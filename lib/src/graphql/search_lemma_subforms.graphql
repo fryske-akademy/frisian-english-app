@@ -1,0 +1,29 @@
+query SearchLemmaSubForm(
+    $offset: Int! = 0
+	$max: Int! = 10
+	$searchterm: String!
+	$lang: LangType!
+	$pos: GramType
+	$source: String
+	$sensitive: Boolean! = false
+	$lexiconFallback: Boolean! = false
+) {
+  lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm pos: $pos sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
+        message {
+            level text
+        }
+        offset max total lemmas {
+            link { source lemma pos lang } form grammar translations {
+                form
+            }
+            subForms {
+                __typename
+                ... on ParadigmCategory { type forms { form lang grammar hyphenation } }
+                ... on Paradigm { form lang grammar hyphenation }
+                ... on Synonym { form lang meaning }
+                ... on Variant { form lang }
+                ... on Dutchism { form lang }
+            }
+        }
+    }
+}

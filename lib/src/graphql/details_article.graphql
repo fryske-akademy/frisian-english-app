@@ -1,0 +1,7 @@
+query detailsArticle($lemma: String!, $source: String!) {
+  details(lemma: $lemma, source: $source) {
+    lemma {
+      article
+    }
+  }
+}

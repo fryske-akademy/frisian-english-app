@@ -1,0 +1,19 @@
+# import './text_processing.graphql'
+
+fragment ParadigmProcessing on Paradigm {
+	form
+	splitForm
+	grammar
+	lang
+
+	note {
+		text {
+			...TextProcessing
+		}
+	}
+
+	hyphenation
+	preferred
+	pronunciation
+	stress
+}

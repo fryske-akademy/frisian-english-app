@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      build_web_compilers|entrypoint:
+        options:
+        tree_shake: true
+      ferry_generator|graphql_builder:
+        enabled: true
+        options:
+          schema: frysish|lib/schema.graphql
+      ferry_generator|serializer_builder:
+        enabled: true
+        options:
+          schema: frysish|lib/schema.graphql

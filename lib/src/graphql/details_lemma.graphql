@@ -1,0 +1,7 @@
+# import './fragments/lemma_details.graphql'
+
+query detailsLemma($lemma: String!, $pos: GramType, $source: String!) {
+	details(lemma: $lemma, pos: $pos, source: $source) {
+		lemma {...LemmaDetails}
+	}
+}

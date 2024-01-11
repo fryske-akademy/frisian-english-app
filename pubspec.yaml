@@ -1,0 +1,76 @@
+name: frysish
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.2 <4.0.0'
+
+dependencies:
+  auto_size_text: ^3.0.0
+  
+  dynamic_color: ^1.6.8
+
+  ferry: ^0.15.0+1
+  ferry_generator: ^0.8.2
+  ferry_hive_store: ^0.5.2
+  gql_http_link: ^1.0.1+1
+  hive_flutter: ^1.1.0
+  get_it: ^7.6.4
+  
+  build_runner: ^2.4.7
+  
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_localization: ^0.2.0
+  flutter_offline: ^3.0.1
+  flutter_onboarding_slider: ^1.0.11
+  flutter_svg: ^2.0.9
+  
+  go_router: ^12.1.3
+  google_fonts: ^6.1.0
+
+  path_provider: ^2.1.1
+  shared_preferences: ^2.2.2
+  intl: ^0.18.1
+
+  logger: ^2.0.2+1
+  mockito: ^5.4.4
+  
+  url_launcher: ^6.2.2
+  provider: ^6.1.1
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/flags/
+    - assets/logos/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logos/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: false
+    image_path: "path/to/image.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: false
+    image_path: "path/to/image.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: false
+    image_path: "path/to/image.png"
