@@ -7,45 +7,45 @@ environment:
   sdk: '>=3.2.2 <4.0.0'
 
 dependencies:
-  auto_size_text: ^3.0.0
+  auto_size_text: ^3.0.0                  #https://pub.dev/packages/auto_size_text
   
-  dynamic_color: ^1.6.8
+  dynamic_color: ^1.6.8                   #https://pub.dev/packages/dynamic_color
 
-  ferry: ^0.15.0+1
-  ferry_generator: ^0.8.2
-  ferry_hive_store: ^0.5.2
-  gql_http_link: ^1.0.1+1
-  hive_flutter: ^1.1.0
-  get_it: ^7.6.4
+  ferry: ^0.15.0+1                        #https://pub.dev/packages/ferry
+  ferry_generator: ^0.8.2                 #https://pub.dev/packages/ferry_generator
+  ferry_hive_store: ^0.5.2                #https://pub.dev/packages/ferry_hive_store
+  gql_http_link: ^1.0.1+1                 #https://pub.dev/packages/gql_http_link
+  hive_flutter: ^1.1.0                    #https://pub.dev/packages/hive_flutter
+  get_it: ^7.6.4                          #https://pub.dev/packages/get_it
   
-  build_runner: ^2.4.7
+  build_runner: ^2.4.7                    #https://pub.dev/packages/build_runner
   
   flutter:
-    sdk: flutter
-  flutter_launcher_icons: ^0.13.1
-  flutter_localization: ^0.2.0
-  flutter_offline: ^3.0.1
-  flutter_onboarding_slider: ^1.0.11
-  flutter_svg: ^2.0.9
+    sdk: flutter                          #https://flutter.dev/docs/development/tools/sdk/releases?tab=macos
+  flutter_launcher_icons: ^0.13.1         #https://pub.dev/packages/flutter_launcher_icons
+  flutter_localization: ^0.2.0            #https://pub.dev/packages/flutter_localization
+  flutter_offline: ^3.0.1                 #https://pub.dev/packages/flutter_offline
+  flutter_onboarding_slider: ^1.0.11      #https://pub.dev/packages/flutter_onboarding_slider
+  flutter_svg: ^2.0.9                     #https://pub.dev/packages/flutter_svg
   
-  go_router: ^12.1.3
-  google_fonts: ^6.1.0
+  go_router: ^12.1.3                      #https://pub.dev/packages/go_router
+  google_fonts: ^6.1.0                    #https://pub.dev/packages/google_fonts
 
-  path_provider: ^2.1.1
-  shared_preferences: ^2.2.2
-  intl: ^0.18.1
+  path_provider: ^2.1.1                   #https://pub.dev/packages/path_provider
+  shared_preferences: ^2.2.2              #https://pub.dev/packages/shared_preferences
+  intl: ^0.18.1                           #https://pub.dev/packages/intl               
 
-  logger: ^2.0.2+1
-  mockito: ^5.4.4
+  logger: ^2.0.2+1                        #https://pub.dev/packages/logger          
+  mockito: ^5.4.4                         #https://pub.dev/packages/mockito                  
   
-  url_launcher: ^6.2.2
-  provider: ^6.1.1
-  cupertino_icons: ^1.0.6
+  url_launcher: ^6.2.2                    #https://pub.dev/packages/url_launcher            
+  provider: ^6.1.1                        #https://pub.dev/packages/provider                
+  cupertino_icons: ^1.0.6                 #https://pub.dev/packages/cupertino_icons
 
 dev_dependencies:
   flutter_test:
-    sdk: flutter
-  flutter_lints: ^2.0.0
+    sdk: flutter                          #https://flutter.dev/docs/testing       
+  flutter_lints: ^2.0.0                   #https://pub.dev/packages/flutter_lints            
 
 flutter:
   uses-material-design: true
