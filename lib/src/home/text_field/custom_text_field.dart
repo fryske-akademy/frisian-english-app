@@ -154,7 +154,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         .request(GautocompleteReq((b) => b
           ..vars.searchterm = '$value*'
           ..vars.lang = varController.isFryEn ? GLangType.fry : GLangType.en
-          ..vars.source = varController.isFryEn ? "fiwb" : ""))
+          ..vars.source = varController.isFryEn ? "fkw" : ""))
         .listen(
       (response) {
         removeOverlays();
