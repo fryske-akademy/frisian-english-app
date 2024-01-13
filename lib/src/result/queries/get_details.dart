@@ -1,5 +1,4 @@
 import 'package:ferry/ferry.dart';
-import 'package:frysish/src/result/queries/get_fry_lemmas.dart';
 import 'package:get_it/get_it.dart';
 import 'package:frysish/__generated__/schema.schema.gql.dart';
 
@@ -13,9 +12,8 @@ Future getDetails() async {
   OperationRequest request;
 
   if (varController.isFryEn) {
-    var data = await getFryLemmas(varController.query);
     request = GdetailsLemmaReq((b) => b
-      ..vars.lemma = data.form
+      ..vars.lemma = varController.query
       ..vars.source = "fkw");
   } else {
     request = GsearchLemmaReq((b) => b

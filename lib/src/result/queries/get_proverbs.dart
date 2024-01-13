@@ -5,15 +5,13 @@ import 'package:frysish/src/graphql/__generated__/details_proverbs.req.gql.dart'
 import 'package:frysish/src/graphql/__generated__/text_proverbs.req.gql.dart';
 
 import '../../../main.dart';
-import 'get_fry_lemmas.dart';
 
 Future<List> getProverbs() async {
   final client = GetIt.I<TypedLink>();
   OperationRequest request;
   if (varController.isFryEn) {
-    var data = await getFryLemmas(varController.query);
     request = GdetailsProverbsReq((b) => b
-      ..vars.lemma = data.form
+      ..vars.lemma = varController.query
       ..vars.source = "fiwb");
   } else {
     request = GtextProverbsReq((b) => b

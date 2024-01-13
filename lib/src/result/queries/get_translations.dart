@@ -5,16 +5,14 @@ import 'package:frysish/src/graphql/__generated__/details_translations.req.gql.d
 import 'package:frysish/src/graphql/__generated__/search_lemma.req.gql.dart';
 
 import '../../../main.dart';
-import 'get_fry_lemmas.dart';
 
 Future getTranslations() async {
   final client = GetIt.I<TypedLink>();
   OperationRequest request;
 
   if (varController.isFryEn) {
-    var data = await getFryLemmas(varController.query);
     request = GdetailsTranslationsReq((b) => b
-      ..vars.lemma = data.form
+      ..vars.lemma = varController.query
       ..vars.source = "fiwb");
   } else {
     request = GsearchLemmaReq((b) => b
