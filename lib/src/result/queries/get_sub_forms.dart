@@ -5,7 +5,6 @@ import 'package:get_it/get_it.dart';
 import '../../../__generated__/schema.schema.gql.dart';
 import '../../graphql/__generated__/details_subforms.req.gql.dart';
 import '../../graphql/__generated__/search_lemma.req.gql.dart';
-// import '../../graphql/__generated__/search_lemma_subforms.req.gql.dart';
 
 Future getSubForms() async {
   final client = GetIt.I<TypedLink>();
@@ -30,7 +29,7 @@ Future getSubForms() async {
     return [];
   }
 
-    var data = response.data;
+  var data = response.data;
 
   final subForms = [];
 
@@ -49,7 +48,6 @@ Future getSubForms() async {
             subForms.add(subForm);
           }
         }
-        return subForms.toSet().toList();
       }
     }
   } else {
@@ -60,14 +58,9 @@ Future getSubForms() async {
             subForms.add(subForm);
           }
         }
-        return subForms.toSet().toList();
       }
     }
   }
-  
-  for (var subform in lemmas.first.lemma.subForms) {
-    subForms.add(subform);
-  }
 
-  return subForms.toSet().toList();
+  return subForms;
 }

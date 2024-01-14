@@ -307,9 +307,9 @@ class _DetailOverlayState extends State<DetailOverlay> {
                                 DataRow(cells: [
                                   DataCell(Text(AppLocalizations.of(context)!.person2Sing)),
                                   DataCell(Text(
-                                      '${presPerson2Sing.isEmpty ? '' : presPerson2Sing.first['form']!}, ${presPerson2Sing.isEmpty ? '' : presPerson2Sing.last['form']!}')),
+                                      '${presPerson2Sing.isEmpty ? '' : '${presPerson2Sing.first['form']!},'} ${presPerson2Sing.isEmpty ? '' : presPerson2Sing.last['form']!}')),
                                   DataCell(Text(
-                                      '${presPerson2Sing.isEmpty ? '' : presPerson2Sing.first['hyphenation']!}, ${presPerson2Sing.isEmpty ? '' : presPerson2Sing.last['hyphenation']!}')),
+                                      '${presPerson2Sing.isEmpty ? '' : '${presPerson2Sing.first['hyphenation']!},'} ${presPerson2Sing.isEmpty ? '' : presPerson2Sing.last['hyphenation']!}')),
                                 ]),
                                 DataRow(cells: [
                                   DataCell(Text(AppLocalizations.of(context)!.person2PlurFormal)),
@@ -318,8 +318,8 @@ class _DetailOverlayState extends State<DetailOverlay> {
                                 ]),
                                 DataRow(cells: [
                                   DataCell(Text(AppLocalizations.of(context)!.person3Sing)),
-                                  DataCell(Text(presPerson3Sing.isEmpty ? '' : presPerson1Sing.first['form']!)),
-                                  DataCell(Text(presPerson3Sing.isEmpty ? '' : presPerson1Sing.first['hyphenation']!)),
+                                  DataCell(Text(presPerson3Sing.isEmpty ? '' : presPerson3Sing.first['form']!)),
+                                  DataCell(Text(presPerson3Sing.isEmpty ? '' : presPerson3Sing.first['hyphenation']!)),
                                 ]),
                                 DataRow(cells: [
                                   DataCell(Text(AppLocalizations.of(context)!.person1Plur)),
