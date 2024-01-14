@@ -2,35 +2,42 @@
 # import './fragments/subForm_processing.graphql'
 
 query searchLemma(
-	$offset: Int! = 0
-	$max: Int! = 10
-	$searchterm: String!
-	$lang: LangType!
-	$pos: GramType
-	$source: String
-	$sensitive: Boolean! = false
-	$lexiconFallback: Boolean! = false
+  $offset: Int! = 0
+  $max: Int! = 10
+  $searchterm: String!
+  $lang: LangType!
+  $pos: GramType
+  $source: String
+  $sensitive: Boolean! = false
+  $lexiconFallback: Boolean! = false
 ) {
-	lemmasearch(
-		offset: $offset
-		max: $max
-		searchterm: $searchterm
-		lang: $lang
-		pos: $pos
-		source: $source
-		sensitive: $sensitive
-		lexiconFallback: $lexiconFallback
-	) {
-		offset
-		total
-		max
-		lemmas {
-			form
-			lang
-			link {...LinkDetails}
-			grammar
- 			translations {form lang}
-			subForms {...SubFormProcessing}
-		}
-	}
+  lemmasearch(
+    offset: $offset
+    max: $max
+    searchterm: $searchterm
+    lang: $lang
+    pos: $pos
+    source: $source
+    sensitive: $sensitive
+    lexiconFallback: $lexiconFallback
+  ) {
+    offset
+    total
+    max
+    lemmas {
+      form
+      lang
+      link {
+        ...LinkDetails
+      }
+      grammar
+      translations {
+        form
+        lang
+      }
+      subForms {
+        ...SubFormProcessing
+      }
+    }
+  }
 }

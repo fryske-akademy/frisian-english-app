@@ -1,26 +1,27 @@
 # import './paradigm_processing.graphql'
 
 fragment SubFormProcessing on SubForm {
-	... on ParadigmCategory {
-		type
-		forms {
-			...ParadigmProcessing
-		}
-	}
-	... on Paradigm {
-		...ParadigmProcessing
-	}
-	... on Synonym {
-		form
-		lang
-		meaning
-	}
-	... on Variant {
-		form
-		lang
-	}
-	... on Dutchism {
-		form
-		lang
-	}
+  __typename
+  ... on ParadigmCategory {
+    type
+    forms {
+      ...ParadigmProcessing
+    }
+  }
+  ... on Paradigm {
+    ...ParadigmProcessing
+  }
+  ... on Synonym {
+    form
+    lang
+    meaning
+  }
+  ... on Variant {
+    form
+    lang
+  }
+  ... on Dutchism {
+    form
+    lang
+  }
 }
