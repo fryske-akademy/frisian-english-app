@@ -26,13 +26,11 @@ Future getSubForms() async {
 
   final response = await client.request(request).first;
 
-  var data = response.data;
-
   if (response.graphqlErrors != null || response.hasErrors) {
     return [];
   }
 
-  
+    var data = response.data;
 
   final subForms = [];
 
