@@ -76,6 +76,7 @@ class OnboardingView extends StatelessWidget {
       finishButtonText: 'Launch',
       finishButtonStyle: FinishButtonStyle(backgroundColor: customColor),
       onFinish: () {
+        varController.updateOnboardingShown(true);
         context.go('/home');
       },
       background: const [
