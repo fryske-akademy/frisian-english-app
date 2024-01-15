@@ -129,9 +129,14 @@ class _DetailsState extends State<Details> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "${AppLocalizations.of(context)!.selectPos(varController.gramVar)}${varController.lemmaArticle != ' ' ? ' - ' : ''}${varController.lemmaArticle}${varController.lemmaPronunciation != ' ' ? ' - ' : ''}${varController.lemmaPronunciation}",
-                          softWrap: true, // this will make the text wrap onto the next line
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "${AppLocalizations.of(context)!.selectPos(varController.gramVar)}${varController.lemmaArticle != ' ' ? ' - ' : ''}${varController.lemmaArticle}${varController.lemmaPronunciation != ' ' ? ' - ' : ''}${varController.lemmaPronunciation}",
+                              softWrap: true, // this will make the text wrap onto the next line
+                            ),
+                          ],
                         ),
                       )
                     ],

@@ -117,23 +117,17 @@ class _DetailOverlayState extends State<DetailOverlay> {
                     ),
                     Row(
                       children: [
-                        const SizedBox(width: 20),
+                        const SizedBox(width: 10),
                         Text(AppLocalizations.of(context)!.selectPos(varController.gramVar)),
-                        const SizedBox(width: 8),
                         Visibility(
                           visible: varController.lemmaArticle != ' ',
-                          //visible: varController.gramVar != '' && varController.lemmaArticle != '',
-                          child: const Text('-'),
+                          child: const Text(' - '),
                         ),
-                        const SizedBox(width: 8),
                         Text(varController.lemmaArticle),
-                        const SizedBox(width: 8),
                         Visibility(
                           visible: varController.lemmaPronunciation != ' ',
-                          //visible: varController.lemmaArticle == '' && varController.lemmaPronunciation == '',
-                          child: const Text('-'),
+                          child: const Text(' - '),
                         ),
-                        const SizedBox(width: 8),
                         Text(varController.lemmaPronunciation),
                       ],
                     ),
