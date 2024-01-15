@@ -12,6 +12,20 @@ class AutoComOverlay extends StatefulWidget {
 }
 
 class _AutoComOverlayState extends State<AutoComOverlay> {
+  late ScrollController _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     // Convert lemmas to a set to remove duplicates, then convert back to a list
@@ -23,9 +37,11 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
     return Padding(
       padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
       child: Scrollbar(
+        controller: _scrollController,
         radius: const Radius.circular(25),
         thumbVisibility: true,
         child: ListView.builder(
+          controller: _scrollController,
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.zero,
           itemCount: singleWordLemmas.length ?? 0,

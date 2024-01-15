@@ -68,6 +68,7 @@ class _ExamplesState extends State<Examples> {
                   child: Scrollbar(
                     radius: const Radius.circular(25),
                     thumbVisibility: true,
+                    controller: _scrollController,
                     child: ListView.builder(
                       controller: _scrollController,
                       itemCount: examples.length,

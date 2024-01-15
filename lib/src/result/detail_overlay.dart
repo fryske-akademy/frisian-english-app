@@ -92,17 +92,24 @@ class _DetailOverlayState extends State<DetailOverlay> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        AutoSizeText(
-                          varController.query,
-                          maxLines: 1,
-                          maxFontSize: 40,
-                          minFontSize: 25,
+                        Expanded(
+                          flex: 3,
+                          child: AutoSizeText(
+                            varController.query,
+                            maxLines: 1,
+                            maxFontSize: 40,
+                            minFontSize: 25,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
-                        IconButton(
-                            icon: const Icon(Icons.close),
-                            onPressed: () {
-                              varController.removeOverlay();
-                            }),
+                        Expanded(
+                          flex: 1,
+                          child: IconButton(
+                              icon: const Icon(Icons.close),
+                              onPressed: () {
+                                varController.removeOverlay();
+                              }),
+                        ),
                       ],
                     ),
                     const Divider(
