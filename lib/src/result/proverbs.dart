@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frysish/src/result/queries/get_proverbs.dart';
 
 import '../../main.dart';
+import 'examples.dart';
 import 'get_rich_text.dart';
 
 class Proverbs extends StatefulWidget {
@@ -58,6 +59,23 @@ class _ProverbsState extends State<Proverbs> {
 
           if (snapshot.hasData) {
             var proverbs = snapshot.data;
+
+            List<FilteredData> filtered = [];
+
+            for (var proverb in proverbs) {
+              var text = proverb.text.text;
+              var textSpans = getRichText(text);
+
+              var translations = proverb.translations.first.text.text;
+              var transSpans = getRichText(translations);
+
+              if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
+                continue;
+              }
+
+              filtered.add(FilteredData(textSpans, transSpans));
+            }
+
             return Column(
               children: [
                 Expanded(
@@ -66,14 +84,8 @@ class _ProverbsState extends State<Proverbs> {
                     thumbVisibility: true,
                     radius: const Radius.circular(25),
                     child: ListView.builder(
-                      itemCount: proverbs.length,
+                      itemCount: filtered.length,
                       itemBuilder: (context, index) {
-                        var texts = proverbs[index].text.text;
-                        var textSpans = getRichText(texts);
-
-                        var translations = proverbs[index].translations.first.text.text;
-                        var transSpans = getRichText(translations);
-
                         return Padding(
                           padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),
                           child: Material(
@@ -89,7 +101,7 @@ class _ProverbsState extends State<Proverbs> {
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                   ),
-                                  children: textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                                  children: filtered[index].textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
                                 ),
                               ),
                               subtitle: Padding(
@@ -101,7 +113,7 @@ class _ProverbsState extends State<Proverbs> {
                                       color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                                       fontSize: 16,
                                     ),
-                                    children: transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                                    children: filtered[index].transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
                                   ),
                                 ),
                               ),

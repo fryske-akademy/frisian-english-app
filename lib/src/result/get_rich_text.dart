@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 
 List<TextSpan> getRichText(list) {
   List<TextSpan> textSpans = [];
+  bool isFirstTextSpan = true;
   for (var item in list) {
     switch (item.G__typename) {
       case 'T':
-        textSpans.add(TextSpan(text: item.textT.trim()));
+        String text = item.textT.trim();
+        if (isFirstTextSpan) {
+          text = text.replaceFirst(RegExp(r'^[^a-zA-Z0-9]*'), '');
+          isFirstTextSpan = false;
+        }
+        textSpans.add(TextSpan(text: text));
         break;
       case 'I':
         for (var subItem in item.textI) {

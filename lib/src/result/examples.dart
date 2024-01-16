@@ -4,6 +4,13 @@ import 'package:frysish/src/result/queries/get_examples.dart';
 import '../../main.dart';
 import 'get_rich_text.dart';
 
+class FilteredData {
+  List<TextSpan> textSpans;
+  List<TextSpan> transSpans;
+
+  FilteredData(this.textSpans, this.transSpans);
+}
+
 class Examples extends StatefulWidget {
   const Examples({super.key});
 
@@ -60,6 +67,23 @@ class _ExamplesState extends State<Examples> {
 
           if (snapshot.hasData) {
             var examples = snapshot.data;
+
+            List<FilteredData> filtered = [];
+
+            for (var example in examples) {
+              var text = example.text.text;
+              var textSpans = getRichText(text);
+
+              var translations = example.translations.first.text.text;
+              var transSpans = getRichText(translations);
+
+              if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
+                continue;
+              }
+
+              filtered.add(FilteredData(textSpans, transSpans));
+            }
+
             return Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -78,6 +102,12 @@ class _ExamplesState extends State<Examples> {
 
                         var translations = examples[index].translations.first.text.text;
                         var transSpans = getRichText(translations);
+
+                        // for (var item in textSpans) {
+                        //   if (item.text == '') {
+                        //     textSpans.remove(item);
+                        //   }
+                        // }
 
                         return Padding(
                           padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),
