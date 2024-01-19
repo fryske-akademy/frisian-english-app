@@ -10,19 +10,14 @@ Future getTranslations() async {
   final client = GetIt.I<TypedLink>();
   OperationRequest request;
 
-  if (varController.isFryEn) {
-    request = GdetailsTranslationsReq((b) => b
-      ..vars.lemma = varController.query
-      ..vars.source = "fiwb");
-  } else {
     request = GsearchLemmaReq((b) => b
       ..vars.searchterm = varController.query
-      ..vars.lang = GLangType.en
+      ..vars.lang = varController.isFryEn ? GLangType.fry : GLangType.en
       ..vars.offset = 0
+      ..vars.source = varController.isFryEn ? "fiwb" : null
       ..vars.max = 10
       ..vars.sensitive = false
       ..vars.lexiconFallback = false);
-  }
 
   final response = await client.request(request).first;
 
@@ -38,23 +33,21 @@ Future getTranslations() async {
 
   var translations = [];
 
-  if (varController.isFryEn) {
-    if (data.details.first.translations == null) {
-      return [];
-    }
-    for (var translation in data.details.first.translations) {
-      translations.add(translation);
-    }
-  } else {
     if (data.lemmasearch.lemmas == null) {
       return [];
     }
+
+    var trlang = varController.isFryEn ? GLangType.en : GLangType.fry;
+
     for (var lemma in data.lemmasearch.lemmas) {
-      for (var translation in lemma.translations) {
-        translations.add(translation);
+      if (lemma.translations != null) {
+        for (var translation in lemma.translations) {
+          if (translation.lang==trlang) {
+            translations.add(translation);
+          }
+        }
       }
     }
-  }
 
   return translations;
 }
