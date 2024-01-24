@@ -29,7 +29,7 @@ create file build.yaml (if it doens't exist yet)
 
 Now make your querys in [QUERY].graphl files then execute:
 
-	flutter pub run build_runner build (--delete-conflicting-outputs)
+	flutter pub run build_runner build --delete-conflicting-outputs
 
  # Internationalizing
 
