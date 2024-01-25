@@ -1,0 +1,24 @@
+query texts ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $sensitive: Boolean!=false $source: String) {
+    textsearch(offset: $offset max: $max searchterm: $searchterm lang: $lang sensitive: $sensitive source: $source) {
+        message {level text}
+        offset max total texts {
+            __typename
+            ... on Example {
+                text {...txt} link {...txtlink} translations { text {...txt} }
+            }
+            ... on Collocation {
+                text {...txt} link {...txtlink} translations { text {...txt} }
+            }
+            ... on Proverb {
+                text {...txt} link {...txtlink} translations { text {...txt} }
+            }
+        }
+    }
+}
+# use lemma, pos and source from results to link to details
+fragment txtlink on LemmaLink {source lemma pos lang}
+fragment txt on FormattedText { text {
+    ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
+    ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
+    ... on T {textT}}
+}

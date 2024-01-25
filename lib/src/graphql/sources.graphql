@@ -1,0 +1,5 @@
+query sources {
+    sources {
+        source title fromlang tolang disabled lexicon
+    }
+}

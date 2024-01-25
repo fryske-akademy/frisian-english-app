@@ -1,8 +1,0 @@
-fragment LinkDetails on LemmaLink {
-    source 
-    lemma 
-    lang 
-    pos 
-    id 
-    text
-}

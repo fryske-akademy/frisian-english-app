@@ -57,6 +57,10 @@ type Definition {
 """details of a lemma"""
 type Details implements MessageHolder {
   lemma: Lemma!
+
+  """
+  translations for the lemma, frisian lemmas may have both dutch and english translations
+  """
   translations: [Lemma]
   link: LemmaLink
   senses: [Sense]
@@ -550,7 +554,7 @@ type LemmaLink {
   text: String
 }
 
-# union LemmaOrText = Lemma | TextTranslated
+union LemmaOrText = Lemma | TextTranslated
 
 """paginated lemma information"""
 type Lemmas implements PagingInterface & MessageHolder {
@@ -592,6 +596,10 @@ type MinLemma implements FormInterface {
 
   """grammar information about a form, at least part of speech (pos_*)"""
   grammar: [GramType!]!
+
+  """
+  translations for the lemma, frisian lemmas may have both dutch and english translations
+  """
   translations: [FormTranslation]
   subForms: [SubForm]
 }
@@ -674,8 +682,9 @@ type Q {
 
 """
 Language api for Dutch - Frisian - English, authoritative for Frisian hence Frisian may show more details.
-You can search in english for lemmas or texts (examples etc.), you can directly query the english source, using either
-english or frisian and you can request details from the english source (i.e. using the links in results).
+You can use english when searching in lemmas or texts (examples etc.), you can directly query the frisian-english source,
+you can request details from the english source (i.e. using the links in results) and you can request
+english translations for frisian lemmas in results.
 """
 type Query {
   """
@@ -698,6 +707,11 @@ type Query {
     when true and language is frisian use lexicon results when dictionaries don't return any
     """
     lexiconFallback: Boolean! = false
+
+    """
+    when true english translations for frisian results are shown together with dutch translations
+    """
+    englishTranslations: Boolean! = false
   ): Lemmas
 
   """search in text (lucene syntax), return a paginated graph with texts"""
@@ -724,6 +738,11 @@ type Query {
 
     """details in specific source, see LemmaLink and sources query"""
     source: String!
+
+    """
+    when true english translations for frisian results are shown together with dutch translations
+    """
+    englishTranslations: Boolean! = false
   ): [Details]
 
   """show categorized lists of rhyming words, best rhyming on top."""
@@ -823,7 +842,7 @@ type Sense {
   """
   A Sense under Details holds a Lemma, a Sense under Collocation holds a TextTranslated
   """
-  # translations: [LemmaOrText]
+  translations: [LemmaOrText]
   link: [LemmaLink]
   notes: [Note]
   texts: [Text]

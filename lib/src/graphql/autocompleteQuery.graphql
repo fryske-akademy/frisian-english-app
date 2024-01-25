@@ -1,0 +1,7 @@
+# append * to the searchterm
+query autocomplete ($lang: LangType!=fry $searchterm: String! $source: String="fkw") {
+    lemmasearch(lang: $lang searchterm: $searchterm source: $source) {
+        message { level text }
+        lemmas { form }
+    }
+}

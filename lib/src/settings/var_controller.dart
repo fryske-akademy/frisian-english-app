@@ -4,7 +4,7 @@ import '../list_item.dart';
 import 'settings_service.dart';
 
 class VarController with ChangeNotifier {
-  VarController(this._settingsService);
+    VarController(this._settingsService);
 
   late final SettingsService _settingsService;
 
@@ -121,6 +121,8 @@ class VarController with ChangeNotifier {
   late String lemmaForm = '';
   late String lemmaArticle = '';
   late String lemmaPronunciation = '';
+
+  late var response;
 
   var customColor = const Color.fromARGB(255, 204, 111, 24);
 

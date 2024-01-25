@@ -1,7 +1,0 @@
-query detailsPronunciation($lemma: String!, $source: String!) {
-  details(lemma: $lemma, source: $source) {
-    lemma {
-      pronunciation
-    }
-  }
-}

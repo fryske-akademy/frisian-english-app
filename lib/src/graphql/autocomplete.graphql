@@ -1,5 +1,0 @@
-query autocomplete ($lang: LangType!=fry $searchterm: String! $source: String) {
-    lemmasearch(lang: $lang searchterm: $searchterm source: $source) {
-        lemmas { form }
-    }
-}

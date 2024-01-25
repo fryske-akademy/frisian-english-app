@@ -1,7 +1,0 @@
-query detailsGrammar($lemma: String!, $source: String!) {
-  details(lemma: $lemma, source: $source) {
-    lemma {
-      grammar
-    }
-  }
-}

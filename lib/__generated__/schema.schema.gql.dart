@@ -320,6 +320,10 @@ const Map<String, Set<String>> possibleTypesMap = {
     'Synonym',
     'Variant',
   },
+  'LemmaOrText': {
+    'Lemma',
+    'TextTranslated',
+  },
   'PagingInterface': {
     'Lemmas',
     'RhymeResults',

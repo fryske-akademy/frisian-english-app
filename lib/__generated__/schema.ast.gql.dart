@@ -1096,6 +1096,20 @@ const LemmaLink = _i1.ObjectTypeDefinitionNode(
     ),
   ],
 );
+const LemmaOrText = _i1.UnionTypeDefinitionNode(
+  name: _i1.NameNode(value: 'LemmaOrText'),
+  directives: [],
+  types: [
+    _i1.NamedTypeNode(
+      name: _i1.NameNode(value: 'Lemma'),
+      isNonNull: false,
+    ),
+    _i1.NamedTypeNode(
+      name: _i1.NameNode(value: 'TextTranslated'),
+      isNonNull: false,
+    ),
+  ],
+);
 const Lemmas = _i1.ObjectTypeDefinitionNode(
   name: _i1.NameNode(value: 'Lemmas'),
   directives: [],
@@ -1739,6 +1753,15 @@ const Query = _i1.ObjectTypeDefinitionNode(
           ),
           defaultValue: _i1.BooleanValueNode(value: false),
         ),
+        _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'englishTranslations'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+            name: _i1.NameNode(value: 'Boolean'),
+            isNonNull: true,
+          ),
+          defaultValue: _i1.BooleanValueNode(value: false),
+        ),
       ],
       type: _i1.NamedTypeNode(
         name: _i1.NameNode(value: 'Lemmas'),
@@ -1839,6 +1862,15 @@ const Query = _i1.ObjectTypeDefinitionNode(
             isNonNull: true,
           ),
           defaultValue: null,
+        ),
+        _i1.InputValueDefinitionNode(
+          name: _i1.NameNode(value: 'englishTranslations'),
+          directives: [],
+          type: _i1.NamedTypeNode(
+            name: _i1.NameNode(value: 'Boolean'),
+            isNonNull: true,
+          ),
+          defaultValue: _i1.BooleanValueNode(value: false),
         ),
       ],
       type: _i1.ListTypeNode(
@@ -2251,6 +2283,18 @@ const Sense = _i1.ObjectTypeDefinitionNode(
       args: [],
       type: _i1.NamedTypeNode(
         name: _i1.NameNode(value: 'Definition'),
+        isNonNull: false,
+      ),
+    ),
+    _i1.FieldDefinitionNode(
+      name: _i1.NameNode(value: 'translations'),
+      directives: [],
+      args: [],
+      type: _i1.ListTypeNode(
+        type: _i1.NamedTypeNode(
+          name: _i1.NameNode(value: 'LemmaOrText'),
+          isNonNull: false,
+        ),
         isNonNull: false,
       ),
     ),
@@ -2847,6 +2891,7 @@ const document = _i1.DocumentNode(definitions: [
   LangType,
   Lemma,
   LemmaLink,
+  LemmaOrText,
   Lemmas,
   Message,
   MessageHolder,

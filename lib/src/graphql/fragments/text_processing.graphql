@@ -1,8 +1,0 @@
-fragment TextProcessing on FormattedText { 
-  text {
-    ... on T {textT}
-    ... on Q {textQ {... on T {textT}... on I {textI {... on T {textT}}}}}
-    ... on I {textI {... on T {textT}... on Q {textQ {... on T {textT}}}}}
-    ... on L {link {source lemma pos lang id text}}
-  }
-}

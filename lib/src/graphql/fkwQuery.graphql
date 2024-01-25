@@ -1,0 +1,21 @@
+query fkwlemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType!=fry $searchterm: String! $pos: GramType $sensitive: Boolean!=false $source: String="fkw" $lexiconFallback: Boolean!=false) {
+    lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm pos: $pos sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
+        message {
+            level text
+        }
+        offset max total lemmas {
+            link {...detaillink} form grammar translations {
+                form
+            }
+            subForms {
+                __typename
+                ... on ParadigmCategory { type forms { form lang grammar hyphenation } }
+                ... on Paradigm { form lang grammar hyphenation }
+            }
+        }
+    }
+}
+# use lemma, pos and source from results to link to details
+fragment detaillink on LemmaLink {
+    source lemma pos
+}

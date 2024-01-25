@@ -1,9 +1,6 @@
 targets:
   $default:
     builders:
-      # build_web_compilers|entrypoint:
-      #   options:
-      #   tree_shake: true
       ferry_generator|graphql_builder:
         enabled: true
         options:

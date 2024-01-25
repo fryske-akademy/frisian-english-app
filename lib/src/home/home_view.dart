@@ -4,8 +4,7 @@ import 'package:flutter_offline/flutter_offline.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../main.dart';
-import 'language_overlay.dart';
-import 'text_field/custom_text_field.dart';
+import 'custom_text_field.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -35,21 +34,50 @@ class _HomeViewState extends State<HomeView> {
   }
 
   void showLanguageOverlay() {
-    final RenderBox renderBox = languageIconKey.currentContext!.findRenderObject() as RenderBox;
+    final RenderBox renderBox =
+        languageIconKey.currentContext!.findRenderObject() as RenderBox;
     final Offset offset = renderBox.localToGlobal(Offset.zero);
 
     varController.langSwapOverlayEntry = OverlayEntry(
       builder: (BuildContext context) => Positioned(
-        top: offset.dy,
-        left: offset.dx,
-        child: LanguageOverlay(
-          onClose: () {
-            varController.langSwapOverlayEntry.remove();
-            varController.langSwapOverlayEntry.dispose();
-            varController.langSwapOverlayLive = false;
-          },
-        ),
-      ),
+          top: offset.dy,
+          left: offset.dx,
+          child: Material(
+            child: Row(
+              children: <Widget>[
+                IconButton(
+                  icon: const Icon(Icons.close),
+                  onPressed: () {
+                    varController.langSwapOverlayEntry.remove();
+                    varController.langSwapOverlayEntry.dispose();
+                    varController.langSwapOverlayLive = false;
+                  },
+                ),
+                SegmentedButton<Locale>(
+                  segments: const [
+                    ButtonSegment(
+                      value: Locale('en'),
+                      label: Text('en'),
+                    ),
+                    ButtonSegment(
+                      value: Locale('fr'),
+                      label: Text('fry'),
+                    ),
+                    ButtonSegment(
+                      value: Locale('nl'),
+                      label: Text('nl'),
+                    ),
+                  ],
+                  selected: {
+                    varController.locale,
+                  },
+                  onSelectionChanged: (Set<Locale> selectedValues) {
+                    varController.updateLocale(selectedValues.first);
+                  },
+                ),
+              ],
+            ),
+          )),
     );
 
     Overlay.of(context).insert(varController.langSwapOverlayEntry);
@@ -117,24 +145,28 @@ class _HomeViewState extends State<HomeView> {
                         ConnectivityResult connectivity,
                         Widget child,
                       ) {
-                        final bool connected = connectivity != ConnectivityResult.none;
-                        return connected
-                            ? CustomTextField(
-                                onPressed: (value) {
+                        final bool connected =
+                            connectivity != ConnectivityResult.none;
+                        if (connected) {
+                          return CustomTextField(
+                                onPressed: (value) async {
                                   varController.query = value;
                                   varController.removeOverlay();
                                   context.go('/result');
                                 },
-                              )
-                            : const Icon(
+                              );
+                        } else {
+                          return const Icon(
                                 Icons.wifi_off,
                                 size: 48,
-                              ); // Internet Connection not available.
+                              );
+                        } // Internet Connection not available.
                       },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text('There seems to be an issue with your network connection.'),
+                          Text(
+                              'There seems to be an issue with your network connection.'),
                         ],
                       ),
                     ),
@@ -167,13 +199,17 @@ class _HomeViewState extends State<HomeView> {
                           children: [
                             Material(
                               elevation: 5,
-                              surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                              surfaceTintColor: Theme.of(context)
+                                  .colorScheme
+                                  .onPrimaryContainer,
                               borderRadius: BorderRadius.circular(20),
                               child: Padding(
                                 padding: const EdgeInsets.all(10),
                                 child: Align(
                                   alignment: Alignment.center,
-                                  child: Text(varController.isFryEn ? AppLocalizations.of(context)!.fry : AppLocalizations.of(context)!.en),
+                                  child: Text(varController.isFryEn
+                                      ? AppLocalizations.of(context)!.fry
+                                      : AppLocalizations.of(context)!.en),
                                 ),
                               ),
                             ),
@@ -187,7 +223,8 @@ class _HomeViewState extends State<HomeView> {
                           onPressed: () {
                             varController.removeOverlay();
                             setState(() {
-                              varController.updateisFryEn(!varController.isFryEn);
+                              varController
+                                  .updateisFryEn(!varController.isFryEn);
                             });
                           },
                         ),
@@ -198,13 +235,17 @@ class _HomeViewState extends State<HomeView> {
                           children: [
                             Material(
                               elevation: 5,
-                              surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                              surfaceTintColor: Theme.of(context)
+                                  .colorScheme
+                                  .onPrimaryContainer,
                               borderRadius: BorderRadius.circular(20),
                               child: Padding(
                                 padding: const EdgeInsets.all(10),
                                 child: Align(
                                   alignment: Alignment.center,
-                                  child: Text(varController.isFryEn ? AppLocalizations.of(context)!.en : AppLocalizations.of(context)!.fry),
+                                  child: Text(varController.isFryEn
+                                      ? AppLocalizations.of(context)!.en
+                                      : AppLocalizations.of(context)!.fry),
                                 ),
                               ),
                             ),
