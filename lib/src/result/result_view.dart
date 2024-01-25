@@ -4,6 +4,9 @@ import 'package:frysish/src/result/get_details.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../main.dart';
+import 'parts/details.dart';
+import 'parts/examples.dart';
+import 'parts/translations.dart';
 
 class ResultView extends StatefulWidget {
   const ResultView({super.key});
@@ -44,8 +47,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: Text(AppLocalizations.of(context)!.result,
-                style: const TextStyle(fontSize: 25)),
+            title: Text(AppLocalizations.of(context)!.result, style: const TextStyle(fontSize: 25)),
             centerTitle: true,
             automaticallyImplyLeading: false,
           ),
@@ -61,6 +63,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               }
 
               if (snapshot.hasData) {
+                var response = snapshot.data;
                 return TabBarView(
                   controller: tabController,
                   children: [
@@ -73,7 +76,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                             padding: MediaQuery.of(context).size.width > 768
                                 ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
                                 : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                            // child: const Translations(),
+                            child: Translations(),
                           ),
                         ),
                         Expanded(
@@ -82,7 +85,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                             padding: MediaQuery.of(context).size.width > 768
                                 ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
                                 : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                            // child: const Details(),
+                            child: Details(response),
                           ),
                         ),
                         Padding(
@@ -91,6 +94,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                             child: IconButton(
                               icon: const Icon(Icons.home),
                               onPressed: () {
+                                varController.clearVariables();
                                 context.go('/home');
                               },
                             ),
@@ -99,9 +103,9 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                       ],
                     ),
 
+                    Examples(response),
                     Text("Hallo"),
-                    Text("Hallo"),
-                    // const Examples(),
+
                     // const Proverbs(),
                   ],
                 );

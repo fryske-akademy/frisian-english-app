@@ -74,35 +74,6 @@ const details = _i1.OperationDefinitionNode(
       directives: [],
       selectionSet: _i1.SelectionSetNode(selections: [
         _i1.FieldNode(
-          name: _i1.NameNode(value: 'source'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'message'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'level'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'text'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-          ]),
-        ),
-        _i1.FieldNode(
           name: _i1.NameNode(value: 'lemma'),
           alias: null,
           arguments: [],
@@ -124,28 +95,6 @@ const details = _i1.OperationDefinitionNode(
               name: _i1.NameNode(value: 'lemmagraph'),
               directives: [],
             )
-          ]),
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'link'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'lemma'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'text'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
           ]),
         ),
         _i1.FieldNode(
@@ -181,13 +130,6 @@ const lemmagraph = _i1.FragmentDefinitionNode(
       selectionSet: null,
     ),
     _i1.FieldNode(
-      name: _i1.NameNode(value: 'lang'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    _i1.FieldNode(
       name: _i1.NameNode(value: 'grammar'),
       alias: null,
       arguments: [],
@@ -214,47 +156,6 @@ const lemmagraph = _i1.FragmentDefinitionNode(
       arguments: [],
       directives: [],
       selectionSet: null,
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'note'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'note'),
-          directives: [],
-        )
-      ]),
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'meaning'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'usage'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'type'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'text'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
     ),
     _i1.FieldNode(
       name: _i1.NameNode(value: 'subForms'),
@@ -336,13 +237,6 @@ const lemmagraph = _i1.FragmentDefinitionNode(
             ),
             _i1.FieldNode(
               name: _i1.NameNode(value: 'lang'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'meaning'),
               alias: null,
               arguments: [],
               directives: [],
@@ -432,68 +326,6 @@ const textgraph = _i1.FragmentDefinitionNode(
     _i1.InlineFragmentNode(
       typeCondition: _i1.TypeConditionNode(
           on: _i1.NamedTypeNode(
-        name: _i1.NameNode(value: 'Collocation'),
-        isNonNull: false,
-      )),
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'text'),
-          directives: [],
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'definition'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'def'),
-              directives: [],
-            )
-          ]),
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'translations'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'texttrans'),
-              directives: [],
-            )
-          ]),
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'examples'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'text'),
-              directives: [],
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'translations'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: _i1.SelectionSetNode(selections: [
-                _i1.FragmentSpreadNode(
-                  name: _i1.NameNode(value: 'texttrans'),
-                  directives: [],
-                )
-              ]),
-            ),
-          ]),
-        ),
-      ]),
-    ),
-    _i1.InlineFragmentNode(
-      typeCondition: _i1.TypeConditionNode(
-          on: _i1.NamedTypeNode(
         name: _i1.NameNode(value: 'Proverb'),
         isNonNull: false,
       )),
@@ -502,18 +334,6 @@ const textgraph = _i1.FragmentDefinitionNode(
         _i1.FragmentSpreadNode(
           name: _i1.NameNode(value: 'text'),
           directives: [],
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'definition'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'def'),
-              directives: [],
-            )
-          ]),
         ),
         _i1.FieldNode(
           name: _i1.NameNode(value: 'translations'),
@@ -610,40 +430,6 @@ const texttrans = _i1.FragmentDefinitionNode(
       directives: [],
       selectionSet: null,
     ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'note'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'note'),
-          directives: [],
-        )
-      ]),
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'usage'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'type'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'text'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
   ]),
 );
 const text = _i1.FragmentDefinitionNode(
@@ -680,40 +466,6 @@ const text = _i1.FragmentDefinitionNode(
       arguments: [],
       directives: [],
       selectionSet: null,
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'note'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'note'),
-          directives: [],
-        )
-      ]),
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'usage'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'type'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'text'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
     ),
   ]),
 );
@@ -968,118 +720,6 @@ const txtDetails = _i1.FragmentDefinitionNode(
     )
   ]),
 );
-const note = _i1.FragmentDefinitionNode(
-  name: _i1.NameNode(value: 'note'),
-  typeCondition: _i1.TypeConditionNode(
-      on: _i1.NamedTypeNode(
-    name: _i1.NameNode(value: 'Note'),
-    isNonNull: false,
-  )),
-  directives: [],
-  selectionSet: _i1.SelectionSetNode(selections: [
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'text'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'txtDetails'),
-          directives: [],
-        )
-      ]),
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'link'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'lemmalink'),
-          directives: [],
-        )
-      ]),
-    ),
-  ]),
-);
-const def = _i1.FragmentDefinitionNode(
-  name: _i1.NameNode(value: 'def'),
-  typeCondition: _i1.TypeConditionNode(
-      on: _i1.NamedTypeNode(
-    name: _i1.NameNode(value: 'Definition'),
-    isNonNull: false,
-  )),
-  directives: [],
-  selectionSet: _i1.SelectionSetNode(selections: [
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'def'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.InlineFragmentNode(
-          typeCondition: _i1.TypeConditionNode(
-              on: _i1.NamedTypeNode(
-            name: _i1.NameNode(value: 'FormattedText'),
-            isNonNull: false,
-          )),
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'txtDetails'),
-              directives: [],
-            )
-          ]),
-        ),
-        _i1.InlineFragmentNode(
-          typeCondition: _i1.TypeConditionNode(
-              on: _i1.NamedTypeNode(
-            name: _i1.NameNode(value: 'Gloss'),
-            isNonNull: false,
-          )),
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'gloss'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: _i1.SelectionSetNode(selections: [
-                _i1.FragmentSpreadNode(
-                  name: _i1.NameNode(value: 'txtDetails'),
-                  directives: [],
-                )
-              ]),
-            )
-          ]),
-        ),
-      ]),
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'usage'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'type'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'text'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-      ]),
-    ),
-  ]),
-);
 const par = _i1.FragmentDefinitionNode(
   name: _i1.NameNode(value: 'par'),
   typeCondition: _i1.TypeConditionNode(
@@ -1131,13 +771,6 @@ const par = _i1.FragmentDefinitionNode(
       directives: [],
       selectionSet: null,
     ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'preferred'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
   ]),
 );
 const document = _i1.DocumentNode(definitions: [
@@ -1149,7 +782,5 @@ const document = _i1.DocumentNode(definitions: [
   text,
   lemmalink,
   txtDetails,
-  note,
-  def,
   par,
 ]);

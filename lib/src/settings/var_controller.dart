@@ -4,7 +4,7 @@ import '../list_item.dart';
 import 'settings_service.dart';
 
 class VarController with ChangeNotifier {
-    VarController(this._settingsService);
+  VarController(this._settingsService);
 
   late final SettingsService _settingsService;
 
@@ -148,5 +148,15 @@ class VarController with ChangeNotifier {
       detailOverlayEntry.dispose();
       detailOverlayLive = false;
     }
+  }
+
+  void clearVariables() {
+    stagedItems = [];
+    query = '';
+    gramVar = '';
+    lemmaForm = '';
+    lemmaArticle = '';
+    lemmaPronunciation = '';
+    response = null;
   }
 }

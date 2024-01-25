@@ -1,5 +1,7 @@
+import 'dart:convert';
+
 import 'package:ferry/ferry.dart';
-import 'package:frysish/src/graphql/__generated__/fkwDetailQuery.req.gql.dart';
+import 'package:frysish/src/graphql/__generated__/detailQuery.req.gql.dart';
 import 'package:frysish/src/graphql/__generated__/lemmaQuery.req.gql.dart';
 import 'package:get_it/get_it.dart';
 
@@ -11,11 +13,10 @@ Future getDetails() async {
   OperationRequest request;
 
   if (varController.isFryEn) {
-    request = GfkwdetailsReq((b) => b
+    request = GdetailsReq((b) => b
       ..vars.lemma = varController.query
       ..vars.source = "fiwb"
-      // ..vars.englishTranslations = false
-      );
+      ..vars.englishTranslations = true);
   } else {
     request = GlemmasReq((b) => b
       ..vars.searchterm = varController.query
@@ -23,7 +24,8 @@ Future getDetails() async {
       ..vars.offset = 0
       ..vars.max = 10
       ..vars.sensitive = false
-      ..vars.lexiconFallback = false);
+      ..vars.lexiconFallback = false
+      ..vars.englishTranslations = false);
   }
 
   var response = await client.request(request).first;

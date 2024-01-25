@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint, override_on_non_overriding_member
+// ignore_for_file: type=lint
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:built_collection/built_collection.dart';

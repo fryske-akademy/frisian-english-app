@@ -186,44 +186,6 @@ abstract class GtxtDetailsVars
       );
 }
 
-abstract class GnoteVars implements Built<GnoteVars, GnoteVarsBuilder> {
-  GnoteVars._();
-
-  factory GnoteVars([Function(GnoteVarsBuilder b) updates]) = _$GnoteVars;
-
-  static Serializer<GnoteVars> get serializer => _$gnoteVarsSerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GnoteVars.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GnoteVars? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GnoteVars.serializer,
-        json,
-      );
-}
-
-abstract class GdefVars implements Built<GdefVars, GdefVarsBuilder> {
-  GdefVars._();
-
-  factory GdefVars([Function(GdefVarsBuilder b) updates]) = _$GdefVars;
-
-  static Serializer<GdefVars> get serializer => _$gdefVarsSerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GdefVars.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GdefVars? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GdefVars.serializer,
-        json,
-      );
-}
-
 abstract class GparVars implements Built<GparVars, GparVarsBuilder> {
   GparVars._();
 

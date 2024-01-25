@@ -16,13 +16,13 @@ Future getTranslations() async {
     ..vars.source = varController.isFryEn ? "fiwb" : null
     ..vars.max = 10
     ..vars.sensitive = false
-    ..vars.lexiconFallback = false);
+    ..vars.lexiconFallback = false
+    ..vars.englishTranslations = true);
 
   final response = await client.request(request).first;
+  print(response);
 
-  if (response.graphqlErrors != null ||
-      response.hasErrors ||
-      response.data.lemmasearch.lemmas == null) {
+  if (response.graphqlErrors != null || response.hasErrors || response.data.lemmasearch.lemmas == null) {
     return [];
   }
 

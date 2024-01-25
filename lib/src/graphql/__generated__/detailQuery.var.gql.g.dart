@@ -21,8 +21,6 @@ Serializer<GlemmalinkVars> _$glemmalinkVarsSerializer =
     new _$GlemmalinkVarsSerializer();
 Serializer<GtxtDetailsVars> _$gtxtDetailsVarsSerializer =
     new _$GtxtDetailsVarsSerializer();
-Serializer<GnoteVars> _$gnoteVarsSerializer = new _$GnoteVarsSerializer();
-Serializer<GdefVars> _$gdefVarsSerializer = new _$GdefVarsSerializer();
 Serializer<GparVars> _$gparVarsSerializer = new _$GparVarsSerializer();
 
 class _$GdetailsVarsSerializer implements StructuredSerializer<GdetailsVars> {
@@ -237,44 +235,6 @@ class _$GtxtDetailsVarsSerializer
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     return new GtxtDetailsVarsBuilder().build();
-  }
-}
-
-class _$GnoteVarsSerializer implements StructuredSerializer<GnoteVars> {
-  @override
-  final Iterable<Type> types = const [GnoteVars, _$GnoteVars];
-  @override
-  final String wireName = 'GnoteVars';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GnoteVars object,
-      {FullType specifiedType = FullType.unspecified}) {
-    return <Object?>[];
-  }
-
-  @override
-  GnoteVars deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    return new GnoteVarsBuilder().build();
-  }
-}
-
-class _$GdefVarsSerializer implements StructuredSerializer<GdefVars> {
-  @override
-  final Iterable<Type> types = const [GdefVars, _$GdefVars];
-  @override
-  final String wireName = 'GdefVars';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GdefVars object,
-      {FullType specifiedType = FullType.unspecified}) {
-    return <Object?>[];
-  }
-
-  @override
-  GdefVars deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    return new GdefVarsBuilder().build();
   }
 }
 
@@ -826,118 +786,6 @@ class GtxtDetailsVarsBuilder
 
   _$GtxtDetailsVars _build() {
     final _$result = _$v ?? new _$GtxtDetailsVars._();
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnoteVars extends GnoteVars {
-  factory _$GnoteVars([void Function(GnoteVarsBuilder)? updates]) =>
-      (new GnoteVarsBuilder()..update(updates))._build();
-
-  _$GnoteVars._() : super._();
-
-  @override
-  GnoteVars rebuild(void Function(GnoteVarsBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnoteVarsBuilder toBuilder() => new GnoteVarsBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnoteVars;
-  }
-
-  @override
-  int get hashCode {
-    return 283938953;
-  }
-
-  @override
-  String toString() {
-    return newBuiltValueToStringHelper(r'GnoteVars').toString();
-  }
-}
-
-class GnoteVarsBuilder implements Builder<GnoteVars, GnoteVarsBuilder> {
-  _$GnoteVars? _$v;
-
-  GnoteVarsBuilder();
-
-  @override
-  void replace(GnoteVars other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnoteVars;
-  }
-
-  @override
-  void update(void Function(GnoteVarsBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnoteVars build() => _build();
-
-  _$GnoteVars _build() {
-    final _$result = _$v ?? new _$GnoteVars._();
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GdefVars extends GdefVars {
-  factory _$GdefVars([void Function(GdefVarsBuilder)? updates]) =>
-      (new GdefVarsBuilder()..update(updates))._build();
-
-  _$GdefVars._() : super._();
-
-  @override
-  GdefVars rebuild(void Function(GdefVarsBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GdefVarsBuilder toBuilder() => new GdefVarsBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GdefVars;
-  }
-
-  @override
-  int get hashCode {
-    return 952254399;
-  }
-
-  @override
-  String toString() {
-    return newBuiltValueToStringHelper(r'GdefVars').toString();
-  }
-}
-
-class GdefVarsBuilder implements Builder<GdefVars, GdefVarsBuilder> {
-  _$GdefVars? _$v;
-
-  GdefVarsBuilder();
-
-  @override
-  void replace(GdefVars other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GdefVars;
-  }
-
-  @override
-  void update(void Function(GdefVarsBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GdefVars build() => _build();
-
-  _$GdefVars _build() {
-    final _$result = _$v ?? new _$GdefVars._();
     replace(_$result);
     return _$result;
   }

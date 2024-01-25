@@ -1,42 +1,28 @@
 query details( # case and diacrit sensitive lemma (article) to find
     $lemma: String! $pos: GramType $source: String! $englishTranslations: Boolean!=false) {
     details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
-        source
-        message { level text}
         lemma { ...lemmagraph }
         translations { ...lemmagraph }
-        link {lemma text}
         texts { ...textgraph }
-#        referrers { ...lemmalink }
     }
 }
 fragment lemmagraph  on Lemma {
     form
-    lang
     grammar
     article
     hyphenation
     pronunciation
-    note { ...note }
-    meaning
-    usage { type text }
     subForms {
         ... on ParadigmCategory { type forms { ...par }}
         ... on Paradigm { __typename ...par }
-        ... on Synonym { __typename form lang meaning }
+        ... on Synonym { __typename form lang }
         ... on Variant { __typename form lang }
         ... on Dutchism { __typename form lang }
     }
 }
 fragment textgraph on Text {
     ...nestedtextgraph
-    ... on Collocation {
-        ...text
-        definition { ...def }
-        translations { ...texttrans }
-        examples { ...text translations {...texttrans} }
-    }
-    ... on Proverb { ...text definition { ...def } translations {...texttrans} }
+    ... on Proverb { ...text translations {...texttrans} }
 }
 fragment nestedtextgraph on Text {
     __typename
@@ -44,10 +30,10 @@ fragment nestedtextgraph on Text {
 }
 
 fragment texttrans on TextTranslated {
-    id text {...txtDetails} lang note {...note} usage {type text}
+    id text {...txtDetails} lang
 }
 fragment text on TextInterface {
-    id text {...txtDetails} lang note {...note} usage {type text}
+    id text {...txtDetails} lang
 }
 fragment lemmalink on LemmaLink {
     source lemma pos lang id text
@@ -59,14 +45,6 @@ fragment txtDetails on FormattedText { text {
     ... on L { link { ...lemmalink } }
     }
 }
-fragment note on Note {text {...txtDetails} link {...lemmalink}}
-
-fragment def on Definition {
-    def {
-        ... on FormattedText { ...txtDetails }
-        ... on Gloss { gloss { ...txtDetails } }
-    } usage { type text }
-}
 fragment par on Paradigm {
-    form splitForm lang grammar hyphenation pronunciation preferred
+    form splitForm lang grammar hyphenation pronunciation
 }
