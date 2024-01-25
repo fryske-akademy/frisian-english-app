@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:ferry/ferry.dart';
 import 'package:frysish/src/graphql/__generated__/detailQuery.req.gql.dart';
 import 'package:frysish/src/graphql/__generated__/lemmaQuery.req.gql.dart';

@@ -21,19 +21,9 @@ fragment lemmagraph  on Lemma {
     }
 }
 fragment textgraph on Text {
-    ...nestedtextgraph
-    ... on Proverb { ...text translations {...texttrans} }
-}
-fragment nestedtextgraph on Text {
     __typename
-    ... on Example { ...text translations {...texttrans} }
-}
-
-fragment texttrans on TextTranslated {
-    id text {...txtDetails} lang
-}
-fragment text on TextInterface {
-    id text {...txtDetails} lang
+    ... on Example { id text {...txtDetails} lang translations { id text {...txtDetails} lang } }
+    ... on Proverb { id text {...txtDetails} lang translations { id text {...txtDetails} lang } }
 }
 fragment lemmalink on LemmaLink {
     source lemma pos lang id text

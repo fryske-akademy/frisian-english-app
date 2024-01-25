@@ -103,83 +103,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GlemmasData_lemmasearch_message.serializer)
       ..add(GlemmasReq.serializer)
       ..add(GlemmasVars.serializer)
-      ..add(GnestedtextgraphData__asExample.serializer)
-      ..add(GnestedtextgraphData__asExample_text.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__asI.serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asI_textI__asQ.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-          .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asI_textI__asT.serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asI_textI__base.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__asL.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__asL_link.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__asQ.serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asQ_textQ__asI.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-          .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asQ_textQ__asT.serializer)
-      ..add(
-          GnestedtextgraphData__asExample_text_text__asQ_textQ__base.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__asT.serializer)
-      ..add(GnestedtextgraphData__asExample_text_text__base.serializer)
-      ..add(GnestedtextgraphData__asExample_translations.serializer)
-      ..add(GnestedtextgraphData__asExample_translations_text.serializer)
-      ..add(GnestedtextgraphData__asExample_translations_text_text__asI
-          .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-              .serializer)
-      ..add(GnestedtextgraphData__asExample_translations_text_text__asL
-          .serializer)
-      ..add(GnestedtextgraphData__asExample_translations_text_text__asL_link
-          .serializer)
-      ..add(GnestedtextgraphData__asExample_translations_text_text__asQ
-          .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-              .serializer)
-      ..add(
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-              .serializer)
-      ..add(GnestedtextgraphData__asExample_translations_text_text__asT
-          .serializer)
-      ..add(GnestedtextgraphData__asExample_translations_text_text__base
-          .serializer)
-      ..add(GnestedtextgraphData__base.serializer)
-      ..add(GnestedtextgraphReq.serializer)
-      ..add(GnestedtextgraphVars.serializer)
       ..add(GparData.serializer)
       ..add(GparReq.serializer)
       ..add(GparVars.serializer)
@@ -194,26 +117,61 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GsourcesData_sources.serializer)
       ..add(GsourcesReq.serializer)
       ..add(GsourcesVars.serializer)
-      ..add(GtextData.serializer)
-      ..add(GtextData_text.serializer)
-      ..add(GtextData_text_text__asI.serializer)
-      ..add(GtextData_text_text__asI_textI__asQ.serializer)
-      ..add(GtextData_text_text__asI_textI__asQ_textQ__asT.serializer)
-      ..add(GtextData_text_text__asI_textI__asQ_textQ__base.serializer)
-      ..add(GtextData_text_text__asI_textI__asT.serializer)
-      ..add(GtextData_text_text__asI_textI__base.serializer)
-      ..add(GtextData_text_text__asL.serializer)
-      ..add(GtextData_text_text__asL_link.serializer)
-      ..add(GtextData_text_text__asQ.serializer)
-      ..add(GtextData_text_text__asQ_textQ__asI.serializer)
-      ..add(GtextData_text_text__asQ_textQ__asI_textI__asT.serializer)
-      ..add(GtextData_text_text__asQ_textQ__asI_textI__base.serializer)
-      ..add(GtextData_text_text__asQ_textQ__asT.serializer)
-      ..add(GtextData_text_text__asQ_textQ__base.serializer)
-      ..add(GtextData_text_text__asT.serializer)
-      ..add(GtextData_text_text__base.serializer)
-      ..add(GtextReq.serializer)
-      ..add(GtextVars.serializer)
+      ..add(GtextgraphData__asExample.serializer)
+      ..add(GtextgraphData__asExample_text.serializer)
+      ..add(GtextgraphData__asExample_text_text__asI.serializer)
+      ..add(GtextgraphData__asExample_text_text__asI_textI__asQ.serializer)
+      ..add(GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
+          .serializer)
+      ..add(GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
+          .serializer)
+      ..add(GtextgraphData__asExample_text_text__asI_textI__asT.serializer)
+      ..add(GtextgraphData__asExample_text_text__asI_textI__base.serializer)
+      ..add(GtextgraphData__asExample_text_text__asL.serializer)
+      ..add(GtextgraphData__asExample_text_text__asL_link.serializer)
+      ..add(GtextgraphData__asExample_text_text__asQ.serializer)
+      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asI.serializer)
+      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
+          .serializer)
+      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
+          .serializer)
+      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asT.serializer)
+      ..add(GtextgraphData__asExample_text_text__asQ_textQ__base.serializer)
+      ..add(GtextgraphData__asExample_text_text__asT.serializer)
+      ..add(GtextgraphData__asExample_text_text__base.serializer)
+      ..add(GtextgraphData__asExample_translations.serializer)
+      ..add(GtextgraphData__asExample_translations_text.serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asI.serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asI_textI__asQ
+          .serializer)
+      ..add(
+          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+              .serializer)
+      ..add(
+          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+              .serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asI_textI__asT
+          .serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asI_textI__base
+          .serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asL.serializer)
+      ..add(
+          GtextgraphData__asExample_translations_text_text__asL_link.serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asQ.serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
+          .serializer)
+      ..add(
+          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+              .serializer)
+      ..add(
+          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+              .serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
+          .serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asQ_textQ__base
+          .serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__asT.serializer)
+      ..add(GtextgraphData__asExample_translations_text_text__base.serializer)
       ..add(GtextgraphData__asProverb.serializer)
       ..add(GtextgraphData__asProverb_text.serializer)
       ..add(GtextgraphData__asProverb_text_text__asI.serializer)
@@ -502,26 +460,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GtextsData_textsearch_texts__base.serializer)
       ..add(GtextsReq.serializer)
       ..add(GtextsVars.serializer)
-      ..add(GtexttransData.serializer)
-      ..add(GtexttransData_text.serializer)
-      ..add(GtexttransData_text_text__asI.serializer)
-      ..add(GtexttransData_text_text__asI_textI__asQ.serializer)
-      ..add(GtexttransData_text_text__asI_textI__asQ_textQ__asT.serializer)
-      ..add(GtexttransData_text_text__asI_textI__asQ_textQ__base.serializer)
-      ..add(GtexttransData_text_text__asI_textI__asT.serializer)
-      ..add(GtexttransData_text_text__asI_textI__base.serializer)
-      ..add(GtexttransData_text_text__asL.serializer)
-      ..add(GtexttransData_text_text__asL_link.serializer)
-      ..add(GtexttransData_text_text__asQ.serializer)
-      ..add(GtexttransData_text_text__asQ_textQ__asI.serializer)
-      ..add(GtexttransData_text_text__asQ_textQ__asI_textI__asT.serializer)
-      ..add(GtexttransData_text_text__asQ_textQ__asI_textI__base.serializer)
-      ..add(GtexttransData_text_text__asQ_textQ__asT.serializer)
-      ..add(GtexttransData_text_text__asQ_textQ__base.serializer)
-      ..add(GtexttransData_text_text__asT.serializer)
-      ..add(GtexttransData_text_text__base.serializer)
-      ..add(GtexttransReq.serializer)
-      ..add(GtexttransVars.serializer)
       ..add(GtranslateData.serializer)
       ..add(GtranslateData_translatetext.serializer)
       ..add(GtranslateReq.serializer)
@@ -666,97 +604,73 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<
               GlemmasData_lemmasearch_lemmas_subForms__asParadigmCategory_forms>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GnestedtextgraphData__asExample_text_text)
-          ]),
-          () => new ListBuilder<GnestedtextgraphData__asExample_text_text>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GnestedtextgraphData__asExample_text_text__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_text_text__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GnestedtextgraphData__asExample_text_text__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_text_text__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_translations_text_text>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_translations_text_text__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_translations_text_text__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>())
-      ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GsourcesData_sources)]),
           () => new ListBuilder<GsourcesData_sources>())
       ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GtextData_text_text)]),
-          () => new ListBuilder<GtextData_text_text>())
-      ..addBuilderFactory(
           const FullType(BuiltList,
-              const [const FullType(GtextData_text_text__asI_textI)]),
-          () => new ListBuilder<GtextData_text_text__asI_textI>())
+              const [const FullType(GtextgraphData__asExample_text_text)]),
+          () => new ListBuilder<GtextgraphData__asExample_text_text>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(GtextData_text_text__asI_textI__asQ_textQ)
+            const FullType(GtextgraphData__asExample_text_text__asI_textI)
           ]),
-          () => new ListBuilder<GtextData_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GtextData_text_text__asQ_textQ)]),
-          () => new ListBuilder<GtextData_text_text__asQ_textQ>())
+          () =>
+              new ListBuilder<GtextgraphData__asExample_text_text__asI_textI>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
-            const FullType(GtextData_text_text__asQ_textQ__asI_textI)
+            const FullType(
+                GtextgraphData__asExample_text_text__asI_textI__asQ_textQ)
           ]),
-          () => new ListBuilder<GtextData_text_text__asQ_textQ__asI_textI>())
+          () => new ListBuilder<
+              GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GtextgraphData__asExample_text_text__asQ_textQ)
+          ]),
+          () =>
+              new ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_text_text__asQ_textQ__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GtextgraphData__asExample_translations_text_text)
+          ]),
+          () => new ListBuilder<
+              GtextgraphData__asExample_translations_text_text>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GtextgraphData__asExample_translations_text_text__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GtextgraphData__asExample_translations_text_text__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(GtextgraphData__asProverb_text_text)]),
@@ -1029,30 +943,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<
               GtextsData_textsearch_texts__asProverb_translations_text_text__asQ_textQ__asI_textI>())
       ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GtexttransData_text_text)]),
-          () => new ListBuilder<GtexttransData_text_text>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GtexttransData_text_text__asI_textI)]),
-          () => new ListBuilder<GtexttransData_text_text__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtexttransData_text_text__asI_textI__asQ_textQ)
-          ]),
-          () =>
-              new ListBuilder<GtexttransData_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GtexttransData_text_text__asQ_textQ)]),
-          () => new ListBuilder<GtexttransData_text_text__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtexttransData_text_text__asQ_textQ__asI_textI)
-          ]),
-          () =>
-              new ListBuilder<GtexttransData_text_text__asQ_textQ__asI_textI>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GtxtData_text)]),
           () => new ListBuilder<GtxtData_text>())
       ..addBuilderFactory(
@@ -1221,13 +1111,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
               const [const FullType.nullable(GlemmasData_lemmasearch_lemmas)]),
           () => new ListBuilder<GlemmasData_lemmasearch_lemmas?>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType.nullable(
-                GnestedtextgraphData__asExample_translations)
-          ]),
-          () =>
-              new ListBuilder<GnestedtextgraphData__asExample_translations?>())
-      ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType.nullable(GrhymeData_rhyme_message)]),
           () => new ListBuilder<GrhymeData_rhyme_message?>())
@@ -1243,6 +1126,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType.nullable(GrhymeData_rhyme_rhymeGroups_rhyming)
           ]),
           () => new ListBuilder<GrhymeData_rhyme_rhymeGroups_rhyming?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GtextgraphData__asExample_translations)
+          ]),
+          () => new ListBuilder<GtextgraphData__asExample_translations?>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType.nullable(GtextgraphData__asProverb_translations)

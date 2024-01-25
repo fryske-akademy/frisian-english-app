@@ -37,18 +37,18 @@ class _ExamplesState extends State<Examples> {
     List<FilteredData> filtered = [];
 
     for (var example in examples) {
-      print(example.G__typename);
-      // var text = example.text.text;
-      // var textSpans = getRichText(text);
+      print(example);
+      var text = example.text.text;
+      var textSpans = getRichText(text);
 
-      // var translations = example.translations.first.text.text;
-      // var transSpans = getRichText(translations);
+      var translations = example.translations.first.text.text;
+      var transSpans = getRichText(translations);
 
-      // if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
-      //   continue;
-      // }
+      if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
+        continue;
+      }
 
-      // filtered.add(FilteredData(textSpans, transSpans));
+      filtered.add(FilteredData(textSpans, transSpans));
     }
   }
 

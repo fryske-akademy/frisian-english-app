@@ -319,47 +319,6 @@ const textgraph = _i1.FragmentDefinitionNode(
   )),
   directives: [],
   selectionSet: _i1.SelectionSetNode(selections: [
-    _i1.FragmentSpreadNode(
-      name: _i1.NameNode(value: 'nestedtextgraph'),
-      directives: [],
-    ),
-    _i1.InlineFragmentNode(
-      typeCondition: _i1.TypeConditionNode(
-          on: _i1.NamedTypeNode(
-        name: _i1.NameNode(value: 'Proverb'),
-        isNonNull: false,
-      )),
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'text'),
-          directives: [],
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'translations'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'texttrans'),
-              directives: [],
-            )
-          ]),
-        ),
-      ]),
-    ),
-  ]),
-);
-const nestedtextgraph = _i1.FragmentDefinitionNode(
-  name: _i1.NameNode(value: 'nestedtextgraph'),
-  typeCondition: _i1.TypeConditionNode(
-      on: _i1.NamedTypeNode(
-    name: _i1.NameNode(value: 'Text'),
-    isNonNull: false,
-  )),
-  directives: [],
-  selectionSet: _i1.SelectionSetNode(selections: [
     _i1.FieldNode(
       name: _i1.NameNode(value: '__typename'),
       alias: null,
@@ -375,9 +334,31 @@ const nestedtextgraph = _i1.FragmentDefinitionNode(
       )),
       directives: [],
       selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'text'),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'id'),
+          alias: null,
+          arguments: [],
           directives: [],
+          selectionSet: null,
+        ),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'text'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FragmentSpreadNode(
+              name: _i1.NameNode(value: 'txtDetails'),
+              directives: [],
+            )
+          ]),
+        ),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'lang'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
         ),
         _i1.FieldNode(
           name: _i1.NameNode(value: 'translations'),
@@ -385,87 +366,105 @@ const nestedtextgraph = _i1.FragmentDefinitionNode(
           arguments: [],
           directives: [],
           selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'texttrans'),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
               directives: [],
-            )
+              selectionSet: null,
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'text'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: _i1.SelectionSetNode(selections: [
+                _i1.FragmentSpreadNode(
+                  name: _i1.NameNode(value: 'txtDetails'),
+                  directives: [],
+                )
+              ]),
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'lang'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
           ]),
         ),
       ]),
     ),
-  ]),
-);
-const texttrans = _i1.FragmentDefinitionNode(
-  name: _i1.NameNode(value: 'texttrans'),
-  typeCondition: _i1.TypeConditionNode(
-      on: _i1.NamedTypeNode(
-    name: _i1.NameNode(value: 'TextTranslated'),
-    isNonNull: false,
-  )),
-  directives: [],
-  selectionSet: _i1.SelectionSetNode(selections: [
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'text'),
-      alias: null,
-      arguments: [],
+    _i1.InlineFragmentNode(
+      typeCondition: _i1.TypeConditionNode(
+          on: _i1.NamedTypeNode(
+        name: _i1.NameNode(value: 'Proverb'),
+        isNonNull: false,
+      )),
       directives: [],
       selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'txtDetails'),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'id'),
+          alias: null,
+          arguments: [],
           directives: [],
-        )
-      ]),
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'lang'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-  ]),
-);
-const text = _i1.FragmentDefinitionNode(
-  name: _i1.NameNode(value: 'text'),
-  typeCondition: _i1.TypeConditionNode(
-      on: _i1.NamedTypeNode(
-    name: _i1.NameNode(value: 'TextInterface'),
-    isNonNull: false,
-  )),
-  directives: [],
-  selectionSet: _i1.SelectionSetNode(selections: [
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'id'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'text'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FragmentSpreadNode(
-          name: _i1.NameNode(value: 'txtDetails'),
+          selectionSet: null,
+        ),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'text'),
+          alias: null,
+          arguments: [],
           directives: [],
-        )
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FragmentSpreadNode(
+              name: _i1.NameNode(value: 'txtDetails'),
+              directives: [],
+            )
+          ]),
+        ),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'lang'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null,
+        ),
+        _i1.FieldNode(
+          name: _i1.NameNode(value: 'translations'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'text'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: _i1.SelectionSetNode(selections: [
+                _i1.FragmentSpreadNode(
+                  name: _i1.NameNode(value: 'txtDetails'),
+                  directives: [],
+                )
+              ]),
+            ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'lang'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
+          ]),
+        ),
       ]),
-    ),
-    _i1.FieldNode(
-      name: _i1.NameNode(value: 'lang'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
     ),
   ]),
 );
@@ -777,9 +776,6 @@ const document = _i1.DocumentNode(definitions: [
   details,
   lemmagraph,
   textgraph,
-  nestedtextgraph,
-  texttrans,
-  text,
   lemmalink,
   txtDetails,
   par,

@@ -84,6 +84,117 @@ Serializer<GlemmagraphData_subForms__asDutchism>
     new _$GlemmagraphData_subForms__asDutchismSerializer();
 Serializer<GtextgraphData__base> _$gtextgraphDataBaseSerializer =
     new _$GtextgraphData__baseSerializer();
+Serializer<GtextgraphData__asExample> _$gtextgraphDataAsExampleSerializer =
+    new _$GtextgraphData__asExampleSerializer();
+Serializer<GtextgraphData__asExample_text>
+    _$gtextgraphDataAsExampleTextSerializer =
+    new _$GtextgraphData__asExample_textSerializer();
+Serializer<GtextgraphData__asExample_text_text__base>
+    _$gtextgraphDataAsExampleTextTextBaseSerializer =
+    new _$GtextgraphData__asExample_text_text__baseSerializer();
+Serializer<GtextgraphData__asExample_text_text__asQ>
+    _$gtextgraphDataAsExampleTextTextAsQSerializer =
+    new _$GtextgraphData__asExample_text_text__asQSerializer();
+Serializer<GtextgraphData__asExample_text_text__asQ_textQ__base>
+    _$gtextgraphDataAsExampleTextTextAsQTextQBaseSerializer =
+    new _$GtextgraphData__asExample_text_text__asQ_textQ__baseSerializer();
+Serializer<GtextgraphData__asExample_text_text__asQ_textQ__asT>
+    _$gtextgraphDataAsExampleTextTextAsQTextQAsTSerializer =
+    new _$GtextgraphData__asExample_text_text__asQ_textQ__asTSerializer();
+Serializer<GtextgraphData__asExample_text_text__asQ_textQ__asI>
+    _$gtextgraphDataAsExampleTextTextAsQTextQAsISerializer =
+    new _$GtextgraphData__asExample_text_text__asQ_textQ__asISerializer();
+Serializer<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base>
+    _$gtextgraphDataAsExampleTextTextAsQTextQAsITextIBaseSerializer =
+    new _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseSerializer();
+Serializer<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT>
+    _$gtextgraphDataAsExampleTextTextAsQTextQAsITextIAsTSerializer =
+    new _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTSerializer();
+Serializer<GtextgraphData__asExample_text_text__asI>
+    _$gtextgraphDataAsExampleTextTextAsISerializer =
+    new _$GtextgraphData__asExample_text_text__asISerializer();
+Serializer<GtextgraphData__asExample_text_text__asI_textI__base>
+    _$gtextgraphDataAsExampleTextTextAsITextIBaseSerializer =
+    new _$GtextgraphData__asExample_text_text__asI_textI__baseSerializer();
+Serializer<GtextgraphData__asExample_text_text__asI_textI__asT>
+    _$gtextgraphDataAsExampleTextTextAsITextIAsTSerializer =
+    new _$GtextgraphData__asExample_text_text__asI_textI__asTSerializer();
+Serializer<GtextgraphData__asExample_text_text__asI_textI__asQ>
+    _$gtextgraphDataAsExampleTextTextAsITextIAsQSerializer =
+    new _$GtextgraphData__asExample_text_text__asI_textI__asQSerializer();
+Serializer<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base>
+    _$gtextgraphDataAsExampleTextTextAsITextIAsQTextQBaseSerializer =
+    new _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseSerializer();
+Serializer<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT>
+    _$gtextgraphDataAsExampleTextTextAsITextIAsQTextQAsTSerializer =
+    new _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTSerializer();
+Serializer<GtextgraphData__asExample_text_text__asT>
+    _$gtextgraphDataAsExampleTextTextAsTSerializer =
+    new _$GtextgraphData__asExample_text_text__asTSerializer();
+Serializer<GtextgraphData__asExample_text_text__asL>
+    _$gtextgraphDataAsExampleTextTextAsLSerializer =
+    new _$GtextgraphData__asExample_text_text__asLSerializer();
+Serializer<GtextgraphData__asExample_text_text__asL_link>
+    _$gtextgraphDataAsExampleTextTextAsLLinkSerializer =
+    new _$GtextgraphData__asExample_text_text__asL_linkSerializer();
+Serializer<GtextgraphData__asExample_translations>
+    _$gtextgraphDataAsExampleTranslationsSerializer =
+    new _$GtextgraphData__asExample_translationsSerializer();
+Serializer<GtextgraphData__asExample_translations_text>
+    _$gtextgraphDataAsExampleTranslationsTextSerializer =
+    new _$GtextgraphData__asExample_translations_textSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__base>
+    _$gtextgraphDataAsExampleTranslationsTextTextBaseSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__baseSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asQ>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsQSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asQSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asQ_textQ__base>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQBaseSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__baseSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asQ_textQ__asT>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsTSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asTSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asQ_textQ__asI>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsISerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asISerializer();
+Serializer<
+        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsITextIBaseSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseSerializer();
+Serializer<
+        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsITextIAsTSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asI>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsISerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asISerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asI_textI__base>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsITextIBaseSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asI_textI__baseSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asI_textI__asT>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsTSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asI_textI__asTSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asI_textI__asQ>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsQSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asI_textI__asQSerializer();
+Serializer<
+        GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsQTextQBaseSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseSerializer();
+Serializer<
+        GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsQTextQAsTSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asT>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsTSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asTSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asL>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsLSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asLSerializer();
+Serializer<GtextgraphData__asExample_translations_text_text__asL_link>
+    _$gtextgraphDataAsExampleTranslationsTextTextAsLLinkSerializer =
+    new _$GtextgraphData__asExample_translations_text_text__asL_linkSerializer();
 Serializer<GtextgraphData__asProverb> _$gtextgraphDataAsProverbSerializer =
     new _$GtextgraphData__asProverbSerializer();
 Serializer<GtextgraphData__asProverb_text>
@@ -195,225 +306,6 @@ Serializer<GtextgraphData__asProverb_translations_text_text__asL>
 Serializer<GtextgraphData__asProverb_translations_text_text__asL_link>
     _$gtextgraphDataAsProverbTranslationsTextTextAsLLinkSerializer =
     new _$GtextgraphData__asProverb_translations_text_text__asL_linkSerializer();
-Serializer<GnestedtextgraphData__base> _$gnestedtextgraphDataBaseSerializer =
-    new _$GnestedtextgraphData__baseSerializer();
-Serializer<GnestedtextgraphData__asExample>
-    _$gnestedtextgraphDataAsExampleSerializer =
-    new _$GnestedtextgraphData__asExampleSerializer();
-Serializer<GnestedtextgraphData__asExample_text>
-    _$gnestedtextgraphDataAsExampleTextSerializer =
-    new _$GnestedtextgraphData__asExample_textSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__base>
-    _$gnestedtextgraphDataAsExampleTextTextBaseSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__baseSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asQ>
-    _$gnestedtextgraphDataAsExampleTextTextAsQSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asQSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asQ_textQ__base>
-    _$gnestedtextgraphDataAsExampleTextTextAsQTextQBaseSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__baseSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asQ_textQ__asT>
-    _$gnestedtextgraphDataAsExampleTextTextAsQTextQAsTSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asQ_textQ__asI>
-    _$gnestedtextgraphDataAsExampleTextTextAsQTextQAsISerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asISerializer();
-Serializer<
-        GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base>
-    _$gnestedtextgraphDataAsExampleTextTextAsQTextQAsITextIBaseSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT>
-    _$gnestedtextgraphDataAsExampleTextTextAsQTextQAsITextIAsTSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asI>
-    _$gnestedtextgraphDataAsExampleTextTextAsISerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asISerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asI_textI__base>
-    _$gnestedtextgraphDataAsExampleTextTextAsITextIBaseSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asI_textI__baseSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asI_textI__asT>
-    _$gnestedtextgraphDataAsExampleTextTextAsITextIAsTSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asI_textI__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asI_textI__asQ>
-    _$gnestedtextgraphDataAsExampleTextTextAsITextIAsQSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asI_textI__asQSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base>
-    _$gnestedtextgraphDataAsExampleTextTextAsITextIAsQTextQBaseSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT>
-    _$gnestedtextgraphDataAsExampleTextTextAsITextIAsQTextQAsTSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asT>
-    _$gnestedtextgraphDataAsExampleTextTextAsTSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asL>
-    _$gnestedtextgraphDataAsExampleTextTextAsLSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asLSerializer();
-Serializer<GnestedtextgraphData__asExample_text_text__asL_link>
-    _$gnestedtextgraphDataAsExampleTextTextAsLLinkSerializer =
-    new _$GnestedtextgraphData__asExample_text_text__asL_linkSerializer();
-Serializer<GnestedtextgraphData__asExample_translations>
-    _$gnestedtextgraphDataAsExampleTranslationsSerializer =
-    new _$GnestedtextgraphData__asExample_translationsSerializer();
-Serializer<GnestedtextgraphData__asExample_translations_text>
-    _$gnestedtextgraphDataAsExampleTranslationsTextSerializer =
-    new _$GnestedtextgraphData__asExample_translations_textSerializer();
-Serializer<GnestedtextgraphData__asExample_translations_text_text__base>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextBaseSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__baseSerializer();
-Serializer<GnestedtextgraphData__asExample_translations_text_text__asQ>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsQSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asQSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsQTextQBaseSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsQTextQAsTSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsQTextQAsISerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asISerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsQTextQAsITextIBaseSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsQTextQAsITextIAsTSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_translations_text_text__asI>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsISerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asISerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asI_textI__base>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsITextIBaseSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsITextIAsTSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsITextIAsQSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsITextIAsQTextQBaseSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseSerializer();
-Serializer<
-        GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsITextIAsQTextQAsTSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_translations_text_text__asT>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsTSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asTSerializer();
-Serializer<GnestedtextgraphData__asExample_translations_text_text__asL>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsLSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asLSerializer();
-Serializer<GnestedtextgraphData__asExample_translations_text_text__asL_link>
-    _$gnestedtextgraphDataAsExampleTranslationsTextTextAsLLinkSerializer =
-    new _$GnestedtextgraphData__asExample_translations_text_text__asL_linkSerializer();
-Serializer<GtexttransData> _$gtexttransDataSerializer =
-    new _$GtexttransDataSerializer();
-Serializer<GtexttransData_text> _$gtexttransDataTextSerializer =
-    new _$GtexttransData_textSerializer();
-Serializer<GtexttransData_text_text__base>
-    _$gtexttransDataTextTextBaseSerializer =
-    new _$GtexttransData_text_text__baseSerializer();
-Serializer<GtexttransData_text_text__asQ>
-    _$gtexttransDataTextTextAsQSerializer =
-    new _$GtexttransData_text_text__asQSerializer();
-Serializer<GtexttransData_text_text__asQ_textQ__base>
-    _$gtexttransDataTextTextAsQTextQBaseSerializer =
-    new _$GtexttransData_text_text__asQ_textQ__baseSerializer();
-Serializer<GtexttransData_text_text__asQ_textQ__asT>
-    _$gtexttransDataTextTextAsQTextQAsTSerializer =
-    new _$GtexttransData_text_text__asQ_textQ__asTSerializer();
-Serializer<GtexttransData_text_text__asQ_textQ__asI>
-    _$gtexttransDataTextTextAsQTextQAsISerializer =
-    new _$GtexttransData_text_text__asQ_textQ__asISerializer();
-Serializer<GtexttransData_text_text__asQ_textQ__asI_textI__base>
-    _$gtexttransDataTextTextAsQTextQAsITextIBaseSerializer =
-    new _$GtexttransData_text_text__asQ_textQ__asI_textI__baseSerializer();
-Serializer<GtexttransData_text_text__asQ_textQ__asI_textI__asT>
-    _$gtexttransDataTextTextAsQTextQAsITextIAsTSerializer =
-    new _$GtexttransData_text_text__asQ_textQ__asI_textI__asTSerializer();
-Serializer<GtexttransData_text_text__asI>
-    _$gtexttransDataTextTextAsISerializer =
-    new _$GtexttransData_text_text__asISerializer();
-Serializer<GtexttransData_text_text__asI_textI__base>
-    _$gtexttransDataTextTextAsITextIBaseSerializer =
-    new _$GtexttransData_text_text__asI_textI__baseSerializer();
-Serializer<GtexttransData_text_text__asI_textI__asT>
-    _$gtexttransDataTextTextAsITextIAsTSerializer =
-    new _$GtexttransData_text_text__asI_textI__asTSerializer();
-Serializer<GtexttransData_text_text__asI_textI__asQ>
-    _$gtexttransDataTextTextAsITextIAsQSerializer =
-    new _$GtexttransData_text_text__asI_textI__asQSerializer();
-Serializer<GtexttransData_text_text__asI_textI__asQ_textQ__base>
-    _$gtexttransDataTextTextAsITextIAsQTextQBaseSerializer =
-    new _$GtexttransData_text_text__asI_textI__asQ_textQ__baseSerializer();
-Serializer<GtexttransData_text_text__asI_textI__asQ_textQ__asT>
-    _$gtexttransDataTextTextAsITextIAsQTextQAsTSerializer =
-    new _$GtexttransData_text_text__asI_textI__asQ_textQ__asTSerializer();
-Serializer<GtexttransData_text_text__asT>
-    _$gtexttransDataTextTextAsTSerializer =
-    new _$GtexttransData_text_text__asTSerializer();
-Serializer<GtexttransData_text_text__asL>
-    _$gtexttransDataTextTextAsLSerializer =
-    new _$GtexttransData_text_text__asLSerializer();
-Serializer<GtexttransData_text_text__asL_link>
-    _$gtexttransDataTextTextAsLLinkSerializer =
-    new _$GtexttransData_text_text__asL_linkSerializer();
-Serializer<GtextData> _$gtextDataSerializer = new _$GtextDataSerializer();
-Serializer<GtextData_text> _$gtextDataTextSerializer =
-    new _$GtextData_textSerializer();
-Serializer<GtextData_text_text__base> _$gtextDataTextTextBaseSerializer =
-    new _$GtextData_text_text__baseSerializer();
-Serializer<GtextData_text_text__asQ> _$gtextDataTextTextAsQSerializer =
-    new _$GtextData_text_text__asQSerializer();
-Serializer<GtextData_text_text__asQ_textQ__base>
-    _$gtextDataTextTextAsQTextQBaseSerializer =
-    new _$GtextData_text_text__asQ_textQ__baseSerializer();
-Serializer<GtextData_text_text__asQ_textQ__asT>
-    _$gtextDataTextTextAsQTextQAsTSerializer =
-    new _$GtextData_text_text__asQ_textQ__asTSerializer();
-Serializer<GtextData_text_text__asQ_textQ__asI>
-    _$gtextDataTextTextAsQTextQAsISerializer =
-    new _$GtextData_text_text__asQ_textQ__asISerializer();
-Serializer<GtextData_text_text__asQ_textQ__asI_textI__base>
-    _$gtextDataTextTextAsQTextQAsITextIBaseSerializer =
-    new _$GtextData_text_text__asQ_textQ__asI_textI__baseSerializer();
-Serializer<GtextData_text_text__asQ_textQ__asI_textI__asT>
-    _$gtextDataTextTextAsQTextQAsITextIAsTSerializer =
-    new _$GtextData_text_text__asQ_textQ__asI_textI__asTSerializer();
-Serializer<GtextData_text_text__asI> _$gtextDataTextTextAsISerializer =
-    new _$GtextData_text_text__asISerializer();
-Serializer<GtextData_text_text__asI_textI__base>
-    _$gtextDataTextTextAsITextIBaseSerializer =
-    new _$GtextData_text_text__asI_textI__baseSerializer();
-Serializer<GtextData_text_text__asI_textI__asT>
-    _$gtextDataTextTextAsITextIAsTSerializer =
-    new _$GtextData_text_text__asI_textI__asTSerializer();
-Serializer<GtextData_text_text__asI_textI__asQ>
-    _$gtextDataTextTextAsITextIAsQSerializer =
-    new _$GtextData_text_text__asI_textI__asQSerializer();
-Serializer<GtextData_text_text__asI_textI__asQ_textQ__base>
-    _$gtextDataTextTextAsITextIAsQTextQBaseSerializer =
-    new _$GtextData_text_text__asI_textI__asQ_textQ__baseSerializer();
-Serializer<GtextData_text_text__asI_textI__asQ_textQ__asT>
-    _$gtextDataTextTextAsITextIAsQTextQAsTSerializer =
-    new _$GtextData_text_text__asI_textI__asQ_textQ__asTSerializer();
-Serializer<GtextData_text_text__asT> _$gtextDataTextTextAsTSerializer =
-    new _$GtextData_text_text__asTSerializer();
-Serializer<GtextData_text_text__asL> _$gtextDataTextTextAsLSerializer =
-    new _$GtextData_text_text__asLSerializer();
-Serializer<GtextData_text_text__asL_link> _$gtextDataTextTextAsLLinkSerializer =
-    new _$GtextData_text_text__asL_linkSerializer();
 Serializer<GlemmalinkData> _$glemmalinkDataSerializer =
     new _$GlemmalinkDataSerializer();
 Serializer<GtxtDetailsData> _$gtxtDetailsDataSerializer =
@@ -2587,6 +2479,2177 @@ class _$GtextgraphData__baseSerializer
   }
 }
 
+class _$GtextgraphData__asExampleSerializer
+    implements StructuredSerializer<GtextgraphData__asExample> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample,
+    _$GtextgraphData__asExample
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'text',
+      serializers.serialize(object.text,
+          specifiedType: const FullType(GtextgraphData__asExample_text)),
+      'lang',
+      serializers.serialize(object.lang,
+          specifiedType: const FullType(_i2.GLangType)),
+    ];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.translations;
+    if (value != null) {
+      result
+        ..add('translations')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GtextgraphData__asExample_translations)
+            ])));
+    }
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExampleBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'text':
+          result.text.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GtextgraphData__asExample_text))!
+              as GtextgraphData__asExample_text);
+          break;
+        case 'lang':
+          result.lang = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GLangType))! as _i2.GLangType;
+          break;
+        case 'translations':
+          result.translations.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType.nullable(GtextgraphData__asExample_translations)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_textSerializer
+    implements StructuredSerializer<GtextgraphData__asExample_text> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text,
+    _$GtextgraphData__asExample_text
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample_text object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'text',
+      serializers.serialize(object.text,
+          specifiedType: const FullType(BuiltList,
+              const [const FullType(GtextgraphData__asExample_text_text)])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_textBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'text':
+          result.text.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GtextgraphData__asExample_text_text)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__baseSerializer
+    implements StructuredSerializer<GtextgraphData__asExample_text_text__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__base,
+    _$GtextgraphData__asExample_text_text__base
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__base';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample_text_text__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_text_text__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQSerializer
+    implements StructuredSerializer<GtextgraphData__asExample_text_text__asQ> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asQ,
+    _$GtextgraphData__asExample_text_text__asQ
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asQ';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample_text_text__asQ object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textQ',
+      serializers.serialize(object.textQ,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(GtextgraphData__asExample_text_text__asQ_textQ)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_text_text__asQBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textQ':
+          result.textQ.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GtextgraphData__asExample_text_text__asQ_textQ)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asQ_textQ__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asQ_textQ__base,
+    _$GtextgraphData__asExample_text_text__asQ_textQ__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_text_text__asQ_textQ__base';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asQ_textQ__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asQ_textQ__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asQ_textQ__asT,
+    _$GtextgraphData__asExample_text_text__asQ_textQ__asT
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asQ_textQ__asT';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asQ_textQ__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asISerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asQ_textQ__asI> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asQ_textQ__asI,
+    _$GtextgraphData__asExample_text_text__asQ_textQ__asI
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asQ_textQ__asI';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asQ_textQ__asI object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textI',
+      serializers.serialize(object.textI,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_text_text__asQ_textQ__asI_textI)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textI':
+          result.textI.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GtextgraphData__asExample_text_text__asQ_textQ__asI_textI)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base,
+    _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT,
+    _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asISerializer
+    implements StructuredSerializer<GtextgraphData__asExample_text_text__asI> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asI,
+    _$GtextgraphData__asExample_text_text__asI
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asI';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample_text_text__asI object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textI',
+      serializers.serialize(object.textI,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(GtextgraphData__asExample_text_text__asI_textI)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_text_text__asIBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textI':
+          result.textI.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GtextgraphData__asExample_text_text__asI_textI)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asI_textI__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asI_textI__base,
+    _$GtextgraphData__asExample_text_text__asI_textI__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_text_text__asI_textI__base';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asI_textI__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asI_textI__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asI_textI__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asI_textI__asT,
+    _$GtextgraphData__asExample_text_text__asI_textI__asT
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asI_textI__asT';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asI_textI__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asI_textI__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asQSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asI_textI__asQ> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asI_textI__asQ,
+    _$GtextgraphData__asExample_text_text__asI_textI__asQ
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asI_textI__asQ';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asI_textI__asQ object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textQ',
+      serializers.serialize(object.textQ,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_text_text__asI_textI__asQ_textQ)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asI_textI__asQBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textQ':
+          result.textQ.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GtextgraphData__asExample_text_text__asI_textI__asQ_textQ)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base,
+    _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT,
+    _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asTSerializer
+    implements StructuredSerializer<GtextgraphData__asExample_text_text__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asT,
+    _$GtextgraphData__asExample_text_text__asT
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asT';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample_text_text__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_text_text__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asLSerializer
+    implements StructuredSerializer<GtextgraphData__asExample_text_text__asL> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asL,
+    _$GtextgraphData__asExample_text_text__asL
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asL';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample_text_text__asL object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'link',
+      serializers.serialize(object.link,
+          specifiedType:
+              const FullType(GtextgraphData__asExample_text_text__asL_link)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asL deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_text_text__asLBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'link':
+          result.link.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GtextgraphData__asExample_text_text__asL_link))!
+              as GtextgraphData__asExample_text_text__asL_link);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asL_linkSerializer
+    implements
+        StructuredSerializer<GtextgraphData__asExample_text_text__asL_link> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_text_text__asL_link,
+    _$GtextgraphData__asExample_text_text__asL_link
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_text_text__asL_link';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_text_text__asL_link object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'lemma',
+      serializers.serialize(object.lemma,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.source;
+    if (value != null) {
+      result
+        ..add('source')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.pos;
+    if (value != null) {
+      result
+        ..add('pos')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GGramType)));
+    }
+    value = object.lang;
+    if (value != null) {
+      result
+        ..add('lang')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GLangType)));
+    }
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.text;
+    if (value != null) {
+      result
+        ..add('text')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asL_link deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_text_text__asL_linkBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'source':
+          result.source = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'lemma':
+          result.lemma = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'pos':
+          result.pos = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GGramType)) as _i2.GGramType?;
+          break;
+        case 'lang':
+          result.lang = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GLangType)) as _i2.GLangType?;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'text':
+          result.text = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translationsSerializer
+    implements StructuredSerializer<GtextgraphData__asExample_translations> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations,
+    _$GtextgraphData__asExample_translations
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_translations';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers, GtextgraphData__asExample_translations object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'text',
+      serializers.serialize(object.text,
+          specifiedType:
+              const FullType(GtextgraphData__asExample_translations_text)),
+      'lang',
+      serializers.serialize(object.lang,
+          specifiedType: const FullType(_i2.GLangType)),
+    ];
+    Object? value;
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_translationsBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'text':
+          result.text.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GtextgraphData__asExample_translations_text))!
+              as GtextgraphData__asExample_translations_text);
+          break;
+        case 'lang':
+          result.lang = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GLangType))! as _i2.GLangType;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_textSerializer
+    implements
+        StructuredSerializer<GtextgraphData__asExample_translations_text> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text,
+    _$GtextgraphData__asExample_translations_text
+  ];
+  @override
+  final String wireName = 'GtextgraphData__asExample_translations_text';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'text',
+      serializers.serialize(object.text,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(GtextgraphData__asExample_translations_text_text)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new GtextgraphData__asExample_translations_textBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'text':
+          result.text.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GtextgraphData__asExample_translations_text_text)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__base,
+    _$GtextgraphData__asExample_translations_text_text__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__base';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asQ> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asQ,
+    _$GtextgraphData__asExample_translations_text_text__asQ
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asQ';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asQ object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textQ',
+      serializers.serialize(object.textQ,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asQ_textQ)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asQBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textQ':
+          result.textQ.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GtextgraphData__asExample_translations_text_text__asQ_textQ)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__base,
+    _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asQ_textQ__base';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asT,
+    _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asQ_textQ__asT';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asISerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asI,
+    _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textI',
+      serializers.serialize(object.textI,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textI':
+          result.textI.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base,
+    _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT,
+    _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asISerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asI> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asI,
+    _$GtextgraphData__asExample_translations_text_text__asI
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asI';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asI object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textI',
+      serializers.serialize(object.textI,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asI_textI)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asIBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textI':
+          result.textI.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GtextgraphData__asExample_translations_text_text__asI_textI)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asI_textI__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asI_textI__base,
+    _$GtextgraphData__asExample_translations_text_text__asI_textI__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asI_textI__base';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asI_textI__base object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__base deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asI_textI__asT,
+    _$GtextgraphData__asExample_translations_text_text__asI_textI__asT
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asI_textI__asT';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asI_textI__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asQSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asI_textI__asQ,
+    _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asI_textI__asQ';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asI_textI__asQ object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textQ',
+      serializers.serialize(object.textQ,
+          specifiedType: const FullType(BuiltList, const [
+            const FullType(
+                GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ)
+          ])),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textQ':
+          result.textQ.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(
+                    GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ)
+              ]))! as BuiltList<Object?>);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base,
+    _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT,
+    _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT';
+
+  @override
+  Iterable<Object?> serialize(
+      Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+          object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+      deserialize(Serializers serializers, Iterable<Object?> serialized,
+          {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asTSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asT> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asT,
+    _$GtextgraphData__asExample_translations_text_text__asT
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asT';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asT object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'textT',
+      serializers.serialize(object.textT,
+          specifiedType: const FullType(String)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asT deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asTBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'textT':
+          result.textT = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asLSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asL> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asL,
+    _$GtextgraphData__asExample_translations_text_text__asL
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asL';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asL object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'link',
+      serializers.serialize(object.link,
+          specifiedType: const FullType(
+              GtextgraphData__asExample_translations_text_text__asL_link)),
+    ];
+
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asL deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asLBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'link':
+          result.link.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      GtextgraphData__asExample_translations_text_text__asL_link))!
+              as GtextgraphData__asExample_translations_text_text__asL_link);
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asL_linkSerializer
+    implements
+        StructuredSerializer<
+            GtextgraphData__asExample_translations_text_text__asL_link> {
+  @override
+  final Iterable<Type> types = const [
+    GtextgraphData__asExample_translations_text_text__asL_link,
+    _$GtextgraphData__asExample_translations_text_text__asL_link
+  ];
+  @override
+  final String wireName =
+      'GtextgraphData__asExample_translations_text_text__asL_link';
+
+  @override
+  Iterable<Object?> serialize(Serializers serializers,
+      GtextgraphData__asExample_translations_text_text__asL_link object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object?>[
+      '__typename',
+      serializers.serialize(object.G__typename,
+          specifiedType: const FullType(String)),
+      'lemma',
+      serializers.serialize(object.lemma,
+          specifiedType: const FullType(String)),
+    ];
+    Object? value;
+    value = object.source;
+    if (value != null) {
+      result
+        ..add('source')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.pos;
+    if (value != null) {
+      result
+        ..add('pos')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GGramType)));
+    }
+    value = object.lang;
+    if (value != null) {
+      result
+        ..add('lang')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(_i2.GLangType)));
+    }
+    value = object.id;
+    if (value != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.text;
+    if (value != null) {
+      result
+        ..add('text')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asL_link deserialize(
+      Serializers serializers, Iterable<Object?> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result =
+        new GtextgraphData__asExample_translations_text_text__asL_linkBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current! as String;
+      iterator.moveNext();
+      final Object? value = iterator.current;
+      switch (key) {
+        case '__typename':
+          result.G__typename = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'source':
+          result.source = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'lemma':
+          result.lemma = serializers.deserialize(value,
+              specifiedType: const FullType(String))! as String;
+          break;
+        case 'pos':
+          result.pos = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GGramType)) as _i2.GGramType?;
+          break;
+        case 'lang':
+          result.lang = serializers.deserialize(value,
+              specifiedType: const FullType(_i2.GLangType)) as _i2.GLangType?;
+          break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+        case 'text':
+          result.text = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
 class _$GtextgraphData__asProverbSerializer
     implements StructuredSerializer<GtextgraphData__asProverb> {
   @override
@@ -4716,4291 +6779,6 @@ class _$GtextgraphData__asProverb_translations_text_text__asL_linkSerializer
       {FullType specifiedType = FullType.unspecified}) {
     final result =
         new GtextgraphData__asProverb_translations_text_text__asL_linkBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'source':
-          result.source = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'lemma':
-          result.lemma = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'pos':
-          result.pos = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GGramType)) as _i2.GGramType?;
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType)) as _i2.GLangType?;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__baseSerializer
-    implements StructuredSerializer<GnestedtextgraphData__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__base,
-    _$GnestedtextgraphData__base
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GnestedtextgraphData__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExampleSerializer
-    implements StructuredSerializer<GnestedtextgraphData__asExample> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample,
-    _$GnestedtextgraphData__asExample
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GnestedtextgraphData__asExample object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(GnestedtextgraphData__asExample_text)),
-      'lang',
-      serializers.serialize(object.lang,
-          specifiedType: const FullType(_i2.GLangType)),
-    ];
-    Object? value;
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.translations;
-    if (value != null) {
-      result
-        ..add('translations')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType.nullable(
-                  GnestedtextgraphData__asExample_translations)
-            ])));
-    }
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExampleBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(GnestedtextgraphData__asExample_text))!
-              as GnestedtextgraphData__asExample_text);
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType))! as _i2.GLangType;
-          break;
-        case 'translations':
-          result.translations.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType.nullable(
-                    GnestedtextgraphData__asExample_translations)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_textSerializer
-    implements StructuredSerializer<GnestedtextgraphData__asExample_text> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text,
-    _$GnestedtextgraphData__asExample_text
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_text';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GnestedtextgraphData__asExample_text object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GnestedtextgraphData__asExample_text_text)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExample_textBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GnestedtextgraphData__asExample_text_text)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__baseSerializer
-    implements
-        StructuredSerializer<GnestedtextgraphData__asExample_text_text__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__base,
-    _$GnestedtextgraphData__asExample_text_text__base
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_text_text__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExample_text_text__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQSerializer
-    implements
-        StructuredSerializer<GnestedtextgraphData__asExample_text_text__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asQ,
-    _$GnestedtextgraphData__asExample_text_text__asQ
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_text_text__asQ';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asQ object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GnestedtextgraphData__asExample_text_text__asQ_textQ)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExample_text_text__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_text_text__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__base,
-    _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asT,
-    _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asISerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asI,
-    _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asI object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base,
-    _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT,
-    _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asISerializer
-    implements
-        StructuredSerializer<GnestedtextgraphData__asExample_text_text__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asI,
-    _$GnestedtextgraphData__asExample_text_text__asI
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_text_text__asI';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asI object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GnestedtextgraphData__asExample_text_text__asI_textI)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExample_text_text__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_text_text__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asI_textI__base,
-    _$GnestedtextgraphData__asExample_text_text__asI_textI__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asI_textI__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asI_textI__asT,
-    _$GnestedtextgraphData__asExample_text_text__asI_textI__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asI_textI__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asQSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asI_textI__asQ,
-    _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asI_textI__asQ';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asI_textI__asQ object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base,
-    _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT,
-    _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asTSerializer
-    implements
-        StructuredSerializer<GnestedtextgraphData__asExample_text_text__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asT,
-    _$GnestedtextgraphData__asExample_text_text__asT
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_text_text__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExample_text_text__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asLSerializer
-    implements
-        StructuredSerializer<GnestedtextgraphData__asExample_text_text__asL> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asL,
-    _$GnestedtextgraphData__asExample_text_text__asL
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_text_text__asL';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asL object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'link',
-      serializers.serialize(object.link,
-          specifiedType: const FullType(
-              GnestedtextgraphData__asExample_text_text__asL_link)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asL deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExample_text_text__asLBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'link':
-          result.link.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      GnestedtextgraphData__asExample_text_text__asL_link))!
-              as GnestedtextgraphData__asExample_text_text__asL_link);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asL_linkSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_text_text__asL_link> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_text_text__asL_link,
-    _$GnestedtextgraphData__asExample_text_text__asL_link
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_text_text__asL_link';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_text_text__asL_link object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'lemma',
-      serializers.serialize(object.lemma,
-          specifiedType: const FullType(String)),
-    ];
-    Object? value;
-    value = object.source;
-    if (value != null) {
-      result
-        ..add('source')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.pos;
-    if (value != null) {
-      result
-        ..add('pos')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GGramType)));
-    }
-    value = object.lang;
-    if (value != null) {
-      result
-        ..add('lang')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GLangType)));
-    }
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.text;
-    if (value != null) {
-      result
-        ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asL_link deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_text_text__asL_linkBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'source':
-          result.source = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'lemma':
-          result.lemma = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'pos':
-          result.pos = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GGramType)) as _i2.GGramType?;
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType)) as _i2.GLangType?;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translationsSerializer
-    implements
-        StructuredSerializer<GnestedtextgraphData__asExample_translations> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations,
-    _$GnestedtextgraphData__asExample_translations
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_translations';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(
-              GnestedtextgraphData__asExample_translations_text)),
-      'lang',
-      serializers.serialize(object.lang,
-          specifiedType: const FullType(_i2.GLangType)),
-    ];
-    Object? value;
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GnestedtextgraphData__asExample_translationsBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      GnestedtextgraphData__asExample_translations_text))!
-              as GnestedtextgraphData__asExample_translations_text);
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType))! as _i2.GLangType;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_textSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text,
-    _$GnestedtextgraphData__asExample_translations_text
-  ];
-  @override
-  final String wireName = 'GnestedtextgraphData__asExample_translations_text';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_textBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_translations_text_text)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__base,
-    _$GnestedtextgraphData__asExample_translations_text_text__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asQ,
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asQ';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asQ object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asQ_textQ)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base,
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT,
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asISerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI,
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base,
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT,
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asISerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asI,
-    _$GnestedtextgraphData__asExample_translations_text_text__asI
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asI';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asI object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asI_textI)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_translations_text_text__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__base,
-    _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT,
-    _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ,
-    _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(
-                GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(
-                    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base,
-    _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT,
-    _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-          object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-      deserialize(Serializers serializers, Iterable<Object?> serialized,
-          {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asTSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asT,
-    _$GnestedtextgraphData__asExample_translations_text_text__asT
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asLSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asL> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asL,
-    _$GnestedtextgraphData__asExample_translations_text_text__asL
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asL';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asL object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'link',
-      serializers.serialize(object.link,
-          specifiedType: const FullType(
-              GnestedtextgraphData__asExample_translations_text_text__asL_link)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asL deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asLBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'link':
-          result.link.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      GnestedtextgraphData__asExample_translations_text_text__asL_link))!
-              as GnestedtextgraphData__asExample_translations_text_text__asL_link);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asL_linkSerializer
-    implements
-        StructuredSerializer<
-            GnestedtextgraphData__asExample_translations_text_text__asL_link> {
-  @override
-  final Iterable<Type> types = const [
-    GnestedtextgraphData__asExample_translations_text_text__asL_link,
-    _$GnestedtextgraphData__asExample_translations_text_text__asL_link
-  ];
-  @override
-  final String wireName =
-      'GnestedtextgraphData__asExample_translations_text_text__asL_link';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GnestedtextgraphData__asExample_translations_text_text__asL_link object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'lemma',
-      serializers.serialize(object.lemma,
-          specifiedType: const FullType(String)),
-    ];
-    Object? value;
-    value = object.source;
-    if (value != null) {
-      result
-        ..add('source')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.pos;
-    if (value != null) {
-      result
-        ..add('pos')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GGramType)));
-    }
-    value = object.lang;
-    if (value != null) {
-      result
-        ..add('lang')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GLangType)));
-    }
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.text;
-    if (value != null) {
-      result
-        ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asL_link deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'source':
-          result.source = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'lemma':
-          result.lemma = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'pos':
-          result.pos = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GGramType)) as _i2.GGramType?;
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType)) as _i2.GLangType?;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransDataSerializer
-    implements StructuredSerializer<GtexttransData> {
-  @override
-  final Iterable<Type> types = const [GtexttransData, _$GtexttransData];
-  @override
-  final String wireName = 'GtexttransData';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GtexttransData object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(GtexttransData_text)),
-      'lang',
-      serializers.serialize(object.lang,
-          specifiedType: const FullType(_i2.GLangType)),
-    ];
-    Object? value;
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  GtexttransData deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransDataBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GtexttransData_text))!
-              as GtexttransData_text);
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType))! as _i2.GLangType;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_textSerializer
-    implements StructuredSerializer<GtexttransData_text> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text,
-    _$GtexttransData_text
-  ];
-  @override
-  final String wireName = 'GtexttransData_text';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(
-              BuiltList, const [const FullType(GtexttransData_text_text)])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_textBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtexttransData_text_text)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__baseSerializer
-    implements StructuredSerializer<GtexttransData_text_text__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__base,
-    _$GtexttransData_text_text__base
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asQSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asQ,
-    _$GtexttransData_text_text__asQ
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asQ';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asQ object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList,
-              const [const FullType(GtexttransData_text_text__asQ_textQ)])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asQ deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtexttransData_text_text__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__baseSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asQ_textQ__base,
-    _$GtexttransData_text_text__asQ_textQ__base
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asQ_textQ__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asTSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asQ_textQ__asT,
-    _$GtexttransData_text_text__asQ_textQ__asT
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asQ_textQ__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asISerializer
-    implements StructuredSerializer<GtexttransData_text_text__asQ_textQ__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asQ_textQ__asI,
-    _$GtexttransData_text_text__asQ_textQ__asI
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asQ_textQ__asI';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asQ_textQ__asI object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GtexttransData_text_text__asQ_textQ__asI_textI)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asQ_textQ__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtexttransData_text_text__asQ_textQ__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asI_textI__baseSerializer
-    implements
-        StructuredSerializer<
-            GtexttransData_text_text__asQ_textQ__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asQ_textQ__asI_textI__base,
-    _$GtexttransData_text_text__asQ_textQ__asI_textI__base
-  ];
-  @override
-  final String wireName =
-      'GtexttransData_text_text__asQ_textQ__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtexttransData_text_text__asQ_textQ__asI_textI__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asI_textI__asTSerializer
-    implements
-        StructuredSerializer<
-            GtexttransData_text_text__asQ_textQ__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asQ_textQ__asI_textI__asT,
-    _$GtexttransData_text_text__asQ_textQ__asI_textI__asT
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asQ_textQ__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtexttransData_text_text__asQ_textQ__asI_textI__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asISerializer
-    implements StructuredSerializer<GtexttransData_text_text__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asI,
-    _$GtexttransData_text_text__asI
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asI';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asI object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList,
-              const [const FullType(GtexttransData_text_text__asI_textI)])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asI deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtexttransData_text_text__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__baseSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asI_textI__base,
-    _$GtexttransData_text_text__asI_textI__base
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asI_textI__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asTSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asI_textI__asT,
-    _$GtexttransData_text_text__asI_textI__asT
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asI_textI__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asQSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asI_textI__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asI_textI__asQ,
-    _$GtexttransData_text_text__asI_textI__asQ
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asI_textI__asQ';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asI_textI__asQ object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GtexttransData_text_text__asI_textI__asQ_textQ)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asI_textI__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtexttransData_text_text__asI_textI__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asQ_textQ__baseSerializer
-    implements
-        StructuredSerializer<
-            GtexttransData_text_text__asI_textI__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asI_textI__asQ_textQ__base,
-    _$GtexttransData_text_text__asI_textI__asQ_textQ__base
-  ];
-  @override
-  final String wireName =
-      'GtexttransData_text_text__asI_textI__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtexttransData_text_text__asI_textI__asQ_textQ__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asQ_textQ__asTSerializer
-    implements
-        StructuredSerializer<
-            GtexttransData_text_text__asI_textI__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asI_textI__asQ_textQ__asT,
-    _$GtexttransData_text_text__asI_textI__asQ_textQ__asT
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asI_textI__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtexttransData_text_text__asI_textI__asQ_textQ__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asTSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asT,
-    _$GtexttransData_text_text__asT
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asLSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asL> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asL,
-    _$GtexttransData_text_text__asL
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asL';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asL object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'link',
-      serializers.serialize(object.link,
-          specifiedType: const FullType(GtexttransData_text_text__asL_link)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asL deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asLBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'link':
-          result.link.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(GtexttransData_text_text__asL_link))!
-              as GtexttransData_text_text__asL_link);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtexttransData_text_text__asL_linkSerializer
-    implements StructuredSerializer<GtexttransData_text_text__asL_link> {
-  @override
-  final Iterable<Type> types = const [
-    GtexttransData_text_text__asL_link,
-    _$GtexttransData_text_text__asL_link
-  ];
-  @override
-  final String wireName = 'GtexttransData_text_text__asL_link';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtexttransData_text_text__asL_link object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'lemma',
-      serializers.serialize(object.lemma,
-          specifiedType: const FullType(String)),
-    ];
-    Object? value;
-    value = object.source;
-    if (value != null) {
-      result
-        ..add('source')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.pos;
-    if (value != null) {
-      result
-        ..add('pos')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GGramType)));
-    }
-    value = object.lang;
-    if (value != null) {
-      result
-        ..add('lang')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GLangType)));
-    }
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.text;
-    if (value != null) {
-      result
-        ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  GtexttransData_text_text__asL_link deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtexttransData_text_text__asL_linkBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'source':
-          result.source = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'lemma':
-          result.lemma = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'pos':
-          result.pos = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GGramType)) as _i2.GGramType?;
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType)) as _i2.GLangType?;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextDataSerializer implements StructuredSerializer<GtextData> {
-  @override
-  final Iterable<Type> types = const [GtextData, _$GtextData];
-  @override
-  final String wireName = 'GtextData';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GtextData object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(GtextData_text)),
-      'lang',
-      serializers.serialize(object.lang,
-          specifiedType: const FullType(_i2.GLangType)),
-    ];
-    Object? value;
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  GtextData deserialize(Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextDataBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GtextData_text))!
-              as GtextData_text);
-          break;
-        case 'lang':
-          result.lang = serializers.deserialize(value,
-              specifiedType: const FullType(_i2.GLangType))! as _i2.GLangType;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_textSerializer
-    implements StructuredSerializer<GtextData_text> {
-  @override
-  final Iterable<Type> types = const [GtextData_text, _$GtextData_text];
-  @override
-  final String wireName = 'GtextData_text';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GtextData_text object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'text',
-      serializers.serialize(object.text,
-          specifiedType: const FullType(
-              BuiltList, const [const FullType(GtextData_text_text)])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_textBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'text':
-          result.text.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(GtextData_text_text)]))!
-              as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__baseSerializer
-    implements StructuredSerializer<GtextData_text_text__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__base,
-    _$GtextData_text_text__base
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asQSerializer
-    implements StructuredSerializer<GtextData_text_text__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asQ,
-    _$GtextData_text_text__asQ
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asQ';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asQ object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList,
-              const [const FullType(GtextData_text_text__asQ_textQ)])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asQ deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtextData_text_text__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__baseSerializer
-    implements StructuredSerializer<GtextData_text_text__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asQ_textQ__base,
-    _$GtextData_text_text__asQ_textQ__base
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asQ_textQ__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asTSerializer
-    implements StructuredSerializer<GtextData_text_text__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asQ_textQ__asT,
-    _$GtextData_text_text__asQ_textQ__asT
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asQ_textQ__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asISerializer
-    implements StructuredSerializer<GtextData_text_text__asQ_textQ__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asQ_textQ__asI,
-    _$GtextData_text_text__asQ_textQ__asI
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asQ_textQ__asI';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asQ_textQ__asI object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GtextData_text_text__asQ_textQ__asI_textI)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asQ_textQ__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtextData_text_text__asQ_textQ__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asI_textI__baseSerializer
-    implements
-        StructuredSerializer<GtextData_text_text__asQ_textQ__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asQ_textQ__asI_textI__base,
-    _$GtextData_text_text__asQ_textQ__asI_textI__base
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asQ_textQ__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtextData_text_text__asQ_textQ__asI_textI__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asQ_textQ__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asI_textI__asTSerializer
-    implements
-        StructuredSerializer<GtextData_text_text__asQ_textQ__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asQ_textQ__asI_textI__asT,
-    _$GtextData_text_text__asQ_textQ__asI_textI__asT
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asQ_textQ__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtextData_text_text__asQ_textQ__asI_textI__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asQ_textQ__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asISerializer
-    implements StructuredSerializer<GtextData_text_text__asI> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asI,
-    _$GtextData_text_text__asI
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asI';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asI object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textI',
-      serializers.serialize(object.textI,
-          specifiedType: const FullType(BuiltList,
-              const [const FullType(GtextData_text_text__asI_textI)])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asI deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asIBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textI':
-          result.textI.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtextData_text_text__asI_textI)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asI_textI__baseSerializer
-    implements StructuredSerializer<GtextData_text_text__asI_textI__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asI_textI__base,
-    _$GtextData_text_text__asI_textI__base
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asI_textI__base';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asI_textI__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asI_textI__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asI_textI__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asTSerializer
-    implements StructuredSerializer<GtextData_text_text__asI_textI__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asI_textI__asT,
-    _$GtextData_text_text__asI_textI__asT
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asI_textI__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asI_textI__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asI_textI__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asQSerializer
-    implements StructuredSerializer<GtextData_text_text__asI_textI__asQ> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asI_textI__asQ,
-    _$GtextData_text_text__asI_textI__asQ
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asI_textI__asQ';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asI_textI__asQ object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textQ',
-      serializers.serialize(object.textQ,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(GtextData_text_text__asI_textI__asQ_textQ)
-          ])),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asI_textI__asQBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textQ':
-          result.textQ.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GtextData_text_text__asI_textI__asQ_textQ)
-              ]))! as BuiltList<Object?>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asQ_textQ__baseSerializer
-    implements
-        StructuredSerializer<GtextData_text_text__asI_textI__asQ_textQ__base> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asI_textI__asQ_textQ__base,
-    _$GtextData_text_text__asI_textI__asQ_textQ__base
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asI_textI__asQ_textQ__base';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtextData_text_text__asI_textI__asQ_textQ__base object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__base deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asI_textI__asQ_textQ__baseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asQ_textQ__asTSerializer
-    implements
-        StructuredSerializer<GtextData_text_text__asI_textI__asQ_textQ__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asI_textI__asQ_textQ__asT,
-    _$GtextData_text_text__asI_textI__asQ_textQ__asT
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asI_textI__asQ_textQ__asT';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers,
-      GtextData_text_text__asI_textI__asQ_textQ__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asI_textI__asQ_textQ__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asTSerializer
-    implements StructuredSerializer<GtextData_text_text__asT> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asT,
-    _$GtextData_text_text__asT
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asT';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asT object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'textT',
-      serializers.serialize(object.textT,
-          specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asT deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asTBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'textT':
-          result.textT = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asLSerializer
-    implements StructuredSerializer<GtextData_text_text__asL> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asL,
-    _$GtextData_text_text__asL
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asL';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asL object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'link',
-      serializers.serialize(object.link,
-          specifiedType: const FullType(GtextData_text_text__asL_link)),
-    ];
-
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asL deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asLBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current! as String;
-      iterator.moveNext();
-      final Object? value = iterator.current;
-      switch (key) {
-        case '__typename':
-          result.G__typename = serializers.deserialize(value,
-              specifiedType: const FullType(String))! as String;
-          break;
-        case 'link':
-          result.link.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(GtextData_text_text__asL_link))!
-              as GtextData_text_text__asL_link);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$GtextData_text_text__asL_linkSerializer
-    implements StructuredSerializer<GtextData_text_text__asL_link> {
-  @override
-  final Iterable<Type> types = const [
-    GtextData_text_text__asL_link,
-    _$GtextData_text_text__asL_link
-  ];
-  @override
-  final String wireName = 'GtextData_text_text__asL_link';
-
-  @override
-  Iterable<Object?> serialize(
-      Serializers serializers, GtextData_text_text__asL_link object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object?>[
-      '__typename',
-      serializers.serialize(object.G__typename,
-          specifiedType: const FullType(String)),
-      'lemma',
-      serializers.serialize(object.lemma,
-          specifiedType: const FullType(String)),
-    ];
-    Object? value;
-    value = object.source;
-    if (value != null) {
-      result
-        ..add('source')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.pos;
-    if (value != null) {
-      result
-        ..add('pos')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GGramType)));
-    }
-    value = object.lang;
-    if (value != null) {
-      result
-        ..add('lang')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(_i2.GLangType)));
-    }
-    value = object.id;
-    if (value != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.text;
-    if (value != null) {
-      result
-        ..add('text')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  GtextData_text_text__asL_link deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new GtextData_text_text__asL_linkBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -14469,6 +12247,4864 @@ class GtextgraphData__baseBuilder
   }
 }
 
+class _$GtextgraphData__asExample extends GtextgraphData__asExample {
+  @override
+  final String G__typename;
+  @override
+  final String? id;
+  @override
+  final GtextgraphData__asExample_text text;
+  @override
+  final _i2.GLangType lang;
+  @override
+  final BuiltList<GtextgraphData__asExample_translations?>? translations;
+
+  factory _$GtextgraphData__asExample(
+          [void Function(GtextgraphData__asExampleBuilder)? updates]) =>
+      (new GtextgraphData__asExampleBuilder()..update(updates))._build();
+
+  _$GtextgraphData__asExample._(
+      {required this.G__typename,
+      this.id,
+      required this.text,
+      required this.lang,
+      this.translations})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GtextgraphData__asExample', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        text, r'GtextgraphData__asExample', 'text');
+    BuiltValueNullFieldError.checkNotNull(
+        lang, r'GtextgraphData__asExample', 'lang');
+  }
+
+  @override
+  GtextgraphData__asExample rebuild(
+          void Function(GtextgraphData__asExampleBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExampleBuilder toBuilder() =>
+      new GtextgraphData__asExampleBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        text == other.text &&
+        lang == other.lang &&
+        translations == other.translations;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jc(_$hash, lang.hashCode);
+    _$hash = $jc(_$hash, translations.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GtextgraphData__asExample')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('text', text)
+          ..add('lang', lang)
+          ..add('translations', translations))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExampleBuilder
+    implements
+        Builder<GtextgraphData__asExample, GtextgraphData__asExampleBuilder> {
+  _$GtextgraphData__asExample? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  GtextgraphData__asExample_textBuilder? _text;
+  GtextgraphData__asExample_textBuilder get text =>
+      _$this._text ??= new GtextgraphData__asExample_textBuilder();
+  set text(GtextgraphData__asExample_textBuilder? text) => _$this._text = text;
+
+  _i2.GLangType? _lang;
+  _i2.GLangType? get lang => _$this._lang;
+  set lang(_i2.GLangType? lang) => _$this._lang = lang;
+
+  ListBuilder<GtextgraphData__asExample_translations?>? _translations;
+  ListBuilder<GtextgraphData__asExample_translations?> get translations =>
+      _$this._translations ??=
+          new ListBuilder<GtextgraphData__asExample_translations?>();
+  set translations(
+          ListBuilder<GtextgraphData__asExample_translations?>? translations) =>
+      _$this._translations = translations;
+
+  GtextgraphData__asExampleBuilder() {
+    GtextgraphData__asExample._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExampleBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _text = $v.text.toBuilder();
+      _lang = $v.lang;
+      _translations = $v.translations?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample;
+  }
+
+  @override
+  void update(void Function(GtextgraphData__asExampleBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample build() => _build();
+
+  _$GtextgraphData__asExample _build() {
+    _$GtextgraphData__asExample _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename, r'GtextgraphData__asExample', 'G__typename'),
+              id: id,
+              text: text.build(),
+              lang: BuiltValueNullFieldError.checkNotNull(
+                  lang, r'GtextgraphData__asExample', 'lang'),
+              translations: _translations?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'text';
+        text.build();
+
+        _$failedField = 'translations';
+        _translations?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text extends GtextgraphData__asExample_text {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_text_text> text;
+
+  factory _$GtextgraphData__asExample_text(
+          [void Function(GtextgraphData__asExample_textBuilder)? updates]) =>
+      (new GtextgraphData__asExample_textBuilder()..update(updates))._build();
+
+  _$GtextgraphData__asExample_text._(
+      {required this.G__typename, required this.text})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GtextgraphData__asExample_text', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        text, r'GtextgraphData__asExample_text', 'text');
+  }
+
+  @override
+  GtextgraphData__asExample_text rebuild(
+          void Function(GtextgraphData__asExample_textBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_textBuilder toBuilder() =>
+      new GtextgraphData__asExample_textBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text &&
+        G__typename == other.G__typename &&
+        text == other.text;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'GtextgraphData__asExample_text')
+          ..add('G__typename', G__typename)
+          ..add('text', text))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_textBuilder
+    implements
+        Builder<GtextgraphData__asExample_text,
+            GtextgraphData__asExample_textBuilder> {
+  _$GtextgraphData__asExample_text? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_text_text>? _text;
+  ListBuilder<GtextgraphData__asExample_text_text> get text =>
+      _$this._text ??= new ListBuilder<GtextgraphData__asExample_text_text>();
+  set text(ListBuilder<GtextgraphData__asExample_text_text>? text) =>
+      _$this._text = text;
+
+  GtextgraphData__asExample_textBuilder() {
+    GtextgraphData__asExample_text._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_textBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _text = $v.text.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text;
+  }
+
+  @override
+  void update(void Function(GtextgraphData__asExample_textBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text build() => _build();
+
+  _$GtextgraphData__asExample_text _build() {
+    _$GtextgraphData__asExample_text _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_text._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GtextgraphData__asExample_text', 'G__typename'),
+              text: text.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'text';
+        text.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_text', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__base
+    extends GtextgraphData__asExample_text_text__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_text_text__base(
+          [void Function(GtextgraphData__asExample_text_text__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__baseBuilder()..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__base._({required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__base', 'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__base rebuild(
+          void Function(GtextgraphData__asExample_text_text__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__baseBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__baseBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__baseBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__base,
+            GtextgraphData__asExample_text_text__baseBuilder> {
+  _$GtextgraphData__asExample_text_text__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_text_text__baseBuilder() {
+    GtextgraphData__asExample_text_text__base._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__baseBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__base;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__base build() => _build();
+
+  _$GtextgraphData__asExample_text_text__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__base._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GtextgraphData__asExample_text_text__base', 'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ
+    extends GtextgraphData__asExample_text_text__asQ {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_text_text__asQ_textQ> textQ;
+
+  factory _$GtextgraphData__asExample_text_text__asQ(
+          [void Function(GtextgraphData__asExample_text_text__asQBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asQBuilder()..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asQ._(
+      {required this.G__typename, required this.textQ})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asQ', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textQ, r'GtextgraphData__asExample_text_text__asQ', 'textQ');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ rebuild(
+          void Function(GtextgraphData__asExample_text_text__asQBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asQBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asQBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asQ &&
+        G__typename == other.G__typename &&
+        textQ == other.textQ;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textQ.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asQ')
+          ..add('G__typename', G__typename)
+          ..add('textQ', textQ))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asQBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asQ,
+            GtextgraphData__asExample_text_text__asQBuilder> {
+  _$GtextgraphData__asExample_text_text__asQ? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ>? _textQ;
+  ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ> get textQ =>
+      _$this._textQ ??=
+          new ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ>();
+  set textQ(
+          ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ>? textQ) =>
+      _$this._textQ = textQ;
+
+  GtextgraphData__asExample_text_text__asQBuilder() {
+    GtextgraphData__asExample_text_text__asQ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asQBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textQ = $v.textQ.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asQ other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asQ;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asQBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asQ _build() {
+    _$GtextgraphData__asExample_text_text__asQ _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_text_text__asQ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GtextgraphData__asExample_text_text__asQ', 'G__typename'),
+              textQ: textQ.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textQ';
+        textQ.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_text_text__asQ',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__base
+    extends GtextgraphData__asExample_text_text__asQ_textQ__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_text_text__asQ_textQ__base(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asQ_textQ__base', 'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__base rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asQ_textQ__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asQ_textQ__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asQ_textQ__base,
+            GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder> {
+  _$GtextgraphData__asExample_text_text__asQ_textQ__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder() {
+    GtextgraphData__asExample_text_text__asQ_textQ__base._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asQ_textQ__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asQ_textQ__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__base build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asQ_textQ__base._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asQ_textQ__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asT
+    extends GtextgraphData__asExample_text_text__asQ_textQ__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_text_text__asQ_textQ__asT(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asQ_textQ__asT', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT, r'GtextgraphData__asExample_text_text__asQ_textQ__asT', 'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asT rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asQ_textQ__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asQ_textQ__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asQ_textQ__asT,
+            GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder> {
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder() {
+    GtextgraphData__asExample_text_text__asQ_textQ__asT._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asQ_textQ__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asQ_textQ__asT;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asT build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asQ_textQ__asT._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asQ_textQ__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_text_text__asQ_textQ__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asI
+    extends GtextgraphData__asExample_text_text__asQ_textQ__asI {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>
+      textI;
+
+  factory _$GtextgraphData__asExample_text_text__asQ_textQ__asI(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI._(
+      {required this.G__typename, required this.textI})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asQ_textQ__asI', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textI, r'GtextgraphData__asExample_text_text__asQ_textQ__asI', 'textI');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asQ_textQ__asI &&
+        G__typename == other.G__typename &&
+        textI == other.textI;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textI.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asQ_textQ__asI')
+          ..add('G__typename', G__typename)
+          ..add('textI', textI))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asQ_textQ__asI,
+            GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder> {
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>?
+      _textI;
+  ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>
+      get textI => _$this._textI ??= new ListBuilder<
+          GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>();
+  set textI(
+          ListBuilder<
+                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>?
+              textI) =>
+      _$this._textI = textI;
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder() {
+    GtextgraphData__asExample_text_text__asQ_textQ__asI._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textI = $v.textI.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asQ_textQ__asI other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asQ_textQ__asI;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI _build() {
+    _$GtextgraphData__asExample_text_text__asQ_textQ__asI _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_text_text__asQ_textQ__asI._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_text_text__asQ_textQ__asI',
+                  'G__typename'),
+              textI: textI.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textI';
+        textI.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_text_text__asQ_textQ__asI',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
+    extends GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base',
+        'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base,
+            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder> {
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder() {
+    GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base build() =>
+      _build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
+    extends GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT,
+        r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
+        'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT,
+            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder> {
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder() {
+    GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT build() =>
+      _build();
+
+  _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI
+    extends GtextgraphData__asExample_text_text__asI {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_text_text__asI_textI> textI;
+
+  factory _$GtextgraphData__asExample_text_text__asI(
+          [void Function(GtextgraphData__asExample_text_text__asIBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asIBuilder()..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asI._(
+      {required this.G__typename, required this.textI})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asI', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textI, r'GtextgraphData__asExample_text_text__asI', 'textI');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI rebuild(
+          void Function(GtextgraphData__asExample_text_text__asIBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asIBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asIBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asI &&
+        G__typename == other.G__typename &&
+        textI == other.textI;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textI.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asI')
+          ..add('G__typename', G__typename)
+          ..add('textI', textI))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asIBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asI,
+            GtextgraphData__asExample_text_text__asIBuilder> {
+  _$GtextgraphData__asExample_text_text__asI? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_text_text__asI_textI>? _textI;
+  ListBuilder<GtextgraphData__asExample_text_text__asI_textI> get textI =>
+      _$this._textI ??=
+          new ListBuilder<GtextgraphData__asExample_text_text__asI_textI>();
+  set textI(
+          ListBuilder<GtextgraphData__asExample_text_text__asI_textI>? textI) =>
+      _$this._textI = textI;
+
+  GtextgraphData__asExample_text_text__asIBuilder() {
+    GtextgraphData__asExample_text_text__asI._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asIBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textI = $v.textI.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asI other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asI;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asIBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asI _build() {
+    _$GtextgraphData__asExample_text_text__asI _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_text_text__asI._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GtextgraphData__asExample_text_text__asI', 'G__typename'),
+              textI: textI.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textI';
+        textI.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_text_text__asI',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__base
+    extends GtextgraphData__asExample_text_text__asI_textI__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_text_text__asI_textI__base(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asI_textI__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asI_textI__base', 'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__base rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__baseBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asI_textI__baseBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asI_textI__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asI_textI__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asI_textI__baseBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asI_textI__base,
+            GtextgraphData__asExample_text_text__asI_textI__baseBuilder> {
+  _$GtextgraphData__asExample_text_text__asI_textI__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_text_text__asI_textI__baseBuilder() {
+    GtextgraphData__asExample_text_text__asI_textI__base._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_text_text__asI_textI__baseBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asI_textI__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asI_textI__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_text_text__asI_textI__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__base build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asI_textI__base._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asI_textI__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asT
+    extends GtextgraphData__asExample_text_text__asI_textI__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_text_text__asI_textI__asT(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asI_textI__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asI_textI__asT', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT, r'GtextgraphData__asExample_text_text__asI_textI__asT', 'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asT rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asTBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asI_textI__asTBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asI_textI__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asI_textI__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asI_textI__asTBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asI_textI__asT,
+            GtextgraphData__asExample_text_text__asI_textI__asTBuilder> {
+  _$GtextgraphData__asExample_text_text__asI_textI__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_text_text__asI_textI__asTBuilder() {
+    GtextgraphData__asExample_text_text__asI_textI__asT._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_text_text__asI_textI__asTBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asI_textI__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asI_textI__asT;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asI_textI__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asT build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asI_textI__asT._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asI_textI__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_text_text__asI_textI__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asQ
+    extends GtextgraphData__asExample_text_text__asI_textI__asQ {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>
+      textQ;
+
+  factory _$GtextgraphData__asExample_text_text__asI_textI__asQ(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asQBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asI_textI__asQBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ._(
+      {required this.G__typename, required this.textQ})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asI_textI__asQ', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textQ, r'GtextgraphData__asExample_text_text__asI_textI__asQ', 'textQ');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asQBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asI_textI__asQBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asI_textI__asQ &&
+        G__typename == other.G__typename &&
+        textQ == other.textQ;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textQ.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asI_textI__asQ')
+          ..add('G__typename', G__typename)
+          ..add('textQ', textQ))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asI_textI__asQBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asI_textI__asQ,
+            GtextgraphData__asExample_text_text__asI_textI__asQBuilder> {
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>?
+      _textQ;
+  ListBuilder<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>
+      get textQ => _$this._textQ ??= new ListBuilder<
+          GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>();
+  set textQ(
+          ListBuilder<
+                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>?
+              textQ) =>
+      _$this._textQ = textQ;
+
+  GtextgraphData__asExample_text_text__asI_textI__asQBuilder() {
+    GtextgraphData__asExample_text_text__asI_textI__asQ._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_text_text__asI_textI__asQBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textQ = $v.textQ.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asI_textI__asQ other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asI_textI__asQ;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asI_textI__asQBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ _build() {
+    _$GtextgraphData__asExample_text_text__asI_textI__asQ _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_text_text__asI_textI__asQ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_text_text__asI_textI__asQ',
+                  'G__typename'),
+              textQ: textQ.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textQ';
+        textQ.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_text_text__asI_textI__asQ',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
+    extends GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base',
+        'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base,
+            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder> {
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder() {
+    GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base build() =>
+      _build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
+    extends GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT(
+          [void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT,
+        r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
+        'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT rebuild(
+          void Function(
+                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT,
+            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder> {
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder() {
+    GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT build() =>
+      _build();
+
+  _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asT
+    extends GtextgraphData__asExample_text_text__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_text_text__asT(
+          [void Function(GtextgraphData__asExample_text_text__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asTBuilder()..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asT', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT, r'GtextgraphData__asExample_text_text__asT', 'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asT rebuild(
+          void Function(GtextgraphData__asExample_text_text__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asTBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asTBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asTBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asT,
+            GtextgraphData__asExample_text_text__asTBuilder> {
+  _$GtextgraphData__asExample_text_text__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_text_text__asTBuilder() {
+    GtextgraphData__asExample_text_text__asT._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asTBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asT;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asTBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asT build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asT._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                r'GtextgraphData__asExample_text_text__asT', 'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT, r'GtextgraphData__asExample_text_text__asT', 'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asL
+    extends GtextgraphData__asExample_text_text__asL {
+  @override
+  final String G__typename;
+  @override
+  final GtextgraphData__asExample_text_text__asL_link link;
+
+  factory _$GtextgraphData__asExample_text_text__asL(
+          [void Function(GtextgraphData__asExample_text_text__asLBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asLBuilder()..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asL._(
+      {required this.G__typename, required this.link})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asL', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        link, r'GtextgraphData__asExample_text_text__asL', 'link');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asL rebuild(
+          void Function(GtextgraphData__asExample_text_text__asLBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asLBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asLBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asL &&
+        G__typename == other.G__typename &&
+        link == other.link;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, link.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asL')
+          ..add('G__typename', G__typename)
+          ..add('link', link))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asLBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asL,
+            GtextgraphData__asExample_text_text__asLBuilder> {
+  _$GtextgraphData__asExample_text_text__asL? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_text_text__asL_linkBuilder? _link;
+  GtextgraphData__asExample_text_text__asL_linkBuilder get link =>
+      _$this._link ??=
+          new GtextgraphData__asExample_text_text__asL_linkBuilder();
+  set link(GtextgraphData__asExample_text_text__asL_linkBuilder? link) =>
+      _$this._link = link;
+
+  GtextgraphData__asExample_text_text__asLBuilder() {
+    GtextgraphData__asExample_text_text__asL._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asLBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _link = $v.link.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asL other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asL;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asLBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asL build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asL _build() {
+    _$GtextgraphData__asExample_text_text__asL _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_text_text__asL._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GtextgraphData__asExample_text_text__asL', 'G__typename'),
+              link: link.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'link';
+        link.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_text_text__asL',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_text_text__asL_link
+    extends GtextgraphData__asExample_text_text__asL_link {
+  @override
+  final String G__typename;
+  @override
+  final String? source;
+  @override
+  final String lemma;
+  @override
+  final _i2.GGramType? pos;
+  @override
+  final _i2.GLangType? lang;
+  @override
+  final String? id;
+  @override
+  final String? text;
+
+  factory _$GtextgraphData__asExample_text_text__asL_link(
+          [void Function(GtextgraphData__asExample_text_text__asL_linkBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_text_text__asL_linkBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_text_text__asL_link._(
+      {required this.G__typename,
+      this.source,
+      required this.lemma,
+      this.pos,
+      this.lang,
+      this.id,
+      this.text})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_text_text__asL_link', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        lemma, r'GtextgraphData__asExample_text_text__asL_link', 'lemma');
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asL_link rebuild(
+          void Function(GtextgraphData__asExample_text_text__asL_linkBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_text_text__asL_linkBuilder toBuilder() =>
+      new GtextgraphData__asExample_text_text__asL_linkBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_text_text__asL_link &&
+        G__typename == other.G__typename &&
+        source == other.source &&
+        lemma == other.lemma &&
+        pos == other.pos &&
+        lang == other.lang &&
+        id == other.id &&
+        text == other.text;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, source.hashCode);
+    _$hash = $jc(_$hash, lemma.hashCode);
+    _$hash = $jc(_$hash, pos.hashCode);
+    _$hash = $jc(_$hash, lang.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_text_text__asL_link')
+          ..add('G__typename', G__typename)
+          ..add('source', source)
+          ..add('lemma', lemma)
+          ..add('pos', pos)
+          ..add('lang', lang)
+          ..add('id', id)
+          ..add('text', text))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_text_text__asL_linkBuilder
+    implements
+        Builder<GtextgraphData__asExample_text_text__asL_link,
+            GtextgraphData__asExample_text_text__asL_linkBuilder> {
+  _$GtextgraphData__asExample_text_text__asL_link? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _source;
+  String? get source => _$this._source;
+  set source(String? source) => _$this._source = source;
+
+  String? _lemma;
+  String? get lemma => _$this._lemma;
+  set lemma(String? lemma) => _$this._lemma = lemma;
+
+  _i2.GGramType? _pos;
+  _i2.GGramType? get pos => _$this._pos;
+  set pos(_i2.GGramType? pos) => _$this._pos = pos;
+
+  _i2.GLangType? _lang;
+  _i2.GLangType? get lang => _$this._lang;
+  set lang(_i2.GLangType? lang) => _$this._lang = lang;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _text;
+  String? get text => _$this._text;
+  set text(String? text) => _$this._text = text;
+
+  GtextgraphData__asExample_text_text__asL_linkBuilder() {
+    GtextgraphData__asExample_text_text__asL_link._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_text_text__asL_linkBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _source = $v.source;
+      _lemma = $v.lemma;
+      _pos = $v.pos;
+      _lang = $v.lang;
+      _id = $v.id;
+      _text = $v.text;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_text_text__asL_link other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_text_text__asL_link;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_text_text__asL_linkBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_text_text__asL_link build() => _build();
+
+  _$GtextgraphData__asExample_text_text__asL_link _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_text_text__asL_link._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_text_text__asL_link',
+                'G__typename'),
+            source: source,
+            lemma: BuiltValueNullFieldError.checkNotNull(lemma,
+                r'GtextgraphData__asExample_text_text__asL_link', 'lemma'),
+            pos: pos,
+            lang: lang,
+            id: id,
+            text: text);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations
+    extends GtextgraphData__asExample_translations {
+  @override
+  final String G__typename;
+  @override
+  final String? id;
+  @override
+  final GtextgraphData__asExample_translations_text text;
+  @override
+  final _i2.GLangType lang;
+
+  factory _$GtextgraphData__asExample_translations(
+          [void Function(GtextgraphData__asExample_translationsBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translationsBuilder()..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations._(
+      {required this.G__typename,
+      this.id,
+      required this.text,
+      required this.lang})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename, r'GtextgraphData__asExample_translations', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        text, r'GtextgraphData__asExample_translations', 'text');
+    BuiltValueNullFieldError.checkNotNull(
+        lang, r'GtextgraphData__asExample_translations', 'lang');
+  }
+
+  @override
+  GtextgraphData__asExample_translations rebuild(
+          void Function(GtextgraphData__asExample_translationsBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translationsBuilder toBuilder() =>
+      new GtextgraphData__asExample_translationsBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_translations &&
+        G__typename == other.G__typename &&
+        id == other.id &&
+        text == other.text &&
+        lang == other.lang;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jc(_$hash, lang.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations')
+          ..add('G__typename', G__typename)
+          ..add('id', id)
+          ..add('text', text)
+          ..add('lang', lang))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translationsBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations,
+            GtextgraphData__asExample_translationsBuilder> {
+  _$GtextgraphData__asExample_translations? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  GtextgraphData__asExample_translations_textBuilder? _text;
+  GtextgraphData__asExample_translations_textBuilder get text =>
+      _$this._text ??= new GtextgraphData__asExample_translations_textBuilder();
+  set text(GtextgraphData__asExample_translations_textBuilder? text) =>
+      _$this._text = text;
+
+  _i2.GLangType? _lang;
+  _i2.GLangType? get lang => _$this._lang;
+  set lang(_i2.GLangType? lang) => _$this._lang = lang;
+
+  GtextgraphData__asExample_translationsBuilder() {
+    GtextgraphData__asExample_translations._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translationsBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _id = $v.id;
+      _text = $v.text.toBuilder();
+      _lang = $v.lang;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_translations other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_translationsBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations build() => _build();
+
+  _$GtextgraphData__asExample_translations _build() {
+    _$GtextgraphData__asExample_translations _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_translations._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
+                  r'GtextgraphData__asExample_translations', 'G__typename'),
+              id: id,
+              text: text.build(),
+              lang: BuiltValueNullFieldError.checkNotNull(
+                  lang, r'GtextgraphData__asExample_translations', 'lang'));
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'text';
+        text.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_translations',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text
+    extends GtextgraphData__asExample_translations_text {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_translations_text_text> text;
+
+  factory _$GtextgraphData__asExample_translations_text(
+          [void Function(GtextgraphData__asExample_translations_textBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_textBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text._(
+      {required this.G__typename, required this.text})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(G__typename,
+        r'GtextgraphData__asExample_translations_text', 'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        text, r'GtextgraphData__asExample_translations_text', 'text');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text rebuild(
+          void Function(GtextgraphData__asExample_translations_textBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_textBuilder toBuilder() =>
+      new GtextgraphData__asExample_translations_textBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_translations_text &&
+        G__typename == other.G__typename &&
+        text == other.text;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text')
+          ..add('G__typename', G__typename)
+          ..add('text', text))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_textBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations_text,
+            GtextgraphData__asExample_translations_textBuilder> {
+  _$GtextgraphData__asExample_translations_text? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_translations_text_text>? _text;
+  ListBuilder<GtextgraphData__asExample_translations_text_text> get text =>
+      _$this._text ??=
+          new ListBuilder<GtextgraphData__asExample_translations_text_text>();
+  set text(
+          ListBuilder<GtextgraphData__asExample_translations_text_text>?
+              text) =>
+      _$this._text = text;
+
+  GtextgraphData__asExample_translations_textBuilder() {
+    GtextgraphData__asExample_translations_text._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_textBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _text = $v.text.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_translations_text other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations_text;
+  }
+
+  @override
+  void update(
+      void Function(GtextgraphData__asExample_translations_textBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text build() => _build();
+
+  _$GtextgraphData__asExample_translations_text _build() {
+    _$GtextgraphData__asExample_translations_text _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_translations_text._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_translations_text',
+                  'G__typename'),
+              text: text.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'text';
+        text.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_translations_text',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__base
+    extends GtextgraphData__asExample_translations_text_text__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_translations_text_text__base(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__base',
+        'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__base rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__baseBuilder toBuilder() =>
+      new GtextgraphData__asExample_translations_text_text__baseBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_translations_text_text__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__baseBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations_text_text__base,
+            GtextgraphData__asExample_translations_text_text__baseBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_translations_text_text__baseBuilder() {
+    GtextgraphData__asExample_translations_text_text__base._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__baseBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_translations_text_text__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations_text_text__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__base build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__base._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ
+    extends GtextgraphData__asExample_translations_text_text__asQ {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_translations_text_text__asQ_textQ>
+      textQ;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asQ(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asQBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asQBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ._(
+      {required this.G__typename, required this.textQ})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asQ',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(textQ,
+        r'GtextgraphData__asExample_translations_text_text__asQ', 'textQ');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asQBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQBuilder toBuilder() =>
+      new GtextgraphData__asExample_translations_text_text__asQBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_translations_text_text__asQ &&
+        G__typename == other.G__typename &&
+        textQ == other.textQ;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textQ.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asQ')
+          ..add('G__typename', G__typename)
+          ..add('textQ', textQ))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asQBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations_text_text__asQ,
+            GtextgraphData__asExample_translations_text_text__asQBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asQ? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_translations_text_text__asQ_textQ>?
+      _textQ;
+  ListBuilder<GtextgraphData__asExample_translations_text_text__asQ_textQ>
+      get textQ => _$this._textQ ??= new ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asQ_textQ>();
+  set textQ(
+          ListBuilder<
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ>?
+              textQ) =>
+      _$this._textQ = textQ;
+
+  GtextgraphData__asExample_translations_text_text__asQBuilder() {
+    GtextgraphData__asExample_translations_text_text__asQ._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asQBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textQ = $v.textQ.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_translations_text_text__asQ other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations_text_text__asQ;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asQBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ _build() {
+    _$GtextgraphData__asExample_translations_text_text__asQ _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_translations_text_text__asQ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_translations_text_text__asQ',
+                  'G__typename'),
+              textQ: textQ.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textQ';
+        textQ.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_translations_text_text__asQ',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base
+    extends GtextgraphData__asExample_translations_text_text__asQ_textQ__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__base',
+        'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__base rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asQ_textQ__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asQ_textQ__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__base,
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder() {
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__base
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__base build() =>
+      _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asQ_textQ__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
+    extends GtextgraphData__asExample_translations_text_text__asQ_textQ__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
+        'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asT rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asQ_textQ__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asT,
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder() {
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asT build() =>
+      _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
+    extends GtextgraphData__asExample_translations_text_text__asQ_textQ__asI {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<
+          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>
+      textI;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI._(
+      {required this.G__typename, required this.textI})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textI,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
+        'textI');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asQ_textQ__asI &&
+        G__typename == other.G__typename &&
+        textI == other.textI;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textI.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI')
+          ..add('G__typename', G__typename)
+          ..add('textI', textI))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI,
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>?
+      _textI;
+  ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>
+      get textI => _$this._textI ??= new ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>();
+  set textI(
+          ListBuilder<
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>?
+              textI) =>
+      _$this._textI = textI;
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder() {
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textI = $v.textI.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI build() =>
+      _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI _build() {
+    _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
+              ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
+                  'G__typename'),
+              textI: textI.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textI';
+        textI.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+    extends GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base',
+        'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+      rebuild(
+              void Function(
+                      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder)
+                  updates) =>
+          (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base,
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base?
+      _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder() {
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+      build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+      _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+    extends GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT,
+        r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
+        'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+      rebuild(
+              void Function(
+                      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder)
+                  updates) =>
+          (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT,
+            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT?
+      _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder() {
+    GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+      build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+      _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI
+    extends GtextgraphData__asExample_translations_text_text__asI {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<GtextgraphData__asExample_translations_text_text__asI_textI>
+      textI;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asI(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asIBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asIBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI._(
+      {required this.G__typename, required this.textI})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asI',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(textI,
+        r'GtextgraphData__asExample_translations_text_text__asI', 'textI');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asIBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asIBuilder toBuilder() =>
+      new GtextgraphData__asExample_translations_text_text__asIBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_translations_text_text__asI &&
+        G__typename == other.G__typename &&
+        textI == other.textI;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textI.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asI')
+          ..add('G__typename', G__typename)
+          ..add('textI', textI))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asIBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations_text_text__asI,
+            GtextgraphData__asExample_translations_text_text__asIBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asI? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<GtextgraphData__asExample_translations_text_text__asI_textI>?
+      _textI;
+  ListBuilder<GtextgraphData__asExample_translations_text_text__asI_textI>
+      get textI => _$this._textI ??= new ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asI_textI>();
+  set textI(
+          ListBuilder<
+                  GtextgraphData__asExample_translations_text_text__asI_textI>?
+              textI) =>
+      _$this._textI = textI;
+
+  GtextgraphData__asExample_translations_text_text__asIBuilder() {
+    GtextgraphData__asExample_translations_text_text__asI._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asIBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textI = $v.textI.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_translations_text_text__asI other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations_text_text__asI;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asIBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI _build() {
+    _$GtextgraphData__asExample_translations_text_text__asI _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_translations_text_text__asI._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_translations_text_text__asI',
+                  'G__typename'),
+              textI: textI.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textI';
+        textI.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_translations_text_text__asI',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__base
+    extends GtextgraphData__asExample_translations_text_text__asI_textI__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asI_textI__base(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__base',
+        'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__base rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asI_textI__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asI_textI__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asI_textI__base,
+            GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__base? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder() {
+    GtextgraphData__asExample_translations_text_text__asI_textI__base
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asI_textI__base other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asI_textI__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__base build() =>
+      _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__base _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asI_textI__base
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asI_textI__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asT
+    extends GtextgraphData__asExample_translations_text_text__asI_textI__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asI_textI__asT(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__asT',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__asT',
+        'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asT rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asI_textI__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asI_textI__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asT,
+            GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder() {
+    GtextgraphData__asExample_translations_text_text__asI_textI__asT
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asI_textI__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asI_textI__asT;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asT build() =>
+      _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asI_textI__asT
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asI_textI__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_translations_text_text__asI_textI__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ
+    extends GtextgraphData__asExample_translations_text_text__asI_textI__asQ {
+  @override
+  final String G__typename;
+  @override
+  final BuiltList<
+          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>
+      textQ;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ._(
+      {required this.G__typename, required this.textQ})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textQ,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ',
+        'textQ');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asI_textI__asQ &&
+        G__typename == other.G__typename &&
+        textQ == other.textQ;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textQ.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ')
+          ..add('G__typename', G__typename)
+          ..add('textQ', textQ))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ,
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>?
+      _textQ;
+  ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>
+      get textQ => _$this._textQ ??= new ListBuilder<
+          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>();
+  set textQ(
+          ListBuilder<
+                  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>?
+              textQ) =>
+      _$this._textQ = textQ;
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder() {
+    GtextgraphData__asExample_translations_text_text__asI_textI__asQ
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textQ = $v.textQ.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asI_textI__asQ other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ build() =>
+      _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ _build() {
+    _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ
+              ._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ',
+                  'G__typename'),
+              textQ: textQ.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'textQ';
+        textQ.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+    extends GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base {
+  @override
+  final String G__typename;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base._(
+      {required this.G__typename})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base',
+        'G__typename');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+      rebuild(
+              void Function(
+                      GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder)
+                  updates) =>
+          (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base &&
+        G__typename == other.G__typename;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base')
+          ..add('G__typename', G__typename))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base,
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base?
+      _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder() {
+    GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+      build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+      _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base',
+                'G__typename'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+    extends GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        textT,
+        r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
+        'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+      rebuild(
+              void Function(
+                      GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder)
+                  updates) =>
+          (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
+    implements
+        Builder<
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT,
+            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT?
+      _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder() {
+    GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
+      get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+          other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other
+        as _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+      build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+      _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+            ._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asT
+    extends GtextgraphData__asExample_translations_text_text__asT {
+  @override
+  final String G__typename;
+  @override
+  final String textT;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asT(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asTBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asTBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asT._(
+      {required this.G__typename, required this.textT})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asT',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(textT,
+        r'GtextgraphData__asExample_translations_text_text__asT', 'textT');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asT rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asTBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asTBuilder toBuilder() =>
+      new GtextgraphData__asExample_translations_text_text__asTBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_translations_text_text__asT &&
+        G__typename == other.G__typename &&
+        textT == other.textT;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, textT.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asT')
+          ..add('G__typename', G__typename)
+          ..add('textT', textT))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asTBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations_text_text__asT,
+            GtextgraphData__asExample_translations_text_text__asTBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asT? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _textT;
+  String? get textT => _$this._textT;
+  set textT(String? textT) => _$this._textT = textT;
+
+  GtextgraphData__asExample_translations_text_text__asTBuilder() {
+    GtextgraphData__asExample_translations_text_text__asT._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asTBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _textT = $v.textT;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_translations_text_text__asT other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations_text_text__asT;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asTBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asT build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asT _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asT._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asT',
+                'G__typename'),
+            textT: BuiltValueNullFieldError.checkNotNull(
+                textT,
+                r'GtextgraphData__asExample_translations_text_text__asT',
+                'textT'));
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asL
+    extends GtextgraphData__asExample_translations_text_text__asL {
+  @override
+  final String G__typename;
+  @override
+  final GtextgraphData__asExample_translations_text_text__asL_link link;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asL(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asLBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asLBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asL._(
+      {required this.G__typename, required this.link})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asL',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(
+        link, r'GtextgraphData__asExample_translations_text_text__asL', 'link');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asL rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asLBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asLBuilder toBuilder() =>
+      new GtextgraphData__asExample_translations_text_text__asLBuilder()
+        ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is GtextgraphData__asExample_translations_text_text__asL &&
+        G__typename == other.G__typename &&
+        link == other.link;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, link.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asL')
+          ..add('G__typename', G__typename)
+          ..add('link', link))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asLBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations_text_text__asL,
+            GtextgraphData__asExample_translations_text_text__asLBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asL? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  GtextgraphData__asExample_translations_text_text__asL_linkBuilder? _link;
+  GtextgraphData__asExample_translations_text_text__asL_linkBuilder get link =>
+      _$this._link ??=
+          new GtextgraphData__asExample_translations_text_text__asL_linkBuilder();
+  set link(
+          GtextgraphData__asExample_translations_text_text__asL_linkBuilder?
+              link) =>
+      _$this._link = link;
+
+  GtextgraphData__asExample_translations_text_text__asLBuilder() {
+    GtextgraphData__asExample_translations_text_text__asL._initializeBuilder(
+        this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asLBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _link = $v.link.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(GtextgraphData__asExample_translations_text_text__asL other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations_text_text__asL;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asLBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asL build() => _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asL _build() {
+    _$GtextgraphData__asExample_translations_text_text__asL _$result;
+    try {
+      _$result = _$v ??
+          new _$GtextgraphData__asExample_translations_text_text__asL._(
+              G__typename: BuiltValueNullFieldError.checkNotNull(
+                  G__typename,
+                  r'GtextgraphData__asExample_translations_text_text__asL',
+                  'G__typename'),
+              link: link.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'link';
+        link.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GtextgraphData__asExample_translations_text_text__asL',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$GtextgraphData__asExample_translations_text_text__asL_link
+    extends GtextgraphData__asExample_translations_text_text__asL_link {
+  @override
+  final String G__typename;
+  @override
+  final String? source;
+  @override
+  final String lemma;
+  @override
+  final _i2.GGramType? pos;
+  @override
+  final _i2.GLangType? lang;
+  @override
+  final String? id;
+  @override
+  final String? text;
+
+  factory _$GtextgraphData__asExample_translations_text_text__asL_link(
+          [void Function(
+                  GtextgraphData__asExample_translations_text_text__asL_linkBuilder)?
+              updates]) =>
+      (new GtextgraphData__asExample_translations_text_text__asL_linkBuilder()
+            ..update(updates))
+          ._build();
+
+  _$GtextgraphData__asExample_translations_text_text__asL_link._(
+      {required this.G__typename,
+      this.source,
+      required this.lemma,
+      this.pos,
+      this.lang,
+      this.id,
+      this.text})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        G__typename,
+        r'GtextgraphData__asExample_translations_text_text__asL_link',
+        'G__typename');
+    BuiltValueNullFieldError.checkNotNull(lemma,
+        r'GtextgraphData__asExample_translations_text_text__asL_link', 'lemma');
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asL_link rebuild(
+          void Function(
+                  GtextgraphData__asExample_translations_text_text__asL_linkBuilder)
+              updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asL_linkBuilder
+      toBuilder() =>
+          new GtextgraphData__asExample_translations_text_text__asL_linkBuilder()
+            ..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other
+            is GtextgraphData__asExample_translations_text_text__asL_link &&
+        G__typename == other.G__typename &&
+        source == other.source &&
+        lemma == other.lemma &&
+        pos == other.pos &&
+        lang == other.lang &&
+        id == other.id &&
+        text == other.text;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, source.hashCode);
+    _$hash = $jc(_$hash, lemma.hashCode);
+    _$hash = $jc(_$hash, pos.hashCode);
+    _$hash = $jc(_$hash, lang.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(
+            r'GtextgraphData__asExample_translations_text_text__asL_link')
+          ..add('G__typename', G__typename)
+          ..add('source', source)
+          ..add('lemma', lemma)
+          ..add('pos', pos)
+          ..add('lang', lang)
+          ..add('id', id)
+          ..add('text', text))
+        .toString();
+  }
+}
+
+class GtextgraphData__asExample_translations_text_text__asL_linkBuilder
+    implements
+        Builder<GtextgraphData__asExample_translations_text_text__asL_link,
+            GtextgraphData__asExample_translations_text_text__asL_linkBuilder> {
+  _$GtextgraphData__asExample_translations_text_text__asL_link? _$v;
+
+  String? _G__typename;
+  String? get G__typename => _$this._G__typename;
+  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
+
+  String? _source;
+  String? get source => _$this._source;
+  set source(String? source) => _$this._source = source;
+
+  String? _lemma;
+  String? get lemma => _$this._lemma;
+  set lemma(String? lemma) => _$this._lemma = lemma;
+
+  _i2.GGramType? _pos;
+  _i2.GGramType? get pos => _$this._pos;
+  set pos(_i2.GGramType? pos) => _$this._pos = pos;
+
+  _i2.GLangType? _lang;
+  _i2.GLangType? get lang => _$this._lang;
+  set lang(_i2.GLangType? lang) => _$this._lang = lang;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  String? _text;
+  String? get text => _$this._text;
+  set text(String? text) => _$this._text = text;
+
+  GtextgraphData__asExample_translations_text_text__asL_linkBuilder() {
+    GtextgraphData__asExample_translations_text_text__asL_link
+        ._initializeBuilder(this);
+  }
+
+  GtextgraphData__asExample_translations_text_text__asL_linkBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _G__typename = $v.G__typename;
+      _source = $v.source;
+      _lemma = $v.lemma;
+      _pos = $v.pos;
+      _lang = $v.lang;
+      _id = $v.id;
+      _text = $v.text;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(
+      GtextgraphData__asExample_translations_text_text__asL_link other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$GtextgraphData__asExample_translations_text_text__asL_link;
+  }
+
+  @override
+  void update(
+      void Function(
+              GtextgraphData__asExample_translations_text_text__asL_linkBuilder)?
+          updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  GtextgraphData__asExample_translations_text_text__asL_link build() =>
+      _build();
+
+  _$GtextgraphData__asExample_translations_text_text__asL_link _build() {
+    final _$result = _$v ??
+        new _$GtextgraphData__asExample_translations_text_text__asL_link._(
+            G__typename: BuiltValueNullFieldError.checkNotNull(
+                G__typename,
+                r'GtextgraphData__asExample_translations_text_text__asL_link',
+                'G__typename'),
+            source: source,
+            lemma: BuiltValueNullFieldError.checkNotNull(
+                lemma,
+                r'GtextgraphData__asExample_translations_text_text__asL_link',
+                'lemma'),
+            pos: pos,
+            lang: lang,
+            id: id,
+            text: text);
+    replace(_$result);
+    return _$result;
+  }
+}
+
 class _$GtextgraphData__asProverb extends GtextgraphData__asProverb {
   @override
   final String G__typename;
@@ -19318,9384 +21954,6 @@ class GtextgraphData__asProverb_translations_text_text__asL_linkBuilder
                 lemma,
                 r'GtextgraphData__asProverb_translations_text_text__asL_link',
                 'lemma'),
-            pos: pos,
-            lang: lang,
-            id: id,
-            text: text);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__base extends GnestedtextgraphData__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__base(
-          [void Function(GnestedtextgraphData__baseBuilder)? updates]) =>
-      (new GnestedtextgraphData__baseBuilder()..update(updates))._build();
-
-  _$GnestedtextgraphData__base._({required this.G__typename}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GnestedtextgraphData__base', 'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__base rebuild(
-          void Function(GnestedtextgraphData__baseBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__baseBuilder toBuilder() =>
-      new GnestedtextgraphData__baseBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GnestedtextgraphData__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__baseBuilder
-    implements
-        Builder<GnestedtextgraphData__base, GnestedtextgraphData__baseBuilder> {
-  _$GnestedtextgraphData__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__baseBuilder() {
-    GnestedtextgraphData__base._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__base;
-  }
-
-  @override
-  void update(void Function(GnestedtextgraphData__baseBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__base build() => _build();
-
-  _$GnestedtextgraphData__base _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GnestedtextgraphData__base', 'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample
-    extends GnestedtextgraphData__asExample {
-  @override
-  final String G__typename;
-  @override
-  final String? id;
-  @override
-  final GnestedtextgraphData__asExample_text text;
-  @override
-  final _i2.GLangType lang;
-  @override
-  final BuiltList<GnestedtextgraphData__asExample_translations?>? translations;
-
-  factory _$GnestedtextgraphData__asExample(
-          [void Function(GnestedtextgraphData__asExampleBuilder)? updates]) =>
-      (new GnestedtextgraphData__asExampleBuilder()..update(updates))._build();
-
-  _$GnestedtextgraphData__asExample._(
-      {required this.G__typename,
-      this.id,
-      required this.text,
-      required this.lang,
-      this.translations})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GnestedtextgraphData__asExample', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        text, r'GnestedtextgraphData__asExample', 'text');
-    BuiltValueNullFieldError.checkNotNull(
-        lang, r'GnestedtextgraphData__asExample', 'lang');
-  }
-
-  @override
-  GnestedtextgraphData__asExample rebuild(
-          void Function(GnestedtextgraphData__asExampleBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExampleBuilder toBuilder() =>
-      new GnestedtextgraphData__asExampleBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample &&
-        G__typename == other.G__typename &&
-        id == other.id &&
-        text == other.text &&
-        lang == other.lang &&
-        translations == other.translations;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jc(_$hash, translations.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GnestedtextgraphData__asExample')
-          ..add('G__typename', G__typename)
-          ..add('id', id)
-          ..add('text', text)
-          ..add('lang', lang)
-          ..add('translations', translations))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExampleBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample,
-            GnestedtextgraphData__asExampleBuilder> {
-  _$GnestedtextgraphData__asExample? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  GnestedtextgraphData__asExample_textBuilder? _text;
-  GnestedtextgraphData__asExample_textBuilder get text =>
-      _$this._text ??= new GnestedtextgraphData__asExample_textBuilder();
-  set text(GnestedtextgraphData__asExample_textBuilder? text) =>
-      _$this._text = text;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  ListBuilder<GnestedtextgraphData__asExample_translations?>? _translations;
-  ListBuilder<GnestedtextgraphData__asExample_translations?> get translations =>
-      _$this._translations ??=
-          new ListBuilder<GnestedtextgraphData__asExample_translations?>();
-  set translations(
-          ListBuilder<GnestedtextgraphData__asExample_translations?>?
-              translations) =>
-      _$this._translations = translations;
-
-  GnestedtextgraphData__asExampleBuilder() {
-    GnestedtextgraphData__asExample._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExampleBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _id = $v.id;
-      _text = $v.text.toBuilder();
-      _lang = $v.lang;
-      _translations = $v.translations?.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample;
-  }
-
-  @override
-  void update(void Function(GnestedtextgraphData__asExampleBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample build() => _build();
-
-  _$GnestedtextgraphData__asExample _build() {
-    _$GnestedtextgraphData__asExample _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  r'GnestedtextgraphData__asExample', 'G__typename'),
-              id: id,
-              text: text.build(),
-              lang: BuiltValueNullFieldError.checkNotNull(
-                  lang, r'GnestedtextgraphData__asExample', 'lang'),
-              translations: _translations?.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-
-        _$failedField = 'translations';
-        _translations?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text
-    extends GnestedtextgraphData__asExample_text {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GnestedtextgraphData__asExample_text_text> text;
-
-  factory _$GnestedtextgraphData__asExample_text(
-          [void Function(GnestedtextgraphData__asExample_textBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_textBuilder()..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text._(
-      {required this.G__typename, required this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GnestedtextgraphData__asExample_text', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        text, r'GnestedtextgraphData__asExample_text', 'text');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text rebuild(
-          void Function(GnestedtextgraphData__asExample_textBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_textBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_textBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text &&
-        G__typename == other.G__typename &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GnestedtextgraphData__asExample_text')
-          ..add('G__typename', G__typename)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_textBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text,
-            GnestedtextgraphData__asExample_textBuilder> {
-  _$GnestedtextgraphData__asExample_text? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GnestedtextgraphData__asExample_text_text>? _text;
-  ListBuilder<GnestedtextgraphData__asExample_text_text> get text =>
-      _$this._text ??=
-          new ListBuilder<GnestedtextgraphData__asExample_text_text>();
-  set text(ListBuilder<GnestedtextgraphData__asExample_text_text>? text) =>
-      _$this._text = text;
-
-  GnestedtextgraphData__asExample_textBuilder() {
-    GnestedtextgraphData__asExample_text._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_textBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _text = $v.text.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_text other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_textBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text build() => _build();
-
-  _$GnestedtextgraphData__asExample_text _build() {
-    _$GnestedtextgraphData__asExample_text _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_text._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  r'GnestedtextgraphData__asExample_text', 'G__typename'),
-              text: text.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_text',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__base
-    extends GnestedtextgraphData__asExample_text_text__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_text_text__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_text_text__base', 'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__base rebuild(
-          void Function(GnestedtextgraphData__asExample_text_text__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__baseBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_text_text__baseBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__baseBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__base,
-            GnestedtextgraphData__asExample_text_text__baseBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_text_text__baseBuilder() {
-    GnestedtextgraphData__asExample_text_text__base._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_text_text__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__base;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_text_text__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__base build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__base _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ
-    extends GnestedtextgraphData__asExample_text_text__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GnestedtextgraphData__asExample_text_text__asQ_textQ> textQ;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asQ(
-          [void Function(GnestedtextgraphData__asExample_text_text__asQBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asQBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ._(
-      {required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asQ', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textQ, r'GnestedtextgraphData__asExample_text_text__asQ', 'textQ');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ rebuild(
-          void Function(GnestedtextgraphData__asExample_text_text__asQBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_text_text__asQBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asQBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asQ,
-            GnestedtextgraphData__asExample_text_text__asQBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GnestedtextgraphData__asExample_text_text__asQ_textQ>? _textQ;
-  ListBuilder<
-      GnestedtextgraphData__asExample_text_text__asQ_textQ> get textQ => _$this
-          ._textQ ??=
-      new ListBuilder<GnestedtextgraphData__asExample_text_text__asQ_textQ>();
-  set textQ(
-          ListBuilder<GnestedtextgraphData__asExample_text_text__asQ_textQ>?
-              textQ) =>
-      _$this._textQ = textQ;
-
-  GnestedtextgraphData__asExample_text_text__asQBuilder() {
-    GnestedtextgraphData__asExample_text_text__asQ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asQBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_text_text__asQ other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asQ;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_text_text__asQBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ _build() {
-    _$GnestedtextgraphData__asExample_text_text__asQ _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_text_text__asQ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_text_text__asQ',
-                  'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_text_text__asQ',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base
-    extends GnestedtextgraphData__asExample_text_text__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__base rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_text_text__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asQ_textQ__base,
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder() {
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asQ_textQ__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__base build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asQ_textQ__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT
-    extends GnestedtextgraphData__asExample_text_text__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(textT,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asT', 'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asT rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asQ_textQ__asT,
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder() {
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asQ_textQ__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asT build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI
-    extends GnestedtextgraphData__asExample_text_text__asQ_textQ__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI> textI;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI._(
-      {required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(textI,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI', 'textI');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asQ_textQ__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asQ_textQ__asI,
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI>?
-      _textI;
-  ListBuilder<GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI>
-      get textI => _$this._textI ??= new ListBuilder<
-          GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI>();
-  set textI(
-          ListBuilder<
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI>?
-              textI) =>
-      _$this._textI = textI;
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder() {
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asI
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asI other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asQ_textQ__asIBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI _build() {
-    _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI',
-                  'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-    extends GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base,
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder() {
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-    extends GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT,
-        r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
-        'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT,
-            GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder() {
-    GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI
-    extends GnestedtextgraphData__asExample_text_text__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GnestedtextgraphData__asExample_text_text__asI_textI> textI;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asI(
-          [void Function(GnestedtextgraphData__asExample_text_text__asIBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asIBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI._(
-      {required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asI', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textI, r'GnestedtextgraphData__asExample_text_text__asI', 'textI');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI rebuild(
-          void Function(GnestedtextgraphData__asExample_text_text__asIBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asIBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_text_text__asIBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asIBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asI,
-            GnestedtextgraphData__asExample_text_text__asIBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GnestedtextgraphData__asExample_text_text__asI_textI>? _textI;
-  ListBuilder<
-      GnestedtextgraphData__asExample_text_text__asI_textI> get textI => _$this
-          ._textI ??=
-      new ListBuilder<GnestedtextgraphData__asExample_text_text__asI_textI>();
-  set textI(
-          ListBuilder<GnestedtextgraphData__asExample_text_text__asI_textI>?
-              textI) =>
-      _$this._textI = textI;
-
-  GnestedtextgraphData__asExample_text_text__asIBuilder() {
-    GnestedtextgraphData__asExample_text_text__asI._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asIBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_text_text__asI other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asI;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_text_text__asIBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI _build() {
-    _$GnestedtextgraphData__asExample_text_text__asI _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_text_text__asI._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_text_text__asI',
-                  'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_text_text__asI',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__base
-    extends GnestedtextgraphData__asExample_text_text__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asI_textI__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__base rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_text_text__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asI_textI__base,
-            GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder() {
-    GnestedtextgraphData__asExample_text_text__asI_textI__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asI_textI__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asI_textI__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__base build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__base _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asI_textI__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asI_textI__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asT
-    extends GnestedtextgraphData__asExample_text_text__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asI_textI__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(textT,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__asT', 'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asT rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asI_textI__asT,
-            GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder() {
-    GnestedtextgraphData__asExample_text_text__asI_textI__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asI_textI__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asI_textI__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asT build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asT _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asI_textI__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asI_textI__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_text_text__asI_textI__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ
-    extends GnestedtextgraphData__asExample_text_text__asI_textI__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<
-      GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ> textQ;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ._(
-      {required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(textQ,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ', 'textQ');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asI_textI__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asI_textI__asQ,
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ>?
-      _textQ;
-  ListBuilder<GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ>
-      get textQ => _$this._textQ ??= new ListBuilder<
-          GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ>();
-  set textQ(
-          ListBuilder<
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ>?
-              textQ) =>
-      _$this._textQ = textQ;
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder() {
-    GnestedtextgraphData__asExample_text_text__asI_textI__asQ
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asI_textI__asQ other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asI_textI__asQBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ _build() {
-    _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ',
-                  'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-    extends GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base,
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder() {
-    GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-    extends GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT,
-        r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
-        'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT,
-            GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder() {
-    GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asT
-    extends GnestedtextgraphData__asExample_text_text__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asT(
-          [void Function(GnestedtextgraphData__asExample_text_text__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GnestedtextgraphData__asExample_text_text__asT', 'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asT rebuild(
-          void Function(GnestedtextgraphData__asExample_text_text__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asTBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_text_text__asTBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asTBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asT,
-            GnestedtextgraphData__asExample_text_text__asTBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_text_text__asTBuilder() {
-    GnestedtextgraphData__asExample_text_text__asT._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_text_text__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asT;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_text_text__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asT build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asT _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(textT,
-                r'GnestedtextgraphData__asExample_text_text__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asL
-    extends GnestedtextgraphData__asExample_text_text__asL {
-  @override
-  final String G__typename;
-  @override
-  final GnestedtextgraphData__asExample_text_text__asL_link link;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asL(
-          [void Function(GnestedtextgraphData__asExample_text_text__asLBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asLBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asL._(
-      {required this.G__typename, required this.link})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asL', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        link, r'GnestedtextgraphData__asExample_text_text__asL', 'link');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asL rebuild(
-          void Function(GnestedtextgraphData__asExample_text_text__asLBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asLBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_text_text__asLBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asL &&
-        G__typename == other.G__typename &&
-        link == other.link;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, link.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asL')
-          ..add('G__typename', G__typename)
-          ..add('link', link))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asLBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asL,
-            GnestedtextgraphData__asExample_text_text__asLBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asL? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_text_text__asL_linkBuilder? _link;
-  GnestedtextgraphData__asExample_text_text__asL_linkBuilder get link =>
-      _$this._link ??=
-          new GnestedtextgraphData__asExample_text_text__asL_linkBuilder();
-  set link(GnestedtextgraphData__asExample_text_text__asL_linkBuilder? link) =>
-      _$this._link = link;
-
-  GnestedtextgraphData__asExample_text_text__asLBuilder() {
-    GnestedtextgraphData__asExample_text_text__asL._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asLBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _link = $v.link.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_text_text__asL other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asL;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_text_text__asLBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asL build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asL _build() {
-    _$GnestedtextgraphData__asExample_text_text__asL _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_text_text__asL._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_text_text__asL',
-                  'G__typename'),
-              link: link.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'link';
-        link.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_text_text__asL',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_text_text__asL_link
-    extends GnestedtextgraphData__asExample_text_text__asL_link {
-  @override
-  final String G__typename;
-  @override
-  final String? source;
-  @override
-  final String lemma;
-  @override
-  final _i2.GGramType? pos;
-  @override
-  final _i2.GLangType? lang;
-  @override
-  final String? id;
-  @override
-  final String? text;
-
-  factory _$GnestedtextgraphData__asExample_text_text__asL_link(
-          [void Function(
-                  GnestedtextgraphData__asExample_text_text__asL_linkBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_text_text__asL_linkBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_text_text__asL_link._(
-      {required this.G__typename,
-      this.source,
-      required this.lemma,
-      this.pos,
-      this.lang,
-      this.id,
-      this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_text_text__asL_link', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        lemma, r'GnestedtextgraphData__asExample_text_text__asL_link', 'lemma');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asL_link rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_text_text__asL_linkBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asL_linkBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_text_text__asL_linkBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_text_text__asL_link &&
-        G__typename == other.G__typename &&
-        source == other.source &&
-        lemma == other.lemma &&
-        pos == other.pos &&
-        lang == other.lang &&
-        id == other.id &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, source.hashCode);
-    _$hash = $jc(_$hash, lemma.hashCode);
-    _$hash = $jc(_$hash, pos.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_text_text__asL_link')
-          ..add('G__typename', G__typename)
-          ..add('source', source)
-          ..add('lemma', lemma)
-          ..add('pos', pos)
-          ..add('lang', lang)
-          ..add('id', id)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_text_text__asL_linkBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_text_text__asL_link,
-            GnestedtextgraphData__asExample_text_text__asL_linkBuilder> {
-  _$GnestedtextgraphData__asExample_text_text__asL_link? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _source;
-  String? get source => _$this._source;
-  set source(String? source) => _$this._source = source;
-
-  String? _lemma;
-  String? get lemma => _$this._lemma;
-  set lemma(String? lemma) => _$this._lemma = lemma;
-
-  _i2.GGramType? _pos;
-  _i2.GGramType? get pos => _$this._pos;
-  set pos(_i2.GGramType? pos) => _$this._pos = pos;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  String? _text;
-  String? get text => _$this._text;
-  set text(String? text) => _$this._text = text;
-
-  GnestedtextgraphData__asExample_text_text__asL_linkBuilder() {
-    GnestedtextgraphData__asExample_text_text__asL_link._initializeBuilder(
-        this);
-  }
-
-  GnestedtextgraphData__asExample_text_text__asL_linkBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _source = $v.source;
-      _lemma = $v.lemma;
-      _pos = $v.pos;
-      _lang = $v.lang;
-      _id = $v.id;
-      _text = $v.text;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_text_text__asL_link other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_text_text__asL_link;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_text_text__asL_linkBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_text_text__asL_link build() => _build();
-
-  _$GnestedtextgraphData__asExample_text_text__asL_link _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_text_text__asL_link._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_text_text__asL_link',
-                'G__typename'),
-            source: source,
-            lemma: BuiltValueNullFieldError.checkNotNull(
-                lemma,
-                r'GnestedtextgraphData__asExample_text_text__asL_link',
-                'lemma'),
-            pos: pos,
-            lang: lang,
-            id: id,
-            text: text);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations
-    extends GnestedtextgraphData__asExample_translations {
-  @override
-  final String G__typename;
-  @override
-  final String? id;
-  @override
-  final GnestedtextgraphData__asExample_translations_text text;
-  @override
-  final _i2.GLangType lang;
-
-  factory _$GnestedtextgraphData__asExample_translations(
-          [void Function(GnestedtextgraphData__asExample_translationsBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translationsBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations._(
-      {required this.G__typename,
-      this.id,
-      required this.text,
-      required this.lang})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_translations', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        text, r'GnestedtextgraphData__asExample_translations', 'text');
-    BuiltValueNullFieldError.checkNotNull(
-        lang, r'GnestedtextgraphData__asExample_translations', 'lang');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations rebuild(
-          void Function(GnestedtextgraphData__asExample_translationsBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translationsBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_translationsBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_translations &&
-        G__typename == other.G__typename &&
-        id == other.id &&
-        text == other.text &&
-        lang == other.lang;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations')
-          ..add('G__typename', G__typename)
-          ..add('id', id)
-          ..add('text', text)
-          ..add('lang', lang))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translationsBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_translations,
-            GnestedtextgraphData__asExample_translationsBuilder> {
-  _$GnestedtextgraphData__asExample_translations? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  GnestedtextgraphData__asExample_translations_textBuilder? _text;
-  GnestedtextgraphData__asExample_translations_textBuilder get text =>
-      _$this._text ??=
-          new GnestedtextgraphData__asExample_translations_textBuilder();
-  set text(GnestedtextgraphData__asExample_translations_textBuilder? text) =>
-      _$this._text = text;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  GnestedtextgraphData__asExample_translationsBuilder() {
-    GnestedtextgraphData__asExample_translations._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translationsBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _id = $v.id;
-      _text = $v.text.toBuilder();
-      _lang = $v.lang;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_translations other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_translations;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_translationsBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations _build() {
-    _$GnestedtextgraphData__asExample_translations _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_translations._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_translations',
-                  'G__typename'),
-              id: id,
-              text: text.build(),
-              lang: BuiltValueNullFieldError.checkNotNull(lang,
-                  r'GnestedtextgraphData__asExample_translations', 'lang'));
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_translations',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text
-    extends GnestedtextgraphData__asExample_translations_text {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GnestedtextgraphData__asExample_translations_text_text> text;
-
-  factory _$GnestedtextgraphData__asExample_translations_text(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_textBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_textBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text._(
-      {required this.G__typename, required this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GnestedtextgraphData__asExample_translations_text', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        text, r'GnestedtextgraphData__asExample_translations_text', 'text');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_textBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_textBuilder toBuilder() =>
-      new GnestedtextgraphData__asExample_translations_textBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GnestedtextgraphData__asExample_translations_text &&
-        G__typename == other.G__typename &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text')
-          ..add('G__typename', G__typename)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_textBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_translations_text,
-            GnestedtextgraphData__asExample_translations_textBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GnestedtextgraphData__asExample_translations_text_text>? _text;
-  ListBuilder<
-      GnestedtextgraphData__asExample_translations_text_text> get text => _$this
-          ._text ??=
-      new ListBuilder<GnestedtextgraphData__asExample_translations_text_text>();
-  set text(
-          ListBuilder<GnestedtextgraphData__asExample_translations_text_text>?
-              text) =>
-      _$this._text = text;
-
-  GnestedtextgraphData__asExample_translations_textBuilder() {
-    GnestedtextgraphData__asExample_translations_text._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_textBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _text = $v.text.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GnestedtextgraphData__asExample_translations_text other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GnestedtextgraphData__asExample_translations_text;
-  }
-
-  @override
-  void update(
-      void Function(GnestedtextgraphData__asExample_translations_textBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text _build() {
-    _$GnestedtextgraphData__asExample_translations_text _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_translations_text._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_translations_text',
-                  'G__typename'),
-              text: text.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_translations_text',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__base
-    extends GnestedtextgraphData__asExample_translations_text_text__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__base rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__baseBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_translations_text_text__base,
-            GnestedtextgraphData__asExample_translations_text_text__baseBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_translations_text_text__baseBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__baseBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v =
-        other as _$GnestedtextgraphData__asExample_translations_text_text__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__base build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__base _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ
-    extends GnestedtextgraphData__asExample_translations_text_text__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ> textQ;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asQ(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asQBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ._(
-      {required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textQ,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ',
-        'textQ');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asQBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asQBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_translations_text_text__asQ,
-            GnestedtextgraphData__asExample_translations_text_text__asQBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ>?
-      _textQ;
-  ListBuilder<GnestedtextgraphData__asExample_translations_text_text__asQ_textQ>
-      get textQ => _$this._textQ ??= new ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ>();
-  set textQ(
-          ListBuilder<
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ>?
-              textQ) =>
-      _$this._textQ = textQ;
-
-  GnestedtextgraphData__asExample_translations_text_text__asQBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asQ
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asQBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asQ other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v =
-        other as _$GnestedtextgraphData__asExample_translations_text_text__asQ;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asQBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ _build() {
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_translations_text_text__asQ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_translations_text_text__asQ',
-                  'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-    extends GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base,
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base?
-      _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-    extends GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
-        'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT,
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-    extends GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>
-      textI;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI._(
-      {required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textI,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
-        'textI');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI,
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>?
-      _textI;
-  ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>
-      get textI => _$this._textI ??= new ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>();
-  set textI(
-          ListBuilder<
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>?
-              textI) =>
-      _$this._textI = textI;
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-      _build() {
-    _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-        _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-              ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
-                  'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-    extends GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-      rebuild(
-              void Function(
-                      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder)
-                  updates) =>
-          (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base,
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base?
-      _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-    extends GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT,
-        r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
-        'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-      rebuild(
-              void Function(
-                      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder)
-                  updates) =>
-          (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT,
-            GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT?
-      _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI
-    extends GnestedtextgraphData__asExample_translations_text_text__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI> textI;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asI(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asIBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asIBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI._(
-      {required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textI,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI',
-        'textI');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asIBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asIBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asIBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asIBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_translations_text_text__asI,
-            GnestedtextgraphData__asExample_translations_text_text__asIBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI>?
-      _textI;
-  ListBuilder<GnestedtextgraphData__asExample_translations_text_text__asI_textI>
-      get textI => _$this._textI ??= new ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI>();
-  set textI(
-          ListBuilder<
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI>?
-              textI) =>
-      _$this._textI = textI;
-
-  GnestedtextgraphData__asExample_translations_text_text__asIBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asI
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asIBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asI other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v =
-        other as _$GnestedtextgraphData__asExample_translations_text_text__asI;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asIBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI _build() {
-    _$GnestedtextgraphData__asExample_translations_text_text__asI _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_translations_text_text__asI._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_translations_text_text__asI',
-                  'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-    extends GnestedtextgraphData__asExample_translations_text_text__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__base rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__base,
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base?
-      _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__base
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-    extends GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT',
-        'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT,
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-    extends GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>
-      textQ;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ._(
-      {required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textQ,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ',
-        'textQ');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ,
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>?
-      _textQ;
-  ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>
-      get textQ => _$this._textQ ??= new ListBuilder<
-          GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>();
-  set textQ(
-          ListBuilder<
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>?
-              textQ) =>
-      _$this._textQ = textQ;
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-      _build() {
-    _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-        _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ
-              ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ',
-                  'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-    extends GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base',
-        'G__typename');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-      rebuild(
-              void Function(
-                      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder)
-                  updates) =>
-          (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base,
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base?
-      _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-    extends GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT,
-        r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
-        'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-      rebuild(
-              void Function(
-                      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder)
-                  updates) =>
-          (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT,
-            GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT?
-      _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-          other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-      build() => _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-      _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asT
-    extends GnestedtextgraphData__asExample_translations_text_text__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asT(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asTBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asT',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT,
-        r'GnestedtextgraphData__asExample_translations_text_text__asT',
-        'textT');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asT rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asTBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asTBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asTBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_translations_text_text__asT,
-            GnestedtextgraphData__asExample_translations_text_text__asTBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GnestedtextgraphData__asExample_translations_text_text__asTBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asT
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asTBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v =
-        other as _$GnestedtextgraphData__asExample_translations_text_text__asT;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asT build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asT _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GnestedtextgraphData__asExample_translations_text_text__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asL
-    extends GnestedtextgraphData__asExample_translations_text_text__asL {
-  @override
-  final String G__typename;
-  @override
-  final GnestedtextgraphData__asExample_translations_text_text__asL_link link;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asL(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asLBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asLBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asL._(
-      {required this.G__typename, required this.link})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asL',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(link,
-        r'GnestedtextgraphData__asExample_translations_text_text__asL', 'link');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asL rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asLBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asLBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asLBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asL &&
-        G__typename == other.G__typename &&
-        link == other.link;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, link.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asL')
-          ..add('G__typename', G__typename)
-          ..add('link', link))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asLBuilder
-    implements
-        Builder<GnestedtextgraphData__asExample_translations_text_text__asL,
-            GnestedtextgraphData__asExample_translations_text_text__asLBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asL? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder?
-      _link;
-  GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder
-      get link => _$this._link ??=
-          new GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder();
-  set link(
-          GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder?
-              link) =>
-      _$this._link = link;
-
-  GnestedtextgraphData__asExample_translations_text_text__asLBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asL
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asLBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _link = $v.link.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asL other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v =
-        other as _$GnestedtextgraphData__asExample_translations_text_text__asL;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asLBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asL build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asL _build() {
-    _$GnestedtextgraphData__asExample_translations_text_text__asL _$result;
-    try {
-      _$result = _$v ??
-          new _$GnestedtextgraphData__asExample_translations_text_text__asL._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename,
-                  r'GnestedtextgraphData__asExample_translations_text_text__asL',
-                  'G__typename'),
-              link: link.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'link';
-        link.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GnestedtextgraphData__asExample_translations_text_text__asL',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GnestedtextgraphData__asExample_translations_text_text__asL_link
-    extends GnestedtextgraphData__asExample_translations_text_text__asL_link {
-  @override
-  final String G__typename;
-  @override
-  final String? source;
-  @override
-  final String lemma;
-  @override
-  final _i2.GGramType? pos;
-  @override
-  final _i2.GLangType? lang;
-  @override
-  final String? id;
-  @override
-  final String? text;
-
-  factory _$GnestedtextgraphData__asExample_translations_text_text__asL_link(
-          [void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder)?
-              updates]) =>
-      (new GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asL_link._(
-      {required this.G__typename,
-      this.source,
-      required this.lemma,
-      this.pos,
-      this.lang,
-      this.id,
-      this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename,
-        r'GnestedtextgraphData__asExample_translations_text_text__asL_link',
-        'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        lemma,
-        r'GnestedtextgraphData__asExample_translations_text_text__asL_link',
-        'lemma');
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asL_link rebuild(
-          void Function(
-                  GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder
-      toBuilder() =>
-          new GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder()
-            ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other
-            is GnestedtextgraphData__asExample_translations_text_text__asL_link &&
-        G__typename == other.G__typename &&
-        source == other.source &&
-        lemma == other.lemma &&
-        pos == other.pos &&
-        lang == other.lang &&
-        id == other.id &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, source.hashCode);
-    _$hash = $jc(_$hash, lemma.hashCode);
-    _$hash = $jc(_$hash, pos.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GnestedtextgraphData__asExample_translations_text_text__asL_link')
-          ..add('G__typename', G__typename)
-          ..add('source', source)
-          ..add('lemma', lemma)
-          ..add('pos', pos)
-          ..add('lang', lang)
-          ..add('id', id)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder
-    implements
-        Builder<
-            GnestedtextgraphData__asExample_translations_text_text__asL_link,
-            GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder> {
-  _$GnestedtextgraphData__asExample_translations_text_text__asL_link? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _source;
-  String? get source => _$this._source;
-  set source(String? source) => _$this._source = source;
-
-  String? _lemma;
-  String? get lemma => _$this._lemma;
-  set lemma(String? lemma) => _$this._lemma = lemma;
-
-  _i2.GGramType? _pos;
-  _i2.GGramType? get pos => _$this._pos;
-  set pos(_i2.GGramType? pos) => _$this._pos = pos;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  String? _text;
-  String? get text => _$this._text;
-  set text(String? text) => _$this._text = text;
-
-  GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder() {
-    GnestedtextgraphData__asExample_translations_text_text__asL_link
-        ._initializeBuilder(this);
-  }
-
-  GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder
-      get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _source = $v.source;
-      _lemma = $v.lemma;
-      _pos = $v.pos;
-      _lang = $v.lang;
-      _id = $v.id;
-      _text = $v.text;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(
-      GnestedtextgraphData__asExample_translations_text_text__asL_link other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other
-        as _$GnestedtextgraphData__asExample_translations_text_text__asL_link;
-  }
-
-  @override
-  void update(
-      void Function(
-              GnestedtextgraphData__asExample_translations_text_text__asL_linkBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GnestedtextgraphData__asExample_translations_text_text__asL_link build() =>
-      _build();
-
-  _$GnestedtextgraphData__asExample_translations_text_text__asL_link _build() {
-    final _$result = _$v ??
-        new _$GnestedtextgraphData__asExample_translations_text_text__asL_link
-            ._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GnestedtextgraphData__asExample_translations_text_text__asL_link',
-                'G__typename'),
-            source: source,
-            lemma: BuiltValueNullFieldError.checkNotNull(
-                lemma,
-                r'GnestedtextgraphData__asExample_translations_text_text__asL_link',
-                'lemma'),
-            pos: pos,
-            lang: lang,
-            id: id,
-            text: text);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData extends GtexttransData {
-  @override
-  final String G__typename;
-  @override
-  final String? id;
-  @override
-  final GtexttransData_text text;
-  @override
-  final _i2.GLangType lang;
-
-  factory _$GtexttransData([void Function(GtexttransDataBuilder)? updates]) =>
-      (new GtexttransDataBuilder()..update(updates))._build();
-
-  _$GtexttransData._(
-      {required this.G__typename,
-      this.id,
-      required this.text,
-      required this.lang})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(text, r'GtexttransData', 'text');
-    BuiltValueNullFieldError.checkNotNull(lang, r'GtexttransData', 'lang');
-  }
-
-  @override
-  GtexttransData rebuild(void Function(GtexttransDataBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransDataBuilder toBuilder() =>
-      new GtexttransDataBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData &&
-        G__typename == other.G__typename &&
-        id == other.id &&
-        text == other.text &&
-        lang == other.lang;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData')
-          ..add('G__typename', G__typename)
-          ..add('id', id)
-          ..add('text', text)
-          ..add('lang', lang))
-        .toString();
-  }
-}
-
-class GtexttransDataBuilder
-    implements Builder<GtexttransData, GtexttransDataBuilder> {
-  _$GtexttransData? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  GtexttransData_textBuilder? _text;
-  GtexttransData_textBuilder get text =>
-      _$this._text ??= new GtexttransData_textBuilder();
-  set text(GtexttransData_textBuilder? text) => _$this._text = text;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  GtexttransDataBuilder() {
-    GtexttransData._initializeBuilder(this);
-  }
-
-  GtexttransDataBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _id = $v.id;
-      _text = $v.text.toBuilder();
-      _lang = $v.lang;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData;
-  }
-
-  @override
-  void update(void Function(GtexttransDataBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData build() => _build();
-
-  _$GtexttransData _build() {
-    _$GtexttransData _$result;
-    try {
-      _$result = _$v ??
-          new _$GtexttransData._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtexttransData', 'G__typename'),
-              id: id,
-              text: text.build(),
-              lang: BuiltValueNullFieldError.checkNotNull(
-                  lang, r'GtexttransData', 'lang'));
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtexttransData', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text extends GtexttransData_text {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtexttransData_text_text> text;
-
-  factory _$GtexttransData_text(
-          [void Function(GtexttransData_textBuilder)? updates]) =>
-      (new GtexttransData_textBuilder()..update(updates))._build();
-
-  _$GtexttransData_text._({required this.G__typename, required this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData_text', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(text, r'GtexttransData_text', 'text');
-  }
-
-  @override
-  GtexttransData_text rebuild(
-          void Function(GtexttransData_textBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_textBuilder toBuilder() =>
-      new GtexttransData_textBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text &&
-        G__typename == other.G__typename &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData_text')
-          ..add('G__typename', G__typename)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GtexttransData_textBuilder
-    implements Builder<GtexttransData_text, GtexttransData_textBuilder> {
-  _$GtexttransData_text? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtexttransData_text_text>? _text;
-  ListBuilder<GtexttransData_text_text> get text =>
-      _$this._text ??= new ListBuilder<GtexttransData_text_text>();
-  set text(ListBuilder<GtexttransData_text_text>? text) => _$this._text = text;
-
-  GtexttransData_textBuilder() {
-    GtexttransData_text._initializeBuilder(this);
-  }
-
-  GtexttransData_textBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _text = $v.text.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text;
-  }
-
-  @override
-  void update(void Function(GtexttransData_textBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text build() => _build();
-
-  _$GtexttransData_text _build() {
-    _$GtexttransData_text _$result;
-    try {
-      _$result = _$v ??
-          new _$GtexttransData_text._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtexttransData_text', 'G__typename'),
-              text: text.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtexttransData_text', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__base extends GtexttransData_text_text__base {
-  @override
-  final String G__typename;
-
-  factory _$GtexttransData_text_text__base(
-          [void Function(GtexttransData_text_text__baseBuilder)? updates]) =>
-      (new GtexttransData_text_text__baseBuilder()..update(updates))._build();
-
-  _$GtexttransData_text_text__base._({required this.G__typename}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData_text_text__base', 'G__typename');
-  }
-
-  @override
-  GtexttransData_text_text__base rebuild(
-          void Function(GtexttransData_text_text__baseBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__baseBuilder toBuilder() =>
-      new GtexttransData_text_text__baseBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData_text_text__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__baseBuilder
-    implements
-        Builder<GtexttransData_text_text__base,
-            GtexttransData_text_text__baseBuilder> {
-  _$GtexttransData_text_text__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtexttransData_text_text__baseBuilder() {
-    GtexttransData_text_text__base._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__base;
-  }
-
-  @override
-  void update(void Function(GtexttransData_text_text__baseBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__base build() => _build();
-
-  _$GtexttransData_text_text__base _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GtexttransData_text_text__base', 'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asQ extends GtexttransData_text_text__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtexttransData_text_text__asQ_textQ> textQ;
-
-  factory _$GtexttransData_text_text__asQ(
-          [void Function(GtexttransData_text_text__asQBuilder)? updates]) =>
-      (new GtexttransData_text_text__asQBuilder()..update(updates))._build();
-
-  _$GtexttransData_text_text__asQ._(
-      {required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData_text_text__asQ', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textQ, r'GtexttransData_text_text__asQ', 'textQ');
-  }
-
-  @override
-  GtexttransData_text_text__asQ rebuild(
-          void Function(GtexttransData_text_text__asQBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asQBuilder toBuilder() =>
-      new GtexttransData_text_text__asQBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData_text_text__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asQBuilder
-    implements
-        Builder<GtexttransData_text_text__asQ,
-            GtexttransData_text_text__asQBuilder> {
-  _$GtexttransData_text_text__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtexttransData_text_text__asQ_textQ>? _textQ;
-  ListBuilder<GtexttransData_text_text__asQ_textQ> get textQ =>
-      _$this._textQ ??= new ListBuilder<GtexttransData_text_text__asQ_textQ>();
-  set textQ(ListBuilder<GtexttransData_text_text__asQ_textQ>? textQ) =>
-      _$this._textQ = textQ;
-
-  GtexttransData_text_text__asQBuilder() {
-    GtexttransData_text_text__asQ._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asQBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asQ other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asQ;
-  }
-
-  @override
-  void update(void Function(GtexttransData_text_text__asQBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asQ build() => _build();
-
-  _$GtexttransData_text_text__asQ _build() {
-    _$GtexttransData_text_text__asQ _$result;
-    try {
-      _$result = _$v ??
-          new _$GtexttransData_text_text__asQ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtexttransData_text_text__asQ', 'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtexttransData_text_text__asQ', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__base
-    extends GtexttransData_text_text__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GtexttransData_text_text__asQ_textQ__base(
-          [void Function(GtexttransData_text_text__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asQ_textQ__baseBuilder()..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asQ_textQ__base._({required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asQ_textQ__base', 'G__typename');
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__base rebuild(
-          void Function(GtexttransData_text_text__asQ_textQ__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asQ_textQ__baseBuilder toBuilder() =>
-      new GtexttransData_text_text__asQ_textQ__baseBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asQ_textQ__baseBuilder
-    implements
-        Builder<GtexttransData_text_text__asQ_textQ__base,
-            GtexttransData_text_text__asQ_textQ__baseBuilder> {
-  _$GtexttransData_text_text__asQ_textQ__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtexttransData_text_text__asQ_textQ__baseBuilder() {
-    GtexttransData_text_text__asQ_textQ__base._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asQ_textQ__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asQ_textQ__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asQ_textQ__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__base build() => _build();
-
-  _$GtexttransData_text_text__asQ_textQ__base _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asQ_textQ__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtexttransData_text_text__asQ_textQ__base', 'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asT
-    extends GtexttransData_text_text__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtexttransData_text_text__asQ_textQ__asT(
-          [void Function(GtexttransData_text_text__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asQ_textQ__asTBuilder()..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asQ_textQ__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtexttransData_text_text__asQ_textQ__asT', 'textT');
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asT rebuild(
-          void Function(GtexttransData_text_text__asQ_textQ__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asTBuilder toBuilder() =>
-      new GtexttransData_text_text__asQ_textQ__asTBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asQ_textQ__asTBuilder
-    implements
-        Builder<GtexttransData_text_text__asQ_textQ__asT,
-            GtexttransData_text_text__asQ_textQ__asTBuilder> {
-  _$GtexttransData_text_text__asQ_textQ__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtexttransData_text_text__asQ_textQ__asTBuilder() {
-    GtexttransData_text_text__asQ_textQ__asT._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asQ_textQ__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asQ_textQ__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asQ_textQ__asTBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asT build() => _build();
-
-  _$GtexttransData_text_text__asQ_textQ__asT _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asQ_textQ__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtexttransData_text_text__asQ_textQ__asT', 'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT, r'GtexttransData_text_text__asQ_textQ__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asI
-    extends GtexttransData_text_text__asQ_textQ__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtexttransData_text_text__asQ_textQ__asI_textI> textI;
-
-  factory _$GtexttransData_text_text__asQ_textQ__asI(
-          [void Function(GtexttransData_text_text__asQ_textQ__asIBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asQ_textQ__asIBuilder()..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asQ_textQ__asI._(
-      {required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asQ_textQ__asI', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textI, r'GtexttransData_text_text__asQ_textQ__asI', 'textI');
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI rebuild(
-          void Function(GtexttransData_text_text__asQ_textQ__asIBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asIBuilder toBuilder() =>
-      new GtexttransData_text_text__asQ_textQ__asIBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asQ_textQ__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asQ_textQ__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asQ_textQ__asIBuilder
-    implements
-        Builder<GtexttransData_text_text__asQ_textQ__asI,
-            GtexttransData_text_text__asQ_textQ__asIBuilder> {
-  _$GtexttransData_text_text__asQ_textQ__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtexttransData_text_text__asQ_textQ__asI_textI>? _textI;
-  ListBuilder<GtexttransData_text_text__asQ_textQ__asI_textI> get textI =>
-      _$this._textI ??=
-          new ListBuilder<GtexttransData_text_text__asQ_textQ__asI_textI>();
-  set textI(
-          ListBuilder<GtexttransData_text_text__asQ_textQ__asI_textI>? textI) =>
-      _$this._textI = textI;
-
-  GtexttransData_text_text__asQ_textQ__asIBuilder() {
-    GtexttransData_text_text__asQ_textQ__asI._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asQ_textQ__asIBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asQ_textQ__asI other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asQ_textQ__asI;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asQ_textQ__asIBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI build() => _build();
-
-  _$GtexttransData_text_text__asQ_textQ__asI _build() {
-    _$GtexttransData_text_text__asQ_textQ__asI _$result;
-    try {
-      _$result = _$v ??
-          new _$GtexttransData_text_text__asQ_textQ__asI._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  r'GtexttransData_text_text__asQ_textQ__asI', 'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtexttransData_text_text__asQ_textQ__asI',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asI_textI__base
-    extends GtexttransData_text_text__asQ_textQ__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GtexttransData_text_text__asQ_textQ__asI_textI__base(
-          [void Function(
-                  GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asQ_textQ__asI_textI__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asQ_textQ__asI_textI__base', 'G__typename');
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__base rebuild(
-          void Function(
-                  GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder toBuilder() =>
-      new GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asQ_textQ__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asQ_textQ__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder
-    implements
-        Builder<GtexttransData_text_text__asQ_textQ__asI_textI__base,
-            GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder> {
-  _$GtexttransData_text_text__asQ_textQ__asI_textI__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder() {
-    GtexttransData_text_text__asQ_textQ__asI_textI__base._initializeBuilder(
-        this);
-  }
-
-  GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asQ_textQ__asI_textI__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asQ_textQ__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GtexttransData_text_text__asQ_textQ__asI_textI__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__base build() => _build();
-
-  _$GtexttransData_text_text__asQ_textQ__asI_textI__base _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asQ_textQ__asI_textI__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtexttransData_text_text__asQ_textQ__asI_textI__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asQ_textQ__asI_textI__asT
-    extends GtexttransData_text_text__asQ_textQ__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtexttransData_text_text__asQ_textQ__asI_textI__asT(
-          [void Function(
-                  GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asQ_textQ__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asQ_textQ__asI_textI__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtexttransData_text_text__asQ_textQ__asI_textI__asT', 'textT');
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__asT rebuild(
-          void Function(
-                  GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder toBuilder() =>
-      new GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asQ_textQ__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asQ_textQ__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder
-    implements
-        Builder<GtexttransData_text_text__asQ_textQ__asI_textI__asT,
-            GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder> {
-  _$GtexttransData_text_text__asQ_textQ__asI_textI__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder() {
-    GtexttransData_text_text__asQ_textQ__asI_textI__asT._initializeBuilder(
-        this);
-  }
-
-  GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asQ_textQ__asI_textI__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asQ_textQ__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asQ_textQ__asI_textI__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asQ_textQ__asI_textI__asT build() => _build();
-
-  _$GtexttransData_text_text__asQ_textQ__asI_textI__asT _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asQ_textQ__asI_textI__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtexttransData_text_text__asQ_textQ__asI_textI__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GtexttransData_text_text__asQ_textQ__asI_textI__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asI extends GtexttransData_text_text__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtexttransData_text_text__asI_textI> textI;
-
-  factory _$GtexttransData_text_text__asI(
-          [void Function(GtexttransData_text_text__asIBuilder)? updates]) =>
-      (new GtexttransData_text_text__asIBuilder()..update(updates))._build();
-
-  _$GtexttransData_text_text__asI._(
-      {required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData_text_text__asI', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textI, r'GtexttransData_text_text__asI', 'textI');
-  }
-
-  @override
-  GtexttransData_text_text__asI rebuild(
-          void Function(GtexttransData_text_text__asIBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asIBuilder toBuilder() =>
-      new GtexttransData_text_text__asIBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData_text_text__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asIBuilder
-    implements
-        Builder<GtexttransData_text_text__asI,
-            GtexttransData_text_text__asIBuilder> {
-  _$GtexttransData_text_text__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtexttransData_text_text__asI_textI>? _textI;
-  ListBuilder<GtexttransData_text_text__asI_textI> get textI =>
-      _$this._textI ??= new ListBuilder<GtexttransData_text_text__asI_textI>();
-  set textI(ListBuilder<GtexttransData_text_text__asI_textI>? textI) =>
-      _$this._textI = textI;
-
-  GtexttransData_text_text__asIBuilder() {
-    GtexttransData_text_text__asI._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asIBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asI other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asI;
-  }
-
-  @override
-  void update(void Function(GtexttransData_text_text__asIBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asI build() => _build();
-
-  _$GtexttransData_text_text__asI _build() {
-    _$GtexttransData_text_text__asI _$result;
-    try {
-      _$result = _$v ??
-          new _$GtexttransData_text_text__asI._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtexttransData_text_text__asI', 'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtexttransData_text_text__asI', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__base
-    extends GtexttransData_text_text__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GtexttransData_text_text__asI_textI__base(
-          [void Function(GtexttransData_text_text__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asI_textI__baseBuilder()..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asI_textI__base._({required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asI_textI__base', 'G__typename');
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__base rebuild(
-          void Function(GtexttransData_text_text__asI_textI__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asI_textI__baseBuilder toBuilder() =>
-      new GtexttransData_text_text__asI_textI__baseBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asI_textI__baseBuilder
-    implements
-        Builder<GtexttransData_text_text__asI_textI__base,
-            GtexttransData_text_text__asI_textI__baseBuilder> {
-  _$GtexttransData_text_text__asI_textI__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtexttransData_text_text__asI_textI__baseBuilder() {
-    GtexttransData_text_text__asI_textI__base._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asI_textI__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asI_textI__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asI_textI__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__base build() => _build();
-
-  _$GtexttransData_text_text__asI_textI__base _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asI_textI__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtexttransData_text_text__asI_textI__base', 'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asT
-    extends GtexttransData_text_text__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtexttransData_text_text__asI_textI__asT(
-          [void Function(GtexttransData_text_text__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asI_textI__asTBuilder()..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asI_textI__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtexttransData_text_text__asI_textI__asT', 'textT');
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asT rebuild(
-          void Function(GtexttransData_text_text__asI_textI__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asI_textI__asTBuilder toBuilder() =>
-      new GtexttransData_text_text__asI_textI__asTBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asI_textI__asTBuilder
-    implements
-        Builder<GtexttransData_text_text__asI_textI__asT,
-            GtexttransData_text_text__asI_textI__asTBuilder> {
-  _$GtexttransData_text_text__asI_textI__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtexttransData_text_text__asI_textI__asTBuilder() {
-    GtexttransData_text_text__asI_textI__asT._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asI_textI__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asI_textI__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asI_textI__asTBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asT build() => _build();
-
-  _$GtexttransData_text_text__asI_textI__asT _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asI_textI__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtexttransData_text_text__asI_textI__asT', 'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT, r'GtexttransData_text_text__asI_textI__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asQ
-    extends GtexttransData_text_text__asI_textI__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtexttransData_text_text__asI_textI__asQ_textQ> textQ;
-
-  factory _$GtexttransData_text_text__asI_textI__asQ(
-          [void Function(GtexttransData_text_text__asI_textI__asQBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asI_textI__asQBuilder()..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asI_textI__asQ._(
-      {required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asI_textI__asQ', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textQ, r'GtexttransData_text_text__asI_textI__asQ', 'textQ');
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ rebuild(
-          void Function(GtexttransData_text_text__asI_textI__asQBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asI_textI__asQBuilder toBuilder() =>
-      new GtexttransData_text_text__asI_textI__asQBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asI_textI__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asI_textI__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asI_textI__asQBuilder
-    implements
-        Builder<GtexttransData_text_text__asI_textI__asQ,
-            GtexttransData_text_text__asI_textI__asQBuilder> {
-  _$GtexttransData_text_text__asI_textI__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtexttransData_text_text__asI_textI__asQ_textQ>? _textQ;
-  ListBuilder<GtexttransData_text_text__asI_textI__asQ_textQ> get textQ =>
-      _$this._textQ ??=
-          new ListBuilder<GtexttransData_text_text__asI_textI__asQ_textQ>();
-  set textQ(
-          ListBuilder<GtexttransData_text_text__asI_textI__asQ_textQ>? textQ) =>
-      _$this._textQ = textQ;
-
-  GtexttransData_text_text__asI_textI__asQBuilder() {
-    GtexttransData_text_text__asI_textI__asQ._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asI_textI__asQBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asI_textI__asQ other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asI_textI__asQ;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asI_textI__asQBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ build() => _build();
-
-  _$GtexttransData_text_text__asI_textI__asQ _build() {
-    _$GtexttransData_text_text__asI_textI__asQ _$result;
-    try {
-      _$result = _$v ??
-          new _$GtexttransData_text_text__asI_textI__asQ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  r'GtexttransData_text_text__asI_textI__asQ', 'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtexttransData_text_text__asI_textI__asQ',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asQ_textQ__base
-    extends GtexttransData_text_text__asI_textI__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GtexttransData_text_text__asI_textI__asQ_textQ__base(
-          [void Function(
-                  GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asI_textI__asQ_textQ__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asI_textI__asQ_textQ__base', 'G__typename');
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__base rebuild(
-          void Function(
-                  GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder toBuilder() =>
-      new GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asI_textI__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asI_textI__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder
-    implements
-        Builder<GtexttransData_text_text__asI_textI__asQ_textQ__base,
-            GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder> {
-  _$GtexttransData_text_text__asI_textI__asQ_textQ__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder() {
-    GtexttransData_text_text__asI_textI__asQ_textQ__base._initializeBuilder(
-        this);
-  }
-
-  GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asI_textI__asQ_textQ__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asI_textI__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(
-              GtexttransData_text_text__asI_textI__asQ_textQ__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__base build() => _build();
-
-  _$GtexttransData_text_text__asI_textI__asQ_textQ__base _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asI_textI__asQ_textQ__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtexttransData_text_text__asI_textI__asQ_textQ__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asI_textI__asQ_textQ__asT
-    extends GtexttransData_text_text__asI_textI__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtexttransData_text_text__asI_textI__asQ_textQ__asT(
-          [void Function(
-                  GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asI_textI__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtexttransData_text_text__asI_textI__asQ_textQ__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtexttransData_text_text__asI_textI__asQ_textQ__asT', 'textT');
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__asT rebuild(
-          void Function(
-                  GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder toBuilder() =>
-      new GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asI_textI__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtexttransData_text_text__asI_textI__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder
-    implements
-        Builder<GtexttransData_text_text__asI_textI__asQ_textQ__asT,
-            GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder> {
-  _$GtexttransData_text_text__asI_textI__asQ_textQ__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder() {
-    GtexttransData_text_text__asI_textI__asQ_textQ__asT._initializeBuilder(
-        this);
-  }
-
-  GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asI_textI__asQ_textQ__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asI_textI__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asI_textI__asQ_textQ__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asI_textI__asQ_textQ__asT build() => _build();
-
-  _$GtexttransData_text_text__asI_textI__asQ_textQ__asT _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asI_textI__asQ_textQ__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtexttransData_text_text__asI_textI__asQ_textQ__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT,
-                r'GtexttransData_text_text__asI_textI__asQ_textQ__asT',
-                'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asT extends GtexttransData_text_text__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtexttransData_text_text__asT(
-          [void Function(GtexttransData_text_text__asTBuilder)? updates]) =>
-      (new GtexttransData_text_text__asTBuilder()..update(updates))._build();
-
-  _$GtexttransData_text_text__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData_text_text__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtexttransData_text_text__asT', 'textT');
-  }
-
-  @override
-  GtexttransData_text_text__asT rebuild(
-          void Function(GtexttransData_text_text__asTBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asTBuilder toBuilder() =>
-      new GtexttransData_text_text__asTBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData_text_text__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asTBuilder
-    implements
-        Builder<GtexttransData_text_text__asT,
-            GtexttransData_text_text__asTBuilder> {
-  _$GtexttransData_text_text__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtexttransData_text_text__asTBuilder() {
-    GtexttransData_text_text__asT._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asT;
-  }
-
-  @override
-  void update(void Function(GtexttransData_text_text__asTBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asT build() => _build();
-
-  _$GtexttransData_text_text__asT _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GtexttransData_text_text__asT', 'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT, r'GtexttransData_text_text__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asL extends GtexttransData_text_text__asL {
-  @override
-  final String G__typename;
-  @override
-  final GtexttransData_text_text__asL_link link;
-
-  factory _$GtexttransData_text_text__asL(
-          [void Function(GtexttransData_text_text__asLBuilder)? updates]) =>
-      (new GtexttransData_text_text__asLBuilder()..update(updates))._build();
-
-  _$GtexttransData_text_text__asL._(
-      {required this.G__typename, required this.link})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData_text_text__asL', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        link, r'GtexttransData_text_text__asL', 'link');
-  }
-
-  @override
-  GtexttransData_text_text__asL rebuild(
-          void Function(GtexttransData_text_text__asLBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asLBuilder toBuilder() =>
-      new GtexttransData_text_text__asLBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asL &&
-        G__typename == other.G__typename &&
-        link == other.link;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, link.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData_text_text__asL')
-          ..add('G__typename', G__typename)
-          ..add('link', link))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asLBuilder
-    implements
-        Builder<GtexttransData_text_text__asL,
-            GtexttransData_text_text__asLBuilder> {
-  _$GtexttransData_text_text__asL? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtexttransData_text_text__asL_linkBuilder? _link;
-  GtexttransData_text_text__asL_linkBuilder get link =>
-      _$this._link ??= new GtexttransData_text_text__asL_linkBuilder();
-  set link(GtexttransData_text_text__asL_linkBuilder? link) =>
-      _$this._link = link;
-
-  GtexttransData_text_text__asLBuilder() {
-    GtexttransData_text_text__asL._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asLBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _link = $v.link.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asL other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asL;
-  }
-
-  @override
-  void update(void Function(GtexttransData_text_text__asLBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asL build() => _build();
-
-  _$GtexttransData_text_text__asL _build() {
-    _$GtexttransData_text_text__asL _$result;
-    try {
-      _$result = _$v ??
-          new _$GtexttransData_text_text__asL._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtexttransData_text_text__asL', 'G__typename'),
-              link: link.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'link';
-        link.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtexttransData_text_text__asL', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtexttransData_text_text__asL_link
-    extends GtexttransData_text_text__asL_link {
-  @override
-  final String G__typename;
-  @override
-  final String? source;
-  @override
-  final String lemma;
-  @override
-  final _i2.GGramType? pos;
-  @override
-  final _i2.GLangType? lang;
-  @override
-  final String? id;
-  @override
-  final String? text;
-
-  factory _$GtexttransData_text_text__asL_link(
-          [void Function(GtexttransData_text_text__asL_linkBuilder)?
-              updates]) =>
-      (new GtexttransData_text_text__asL_linkBuilder()..update(updates))
-          ._build();
-
-  _$GtexttransData_text_text__asL_link._(
-      {required this.G__typename,
-      this.source,
-      required this.lemma,
-      this.pos,
-      this.lang,
-      this.id,
-      this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtexttransData_text_text__asL_link', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        lemma, r'GtexttransData_text_text__asL_link', 'lemma');
-  }
-
-  @override
-  GtexttransData_text_text__asL_link rebuild(
-          void Function(GtexttransData_text_text__asL_linkBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtexttransData_text_text__asL_linkBuilder toBuilder() =>
-      new GtexttransData_text_text__asL_linkBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtexttransData_text_text__asL_link &&
-        G__typename == other.G__typename &&
-        source == other.source &&
-        lemma == other.lemma &&
-        pos == other.pos &&
-        lang == other.lang &&
-        id == other.id &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, source.hashCode);
-    _$hash = $jc(_$hash, lemma.hashCode);
-    _$hash = $jc(_$hash, pos.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtexttransData_text_text__asL_link')
-          ..add('G__typename', G__typename)
-          ..add('source', source)
-          ..add('lemma', lemma)
-          ..add('pos', pos)
-          ..add('lang', lang)
-          ..add('id', id)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GtexttransData_text_text__asL_linkBuilder
-    implements
-        Builder<GtexttransData_text_text__asL_link,
-            GtexttransData_text_text__asL_linkBuilder> {
-  _$GtexttransData_text_text__asL_link? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _source;
-  String? get source => _$this._source;
-  set source(String? source) => _$this._source = source;
-
-  String? _lemma;
-  String? get lemma => _$this._lemma;
-  set lemma(String? lemma) => _$this._lemma = lemma;
-
-  _i2.GGramType? _pos;
-  _i2.GGramType? get pos => _$this._pos;
-  set pos(_i2.GGramType? pos) => _$this._pos = pos;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  String? _text;
-  String? get text => _$this._text;
-  set text(String? text) => _$this._text = text;
-
-  GtexttransData_text_text__asL_linkBuilder() {
-    GtexttransData_text_text__asL_link._initializeBuilder(this);
-  }
-
-  GtexttransData_text_text__asL_linkBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _source = $v.source;
-      _lemma = $v.lemma;
-      _pos = $v.pos;
-      _lang = $v.lang;
-      _id = $v.id;
-      _text = $v.text;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtexttransData_text_text__asL_link other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtexttransData_text_text__asL_link;
-  }
-
-  @override
-  void update(
-      void Function(GtexttransData_text_text__asL_linkBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtexttransData_text_text__asL_link build() => _build();
-
-  _$GtexttransData_text_text__asL_link _build() {
-    final _$result = _$v ??
-        new _$GtexttransData_text_text__asL_link._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtexttransData_text_text__asL_link', 'G__typename'),
-            source: source,
-            lemma: BuiltValueNullFieldError.checkNotNull(
-                lemma, r'GtexttransData_text_text__asL_link', 'lemma'),
-            pos: pos,
-            lang: lang,
-            id: id,
-            text: text);
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData extends GtextData {
-  @override
-  final String G__typename;
-  @override
-  final String? id;
-  @override
-  final GtextData_text text;
-  @override
-  final _i2.GLangType lang;
-
-  factory _$GtextData([void Function(GtextDataBuilder)? updates]) =>
-      (new GtextDataBuilder()..update(updates))._build();
-
-  _$GtextData._(
-      {required this.G__typename,
-      this.id,
-      required this.text,
-      required this.lang})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(text, r'GtextData', 'text');
-    BuiltValueNullFieldError.checkNotNull(lang, r'GtextData', 'lang');
-  }
-
-  @override
-  GtextData rebuild(void Function(GtextDataBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextDataBuilder toBuilder() => new GtextDataBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData &&
-        G__typename == other.G__typename &&
-        id == other.id &&
-        text == other.text &&
-        lang == other.lang;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData')
-          ..add('G__typename', G__typename)
-          ..add('id', id)
-          ..add('text', text)
-          ..add('lang', lang))
-        .toString();
-  }
-}
-
-class GtextDataBuilder implements Builder<GtextData, GtextDataBuilder> {
-  _$GtextData? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  GtextData_textBuilder? _text;
-  GtextData_textBuilder get text =>
-      _$this._text ??= new GtextData_textBuilder();
-  set text(GtextData_textBuilder? text) => _$this._text = text;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  GtextDataBuilder() {
-    GtextData._initializeBuilder(this);
-  }
-
-  GtextDataBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _id = $v.id;
-      _text = $v.text.toBuilder();
-      _lang = $v.lang;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData;
-  }
-
-  @override
-  void update(void Function(GtextDataBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData build() => _build();
-
-  _$GtextData _build() {
-    _$GtextData _$result;
-    try {
-      _$result = _$v ??
-          new _$GtextData._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtextData', 'G__typename'),
-              id: id,
-              text: text.build(),
-              lang: BuiltValueNullFieldError.checkNotNull(
-                  lang, r'GtextData', 'lang'));
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtextData', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text extends GtextData_text {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtextData_text_text> text;
-
-  factory _$GtextData_text([void Function(GtextData_textBuilder)? updates]) =>
-      (new GtextData_textBuilder()..update(updates))._build();
-
-  _$GtextData_text._({required this.G__typename, required this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(text, r'GtextData_text', 'text');
-  }
-
-  @override
-  GtextData_text rebuild(void Function(GtextData_textBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_textBuilder toBuilder() =>
-      new GtextData_textBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text &&
-        G__typename == other.G__typename &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text')
-          ..add('G__typename', G__typename)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GtextData_textBuilder
-    implements Builder<GtextData_text, GtextData_textBuilder> {
-  _$GtextData_text? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtextData_text_text>? _text;
-  ListBuilder<GtextData_text_text> get text =>
-      _$this._text ??= new ListBuilder<GtextData_text_text>();
-  set text(ListBuilder<GtextData_text_text>? text) => _$this._text = text;
-
-  GtextData_textBuilder() {
-    GtextData_text._initializeBuilder(this);
-  }
-
-  GtextData_textBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _text = $v.text.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text;
-  }
-
-  @override
-  void update(void Function(GtextData_textBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text build() => _build();
-
-  _$GtextData_text _build() {
-    _$GtextData_text _$result;
-    try {
-      _$result = _$v ??
-          new _$GtextData_text._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtextData_text', 'G__typename'),
-              text: text.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'text';
-        text.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtextData_text', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__base extends GtextData_text_text__base {
-  @override
-  final String G__typename;
-
-  factory _$GtextData_text_text__base(
-          [void Function(GtextData_text_text__baseBuilder)? updates]) =>
-      (new GtextData_text_text__baseBuilder()..update(updates))._build();
-
-  _$GtextData_text_text__base._({required this.G__typename}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__base', 'G__typename');
-  }
-
-  @override
-  GtextData_text_text__base rebuild(
-          void Function(GtextData_text_text__baseBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__baseBuilder toBuilder() =>
-      new GtextData_text_text__baseBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtextData_text_text__baseBuilder
-    implements
-        Builder<GtextData_text_text__base, GtextData_text_text__baseBuilder> {
-  _$GtextData_text_text__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtextData_text_text__baseBuilder() {
-    GtextData_text_text__base._initializeBuilder(this);
-  }
-
-  GtextData_text_text__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__base;
-  }
-
-  @override
-  void update(void Function(GtextData_text_text__baseBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__base build() => _build();
-
-  _$GtextData_text_text__base _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GtextData_text_text__base', 'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asQ extends GtextData_text_text__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtextData_text_text__asQ_textQ> textQ;
-
-  factory _$GtextData_text_text__asQ(
-          [void Function(GtextData_text_text__asQBuilder)? updates]) =>
-      (new GtextData_text_text__asQBuilder()..update(updates))._build();
-
-  _$GtextData_text_text__asQ._({required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asQ', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textQ, r'GtextData_text_text__asQ', 'textQ');
-  }
-
-  @override
-  GtextData_text_text__asQ rebuild(
-          void Function(GtextData_text_text__asQBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asQBuilder toBuilder() =>
-      new GtextData_text_text__asQBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asQBuilder
-    implements
-        Builder<GtextData_text_text__asQ, GtextData_text_text__asQBuilder> {
-  _$GtextData_text_text__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtextData_text_text__asQ_textQ>? _textQ;
-  ListBuilder<GtextData_text_text__asQ_textQ> get textQ =>
-      _$this._textQ ??= new ListBuilder<GtextData_text_text__asQ_textQ>();
-  set textQ(ListBuilder<GtextData_text_text__asQ_textQ>? textQ) =>
-      _$this._textQ = textQ;
-
-  GtextData_text_text__asQBuilder() {
-    GtextData_text_text__asQ._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asQBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asQ other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asQ;
-  }
-
-  @override
-  void update(void Function(GtextData_text_text__asQBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asQ build() => _build();
-
-  _$GtextData_text_text__asQ _build() {
-    _$GtextData_text_text__asQ _$result;
-    try {
-      _$result = _$v ??
-          new _$GtextData_text_text__asQ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtextData_text_text__asQ', 'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtextData_text_text__asQ', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__base
-    extends GtextData_text_text__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GtextData_text_text__asQ_textQ__base(
-          [void Function(GtextData_text_text__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asQ_textQ__baseBuilder()..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asQ_textQ__base._({required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asQ_textQ__base', 'G__typename');
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__base rebuild(
-          void Function(GtextData_text_text__asQ_textQ__baseBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asQ_textQ__baseBuilder toBuilder() =>
-      new GtextData_text_text__asQ_textQ__baseBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asQ_textQ__baseBuilder
-    implements
-        Builder<GtextData_text_text__asQ_textQ__base,
-            GtextData_text_text__asQ_textQ__baseBuilder> {
-  _$GtextData_text_text__asQ_textQ__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtextData_text_text__asQ_textQ__baseBuilder() {
-    GtextData_text_text__asQ_textQ__base._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asQ_textQ__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asQ_textQ__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asQ_textQ__baseBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__base build() => _build();
-
-  _$GtextData_text_text__asQ_textQ__base _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asQ_textQ__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtextData_text_text__asQ_textQ__base', 'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asT
-    extends GtextData_text_text__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtextData_text_text__asQ_textQ__asT(
-          [void Function(GtextData_text_text__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asQ_textQ__asTBuilder()..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asQ_textQ__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtextData_text_text__asQ_textQ__asT', 'textT');
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asT rebuild(
-          void Function(GtextData_text_text__asQ_textQ__asTBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asQ_textQ__asTBuilder toBuilder() =>
-      new GtextData_text_text__asQ_textQ__asTBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asQ_textQ__asTBuilder
-    implements
-        Builder<GtextData_text_text__asQ_textQ__asT,
-            GtextData_text_text__asQ_textQ__asTBuilder> {
-  _$GtextData_text_text__asQ_textQ__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtextData_text_text__asQ_textQ__asTBuilder() {
-    GtextData_text_text__asQ_textQ__asT._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asQ_textQ__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asQ_textQ__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asQ_textQ__asTBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asT build() => _build();
-
-  _$GtextData_text_text__asQ_textQ__asT _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asQ_textQ__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtextData_text_text__asQ_textQ__asT', 'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT, r'GtextData_text_text__asQ_textQ__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asI
-    extends GtextData_text_text__asQ_textQ__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtextData_text_text__asQ_textQ__asI_textI> textI;
-
-  factory _$GtextData_text_text__asQ_textQ__asI(
-          [void Function(GtextData_text_text__asQ_textQ__asIBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asQ_textQ__asIBuilder()..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asQ_textQ__asI._(
-      {required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asQ_textQ__asI', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textI, r'GtextData_text_text__asQ_textQ__asI', 'textI');
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI rebuild(
-          void Function(GtextData_text_text__asQ_textQ__asIBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asQ_textQ__asIBuilder toBuilder() =>
-      new GtextData_text_text__asQ_textQ__asIBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asQ_textQ__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asQ_textQ__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asQ_textQ__asIBuilder
-    implements
-        Builder<GtextData_text_text__asQ_textQ__asI,
-            GtextData_text_text__asQ_textQ__asIBuilder> {
-  _$GtextData_text_text__asQ_textQ__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtextData_text_text__asQ_textQ__asI_textI>? _textI;
-  ListBuilder<GtextData_text_text__asQ_textQ__asI_textI> get textI =>
-      _$this._textI ??=
-          new ListBuilder<GtextData_text_text__asQ_textQ__asI_textI>();
-  set textI(ListBuilder<GtextData_text_text__asQ_textQ__asI_textI>? textI) =>
-      _$this._textI = textI;
-
-  GtextData_text_text__asQ_textQ__asIBuilder() {
-    GtextData_text_text__asQ_textQ__asI._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asQ_textQ__asIBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asQ_textQ__asI other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asQ_textQ__asI;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asQ_textQ__asIBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI build() => _build();
-
-  _$GtextData_text_text__asQ_textQ__asI _build() {
-    _$GtextData_text_text__asQ_textQ__asI _$result;
-    try {
-      _$result = _$v ??
-          new _$GtextData_text_text__asQ_textQ__asI._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  r'GtextData_text_text__asQ_textQ__asI', 'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtextData_text_text__asQ_textQ__asI',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asI_textI__base
-    extends GtextData_text_text__asQ_textQ__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GtextData_text_text__asQ_textQ__asI_textI__base(
-          [void Function(
-                  GtextData_text_text__asQ_textQ__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asQ_textQ__asI_textI__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asQ_textQ__asI_textI__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtextData_text_text__asQ_textQ__asI_textI__base', 'G__typename');
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__base rebuild(
-          void Function(GtextData_text_text__asQ_textQ__asI_textI__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__baseBuilder toBuilder() =>
-      new GtextData_text_text__asQ_textQ__asI_textI__baseBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asQ_textQ__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtextData_text_text__asQ_textQ__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asQ_textQ__asI_textI__baseBuilder
-    implements
-        Builder<GtextData_text_text__asQ_textQ__asI_textI__base,
-            GtextData_text_text__asQ_textQ__asI_textI__baseBuilder> {
-  _$GtextData_text_text__asQ_textQ__asI_textI__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtextData_text_text__asQ_textQ__asI_textI__baseBuilder() {
-    GtextData_text_text__asQ_textQ__asI_textI__base._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asQ_textQ__asI_textI__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asQ_textQ__asI_textI__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asQ_textQ__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asQ_textQ__asI_textI__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__base build() => _build();
-
-  _$GtextData_text_text__asQ_textQ__asI_textI__base _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asQ_textQ__asI_textI__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtextData_text_text__asQ_textQ__asI_textI__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asQ_textQ__asI_textI__asT
-    extends GtextData_text_text__asQ_textQ__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtextData_text_text__asQ_textQ__asI_textI__asT(
-          [void Function(GtextData_text_text__asQ_textQ__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asQ_textQ__asI_textI__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asQ_textQ__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtextData_text_text__asQ_textQ__asI_textI__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtextData_text_text__asQ_textQ__asI_textI__asT', 'textT');
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__asT rebuild(
-          void Function(GtextData_text_text__asQ_textQ__asI_textI__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__asTBuilder toBuilder() =>
-      new GtextData_text_text__asQ_textQ__asI_textI__asTBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asQ_textQ__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtextData_text_text__asQ_textQ__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asQ_textQ__asI_textI__asTBuilder
-    implements
-        Builder<GtextData_text_text__asQ_textQ__asI_textI__asT,
-            GtextData_text_text__asQ_textQ__asI_textI__asTBuilder> {
-  _$GtextData_text_text__asQ_textQ__asI_textI__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtextData_text_text__asQ_textQ__asI_textI__asTBuilder() {
-    GtextData_text_text__asQ_textQ__asI_textI__asT._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asQ_textQ__asI_textI__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asQ_textQ__asI_textI__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asQ_textQ__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asQ_textQ__asI_textI__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asQ_textQ__asI_textI__asT build() => _build();
-
-  _$GtextData_text_text__asQ_textQ__asI_textI__asT _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asQ_textQ__asI_textI__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtextData_text_text__asQ_textQ__asI_textI__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(textT,
-                r'GtextData_text_text__asQ_textQ__asI_textI__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asI extends GtextData_text_text__asI {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtextData_text_text__asI_textI> textI;
-
-  factory _$GtextData_text_text__asI(
-          [void Function(GtextData_text_text__asIBuilder)? updates]) =>
-      (new GtextData_text_text__asIBuilder()..update(updates))._build();
-
-  _$GtextData_text_text__asI._({required this.G__typename, required this.textI})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asI', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textI, r'GtextData_text_text__asI', 'textI');
-  }
-
-  @override
-  GtextData_text_text__asI rebuild(
-          void Function(GtextData_text_text__asIBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asIBuilder toBuilder() =>
-      new GtextData_text_text__asIBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asI &&
-        G__typename == other.G__typename &&
-        textI == other.textI;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textI.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asI')
-          ..add('G__typename', G__typename)
-          ..add('textI', textI))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asIBuilder
-    implements
-        Builder<GtextData_text_text__asI, GtextData_text_text__asIBuilder> {
-  _$GtextData_text_text__asI? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtextData_text_text__asI_textI>? _textI;
-  ListBuilder<GtextData_text_text__asI_textI> get textI =>
-      _$this._textI ??= new ListBuilder<GtextData_text_text__asI_textI>();
-  set textI(ListBuilder<GtextData_text_text__asI_textI>? textI) =>
-      _$this._textI = textI;
-
-  GtextData_text_text__asIBuilder() {
-    GtextData_text_text__asI._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asIBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textI = $v.textI.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asI other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asI;
-  }
-
-  @override
-  void update(void Function(GtextData_text_text__asIBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asI build() => _build();
-
-  _$GtextData_text_text__asI _build() {
-    _$GtextData_text_text__asI _$result;
-    try {
-      _$result = _$v ??
-          new _$GtextData_text_text__asI._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtextData_text_text__asI', 'G__typename'),
-              textI: textI.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textI';
-        textI.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtextData_text_text__asI', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asI_textI__base
-    extends GtextData_text_text__asI_textI__base {
-  @override
-  final String G__typename;
-
-  factory _$GtextData_text_text__asI_textI__base(
-          [void Function(GtextData_text_text__asI_textI__baseBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asI_textI__baseBuilder()..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asI_textI__base._({required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asI_textI__base', 'G__typename');
-  }
-
-  @override
-  GtextData_text_text__asI_textI__base rebuild(
-          void Function(GtextData_text_text__asI_textI__baseBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asI_textI__baseBuilder toBuilder() =>
-      new GtextData_text_text__asI_textI__baseBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asI_textI__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asI_textI__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asI_textI__baseBuilder
-    implements
-        Builder<GtextData_text_text__asI_textI__base,
-            GtextData_text_text__asI_textI__baseBuilder> {
-  _$GtextData_text_text__asI_textI__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtextData_text_text__asI_textI__baseBuilder() {
-    GtextData_text_text__asI_textI__base._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asI_textI__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asI_textI__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asI_textI__base;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asI_textI__baseBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asI_textI__base build() => _build();
-
-  _$GtextData_text_text__asI_textI__base _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asI_textI__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtextData_text_text__asI_textI__base', 'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asT
-    extends GtextData_text_text__asI_textI__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtextData_text_text__asI_textI__asT(
-          [void Function(GtextData_text_text__asI_textI__asTBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asI_textI__asTBuilder()..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asI_textI__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asI_textI__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtextData_text_text__asI_textI__asT', 'textT');
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asT rebuild(
-          void Function(GtextData_text_text__asI_textI__asTBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asI_textI__asTBuilder toBuilder() =>
-      new GtextData_text_text__asI_textI__asTBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asI_textI__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asI_textI__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asI_textI__asTBuilder
-    implements
-        Builder<GtextData_text_text__asI_textI__asT,
-            GtextData_text_text__asI_textI__asTBuilder> {
-  _$GtextData_text_text__asI_textI__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtextData_text_text__asI_textI__asTBuilder() {
-    GtextData_text_text__asI_textI__asT._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asI_textI__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asI_textI__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asI_textI__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asI_textI__asTBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asT build() => _build();
-
-  _$GtextData_text_text__asI_textI__asT _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asI_textI__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                r'GtextData_text_text__asI_textI__asT', 'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT, r'GtextData_text_text__asI_textI__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asQ
-    extends GtextData_text_text__asI_textI__asQ {
-  @override
-  final String G__typename;
-  @override
-  final BuiltList<GtextData_text_text__asI_textI__asQ_textQ> textQ;
-
-  factory _$GtextData_text_text__asI_textI__asQ(
-          [void Function(GtextData_text_text__asI_textI__asQBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asI_textI__asQBuilder()..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asI_textI__asQ._(
-      {required this.G__typename, required this.textQ})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asI_textI__asQ', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textQ, r'GtextData_text_text__asI_textI__asQ', 'textQ');
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ rebuild(
-          void Function(GtextData_text_text__asI_textI__asQBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asI_textI__asQBuilder toBuilder() =>
-      new GtextData_text_text__asI_textI__asQBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asI_textI__asQ &&
-        G__typename == other.G__typename &&
-        textQ == other.textQ;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textQ.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asI_textI__asQ')
-          ..add('G__typename', G__typename)
-          ..add('textQ', textQ))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asI_textI__asQBuilder
-    implements
-        Builder<GtextData_text_text__asI_textI__asQ,
-            GtextData_text_text__asI_textI__asQBuilder> {
-  _$GtextData_text_text__asI_textI__asQ? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  ListBuilder<GtextData_text_text__asI_textI__asQ_textQ>? _textQ;
-  ListBuilder<GtextData_text_text__asI_textI__asQ_textQ> get textQ =>
-      _$this._textQ ??=
-          new ListBuilder<GtextData_text_text__asI_textI__asQ_textQ>();
-  set textQ(ListBuilder<GtextData_text_text__asI_textI__asQ_textQ>? textQ) =>
-      _$this._textQ = textQ;
-
-  GtextData_text_text__asI_textI__asQBuilder() {
-    GtextData_text_text__asI_textI__asQ._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asI_textI__asQBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textQ = $v.textQ.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asI_textI__asQ other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asI_textI__asQ;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asI_textI__asQBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ build() => _build();
-
-  _$GtextData_text_text__asI_textI__asQ _build() {
-    _$GtextData_text_text__asI_textI__asQ _$result;
-    try {
-      _$result = _$v ??
-          new _$GtextData_text_text__asI_textI__asQ._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(G__typename,
-                  r'GtextData_text_text__asI_textI__asQ', 'G__typename'),
-              textQ: textQ.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'textQ';
-        textQ.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtextData_text_text__asI_textI__asQ',
-            _$failedField,
-            e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asQ_textQ__base
-    extends GtextData_text_text__asI_textI__asQ_textQ__base {
-  @override
-  final String G__typename;
-
-  factory _$GtextData_text_text__asI_textI__asQ_textQ__base(
-          [void Function(
-                  GtextData_text_text__asI_textI__asQ_textQ__baseBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asI_textI__asQ_textQ__baseBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asI_textI__asQ_textQ__base._(
-      {required this.G__typename})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtextData_text_text__asI_textI__asQ_textQ__base', 'G__typename');
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__base rebuild(
-          void Function(GtextData_text_text__asI_textI__asQ_textQ__baseBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__baseBuilder toBuilder() =>
-      new GtextData_text_text__asI_textI__asQ_textQ__baseBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asI_textI__asQ_textQ__base &&
-        G__typename == other.G__typename;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtextData_text_text__asI_textI__asQ_textQ__base')
-          ..add('G__typename', G__typename))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asI_textI__asQ_textQ__baseBuilder
-    implements
-        Builder<GtextData_text_text__asI_textI__asQ_textQ__base,
-            GtextData_text_text__asI_textI__asQ_textQ__baseBuilder> {
-  _$GtextData_text_text__asI_textI__asQ_textQ__base? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtextData_text_text__asI_textI__asQ_textQ__baseBuilder() {
-    GtextData_text_text__asI_textI__asQ_textQ__base._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asI_textI__asQ_textQ__baseBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asI_textI__asQ_textQ__base other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asI_textI__asQ_textQ__base;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asI_textI__asQ_textQ__baseBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__base build() => _build();
-
-  _$GtextData_text_text__asI_textI__asQ_textQ__base _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asI_textI__asQ_textQ__base._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtextData_text_text__asI_textI__asQ_textQ__base',
-                'G__typename'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asI_textI__asQ_textQ__asT
-    extends GtextData_text_text__asI_textI__asQ_textQ__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtextData_text_text__asI_textI__asQ_textQ__asT(
-          [void Function(GtextData_text_text__asI_textI__asQ_textQ__asTBuilder)?
-              updates]) =>
-      (new GtextData_text_text__asI_textI__asQ_textQ__asTBuilder()
-            ..update(updates))
-          ._build();
-
-  _$GtextData_text_text__asI_textI__asQ_textQ__asT._(
-      {required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(G__typename,
-        r'GtextData_text_text__asI_textI__asQ_textQ__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtextData_text_text__asI_textI__asQ_textQ__asT', 'textT');
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__asT rebuild(
-          void Function(GtextData_text_text__asI_textI__asQ_textQ__asTBuilder)
-              updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__asTBuilder toBuilder() =>
-      new GtextData_text_text__asI_textI__asQ_textQ__asTBuilder()
-        ..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asI_textI__asQ_textQ__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(
-            r'GtextData_text_text__asI_textI__asQ_textQ__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asI_textI__asQ_textQ__asTBuilder
-    implements
-        Builder<GtextData_text_text__asI_textI__asQ_textQ__asT,
-            GtextData_text_text__asI_textI__asQ_textQ__asTBuilder> {
-  _$GtextData_text_text__asI_textI__asQ_textQ__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtextData_text_text__asI_textI__asQ_textQ__asTBuilder() {
-    GtextData_text_text__asI_textI__asQ_textQ__asT._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asI_textI__asQ_textQ__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asI_textI__asQ_textQ__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asI_textI__asQ_textQ__asT;
-  }
-
-  @override
-  void update(
-      void Function(GtextData_text_text__asI_textI__asQ_textQ__asTBuilder)?
-          updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asI_textI__asQ_textQ__asT build() => _build();
-
-  _$GtextData_text_text__asI_textI__asQ_textQ__asT _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asI_textI__asQ_textQ__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename,
-                r'GtextData_text_text__asI_textI__asQ_textQ__asT',
-                'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(textT,
-                r'GtextData_text_text__asI_textI__asQ_textQ__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asT extends GtextData_text_text__asT {
-  @override
-  final String G__typename;
-  @override
-  final String textT;
-
-  factory _$GtextData_text_text__asT(
-          [void Function(GtextData_text_text__asTBuilder)? updates]) =>
-      (new GtextData_text_text__asTBuilder()..update(updates))._build();
-
-  _$GtextData_text_text__asT._({required this.G__typename, required this.textT})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asT', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        textT, r'GtextData_text_text__asT', 'textT');
-  }
-
-  @override
-  GtextData_text_text__asT rebuild(
-          void Function(GtextData_text_text__asTBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asTBuilder toBuilder() =>
-      new GtextData_text_text__asTBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asT &&
-        G__typename == other.G__typename &&
-        textT == other.textT;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, textT.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asT')
-          ..add('G__typename', G__typename)
-          ..add('textT', textT))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asTBuilder
-    implements
-        Builder<GtextData_text_text__asT, GtextData_text_text__asTBuilder> {
-  _$GtextData_text_text__asT? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _textT;
-  String? get textT => _$this._textT;
-  set textT(String? textT) => _$this._textT = textT;
-
-  GtextData_text_text__asTBuilder() {
-    GtextData_text_text__asT._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asTBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _textT = $v.textT;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asT other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asT;
-  }
-
-  @override
-  void update(void Function(GtextData_text_text__asTBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asT build() => _build();
-
-  _$GtextData_text_text__asT _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asT._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GtextData_text_text__asT', 'G__typename'),
-            textT: BuiltValueNullFieldError.checkNotNull(
-                textT, r'GtextData_text_text__asT', 'textT'));
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asL extends GtextData_text_text__asL {
-  @override
-  final String G__typename;
-  @override
-  final GtextData_text_text__asL_link link;
-
-  factory _$GtextData_text_text__asL(
-          [void Function(GtextData_text_text__asLBuilder)? updates]) =>
-      (new GtextData_text_text__asLBuilder()..update(updates))._build();
-
-  _$GtextData_text_text__asL._({required this.G__typename, required this.link})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asL', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        link, r'GtextData_text_text__asL', 'link');
-  }
-
-  @override
-  GtextData_text_text__asL rebuild(
-          void Function(GtextData_text_text__asLBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asLBuilder toBuilder() =>
-      new GtextData_text_text__asLBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asL &&
-        G__typename == other.G__typename &&
-        link == other.link;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, link.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asL')
-          ..add('G__typename', G__typename)
-          ..add('link', link))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asLBuilder
-    implements
-        Builder<GtextData_text_text__asL, GtextData_text_text__asLBuilder> {
-  _$GtextData_text_text__asL? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  GtextData_text_text__asL_linkBuilder? _link;
-  GtextData_text_text__asL_linkBuilder get link =>
-      _$this._link ??= new GtextData_text_text__asL_linkBuilder();
-  set link(GtextData_text_text__asL_linkBuilder? link) => _$this._link = link;
-
-  GtextData_text_text__asLBuilder() {
-    GtextData_text_text__asL._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asLBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _link = $v.link.toBuilder();
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asL other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asL;
-  }
-
-  @override
-  void update(void Function(GtextData_text_text__asLBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asL build() => _build();
-
-  _$GtextData_text_text__asL _build() {
-    _$GtextData_text_text__asL _$result;
-    try {
-      _$result = _$v ??
-          new _$GtextData_text_text__asL._(
-              G__typename: BuiltValueNullFieldError.checkNotNull(
-                  G__typename, r'GtextData_text_text__asL', 'G__typename'),
-              link: link.build());
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'link';
-        link.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'GtextData_text_text__asL', _$failedField, e.toString());
-      }
-      rethrow;
-    }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextData_text_text__asL_link extends GtextData_text_text__asL_link {
-  @override
-  final String G__typename;
-  @override
-  final String? source;
-  @override
-  final String lemma;
-  @override
-  final _i2.GGramType? pos;
-  @override
-  final _i2.GLangType? lang;
-  @override
-  final String? id;
-  @override
-  final String? text;
-
-  factory _$GtextData_text_text__asL_link(
-          [void Function(GtextData_text_text__asL_linkBuilder)? updates]) =>
-      (new GtextData_text_text__asL_linkBuilder()..update(updates))._build();
-
-  _$GtextData_text_text__asL_link._(
-      {required this.G__typename,
-      this.source,
-      required this.lemma,
-      this.pos,
-      this.lang,
-      this.id,
-      this.text})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        G__typename, r'GtextData_text_text__asL_link', 'G__typename');
-    BuiltValueNullFieldError.checkNotNull(
-        lemma, r'GtextData_text_text__asL_link', 'lemma');
-  }
-
-  @override
-  GtextData_text_text__asL_link rebuild(
-          void Function(GtextData_text_text__asL_linkBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextData_text_text__asL_linkBuilder toBuilder() =>
-      new GtextData_text_text__asL_linkBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextData_text_text__asL_link &&
-        G__typename == other.G__typename &&
-        source == other.source &&
-        lemma == other.lemma &&
-        pos == other.pos &&
-        lang == other.lang &&
-        id == other.id &&
-        text == other.text;
-  }
-
-  @override
-  int get hashCode {
-    var _$hash = 0;
-    _$hash = $jc(_$hash, G__typename.hashCode);
-    _$hash = $jc(_$hash, source.hashCode);
-    _$hash = $jc(_$hash, lemma.hashCode);
-    _$hash = $jc(_$hash, pos.hashCode);
-    _$hash = $jc(_$hash, lang.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, text.hashCode);
-    _$hash = $jf(_$hash);
-    return _$hash;
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper(r'GtextData_text_text__asL_link')
-          ..add('G__typename', G__typename)
-          ..add('source', source)
-          ..add('lemma', lemma)
-          ..add('pos', pos)
-          ..add('lang', lang)
-          ..add('id', id)
-          ..add('text', text))
-        .toString();
-  }
-}
-
-class GtextData_text_text__asL_linkBuilder
-    implements
-        Builder<GtextData_text_text__asL_link,
-            GtextData_text_text__asL_linkBuilder> {
-  _$GtextData_text_text__asL_link? _$v;
-
-  String? _G__typename;
-  String? get G__typename => _$this._G__typename;
-  set G__typename(String? G__typename) => _$this._G__typename = G__typename;
-
-  String? _source;
-  String? get source => _$this._source;
-  set source(String? source) => _$this._source = source;
-
-  String? _lemma;
-  String? get lemma => _$this._lemma;
-  set lemma(String? lemma) => _$this._lemma = lemma;
-
-  _i2.GGramType? _pos;
-  _i2.GGramType? get pos => _$this._pos;
-  set pos(_i2.GGramType? pos) => _$this._pos = pos;
-
-  _i2.GLangType? _lang;
-  _i2.GLangType? get lang => _$this._lang;
-  set lang(_i2.GLangType? lang) => _$this._lang = lang;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
-  String? _text;
-  String? get text => _$this._text;
-  set text(String? text) => _$this._text = text;
-
-  GtextData_text_text__asL_linkBuilder() {
-    GtextData_text_text__asL_link._initializeBuilder(this);
-  }
-
-  GtextData_text_text__asL_linkBuilder get _$this {
-    final $v = _$v;
-    if ($v != null) {
-      _G__typename = $v.G__typename;
-      _source = $v.source;
-      _lemma = $v.lemma;
-      _pos = $v.pos;
-      _lang = $v.lang;
-      _id = $v.id;
-      _text = $v.text;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(GtextData_text_text__asL_link other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextData_text_text__asL_link;
-  }
-
-  @override
-  void update(void Function(GtextData_text_text__asL_linkBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextData_text_text__asL_link build() => _build();
-
-  _$GtextData_text_text__asL_link _build() {
-    final _$result = _$v ??
-        new _$GtextData_text_text__asL_link._(
-            G__typename: BuiltValueNullFieldError.checkNotNull(
-                G__typename, r'GtextData_text_text__asL_link', 'G__typename'),
-            source: source,
-            lemma: BuiltValueNullFieldError.checkNotNull(
-                lemma, r'GtextData_text_text__asL_link', 'lemma'),
             pos: pos,
             lang: lang,
             id: id,
