@@ -135,51 +135,6 @@ abstract class GlemmagraphReq
       );
 }
 
-abstract class GtextgraphReq
-    implements
-        Built<GtextgraphReq, GtextgraphReqBuilder>,
-        _i1.FragmentRequest<_i2.GtextgraphData, _i3.GtextgraphVars> {
-  GtextgraphReq._();
-
-  factory GtextgraphReq([Function(GtextgraphReqBuilder b) updates]) =
-      _$GtextgraphReq;
-
-  static void _initializeBuilder(GtextgraphReqBuilder b) => b
-    ..document = _i5.document
-    ..fragmentName = 'textgraph';
-
-  @override
-  _i3.GtextgraphVars get vars;
-  @override
-  _i7.DocumentNode get document;
-  @override
-  String? get fragmentName;
-  @override
-  Map<String, dynamic> get idFields;
-  @override
-  _i2.GtextgraphData? parseData(Map<String, dynamic> json) =>
-      _i2.GtextgraphData.fromJson(json);
-
-  @override
-  Map<String, dynamic> varsToJson() => vars.toJson();
-
-  @override
-  Map<String, dynamic> dataToJson(dynamic data) => data.toJson();
-
-  static Serializer<GtextgraphReq> get serializer => _$gtextgraphReqSerializer;
-
-  Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
-        GtextgraphReq.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphReq? fromJson(Map<String, dynamic> json) =>
-      _i6.serializers.deserializeWith(
-        GtextgraphReq.serializer,
-        json,
-      );
-}
-
 abstract class GlemmalinkReq
     implements
         Built<GlemmalinkReq, GlemmalinkReqBuilder>,

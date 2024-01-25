@@ -34,7 +34,163 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GdetailsData_details_lemma_subForms__asSynonym.serializer)
       ..add(GdetailsData_details_lemma_subForms__asVariant.serializer)
       ..add(GdetailsData_details_lemma_subForms__base.serializer)
-      ..add(GdetailsData_details_texts.serializer)
+      ..add(GdetailsData_details_texts__asExample.serializer)
+      ..add(GdetailsData_details_texts__asExample_text.serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asI.serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asI_textI__asQ
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asI_textI__asT
+          .serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asI_textI__base
+          .serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asL.serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_text_text__asL_link.serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asQ.serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT
+          .serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asQ_textQ__base
+          .serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__asT.serializer)
+      ..add(GdetailsData_details_texts__asExample_text_text__base.serializer)
+      ..add(GdetailsData_details_texts__asExample_translations.serializer)
+      ..add(GdetailsData_details_texts__asExample_translations_text.serializer)
+      ..add(GdetailsData_details_texts__asExample_translations_text_text__asI
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asExample_translations_text_text__asL
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asL_link
+              .serializer)
+      ..add(GdetailsData_details_texts__asExample_translations_text_text__asQ
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asExample_translations_text_text__asT
+          .serializer)
+      ..add(GdetailsData_details_texts__asExample_translations_text_text__base
+          .serializer)
+      ..add(GdetailsData_details_texts__asProverb.serializer)
+      ..add(GdetailsData_details_texts__asProverb_text.serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asI.serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asI_textI__asT
+          .serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asI_textI__base
+          .serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asL.serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_text_text__asL_link.serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asQ.serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT
+          .serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base
+          .serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__asT.serializer)
+      ..add(GdetailsData_details_texts__asProverb_text_text__base.serializer)
+      ..add(GdetailsData_details_texts__asProverb_translations.serializer)
+      ..add(GdetailsData_details_texts__asProverb_translations_text.serializer)
+      ..add(GdetailsData_details_texts__asProverb_translations_text_text__asI
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asProverb_translations_text_text__asL
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asL_link
+              .serializer)
+      ..add(GdetailsData_details_texts__asProverb_translations_text_text__asQ
+          .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT
+              .serializer)
+      ..add(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base
+              .serializer)
+      ..add(GdetailsData_details_texts__asProverb_translations_text_text__asT
+          .serializer)
+      ..add(GdetailsData_details_texts__asProverb_translations_text_text__base
+          .serializer)
+      ..add(GdetailsData_details_texts__base.serializer)
       ..add(GdetailsData_details_translations.serializer)
       ..add(GdetailsData_details_translations_subForms__asDutchism.serializer)
       ..add(GdetailsData_details_translations_subForms__asParadigm.serializer)
@@ -117,119 +273,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GsourcesData_sources.serializer)
       ..add(GsourcesReq.serializer)
       ..add(GsourcesVars.serializer)
-      ..add(GtextgraphData__asExample.serializer)
-      ..add(GtextgraphData__asExample_text.serializer)
-      ..add(GtextgraphData__asExample_text_text__asI.serializer)
-      ..add(GtextgraphData__asExample_text_text__asI_textI__asQ.serializer)
-      ..add(GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-          .serializer)
-      ..add(GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-          .serializer)
-      ..add(GtextgraphData__asExample_text_text__asI_textI__asT.serializer)
-      ..add(GtextgraphData__asExample_text_text__asI_textI__base.serializer)
-      ..add(GtextgraphData__asExample_text_text__asL.serializer)
-      ..add(GtextgraphData__asExample_text_text__asL_link.serializer)
-      ..add(GtextgraphData__asExample_text_text__asQ.serializer)
-      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asI.serializer)
-      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-          .serializer)
-      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-          .serializer)
-      ..add(GtextgraphData__asExample_text_text__asQ_textQ__asT.serializer)
-      ..add(GtextgraphData__asExample_text_text__asQ_textQ__base.serializer)
-      ..add(GtextgraphData__asExample_text_text__asT.serializer)
-      ..add(GtextgraphData__asExample_text_text__base.serializer)
-      ..add(GtextgraphData__asExample_translations.serializer)
-      ..add(GtextgraphData__asExample_translations_text.serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asI.serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asI_textI__asQ
-          .serializer)
-      ..add(
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-              .serializer)
-      ..add(
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-              .serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asI_textI__asT
-          .serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asI_textI__base
-          .serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asL.serializer)
-      ..add(
-          GtextgraphData__asExample_translations_text_text__asL_link.serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asQ.serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-          .serializer)
-      ..add(
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-              .serializer)
-      ..add(
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-              .serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-          .serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asQ_textQ__base
-          .serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__asT.serializer)
-      ..add(GtextgraphData__asExample_translations_text_text__base.serializer)
-      ..add(GtextgraphData__asProverb.serializer)
-      ..add(GtextgraphData__asProverb_text.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asI.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asI_textI__asQ.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT
-          .serializer)
-      ..add(GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base
-          .serializer)
-      ..add(GtextgraphData__asProverb_text_text__asI_textI__asT.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asI_textI__base.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asL.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asL_link.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asQ.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asQ_textQ__asI.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT
-          .serializer)
-      ..add(GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base
-          .serializer)
-      ..add(GtextgraphData__asProverb_text_text__asQ_textQ__asT.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asQ_textQ__base.serializer)
-      ..add(GtextgraphData__asProverb_text_text__asT.serializer)
-      ..add(GtextgraphData__asProverb_text_text__base.serializer)
-      ..add(GtextgraphData__asProverb_translations.serializer)
-      ..add(GtextgraphData__asProverb_translations_text.serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asI.serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asI_textI__asQ
-          .serializer)
-      ..add(
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
-              .serializer)
-      ..add(
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base
-              .serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asI_textI__asT
-          .serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asI_textI__base
-          .serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asL.serializer)
-      ..add(
-          GtextgraphData__asProverb_translations_text_text__asL_link.serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asQ.serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI
-          .serializer)
-      ..add(
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
-              .serializer)
-      ..add(
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base
-              .serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT
-          .serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asQ_textQ__base
-          .serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__asT.serializer)
-      ..add(GtextgraphData__asProverb_translations_text_text__base.serializer)
-      ..add(GtextgraphData__base.serializer)
-      ..add(GtextgraphReq.serializer)
-      ..add(GtextgraphVars.serializer)
       ..add(GtextsData.serializer)
       ..add(GtextsData_textsearch.serializer)
       ..add(GtextsData_textsearch_message.serializer)
@@ -571,6 +614,144 @@ Serializers _$serializers = (new Serializers().toBuilder()
               GdetailsData_details_lemma_subForms__asParadigmCategory_forms>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
+            const FullType(GdetailsData_details_texts__asExample_text_text)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_text_text>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_text_text__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_text_text__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_text_text__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_text_text__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_translations_text_text)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_translations_text_text>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_translations_text_text__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_translations_text_text__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GdetailsData_details_texts__asProverb_text_text)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_text_text>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_text_text__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_text_text__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_text_text__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_text_text__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_translations_text_text)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_translations_text_text>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_translations_text_text__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_translations_text_text__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
             const FullType(
                 GdetailsData_details_translations_subForms__asParadigmCategory_forms)
           ]),
@@ -607,134 +788,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GsourcesData_sources)]),
           () => new ListBuilder<GsourcesData_sources>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GtextgraphData__asExample_text_text)]),
-          () => new ListBuilder<GtextgraphData__asExample_text_text>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtextgraphData__asExample_text_text__asI_textI)
-          ]),
-          () =>
-              new ListBuilder<GtextgraphData__asExample_text_text__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asExample_text_text__asI_textI__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtextgraphData__asExample_text_text__asQ_textQ)
-          ]),
-          () =>
-              new ListBuilder<GtextgraphData__asExample_text_text__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asExample_text_text__asQ_textQ__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtextgraphData__asExample_translations_text_text)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asExample_translations_text_text>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asExample_translations_text_text__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asExample_translations_text_text__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asExample_translations_text_text__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asExample_translations_text_text__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GtextgraphData__asProverb_text_text)]),
-          () => new ListBuilder<GtextgraphData__asProverb_text_text>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtextgraphData__asProverb_text_text__asI_textI)
-          ]),
-          () =>
-              new ListBuilder<GtextgraphData__asProverb_text_text__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtextgraphData__asProverb_text_text__asQ_textQ)
-          ]),
-          () =>
-              new ListBuilder<GtextgraphData__asProverb_text_text__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GtextgraphData__asProverb_translations_text_text)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asProverb_translations_text_text>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asProverb_translations_text_text__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asProverb_translations_text_text__asI_textI>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asProverb_translations_text_text__asQ_textQ)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asProverb_translations_text_text__asQ_textQ>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI)
-          ]),
-          () => new ListBuilder<
-              GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(GtextsData_textsearch_texts__asCollocation_text_text)
@@ -1077,6 +1130,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<GdetailsData_details?>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
+            const FullType.nullable(
+                GdetailsData_details_texts__asExample_translations)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asExample_translations?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GdetailsData_details_texts__asProverb_translations)
+          ]),
+          () => new ListBuilder<
+              GdetailsData_details_texts__asProverb_translations?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
             const FullType.nullable(GdetailsData_details_translations)
           ]),
           () => new ListBuilder<GdetailsData_details_translations?>())
@@ -1126,16 +1193,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType.nullable(GrhymeData_rhyme_rhymeGroups_rhyming)
           ]),
           () => new ListBuilder<GrhymeData_rhyme_rhymeGroups_rhyming?>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType.nullable(GtextgraphData__asExample_translations)
-          ]),
-          () => new ListBuilder<GtextgraphData__asExample_translations?>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType.nullable(GtextgraphData__asProverb_translations)
-          ]),
-          () => new ListBuilder<GtextgraphData__asProverb_translations?>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType.nullable(GtextsData_textsearch_message)]),

@@ -117,6 +117,8 @@ class VarController with ChangeNotifier {
 
   late String query = '';
 
+  late List translations;
+
   late String gramVar = '';
   late String lemmaForm = '';
   late String lemmaArticle = '';
@@ -152,6 +154,7 @@ class VarController with ChangeNotifier {
 
   void clearVariables() {
     stagedItems = [];
+    translations = [];
     query = '';
     gramVar = '';
     lemmaForm = '';

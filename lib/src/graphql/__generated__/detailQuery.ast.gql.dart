@@ -103,10 +103,146 @@ const details = _i1.OperationDefinitionNode(
           arguments: [],
           directives: [],
           selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'textgraph'),
+            _i1.InlineFragmentNode(
+              typeCondition: _i1.TypeConditionNode(
+                  on: _i1.NamedTypeNode(
+                name: _i1.NameNode(value: 'Example'),
+                isNonNull: false,
+              )),
               directives: [],
-            )
+              selectionSet: _i1.SelectionSetNode(selections: [
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'text'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: _i1.SelectionSetNode(selections: [
+                    _i1.FragmentSpreadNode(
+                      name: _i1.NameNode(value: 'txtDetails'),
+                      directives: [],
+                    )
+                  ]),
+                ),
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'lang'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'translations'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: _i1.SelectionSetNode(selections: [
+                    _i1.FieldNode(
+                      name: _i1.NameNode(value: 'id'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: null,
+                    ),
+                    _i1.FieldNode(
+                      name: _i1.NameNode(value: 'text'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: _i1.SelectionSetNode(selections: [
+                        _i1.FragmentSpreadNode(
+                          name: _i1.NameNode(value: 'txtDetails'),
+                          directives: [],
+                        )
+                      ]),
+                    ),
+                    _i1.FieldNode(
+                      name: _i1.NameNode(value: 'lang'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: null,
+                    ),
+                  ]),
+                ),
+              ]),
+            ),
+            _i1.InlineFragmentNode(
+              typeCondition: _i1.TypeConditionNode(
+                  on: _i1.NamedTypeNode(
+                name: _i1.NameNode(value: 'Proverb'),
+                isNonNull: false,
+              )),
+              directives: [],
+              selectionSet: _i1.SelectionSetNode(selections: [
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'text'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: _i1.SelectionSetNode(selections: [
+                    _i1.FragmentSpreadNode(
+                      name: _i1.NameNode(value: 'txtDetails'),
+                      directives: [],
+                    )
+                  ]),
+                ),
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'lang'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                _i1.FieldNode(
+                  name: _i1.NameNode(value: 'translations'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: _i1.SelectionSetNode(selections: [
+                    _i1.FieldNode(
+                      name: _i1.NameNode(value: 'id'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: null,
+                    ),
+                    _i1.FieldNode(
+                      name: _i1.NameNode(value: 'text'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: _i1.SelectionSetNode(selections: [
+                        _i1.FragmentSpreadNode(
+                          name: _i1.NameNode(value: 'txtDetails'),
+                          directives: [],
+                        )
+                      ]),
+                    ),
+                    _i1.FieldNode(
+                      name: _i1.NameNode(value: 'lang'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: null,
+                    ),
+                  ]),
+                ),
+              ]),
+            ),
           ]),
         ),
       ]),
@@ -242,6 +378,13 @@ const lemmagraph = _i1.FragmentDefinitionNode(
               directives: [],
               selectionSet: null,
             ),
+            _i1.FieldNode(
+              name: _i1.NameNode(value: 'meaning'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null,
+            ),
           ]),
         ),
         _i1.InlineFragmentNode(
@@ -296,164 +439,6 @@ const lemmagraph = _i1.FragmentDefinitionNode(
               arguments: [],
               directives: [],
               selectionSet: null,
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'lang'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-          ]),
-        ),
-      ]),
-    ),
-  ]),
-);
-const textgraph = _i1.FragmentDefinitionNode(
-  name: _i1.NameNode(value: 'textgraph'),
-  typeCondition: _i1.TypeConditionNode(
-      on: _i1.NamedTypeNode(
-    name: _i1.NameNode(value: 'Text'),
-    isNonNull: false,
-  )),
-  directives: [],
-  selectionSet: _i1.SelectionSetNode(selections: [
-    _i1.FieldNode(
-      name: _i1.NameNode(value: '__typename'),
-      alias: null,
-      arguments: [],
-      directives: [],
-      selectionSet: null,
-    ),
-    _i1.InlineFragmentNode(
-      typeCondition: _i1.TypeConditionNode(
-          on: _i1.NamedTypeNode(
-        name: _i1.NameNode(value: 'Example'),
-        isNonNull: false,
-      )),
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'id'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'text'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'txtDetails'),
-              directives: [],
-            )
-          ]),
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'lang'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'translations'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'text'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: _i1.SelectionSetNode(selections: [
-                _i1.FragmentSpreadNode(
-                  name: _i1.NameNode(value: 'txtDetails'),
-                  directives: [],
-                )
-              ]),
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'lang'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-          ]),
-        ),
-      ]),
-    ),
-    _i1.InlineFragmentNode(
-      typeCondition: _i1.TypeConditionNode(
-          on: _i1.NamedTypeNode(
-        name: _i1.NameNode(value: 'Proverb'),
-        isNonNull: false,
-      )),
-      directives: [],
-      selectionSet: _i1.SelectionSetNode(selections: [
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'id'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'text'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FragmentSpreadNode(
-              name: _i1.NameNode(value: 'txtDetails'),
-              directives: [],
-            )
-          ]),
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'lang'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: null,
-        ),
-        _i1.FieldNode(
-          name: _i1.NameNode(value: 'translations'),
-          alias: null,
-          arguments: [],
-          directives: [],
-          selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null,
-            ),
-            _i1.FieldNode(
-              name: _i1.NameNode(value: 'text'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: _i1.SelectionSetNode(selections: [
-                _i1.FragmentSpreadNode(
-                  name: _i1.NameNode(value: 'txtDetails'),
-                  directives: [],
-                )
-              ]),
             ),
             _i1.FieldNode(
               name: _i1.NameNode(value: 'lang'),
@@ -775,7 +760,6 @@ const par = _i1.FragmentDefinitionNode(
 const document = _i1.DocumentNode(definitions: [
   details,
   lemmagraph,
-  textgraph,
   lemmalink,
   txtDetails,
   par,

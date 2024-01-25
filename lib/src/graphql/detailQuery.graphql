@@ -3,7 +3,10 @@ query details( # case and diacrit sensitive lemma (article) to find
     details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
         lemma { ...lemmagraph }
         translations { ...lemmagraph }
-        texts { ...textgraph }
+        texts { 
+            ... on Example { id text {...txtDetails} lang translations {id text {...txtDetails} lang} }
+            ... on Proverb { id text {...txtDetails} lang translations {id text {...txtDetails} lang} }
+        }
     }
 }
 fragment lemmagraph  on Lemma {
@@ -15,16 +18,12 @@ fragment lemmagraph  on Lemma {
     subForms {
         ... on ParadigmCategory { type forms { ...par }}
         ... on Paradigm { __typename ...par }
-        ... on Synonym { __typename form lang }
+        ... on Synonym { __typename form lang meaning }
         ... on Variant { __typename form lang }
         ... on Dutchism { __typename form lang }
     }
 }
-fragment textgraph on Text {
-    __typename
-    ... on Example { id text {...txtDetails} lang translations { id text {...txtDetails} lang } }
-    ... on Proverb { id text {...txtDetails} lang translations { id text {...txtDetails} lang } }
-}
+
 fragment lemmalink on LemmaLink {
     source lemma pos lang id text
 }

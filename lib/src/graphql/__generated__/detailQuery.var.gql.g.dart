@@ -10,8 +10,6 @@ Serializer<GdetailsVars> _$gdetailsVarsSerializer =
     new _$GdetailsVarsSerializer();
 Serializer<GlemmagraphVars> _$glemmagraphVarsSerializer =
     new _$GlemmagraphVarsSerializer();
-Serializer<GtextgraphVars> _$gtextgraphVarsSerializer =
-    new _$GtextgraphVarsSerializer();
 Serializer<GlemmalinkVars> _$glemmalinkVarsSerializer =
     new _$GlemmalinkVarsSerializer();
 Serializer<GtxtDetailsVars> _$gtxtDetailsVarsSerializer =
@@ -102,27 +100,6 @@ class _$GlemmagraphVarsSerializer
       Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     return new GlemmagraphVarsBuilder().build();
-  }
-}
-
-class _$GtextgraphVarsSerializer
-    implements StructuredSerializer<GtextgraphVars> {
-  @override
-  final Iterable<Type> types = const [GtextgraphVars, _$GtextgraphVars];
-  @override
-  final String wireName = 'GtextgraphVars';
-
-  @override
-  Iterable<Object?> serialize(Serializers serializers, GtextgraphVars object,
-      {FullType specifiedType = FullType.unspecified}) {
-    return <Object?>[];
-  }
-
-  @override
-  GtextgraphVars deserialize(
-      Serializers serializers, Iterable<Object?> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    return new GtextgraphVarsBuilder().build();
   }
 }
 
@@ -368,64 +345,6 @@ class GlemmagraphVarsBuilder
 
   _$GlemmagraphVars _build() {
     final _$result = _$v ?? new _$GlemmagraphVars._();
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$GtextgraphVars extends GtextgraphVars {
-  factory _$GtextgraphVars([void Function(GtextgraphVarsBuilder)? updates]) =>
-      (new GtextgraphVarsBuilder()..update(updates))._build();
-
-  _$GtextgraphVars._() : super._();
-
-  @override
-  GtextgraphVars rebuild(void Function(GtextgraphVarsBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  GtextgraphVarsBuilder toBuilder() =>
-      new GtextgraphVarsBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is GtextgraphVars;
-  }
-
-  @override
-  int get hashCode {
-    return 71473943;
-  }
-
-  @override
-  String toString() {
-    return newBuiltValueToStringHelper(r'GtextgraphVars').toString();
-  }
-}
-
-class GtextgraphVarsBuilder
-    implements Builder<GtextgraphVars, GtextgraphVarsBuilder> {
-  _$GtextgraphVars? _$v;
-
-  GtextgraphVarsBuilder();
-
-  @override
-  void replace(GtextgraphVars other) {
-    ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$GtextgraphVars;
-  }
-
-  @override
-  void update(void Function(GtextgraphVarsBuilder)? updates) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  GtextgraphVars build() => _build();
-
-  _$GtextgraphVars _build() {
-    final _$result = _$v ?? new _$GtextgraphVars._();
     replace(_$result);
     return _$result;
   }

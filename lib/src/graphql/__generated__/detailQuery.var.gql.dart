@@ -56,28 +56,6 @@ abstract class GlemmagraphVars
       );
 }
 
-abstract class GtextgraphVars
-    implements Built<GtextgraphVars, GtextgraphVarsBuilder> {
-  GtextgraphVars._();
-
-  factory GtextgraphVars([Function(GtextgraphVarsBuilder b) updates]) =
-      _$GtextgraphVars;
-
-  static Serializer<GtextgraphVars> get serializer =>
-      _$gtextgraphVarsSerializer;
-
-  Map<String, dynamic> toJson() => (_i2.serializers.serializeWith(
-        GtextgraphVars.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphVars? fromJson(Map<String, dynamic> json) =>
-      _i2.serializers.deserializeWith(
-        GtextgraphVars.serializer,
-        json,
-      );
-}
-
 abstract class GlemmalinkVars
     implements Built<GlemmalinkVars, GlemmalinkVarsBuilder> {
   GlemmalinkVars._();

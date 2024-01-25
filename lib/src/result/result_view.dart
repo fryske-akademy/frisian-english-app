@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../main.dart';
 import 'parts/details.dart';
 import 'parts/examples.dart';
+import 'parts/proverbs.dart';
 import 'parts/translations.dart';
 
 class ResultView extends StatefulWidget {
@@ -102,11 +103,8 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                         ),
                       ],
                     ),
-
                     Examples(response),
-                    Text("Hallo"),
-
-                    // const Proverbs(),
+                    Proverbs(response),
                   ],
                 );
               }

@@ -343,6 +343,7 @@ abstract class GdetailsData_details_lemma_subForms__asSynonym
   String get G__typename;
   String get form;
   _i2.GLangType get lang;
+  String? get meaning;
   static Serializer<GdetailsData_details_lemma_subForms__asSynonym>
       get serializer => _$gdetailsDataDetailsLemmaSubFormsAsSynonymSerializer;
 
@@ -720,6 +721,7 @@ abstract class GdetailsData_details_translations_subForms__asSynonym
   String get G__typename;
   String get form;
   _i2.GLangType get lang;
+  String? get meaning;
   static Serializer<GdetailsData_details_translations_subForms__asSynonym>
       get serializer =>
           _$gdetailsDataDetailsTranslationsSubFormsAsSynonymSerializer;
@@ -814,26 +816,19 @@ abstract class GdetailsData_details_translations_subForms__asDutchism
       );
 }
 
-abstract class GdetailsData_details_texts
-    implements
-        Built<GdetailsData_details_texts, GdetailsData_details_textsBuilder>,
-        Gtextgraph {
-  GdetailsData_details_texts._();
-
-  factory GdetailsData_details_texts(
-          [Function(GdetailsData_details_textsBuilder b) updates]) =
-      _$GdetailsData_details_texts;
-
-  static void _initializeBuilder(GdetailsData_details_textsBuilder b) =>
-      b..G__typename = 'Text';
-
-  @override
+abstract class GdetailsData_details_texts {
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GdetailsData_details_texts> get serializer =>
-      _$gdetailsDataDetailsTextsSerializer;
+      _i3.InlineFragmentSerializer<GdetailsData_details_texts>(
+        'GdetailsData_details_texts',
+        GdetailsData_details_texts__base,
+        {
+          'Example': GdetailsData_details_texts__asExample,
+          'Proverb': GdetailsData_details_texts__asProverb,
+        },
+      );
 
-  @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GdetailsData_details_texts.serializer,
         this,
@@ -844,6 +839,3722 @@ abstract class GdetailsData_details_texts
         GdetailsData_details_texts.serializer,
         json,
       );
+}
+
+abstract class GdetailsData_details_texts__base
+    implements
+        Built<GdetailsData_details_texts__base,
+            GdetailsData_details_texts__baseBuilder>,
+        GdetailsData_details_texts {
+  GdetailsData_details_texts__base._();
+
+  factory GdetailsData_details_texts__base(
+          [Function(GdetailsData_details_texts__baseBuilder b) updates]) =
+      _$GdetailsData_details_texts__base;
+
+  static void _initializeBuilder(GdetailsData_details_texts__baseBuilder b) =>
+      b..G__typename = 'Text';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__base> get serializer =>
+      _$gdetailsDataDetailsTextsBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__base.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__base? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__base.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample
+    implements
+        Built<GdetailsData_details_texts__asExample,
+            GdetailsData_details_texts__asExampleBuilder>,
+        GdetailsData_details_texts {
+  GdetailsData_details_texts__asExample._();
+
+  factory GdetailsData_details_texts__asExample(
+          [Function(GdetailsData_details_texts__asExampleBuilder b) updates]) =
+      _$GdetailsData_details_texts__asExample;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExampleBuilder b) =>
+      b..G__typename = 'Example';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String? get id;
+  GdetailsData_details_texts__asExample_text get text;
+  _i2.GLangType get lang;
+  BuiltList<GdetailsData_details_texts__asExample_translations?>?
+      get translations;
+  static Serializer<GdetailsData_details_texts__asExample> get serializer =>
+      _$gdetailsDataDetailsTextsAsExampleSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text
+    implements
+        Built<GdetailsData_details_texts__asExample_text,
+            GdetailsData_details_texts__asExample_textBuilder>,
+        GtxtDetails {
+  GdetailsData_details_texts__asExample_text._();
+
+  factory GdetailsData_details_texts__asExample_text(
+      [Function(GdetailsData_details_texts__asExample_textBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_text;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_textBuilder b) =>
+      b..G__typename = 'FormattedText';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GdetailsData_details_texts__asExample_text_text> get text;
+  static Serializer<GdetailsData_details_texts__asExample_text>
+      get serializer => _$gdetailsDataDetailsTextsAsExampleTextSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text
+    implements GtxtDetails_text {
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asExample_text_text>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_text_text>(
+            'GdetailsData_details_texts__asExample_text_text',
+            GdetailsData_details_texts__asExample_text_text__base,
+            {
+              'Q': GdetailsData_details_texts__asExample_text_text__asQ,
+              'I': GdetailsData_details_texts__asExample_text_text__asI,
+              'T': GdetailsData_details_texts__asExample_text_text__asT,
+              'L': GdetailsData_details_texts__asExample_text_text__asL,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__base
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__base,
+            GdetailsData_details_texts__asExample_text_text__baseBuilder>,
+        GdetailsData_details_texts__asExample_text_text {
+  GdetailsData_details_texts__asExample_text_text__base._();
+
+  factory GdetailsData_details_texts__asExample_text_text__base(
+      [Function(GdetailsData_details_texts__asExample_text_text__baseBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_text_text__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__baseBuilder b) =>
+      b..G__typename = 'TextType';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__base.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__base? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__base.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asQ,
+            GdetailsData_details_texts__asExample_text_text__asQBuilder>,
+        GdetailsData_details_texts__asExample_text_text {
+  GdetailsData_details_texts__asExample_text_text__asQ._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asQ(
+      [Function(GdetailsData_details_texts__asExample_text_text__asQBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_text_text__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asQBuilder b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<GdetailsData_details_texts__asExample_text_text__asQ_textQ>
+      get textQ;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_text_text__asQ_textQ>(
+            'GdetailsData_details_texts__asExample_text_text__asQ_textQ',
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT,
+              'I':
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ_textQ? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ_textQ__base
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asQ_textQ__base,
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ {
+  GdetailsData_details_texts__asExample_text_text__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT,
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ {
+  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI,
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asIBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ {
+  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asIBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asIBuilder
+              b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI>
+      get textI;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsQTextQAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI>(
+            'GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI',
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base,
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsQTextQAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT,
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsQTextQAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asQ_textQ__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asI,
+            GdetailsData_details_texts__asExample_text_text__asIBuilder>,
+        GdetailsData_details_texts__asExample_text_text {
+  GdetailsData_details_texts__asExample_text_text__asI._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asI(
+      [Function(GdetailsData_details_texts__asExample_text_text__asIBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_text_text__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asIBuilder b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<GdetailsData_details_texts__asExample_text_text__asI_textI>
+      get textI;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_text_text__asI_textI>(
+            'GdetailsData_details_texts__asExample_text_text__asI_textI',
+            GdetailsData_details_texts__asExample_text_text__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__asT,
+              'Q':
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__asQ,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI_textI? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI_textI__base
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asI_textI__base,
+            GdetailsData_details_texts__asExample_text_text__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asI_textI {
+  GdetailsData_details_texts__asExample_text_text__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI_textI__asT
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asI_textI__asT,
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asI_textI {
+  GdetailsData_details_texts__asExample_text_text__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI_textI__asQ
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asI_textI__asQ,
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asI_textI {
+  GdetailsData_details_texts__asExample_text_text__asI_textI__asQ._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asI_textI__asQ(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__asQBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asI_textI__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQBuilder
+              b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ>
+      get textQ;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsITextIAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI__asQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI_textI__asQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ>(
+            'GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ',
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base,
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsITextIAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT,
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsITextIAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_text_text__asI_textI__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asT
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asT,
+            GdetailsData_details_texts__asExample_text_text__asTBuilder>,
+        GdetailsData_details_texts__asExample_text_text {
+  GdetailsData_details_texts__asExample_text_text__asT._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asT(
+      [Function(GdetailsData_details_texts__asExample_text_text__asTBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_text_text__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asTBuilder b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asT.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asT? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__asT.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asL
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asL,
+            GdetailsData_details_texts__asExample_text_text__asLBuilder>,
+        GdetailsData_details_texts__asExample_text_text {
+  GdetailsData_details_texts__asExample_text_text__asL._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asL(
+      [Function(GdetailsData_details_texts__asExample_text_text__asLBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_text_text__asL;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asLBuilder b) =>
+      b..G__typename = 'L';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GdetailsData_details_texts__asExample_text_text__asL_link get link;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__asL>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsLSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asL.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asL? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__asL.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_text_text__asL_link
+    implements
+        Built<GdetailsData_details_texts__asExample_text_text__asL_link,
+            GdetailsData_details_texts__asExample_text_text__asL_linkBuilder>,
+        Glemmalink {
+  GdetailsData_details_texts__asExample_text_text__asL_link._();
+
+  factory GdetailsData_details_texts__asExample_text_text__asL_link(
+      [Function(
+              GdetailsData_details_texts__asExample_text_text__asL_linkBuilder
+                  b)
+          updates]) = _$GdetailsData_details_texts__asExample_text_text__asL_link;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_text_text__asL_linkBuilder b) =>
+      b..G__typename = 'LemmaLink';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String? get source;
+  @override
+  String get lemma;
+  @override
+  _i2.GGramType? get pos;
+  @override
+  _i2.GLangType? get lang;
+  @override
+  String? get id;
+  @override
+  String? get text;
+  static Serializer<GdetailsData_details_texts__asExample_text_text__asL_link>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTextTextAsLLinkSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_text_text__asL_link.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_text_text__asL_link? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_text_text__asL_link.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations
+    implements
+        Built<GdetailsData_details_texts__asExample_translations,
+            GdetailsData_details_texts__asExample_translationsBuilder> {
+  GdetailsData_details_texts__asExample_translations._();
+
+  factory GdetailsData_details_texts__asExample_translations(
+      [Function(GdetailsData_details_texts__asExample_translationsBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_translations;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translationsBuilder b) =>
+      b..G__typename = 'TextTranslated';
+
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String? get id;
+  GdetailsData_details_texts__asExample_translations_text get text;
+  _i2.GLangType get lang;
+  static Serializer<GdetailsData_details_texts__asExample_translations>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsSerializer;
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_translations.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text
+    implements
+        Built<GdetailsData_details_texts__asExample_translations_text,
+            GdetailsData_details_texts__asExample_translations_textBuilder>,
+        GtxtDetails {
+  GdetailsData_details_texts__asExample_translations_text._();
+
+  factory GdetailsData_details_texts__asExample_translations_text(
+      [Function(
+              GdetailsData_details_texts__asExample_translations_textBuilder b)
+          updates]) = _$GdetailsData_details_texts__asExample_translations_text;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_textBuilder b) =>
+      b..G__typename = 'FormattedText';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GdetailsData_details_texts__asExample_translations_text_text>
+      get text;
+  static Serializer<GdetailsData_details_texts__asExample_translations_text>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_translations_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text
+    implements GtxtDetails_text {
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_translations_text_text>(
+            'GdetailsData_details_texts__asExample_translations_text_text',
+            GdetailsData_details_texts__asExample_translations_text_text__base,
+            {
+              'Q':
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ,
+              'I':
+                  GdetailsData_details_texts__asExample_translations_text_text__asI,
+              'T':
+                  GdetailsData_details_texts__asExample_translations_text_text__asT,
+              'L':
+                  GdetailsData_details_texts__asExample_translations_text_text__asL,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__base
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__base,
+            GdetailsData_details_texts__asExample_translations_text_text__baseBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text {
+  GdetailsData_details_texts__asExample_translations_text_text__base._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__baseBuilder
+              b) =>
+      b..G__typename = 'TextType';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ
+    implements
+        Built<GdetailsData_details_texts__asExample_translations_text_text__asQ,
+            GdetailsData_details_texts__asExample_translations_text_text__asQBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text {
+  GdetailsData_details_texts__asExample_translations_text_text__asQ._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asQ(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asQBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asQBuilder
+              b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ>
+      get textQ;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ>(
+            'GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ',
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT,
+              'I':
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base,
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ {
+  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT,
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ {
+  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI,
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asIBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ {
+  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asIBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asIBuilder
+              b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI>
+      get textI;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsQTextQAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI>(
+            'GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI',
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base,
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsQTextQAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT,
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsQTextQAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asQ_textQ__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI
+    implements
+        Built<GdetailsData_details_texts__asExample_translations_text_text__asI,
+            GdetailsData_details_texts__asExample_translations_text_text__asIBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text {
+  GdetailsData_details_texts__asExample_translations_text_text__asI._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asI(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asIBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asIBuilder
+              b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI>
+      get textI;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_translations_text_text__asI_textI>(
+            'GdetailsData_details_texts__asExample_translations_text_text__asI_textI',
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT,
+              'Q':
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI_textI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base,
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI {
+  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT,
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI {
+  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ,
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI {
+  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQBuilder
+              b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ>
+      get textQ;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsITextIAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ>(
+            'GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ',
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base,
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsITextIAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT,
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsITextIAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asI_textI__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asT
+    implements
+        Built<GdetailsData_details_texts__asExample_translations_text_text__asT,
+            GdetailsData_details_texts__asExample_translations_text_text__asTBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text {
+  GdetailsData_details_texts__asExample_translations_text_text__asT._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asT(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asL
+    implements
+        Built<GdetailsData_details_texts__asExample_translations_text_text__asL,
+            GdetailsData_details_texts__asExample_translations_text_text__asLBuilder>,
+        GdetailsData_details_texts__asExample_translations_text_text {
+  GdetailsData_details_texts__asExample_translations_text_text__asL._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asL(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asLBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asL;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asLBuilder
+              b) =>
+      b..G__typename = 'L';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GdetailsData_details_texts__asExample_translations_text_text__asL_link
+      get link;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asL>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsLSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asL
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asL?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asL
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asExample_translations_text_text__asL_link
+    implements
+        Built<
+            GdetailsData_details_texts__asExample_translations_text_text__asL_link,
+            GdetailsData_details_texts__asExample_translations_text_text__asL_linkBuilder>,
+        Glemmalink {
+  GdetailsData_details_texts__asExample_translations_text_text__asL_link._();
+
+  factory GdetailsData_details_texts__asExample_translations_text_text__asL_link(
+          [Function(
+                  GdetailsData_details_texts__asExample_translations_text_text__asL_linkBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asExample_translations_text_text__asL_link;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asExample_translations_text_text__asL_linkBuilder
+              b) =>
+      b..G__typename = 'LemmaLink';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String? get source;
+  @override
+  String get lemma;
+  @override
+  _i2.GGramType? get pos;
+  @override
+  _i2.GLangType? get lang;
+  @override
+  String? get id;
+  @override
+  String? get text;
+  static Serializer<
+          GdetailsData_details_texts__asExample_translations_text_text__asL_link>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsExampleTranslationsTextTextAsLLinkSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asExample_translations_text_text__asL_link
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asExample_translations_text_text__asL_link?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asExample_translations_text_text__asL_link
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb
+    implements
+        Built<GdetailsData_details_texts__asProverb,
+            GdetailsData_details_texts__asProverbBuilder>,
+        GdetailsData_details_texts {
+  GdetailsData_details_texts__asProverb._();
+
+  factory GdetailsData_details_texts__asProverb(
+          [Function(GdetailsData_details_texts__asProverbBuilder b) updates]) =
+      _$GdetailsData_details_texts__asProverb;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverbBuilder b) =>
+      b..G__typename = 'Proverb';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String? get id;
+  GdetailsData_details_texts__asProverb_text get text;
+  _i2.GLangType get lang;
+  BuiltList<GdetailsData_details_texts__asProverb_translations?>?
+      get translations;
+  static Serializer<GdetailsData_details_texts__asProverb> get serializer =>
+      _$gdetailsDataDetailsTextsAsProverbSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text
+    implements
+        Built<GdetailsData_details_texts__asProverb_text,
+            GdetailsData_details_texts__asProverb_textBuilder>,
+        GtxtDetails {
+  GdetailsData_details_texts__asProverb_text._();
+
+  factory GdetailsData_details_texts__asProverb_text(
+      [Function(GdetailsData_details_texts__asProverb_textBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_text;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_textBuilder b) =>
+      b..G__typename = 'FormattedText';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GdetailsData_details_texts__asProverb_text_text> get text;
+  static Serializer<GdetailsData_details_texts__asProverb_text>
+      get serializer => _$gdetailsDataDetailsTextsAsProverbTextSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text
+    implements GtxtDetails_text {
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_text_text>(
+            'GdetailsData_details_texts__asProverb_text_text',
+            GdetailsData_details_texts__asProverb_text_text__base,
+            {
+              'Q': GdetailsData_details_texts__asProverb_text_text__asQ,
+              'I': GdetailsData_details_texts__asProverb_text_text__asI,
+              'T': GdetailsData_details_texts__asProverb_text_text__asT,
+              'L': GdetailsData_details_texts__asProverb_text_text__asL,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__base
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__base,
+            GdetailsData_details_texts__asProverb_text_text__baseBuilder>,
+        GdetailsData_details_texts__asProverb_text_text {
+  GdetailsData_details_texts__asProverb_text_text__base._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__base(
+      [Function(GdetailsData_details_texts__asProverb_text_text__baseBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_text_text__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__baseBuilder b) =>
+      b..G__typename = 'TextType';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__base.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__base? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__base.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asQ,
+            GdetailsData_details_texts__asProverb_text_text__asQBuilder>,
+        GdetailsData_details_texts__asProverb_text_text {
+  GdetailsData_details_texts__asProverb_text_text__asQ._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asQ(
+      [Function(GdetailsData_details_texts__asProverb_text_text__asQBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_text_text__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asQBuilder b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<GdetailsData_details_texts__asProverb_text_text__asQ_textQ>
+      get textQ;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_text_text__asQ_textQ>(
+            'GdetailsData_details_texts__asProverb_text_text__asQ_textQ',
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT,
+              'I':
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ_textQ? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base,
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ {
+  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT,
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ {
+  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI,
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asIBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ {
+  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asIBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asIBuilder
+              b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI>
+      get textI;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsQTextQAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI>(
+            'GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI',
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base,
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsQTextQAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT,
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsQTextQAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asQ_textQ__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asI,
+            GdetailsData_details_texts__asProverb_text_text__asIBuilder>,
+        GdetailsData_details_texts__asProverb_text_text {
+  GdetailsData_details_texts__asProverb_text_text__asI._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asI(
+      [Function(GdetailsData_details_texts__asProverb_text_text__asIBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_text_text__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asIBuilder b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<GdetailsData_details_texts__asProverb_text_text__asI_textI>
+      get textI;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_text_text__asI_textI>(
+            'GdetailsData_details_texts__asProverb_text_text__asI_textI',
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__asT,
+              'Q':
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI_textI? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI_textI__base
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asI_textI__base,
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asI_textI {
+  GdetailsData_details_texts__asProverb_text_text__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI_textI__asT
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asI_textI__asT,
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asI_textI {
+  GdetailsData_details_texts__asProverb_text_text__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ,
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asI_textI {
+  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQBuilder
+              b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ>
+      get textQ;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsITextIAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ>(
+            'GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ',
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base,
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsITextIAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT,
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsITextIAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_text_text__asI_textI__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asT
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asT,
+            GdetailsData_details_texts__asProverb_text_text__asTBuilder>,
+        GdetailsData_details_texts__asProverb_text_text {
+  GdetailsData_details_texts__asProverb_text_text__asT._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asT(
+      [Function(GdetailsData_details_texts__asProverb_text_text__asTBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_text_text__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asTBuilder b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asT.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asT? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asT.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asL
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asL,
+            GdetailsData_details_texts__asProverb_text_text__asLBuilder>,
+        GdetailsData_details_texts__asProverb_text_text {
+  GdetailsData_details_texts__asProverb_text_text__asL._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asL(
+      [Function(GdetailsData_details_texts__asProverb_text_text__asLBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_text_text__asL;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asLBuilder b) =>
+      b..G__typename = 'L';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GdetailsData_details_texts__asProverb_text_text__asL_link get link;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__asL>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsLSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asL.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asL? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asL.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_text_text__asL_link
+    implements
+        Built<GdetailsData_details_texts__asProverb_text_text__asL_link,
+            GdetailsData_details_texts__asProverb_text_text__asL_linkBuilder>,
+        Glemmalink {
+  GdetailsData_details_texts__asProverb_text_text__asL_link._();
+
+  factory GdetailsData_details_texts__asProverb_text_text__asL_link(
+      [Function(
+              GdetailsData_details_texts__asProverb_text_text__asL_linkBuilder
+                  b)
+          updates]) = _$GdetailsData_details_texts__asProverb_text_text__asL_link;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_text_text__asL_linkBuilder b) =>
+      b..G__typename = 'LemmaLink';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String? get source;
+  @override
+  String get lemma;
+  @override
+  _i2.GGramType? get pos;
+  @override
+  _i2.GLangType? get lang;
+  @override
+  String? get id;
+  @override
+  String? get text;
+  static Serializer<GdetailsData_details_texts__asProverb_text_text__asL_link>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTextTextAsLLinkSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asL_link.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_text_text__asL_link? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_text_text__asL_link.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations
+    implements
+        Built<GdetailsData_details_texts__asProverb_translations,
+            GdetailsData_details_texts__asProverb_translationsBuilder> {
+  GdetailsData_details_texts__asProverb_translations._();
+
+  factory GdetailsData_details_texts__asProverb_translations(
+      [Function(GdetailsData_details_texts__asProverb_translationsBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_translations;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translationsBuilder b) =>
+      b..G__typename = 'TextTranslated';
+
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String? get id;
+  GdetailsData_details_texts__asProverb_translations_text get text;
+  _i2.GLangType get lang;
+  static Serializer<GdetailsData_details_texts__asProverb_translations>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsSerializer;
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_translations.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text
+    implements
+        Built<GdetailsData_details_texts__asProverb_translations_text,
+            GdetailsData_details_texts__asProverb_translations_textBuilder>,
+        GtxtDetails {
+  GdetailsData_details_texts__asProverb_translations_text._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text(
+      [Function(
+              GdetailsData_details_texts__asProverb_translations_textBuilder b)
+          updates]) = _$GdetailsData_details_texts__asProverb_translations_text;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_textBuilder b) =>
+      b..G__typename = 'FormattedText';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  BuiltList<GdetailsData_details_texts__asProverb_translations_text_text>
+      get text;
+  static Serializer<GdetailsData_details_texts__asProverb_translations_text>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_translations_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text
+    implements GtxtDetails_text {
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_translations_text_text>(
+            'GdetailsData_details_texts__asProverb_translations_text_text',
+            GdetailsData_details_texts__asProverb_translations_text_text__base,
+            {
+              'Q':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ,
+              'I':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI,
+              'T':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asT,
+              'L':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asL,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text.serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text? fromJson(
+          Map<String, dynamic> json) =>
+      _i1.serializers.deserializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text.serializer,
+        json,
+      );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__base
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__base,
+            GdetailsData_details_texts__asProverb_translations_text_text__baseBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text {
+  GdetailsData_details_texts__asProverb_translations_text_text__base._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__baseBuilder
+              b) =>
+      b..G__typename = 'TextType';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ
+    implements
+        Built<GdetailsData_details_texts__asProverb_translations_text_text__asQ,
+            GdetailsData_details_texts__asProverb_translations_text_text__asQBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text {
+  GdetailsData_details_texts__asProverb_translations_text_text__asQ._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asQ(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQBuilder
+              b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ>
+      get textQ;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ>(
+            'GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ',
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT,
+              'I':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base,
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ {
+  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT,
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ {
+  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI,
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asIBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ {
+  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asIBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asIBuilder
+              b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI>
+      get textI;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsQTextQAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI>(
+            'GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI',
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base,
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsQTextQAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT,
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI {
+  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsQTextQAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI
+    implements
+        Built<GdetailsData_details_texts__asProverb_translations_text_text__asI,
+            GdetailsData_details_texts__asProverb_translations_text_text__asIBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text {
+  GdetailsData_details_texts__asProverb_translations_text_text__asI._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asI(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asIBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asI;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asIBuilder
+              b) =>
+      b..G__typename = 'I';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI>
+      get textI;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsISerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI_textI {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_translations_text_text__asI_textI>(
+            'GdetailsData_details_texts__asProverb_translations_text_text__asI_textI',
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT,
+              'Q':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ,
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI_textI?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base,
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__baseBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI {
+  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeI';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsITextIBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT,
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asTBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI {
+  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsITextIAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ,
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI {
+  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQBuilder
+              b) =>
+      b..G__typename = 'Q';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  BuiltList<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ>
+      get textQ;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsITextIAsQSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ {
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ>
+      get serializer => _i3.InlineFragmentSerializer<
+              GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ>(
+            'GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ',
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base,
+            {
+              'T':
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
+            },
+          );
+
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base,
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__baseBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__baseBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__baseBuilder
+              b) =>
+      b..G__typename = 'TextTypeQ';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsITextIAsQTextQBaseSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__base
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT,
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asTBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ {
+  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsITextIAsQTextQAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asT
+    implements
+        Built<GdetailsData_details_texts__asProverb_translations_text_text__asT,
+            GdetailsData_details_texts__asProverb_translations_text_text__asTBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text {
+  GdetailsData_details_texts__asProverb_translations_text_text__asT._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asT(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asTBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asT;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asTBuilder
+              b) =>
+      b..G__typename = 'T';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  String get textT;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asT>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsTSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asT
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asT?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asT
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asL
+    implements
+        Built<GdetailsData_details_texts__asProverb_translations_text_text__asL,
+            GdetailsData_details_texts__asProverb_translations_text_text__asLBuilder>,
+        GdetailsData_details_texts__asProverb_translations_text_text {
+  GdetailsData_details_texts__asProverb_translations_text_text__asL._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asL(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asLBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asL;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asLBuilder
+              b) =>
+      b..G__typename = 'L';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  GdetailsData_details_texts__asProverb_translations_text_text__asL_link
+      get link;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asL>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsLSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asL
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asL?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asL
+                .serializer,
+            json,
+          );
+}
+
+abstract class GdetailsData_details_texts__asProverb_translations_text_text__asL_link
+    implements
+        Built<
+            GdetailsData_details_texts__asProverb_translations_text_text__asL_link,
+            GdetailsData_details_texts__asProverb_translations_text_text__asL_linkBuilder>,
+        Glemmalink {
+  GdetailsData_details_texts__asProverb_translations_text_text__asL_link._();
+
+  factory GdetailsData_details_texts__asProverb_translations_text_text__asL_link(
+          [Function(
+                  GdetailsData_details_texts__asProverb_translations_text_text__asL_linkBuilder
+                      b)
+              updates]) =
+      _$GdetailsData_details_texts__asProverb_translations_text_text__asL_link;
+
+  static void _initializeBuilder(
+          GdetailsData_details_texts__asProverb_translations_text_text__asL_linkBuilder
+              b) =>
+      b..G__typename = 'LemmaLink';
+
+  @override
+  @BuiltValueField(wireName: '__typename')
+  String get G__typename;
+  @override
+  String? get source;
+  @override
+  String get lemma;
+  @override
+  _i2.GGramType? get pos;
+  @override
+  _i2.GLangType? get lang;
+  @override
+  String? get id;
+  @override
+  String? get text;
+  static Serializer<
+          GdetailsData_details_texts__asProverb_translations_text_text__asL_link>
+      get serializer =>
+          _$gdetailsDataDetailsTextsAsProverbTranslationsTextTextAsLLinkSerializer;
+
+  @override
+  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
+        GdetailsData_details_texts__asProverb_translations_text_text__asL_link
+            .serializer,
+        this,
+      ) as Map<String, dynamic>);
+
+  static GdetailsData_details_texts__asProverb_translations_text_text__asL_link?
+      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
+            GdetailsData_details_texts__asProverb_translations_text_text__asL_link
+                .serializer,
+            json,
+          );
 }
 
 abstract class Glemmagraph {
@@ -922,6 +4633,7 @@ abstract class Glemmagraph_subForms__asSynonym implements Glemmagraph_subForms {
   String get G__typename;
   String get form;
   _i2.GLangType get lang;
+  String? get meaning;
   @override
   Map<String, dynamic> toJson();
 }
@@ -1201,6 +4913,7 @@ abstract class GlemmagraphData_subForms__asSynonym
   String get G__typename;
   String get form;
   _i2.GLangType get lang;
+  String? get meaning;
   static Serializer<GlemmagraphData_subForms__asSynonym> get serializer =>
       _$glemmagraphDataSubFormsAsSynonymSerializer;
 
@@ -1288,4265 +5001,6 @@ abstract class GlemmagraphData_subForms__asDutchism
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GlemmagraphData_subForms__asDutchism.serializer,
-        json,
-      );
-}
-
-abstract class Gtextgraph {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__base implements Gtextgraph {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample implements Gtextgraph {
-  @override
-  String get G__typename;
-  String? get id;
-  Gtextgraph__asExample_text get text;
-  _i2.GLangType get lang;
-  BuiltList<Gtextgraph__asExample_translations?>? get translations;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text implements GtxtDetails {
-  @override
-  String get G__typename;
-  @override
-  BuiltList<Gtextgraph__asExample_text_text> get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text implements GtxtDetails_text {
-  @override
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_text_text__base
-    implements Gtextgraph__asExample_text_text {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ
-    implements Gtextgraph__asExample_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_text_text__asQ_textQ> get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ_textQ__base
-    implements Gtextgraph__asExample_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ_textQ__asT
-    implements Gtextgraph__asExample_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ_textQ__asI
-    implements Gtextgraph__asExample_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_text_text__asQ_textQ__asI_textI> get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ_textQ__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ_textQ__asI_textI__base
-    implements Gtextgraph__asExample_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asQ_textQ__asI_textI__asT
-    implements Gtextgraph__asExample_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asI
-    implements Gtextgraph__asExample_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_text_text__asI_textI> get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_text_text__asI_textI__base
-    implements Gtextgraph__asExample_text_text__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asI_textI__asT
-    implements Gtextgraph__asExample_text_text__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asI_textI__asQ
-    implements Gtextgraph__asExample_text_text__asI_textI {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_text_text__asI_textI__asQ_textQ> get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asI_textI__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_text_text__asI_textI__asQ_textQ__base
-    implements Gtextgraph__asExample_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asI_textI__asQ_textQ__asT
-    implements Gtextgraph__asExample_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asT
-    implements Gtextgraph__asExample_text_text {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asL
-    implements Gtextgraph__asExample_text_text {
-  @override
-  String get G__typename;
-  Gtextgraph__asExample_text_text__asL_link get link;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_text_text__asL_link implements Glemmalink {
-  @override
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations {
-  String get G__typename;
-  String? get id;
-  Gtextgraph__asExample_translations_text get text;
-  _i2.GLangType get lang;
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text implements GtxtDetails {
-  @override
-  String get G__typename;
-  @override
-  BuiltList<Gtextgraph__asExample_translations_text_text> get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text
-    implements GtxtDetails_text {
-  @override
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__base
-    implements Gtextgraph__asExample_translations_text_text {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ
-    implements Gtextgraph__asExample_translations_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_translations_text_text__asQ_textQ> get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ_textQ__base
-    implements Gtextgraph__asExample_translations_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ_textQ__asT
-    implements Gtextgraph__asExample_translations_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ_textQ__asI
-    implements Gtextgraph__asExample_translations_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_translations_text_text__asQ_textQ__asI_textI>
-      get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ_textQ__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ_textQ__asI_textI__base
-    implements
-        Gtextgraph__asExample_translations_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-    implements
-        Gtextgraph__asExample_translations_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI
-    implements Gtextgraph__asExample_translations_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_translations_text_text__asI_textI> get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI_textI__base
-    implements Gtextgraph__asExample_translations_text_text__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI_textI__asT
-    implements Gtextgraph__asExample_translations_text_text__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI_textI__asQ
-    implements Gtextgraph__asExample_translations_text_text__asI_textI {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asExample_translations_text_text__asI_textI__asQ_textQ>
-      get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI_textI__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI_textI__asQ_textQ__base
-    implements
-        Gtextgraph__asExample_translations_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-    implements
-        Gtextgraph__asExample_translations_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asT
-    implements Gtextgraph__asExample_translations_text_text {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asL
-    implements Gtextgraph__asExample_translations_text_text {
-  @override
-  String get G__typename;
-  Gtextgraph__asExample_translations_text_text__asL_link get link;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asExample_translations_text_text__asL_link
-    implements Glemmalink {
-  @override
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb implements Gtextgraph {
-  @override
-  String get G__typename;
-  String? get id;
-  Gtextgraph__asProverb_text get text;
-  _i2.GLangType get lang;
-  BuiltList<Gtextgraph__asProverb_translations?>? get translations;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text implements GtxtDetails {
-  @override
-  String get G__typename;
-  @override
-  BuiltList<Gtextgraph__asProverb_text_text> get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text implements GtxtDetails_text {
-  @override
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_text_text__base
-    implements Gtextgraph__asProverb_text_text {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ
-    implements Gtextgraph__asProverb_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_text_text__asQ_textQ> get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ_textQ__base
-    implements Gtextgraph__asProverb_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ_textQ__asT
-    implements Gtextgraph__asProverb_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ_textQ__asI
-    implements Gtextgraph__asProverb_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_text_text__asQ_textQ__asI_textI> get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ_textQ__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ_textQ__asI_textI__base
-    implements Gtextgraph__asProverb_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asQ_textQ__asI_textI__asT
-    implements Gtextgraph__asProverb_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI
-    implements Gtextgraph__asProverb_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_text_text__asI_textI> get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI_textI__base
-    implements Gtextgraph__asProverb_text_text__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI_textI__asT
-    implements Gtextgraph__asProverb_text_text__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI_textI__asQ
-    implements Gtextgraph__asProverb_text_text__asI_textI {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_text_text__asI_textI__asQ_textQ> get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI_textI__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI_textI__asQ_textQ__base
-    implements Gtextgraph__asProverb_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asI_textI__asQ_textQ__asT
-    implements Gtextgraph__asProverb_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asT
-    implements Gtextgraph__asProverb_text_text {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asL
-    implements Gtextgraph__asProverb_text_text {
-  @override
-  String get G__typename;
-  Gtextgraph__asProverb_text_text__asL_link get link;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_text_text__asL_link implements Glemmalink {
-  @override
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations {
-  String get G__typename;
-  String? get id;
-  Gtextgraph__asProverb_translations_text get text;
-  _i2.GLangType get lang;
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text implements GtxtDetails {
-  @override
-  String get G__typename;
-  @override
-  BuiltList<Gtextgraph__asProverb_translations_text_text> get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text
-    implements GtxtDetails_text {
-  @override
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__base
-    implements Gtextgraph__asProverb_translations_text_text {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ
-    implements Gtextgraph__asProverb_translations_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_translations_text_text__asQ_textQ> get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ_textQ__base
-    implements Gtextgraph__asProverb_translations_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ_textQ__asT
-    implements Gtextgraph__asProverb_translations_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ_textQ__asI
-    implements Gtextgraph__asProverb_translations_text_text__asQ_textQ {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_translations_text_text__asQ_textQ__asI_textI>
-      get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ_textQ__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ_textQ__asI_textI__base
-    implements
-        Gtextgraph__asProverb_translations_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
-    implements
-        Gtextgraph__asProverb_translations_text_text__asQ_textQ__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI
-    implements Gtextgraph__asProverb_translations_text_text {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_translations_text_text__asI_textI> get textI;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI_textI {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI_textI__base
-    implements Gtextgraph__asProverb_translations_text_text__asI_textI {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI_textI__asT
-    implements Gtextgraph__asProverb_translations_text_text__asI_textI {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI_textI__asQ
-    implements Gtextgraph__asProverb_translations_text_text__asI_textI {
-  @override
-  String get G__typename;
-  BuiltList<Gtextgraph__asProverb_translations_text_text__asI_textI__asQ_textQ>
-      get textQ;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI_textI__asQ_textQ {
-  String get G__typename;
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI_textI__asQ_textQ__base
-    implements
-        Gtextgraph__asProverb_translations_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
-    implements
-        Gtextgraph__asProverb_translations_text_text__asI_textI__asQ_textQ {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asT
-    implements Gtextgraph__asProverb_translations_text_text {
-  @override
-  String get G__typename;
-  String get textT;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asL
-    implements Gtextgraph__asProverb_translations_text_text {
-  @override
-  String get G__typename;
-  Gtextgraph__asProverb_translations_text_text__asL_link get link;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class Gtextgraph__asProverb_translations_text_text__asL_link
-    implements Glemmalink {
-  @override
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  @override
-  Map<String, dynamic> toJson();
-}
-
-abstract class GtextgraphData implements Gtextgraph {
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData> get serializer =>
-      _i3.InlineFragmentSerializer<GtextgraphData>(
-        'GtextgraphData',
-        GtextgraphData__base,
-        {
-          'Example': GtextgraphData__asExample,
-          'Proverb': GtextgraphData__asProverb,
-        },
-      );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__base
-    implements
-        Built<GtextgraphData__base, GtextgraphData__baseBuilder>,
-        GtextgraphData {
-  GtextgraphData__base._();
-
-  factory GtextgraphData__base(
-          [Function(GtextgraphData__baseBuilder b) updates]) =
-      _$GtextgraphData__base;
-
-  static void _initializeBuilder(GtextgraphData__baseBuilder b) =>
-      b..G__typename = 'Text';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__base> get serializer =>
-      _$gtextgraphDataBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__base? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample
-    implements
-        Built<GtextgraphData__asExample, GtextgraphData__asExampleBuilder>,
-        GtextgraphData {
-  GtextgraphData__asExample._();
-
-  factory GtextgraphData__asExample(
-          [Function(GtextgraphData__asExampleBuilder b) updates]) =
-      _$GtextgraphData__asExample;
-
-  static void _initializeBuilder(GtextgraphData__asExampleBuilder b) =>
-      b..G__typename = 'Example';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String? get id;
-  GtextgraphData__asExample_text get text;
-  _i2.GLangType get lang;
-  BuiltList<GtextgraphData__asExample_translations?>? get translations;
-  static Serializer<GtextgraphData__asExample> get serializer =>
-      _$gtextgraphDataAsExampleSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text
-    implements
-        Built<GtextgraphData__asExample_text,
-            GtextgraphData__asExample_textBuilder>,
-        GtxtDetails {
-  GtextgraphData__asExample_text._();
-
-  factory GtextgraphData__asExample_text(
-          [Function(GtextgraphData__asExample_textBuilder b) updates]) =
-      _$GtextgraphData__asExample_text;
-
-  static void _initializeBuilder(GtextgraphData__asExample_textBuilder b) =>
-      b..G__typename = 'FormattedText';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  BuiltList<GtextgraphData__asExample_text_text> get text;
-  static Serializer<GtextgraphData__asExample_text> get serializer =>
-      _$gtextgraphDataAsExampleTextSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text implements GtxtDetails_text {
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text> get serializer =>
-      _i3.InlineFragmentSerializer<GtextgraphData__asExample_text_text>(
-        'GtextgraphData__asExample_text_text',
-        GtextgraphData__asExample_text_text__base,
-        {
-          'Q': GtextgraphData__asExample_text_text__asQ,
-          'I': GtextgraphData__asExample_text_text__asI,
-          'T': GtextgraphData__asExample_text_text__asT,
-          'L': GtextgraphData__asExample_text_text__asL,
-        },
-      );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__base
-    implements
-        Built<GtextgraphData__asExample_text_text__base,
-            GtextgraphData__asExample_text_text__baseBuilder>,
-        GtextgraphData__asExample_text_text {
-  GtextgraphData__asExample_text_text__base._();
-
-  factory GtextgraphData__asExample_text_text__base(
-      [Function(GtextgraphData__asExample_text_text__baseBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__baseBuilder b) =>
-      b..G__typename = 'TextType';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text__base> get serializer =>
-      _$gtextgraphDataAsExampleTextTextBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ
-    implements
-        Built<GtextgraphData__asExample_text_text__asQ,
-            GtextgraphData__asExample_text_text__asQBuilder>,
-        GtextgraphData__asExample_text_text {
-  GtextgraphData__asExample_text_text__asQ._();
-
-  factory GtextgraphData__asExample_text_text__asQ(
-      [Function(GtextgraphData__asExample_text_text__asQBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asQBuilder b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asExample_text_text__asQ_textQ> get textQ;
-  static Serializer<GtextgraphData__asExample_text_text__asQ> get serializer =>
-      _$gtextgraphDataAsExampleTextTextAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_text_text__asQ_textQ>(
-            'GtextgraphData__asExample_text_text__asQ_textQ',
-            GtextgraphData__asExample_text_text__asQ_textQ__base,
-            {
-              'T': GtextgraphData__asExample_text_text__asQ_textQ__asT,
-              'I': GtextgraphData__asExample_text_text__asQ_textQ__asI,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ_textQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ_textQ__base
-    implements
-        Built<GtextgraphData__asExample_text_text__asQ_textQ__base,
-            GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder>,
-        GtextgraphData__asExample_text_text__asQ_textQ {
-  GtextgraphData__asExample_text_text__asQ_textQ__base._();
-
-  factory GtextgraphData__asExample_text_text__asQ_textQ__base(
-      [Function(GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asQ_textQ__baseBuilder b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text__asQ_textQ__base>
-      get serializer => _$gtextgraphDataAsExampleTextTextAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ_textQ__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ_textQ__asT
-    implements
-        Built<GtextgraphData__asExample_text_text__asQ_textQ__asT,
-            GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder>,
-        GtextgraphData__asExample_text_text__asQ_textQ {
-  GtextgraphData__asExample_text_text__asQ_textQ__asT._();
-
-  factory GtextgraphData__asExample_text_text__asQ_textQ__asT(
-      [Function(GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asQ_textQ__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asExample_text_text__asQ_textQ__asT>
-      get serializer => _$gtextgraphDataAsExampleTextTextAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ_textQ__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ_textQ__asI
-    implements
-        Built<GtextgraphData__asExample_text_text__asQ_textQ__asI,
-            GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder>,
-        GtextgraphData__asExample_text_text__asQ_textQ {
-  GtextgraphData__asExample_text_text__asQ_textQ__asI._();
-
-  factory GtextgraphData__asExample_text_text__asQ_textQ__asI(
-      [Function(GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asQ_textQ__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asQ_textQ__asIBuilder b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>
-      get textI;
-  static Serializer<GtextgraphData__asExample_text_text__asQ_textQ__asI>
-      get serializer => _$gtextgraphDataAsExampleTextTextAsQTextQAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ_textQ__asI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ_textQ__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_text_text__asQ_textQ__asI_textI>(
-            'GtextgraphData__asExample_text_text__asQ_textQ__asI_textI',
-            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base,
-            {
-              'T':
-                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asI_textI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ_textQ__asI_textI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asI_textI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-    implements
-        Built<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base,
-            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder>,
-        GtextgraphData__asExample_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base._();
-
-  factory GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base(
-          [Function(
-                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base>
-      get serializer =>
-          _$gtextgraphDataAsExampleTextTextAsQTextQAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-    implements
-        Built<GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT,
-            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder>,
-        GtextgraphData__asExample_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT._();
-
-  factory GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT(
-          [Function(
-                  GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT>
-      get serializer =>
-          _$gtextgraphDataAsExampleTextTextAsQTextQAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_text_text__asQ_textQ__asI_textI__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI
-    implements
-        Built<GtextgraphData__asExample_text_text__asI,
-            GtextgraphData__asExample_text_text__asIBuilder>,
-        GtextgraphData__asExample_text_text {
-  GtextgraphData__asExample_text_text__asI._();
-
-  factory GtextgraphData__asExample_text_text__asI(
-      [Function(GtextgraphData__asExample_text_text__asIBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asIBuilder b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asExample_text_text__asI_textI> get textI;
-  static Serializer<GtextgraphData__asExample_text_text__asI> get serializer =>
-      _$gtextgraphDataAsExampleTextTextAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_text_text__asI_textI>(
-            'GtextgraphData__asExample_text_text__asI_textI',
-            GtextgraphData__asExample_text_text__asI_textI__base,
-            {
-              'T': GtextgraphData__asExample_text_text__asI_textI__asT,
-              'Q': GtextgraphData__asExample_text_text__asI_textI__asQ,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI_textI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI_textI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asI_textI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI_textI__base
-    implements
-        Built<GtextgraphData__asExample_text_text__asI_textI__base,
-            GtextgraphData__asExample_text_text__asI_textI__baseBuilder>,
-        GtextgraphData__asExample_text_text__asI_textI {
-  GtextgraphData__asExample_text_text__asI_textI__base._();
-
-  factory GtextgraphData__asExample_text_text__asI_textI__base(
-      [Function(GtextgraphData__asExample_text_text__asI_textI__baseBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asI_textI__baseBuilder b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text__asI_textI__base>
-      get serializer => _$gtextgraphDataAsExampleTextTextAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI_textI__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI_textI__asT
-    implements
-        Built<GtextgraphData__asExample_text_text__asI_textI__asT,
-            GtextgraphData__asExample_text_text__asI_textI__asTBuilder>,
-        GtextgraphData__asExample_text_text__asI_textI {
-  GtextgraphData__asExample_text_text__asI_textI__asT._();
-
-  factory GtextgraphData__asExample_text_text__asI_textI__asT(
-      [Function(GtextgraphData__asExample_text_text__asI_textI__asTBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asI_textI__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asExample_text_text__asI_textI__asT>
-      get serializer => _$gtextgraphDataAsExampleTextTextAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI_textI__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI_textI__asQ
-    implements
-        Built<GtextgraphData__asExample_text_text__asI_textI__asQ,
-            GtextgraphData__asExample_text_text__asI_textI__asQBuilder>,
-        GtextgraphData__asExample_text_text__asI_textI {
-  GtextgraphData__asExample_text_text__asI_textI__asQ._();
-
-  factory GtextgraphData__asExample_text_text__asI_textI__asQ(
-      [Function(GtextgraphData__asExample_text_text__asI_textI__asQBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asI_textI__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asI_textI__asQBuilder b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>
-      get textQ;
-  static Serializer<GtextgraphData__asExample_text_text__asI_textI__asQ>
-      get serializer => _$gtextgraphDataAsExampleTextTextAsITextIAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI_textI__asQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI_textI__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_text_text__asI_textI__asQ_textQ>(
-            'GtextgraphData__asExample_text_text__asI_textI__asQ_textQ',
-            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base,
-            {
-              'T':
-                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asQ_textQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI_textI__asQ_textQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asQ_textQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-    implements
-        Built<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base,
-            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder>,
-        GtextgraphData__asExample_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base._();
-
-  factory GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base(
-          [Function(
-                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base>
-      get serializer =>
-          _$gtextgraphDataAsExampleTextTextAsITextIAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-    implements
-        Built<GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT,
-            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder>,
-        GtextgraphData__asExample_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT._();
-
-  factory GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT(
-          [Function(
-                  GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT>
-      get serializer =>
-          _$gtextgraphDataAsExampleTextTextAsITextIAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_text_text__asI_textI__asQ_textQ__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_text_text__asT
-    implements
-        Built<GtextgraphData__asExample_text_text__asT,
-            GtextgraphData__asExample_text_text__asTBuilder>,
-        GtextgraphData__asExample_text_text {
-  GtextgraphData__asExample_text_text__asT._();
-
-  factory GtextgraphData__asExample_text_text__asT(
-      [Function(GtextgraphData__asExample_text_text__asTBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asExample_text_text__asT> get serializer =>
-      _$gtextgraphDataAsExampleTextTextAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asL
-    implements
-        Built<GtextgraphData__asExample_text_text__asL,
-            GtextgraphData__asExample_text_text__asLBuilder>,
-        GtextgraphData__asExample_text_text {
-  GtextgraphData__asExample_text_text__asL._();
-
-  factory GtextgraphData__asExample_text_text__asL(
-      [Function(GtextgraphData__asExample_text_text__asLBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asL;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asLBuilder b) =>
-      b..G__typename = 'L';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  GtextgraphData__asExample_text_text__asL_link get link;
-  static Serializer<GtextgraphData__asExample_text_text__asL> get serializer =>
-      _$gtextgraphDataAsExampleTextTextAsLSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asL.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asL? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asL.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_text_text__asL_link
-    implements
-        Built<GtextgraphData__asExample_text_text__asL_link,
-            GtextgraphData__asExample_text_text__asL_linkBuilder>,
-        Glemmalink {
-  GtextgraphData__asExample_text_text__asL_link._();
-
-  factory GtextgraphData__asExample_text_text__asL_link(
-      [Function(GtextgraphData__asExample_text_text__asL_linkBuilder b)
-          updates]) = _$GtextgraphData__asExample_text_text__asL_link;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_text_text__asL_linkBuilder b) =>
-      b..G__typename = 'LemmaLink';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  static Serializer<GtextgraphData__asExample_text_text__asL_link>
-      get serializer => _$gtextgraphDataAsExampleTextTextAsLLinkSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_text_text__asL_link.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_text_text__asL_link? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_text_text__asL_link.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations
-    implements
-        Built<GtextgraphData__asExample_translations,
-            GtextgraphData__asExample_translationsBuilder> {
-  GtextgraphData__asExample_translations._();
-
-  factory GtextgraphData__asExample_translations(
-          [Function(GtextgraphData__asExample_translationsBuilder b) updates]) =
-      _$GtextgraphData__asExample_translations;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translationsBuilder b) =>
-      b..G__typename = 'TextTranslated';
-
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String? get id;
-  GtextgraphData__asExample_translations_text get text;
-  _i2.GLangType get lang;
-  static Serializer<GtextgraphData__asExample_translations> get serializer =>
-      _$gtextgraphDataAsExampleTranslationsSerializer;
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text
-    implements
-        Built<GtextgraphData__asExample_translations_text,
-            GtextgraphData__asExample_translations_textBuilder>,
-        GtxtDetails {
-  GtextgraphData__asExample_translations_text._();
-
-  factory GtextgraphData__asExample_translations_text(
-      [Function(GtextgraphData__asExample_translations_textBuilder b)
-          updates]) = _$GtextgraphData__asExample_translations_text;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_textBuilder b) =>
-      b..G__typename = 'FormattedText';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  BuiltList<GtextgraphData__asExample_translations_text_text> get text;
-  static Serializer<GtextgraphData__asExample_translations_text>
-      get serializer => _$gtextgraphDataAsExampleTranslationsTextSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text
-    implements GtxtDetails_text {
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_translations_text_text>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_translations_text_text>(
-            'GtextgraphData__asExample_translations_text_text',
-            GtextgraphData__asExample_translations_text_text__base,
-            {
-              'Q': GtextgraphData__asExample_translations_text_text__asQ,
-              'I': GtextgraphData__asExample_translations_text_text__asI,
-              'T': GtextgraphData__asExample_translations_text_text__asT,
-              'L': GtextgraphData__asExample_translations_text_text__asL,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__base
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__base,
-            GtextgraphData__asExample_translations_text_text__baseBuilder>,
-        GtextgraphData__asExample_translations_text_text {
-  GtextgraphData__asExample_translations_text_text__base._();
-
-  factory GtextgraphData__asExample_translations_text_text__base(
-      [Function(GtextgraphData__asExample_translations_text_text__baseBuilder b)
-          updates]) = _$GtextgraphData__asExample_translations_text_text__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__baseBuilder b) =>
-      b..G__typename = 'TextType';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_translations_text_text__base>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asQ,
-            GtextgraphData__asExample_translations_text_text__asQBuilder>,
-        GtextgraphData__asExample_translations_text_text {
-  GtextgraphData__asExample_translations_text_text__asQ._();
-
-  factory GtextgraphData__asExample_translations_text_text__asQ(
-      [Function(GtextgraphData__asExample_translations_text_text__asQBuilder b)
-          updates]) = _$GtextgraphData__asExample_translations_text_text__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asQBuilder b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asExample_translations_text_text__asQ_textQ>
-      get textQ;
-  static Serializer<GtextgraphData__asExample_translations_text_text__asQ>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_translations_text_text__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_translations_text_text__asQ_textQ>(
-            'GtextgraphData__asExample_translations_text_text__asQ_textQ',
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__base,
-            {
-              'T':
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asT,
-              'I':
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ_textQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ_textQ__base
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asQ_textQ__base,
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder>,
-        GtextgraphData__asExample_translations_text_text__asQ_textQ {
-  GtextgraphData__asExample_translations_text_text__asQ_textQ__base._();
-
-  factory GtextgraphData__asExample_translations_text_text__asQ_textQ__base(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__base>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ_textQ__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asQ_textQ__asT,
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder>,
-        GtextgraphData__asExample_translations_text_text__asQ_textQ {
-  GtextgraphData__asExample_translations_text_text__asQ_textQ__asT._();
-
-  factory GtextgraphData__asExample_translations_text_text__asQ_textQ__asT(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asT>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ_textQ__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asQ_textQ__asI,
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder>,
-        GtextgraphData__asExample_translations_text_text__asQ_textQ {
-  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI._();
-
-  factory GtextgraphData__asExample_translations_text_text__asQ_textQ__asI(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asIBuilder
-              b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>
-      get textI;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ_textQ__asI?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI>(
-            'GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI',
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base,
-            {
-              'T':
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-    implements
-        Built<
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base,
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder>,
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base._();
-
-  factory GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-    implements
-        Built<
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT,
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder>,
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT._();
-
-  factory GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsQTextQAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asQ_textQ__asI_textI__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asI,
-            GtextgraphData__asExample_translations_text_text__asIBuilder>,
-        GtextgraphData__asExample_translations_text_text {
-  GtextgraphData__asExample_translations_text_text__asI._();
-
-  factory GtextgraphData__asExample_translations_text_text__asI(
-      [Function(GtextgraphData__asExample_translations_text_text__asIBuilder b)
-          updates]) = _$GtextgraphData__asExample_translations_text_text__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asIBuilder b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asExample_translations_text_text__asI_textI>
-      get textI;
-  static Serializer<GtextgraphData__asExample_translations_text_text__asI>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__asI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asExample_translations_text_text__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_translations_text_text__asI_textI>(
-            'GtextgraphData__asExample_translations_text_text__asI_textI',
-            GtextgraphData__asExample_translations_text_text__asI_textI__base,
-            {
-              'T':
-                  GtextgraphData__asExample_translations_text_text__asI_textI__asT,
-              'Q':
-                  GtextgraphData__asExample_translations_text_text__asI_textI__asQ,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI_textI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI_textI__base
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asI_textI__base,
-            GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder>,
-        GtextgraphData__asExample_translations_text_text__asI_textI {
-  GtextgraphData__asExample_translations_text_text__asI_textI__base._();
-
-  factory GtextgraphData__asExample_translations_text_text__asI_textI__base(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asI_textI__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asI_textI__base>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI_textI__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asI_textI__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI_textI__asT
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asI_textI__asT,
-            GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder>,
-        GtextgraphData__asExample_translations_text_text__asI_textI {
-  GtextgraphData__asExample_translations_text_text__asI_textI__asT._();
-
-  factory GtextgraphData__asExample_translations_text_text__asI_textI__asT(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asI_textI__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asI_textI__asT>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI_textI__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asI_textI__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI_textI__asQ
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asI_textI__asQ,
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder>,
-        GtextgraphData__asExample_translations_text_text__asI_textI {
-  GtextgraphData__asExample_translations_text_text__asI_textI__asQ._();
-
-  factory GtextgraphData__asExample_translations_text_text__asI_textI__asQ(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQBuilder
-              b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>
-      get textQ;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI__asQ
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI_textI__asQ?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ>(
-            'GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ',
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base,
-            {
-              'T':
-                  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-    implements
-        Built<
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base,
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder>,
-        GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base._();
-
-  factory GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-    implements
-        Built<
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT,
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder>,
-        GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT._();
-
-  factory GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT(
-          [Function(
-                  GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsITextIAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asExample_translations_text_text__asI_textI__asQ_textQ__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asT
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asT,
-            GtextgraphData__asExample_translations_text_text__asTBuilder>,
-        GtextgraphData__asExample_translations_text_text {
-  GtextgraphData__asExample_translations_text_text__asT._();
-
-  factory GtextgraphData__asExample_translations_text_text__asT(
-      [Function(GtextgraphData__asExample_translations_text_text__asTBuilder b)
-          updates]) = _$GtextgraphData__asExample_translations_text_text__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asExample_translations_text_text__asT>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asL
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asL,
-            GtextgraphData__asExample_translations_text_text__asLBuilder>,
-        GtextgraphData__asExample_translations_text_text {
-  GtextgraphData__asExample_translations_text_text__asL._();
-
-  factory GtextgraphData__asExample_translations_text_text__asL(
-      [Function(GtextgraphData__asExample_translations_text_text__asLBuilder b)
-          updates]) = _$GtextgraphData__asExample_translations_text_text__asL;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asLBuilder b) =>
-      b..G__typename = 'L';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  GtextgraphData__asExample_translations_text_text__asL_link get link;
-  static Serializer<GtextgraphData__asExample_translations_text_text__asL>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsLSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asL.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asL? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__asL.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asExample_translations_text_text__asL_link
-    implements
-        Built<GtextgraphData__asExample_translations_text_text__asL_link,
-            GtextgraphData__asExample_translations_text_text__asL_linkBuilder>,
-        Glemmalink {
-  GtextgraphData__asExample_translations_text_text__asL_link._();
-
-  factory GtextgraphData__asExample_translations_text_text__asL_link(
-      [Function(
-              GtextgraphData__asExample_translations_text_text__asL_linkBuilder
-                  b)
-          updates]) = _$GtextgraphData__asExample_translations_text_text__asL_link;
-
-  static void _initializeBuilder(
-          GtextgraphData__asExample_translations_text_text__asL_linkBuilder
-              b) =>
-      b..G__typename = 'LemmaLink';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  static Serializer<GtextgraphData__asExample_translations_text_text__asL_link>
-      get serializer =>
-          _$gtextgraphDataAsExampleTranslationsTextTextAsLLinkSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asExample_translations_text_text__asL_link.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asExample_translations_text_text__asL_link? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asExample_translations_text_text__asL_link.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb
-    implements
-        Built<GtextgraphData__asProverb, GtextgraphData__asProverbBuilder>,
-        GtextgraphData {
-  GtextgraphData__asProverb._();
-
-  factory GtextgraphData__asProverb(
-          [Function(GtextgraphData__asProverbBuilder b) updates]) =
-      _$GtextgraphData__asProverb;
-
-  static void _initializeBuilder(GtextgraphData__asProverbBuilder b) =>
-      b..G__typename = 'Proverb';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String? get id;
-  GtextgraphData__asProverb_text get text;
-  _i2.GLangType get lang;
-  BuiltList<GtextgraphData__asProverb_translations?>? get translations;
-  static Serializer<GtextgraphData__asProverb> get serializer =>
-      _$gtextgraphDataAsProverbSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text
-    implements
-        Built<GtextgraphData__asProverb_text,
-            GtextgraphData__asProverb_textBuilder>,
-        GtxtDetails {
-  GtextgraphData__asProverb_text._();
-
-  factory GtextgraphData__asProverb_text(
-          [Function(GtextgraphData__asProverb_textBuilder b) updates]) =
-      _$GtextgraphData__asProverb_text;
-
-  static void _initializeBuilder(GtextgraphData__asProverb_textBuilder b) =>
-      b..G__typename = 'FormattedText';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  BuiltList<GtextgraphData__asProverb_text_text> get text;
-  static Serializer<GtextgraphData__asProverb_text> get serializer =>
-      _$gtextgraphDataAsProverbTextSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text? fromJson(Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text implements GtxtDetails_text {
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text> get serializer =>
-      _i3.InlineFragmentSerializer<GtextgraphData__asProverb_text_text>(
-        'GtextgraphData__asProverb_text_text',
-        GtextgraphData__asProverb_text_text__base,
-        {
-          'Q': GtextgraphData__asProverb_text_text__asQ,
-          'I': GtextgraphData__asProverb_text_text__asI,
-          'T': GtextgraphData__asProverb_text_text__asT,
-          'L': GtextgraphData__asProverb_text_text__asL,
-        },
-      );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__base
-    implements
-        Built<GtextgraphData__asProverb_text_text__base,
-            GtextgraphData__asProverb_text_text__baseBuilder>,
-        GtextgraphData__asProverb_text_text {
-  GtextgraphData__asProverb_text_text__base._();
-
-  factory GtextgraphData__asProverb_text_text__base(
-      [Function(GtextgraphData__asProverb_text_text__baseBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__baseBuilder b) =>
-      b..G__typename = 'TextType';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text__base> get serializer =>
-      _$gtextgraphDataAsProverbTextTextBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ
-    implements
-        Built<GtextgraphData__asProverb_text_text__asQ,
-            GtextgraphData__asProverb_text_text__asQBuilder>,
-        GtextgraphData__asProverb_text_text {
-  GtextgraphData__asProverb_text_text__asQ._();
-
-  factory GtextgraphData__asProverb_text_text__asQ(
-      [Function(GtextgraphData__asProverb_text_text__asQBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asQBuilder b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asProverb_text_text__asQ_textQ> get textQ;
-  static Serializer<GtextgraphData__asProverb_text_text__asQ> get serializer =>
-      _$gtextgraphDataAsProverbTextTextAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_text_text__asQ_textQ>(
-            'GtextgraphData__asProverb_text_text__asQ_textQ',
-            GtextgraphData__asProverb_text_text__asQ_textQ__base,
-            {
-              'T': GtextgraphData__asProverb_text_text__asQ_textQ__asT,
-              'I': GtextgraphData__asProverb_text_text__asQ_textQ__asI,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ_textQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ_textQ__base
-    implements
-        Built<GtextgraphData__asProverb_text_text__asQ_textQ__base,
-            GtextgraphData__asProverb_text_text__asQ_textQ__baseBuilder>,
-        GtextgraphData__asProverb_text_text__asQ_textQ {
-  GtextgraphData__asProverb_text_text__asQ_textQ__base._();
-
-  factory GtextgraphData__asProverb_text_text__asQ_textQ__base(
-      [Function(GtextgraphData__asProverb_text_text__asQ_textQ__baseBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asQ_textQ__baseBuilder b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text__asQ_textQ__base>
-      get serializer => _$gtextgraphDataAsProverbTextTextAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ_textQ__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ_textQ__asT
-    implements
-        Built<GtextgraphData__asProverb_text_text__asQ_textQ__asT,
-            GtextgraphData__asProverb_text_text__asQ_textQ__asTBuilder>,
-        GtextgraphData__asProverb_text_text__asQ_textQ {
-  GtextgraphData__asProverb_text_text__asQ_textQ__asT._();
-
-  factory GtextgraphData__asProverb_text_text__asQ_textQ__asT(
-      [Function(GtextgraphData__asProverb_text_text__asQ_textQ__asTBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asQ_textQ__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asProverb_text_text__asQ_textQ__asT>
-      get serializer => _$gtextgraphDataAsProverbTextTextAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ_textQ__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ_textQ__asI
-    implements
-        Built<GtextgraphData__asProverb_text_text__asQ_textQ__asI,
-            GtextgraphData__asProverb_text_text__asQ_textQ__asIBuilder>,
-        GtextgraphData__asProverb_text_text__asQ_textQ {
-  GtextgraphData__asProverb_text_text__asQ_textQ__asI._();
-
-  factory GtextgraphData__asProverb_text_text__asQ_textQ__asI(
-      [Function(GtextgraphData__asProverb_text_text__asQ_textQ__asIBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asQ_textQ__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asQ_textQ__asIBuilder b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI>
-      get textI;
-  static Serializer<GtextgraphData__asProverb_text_text__asQ_textQ__asI>
-      get serializer => _$gtextgraphDataAsProverbTextTextAsQTextQAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ_textQ__asI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI>(
-            'GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI',
-            GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base,
-            {
-              'T':
-                  GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base
-    implements
-        Built<GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base,
-            GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__baseBuilder>,
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base._();
-
-  factory GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base(
-          [Function(
-                  GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base>
-      get serializer =>
-          _$gtextgraphDataAsProverbTextTextAsQTextQAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT
-    implements
-        Built<GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT,
-            GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asTBuilder>,
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT._();
-
-  factory GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT(
-          [Function(
-                  GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT>
-      get serializer =>
-          _$gtextgraphDataAsProverbTextTextAsQTextQAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_text_text__asQ_textQ__asI_textI__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI
-    implements
-        Built<GtextgraphData__asProverb_text_text__asI,
-            GtextgraphData__asProverb_text_text__asIBuilder>,
-        GtextgraphData__asProverb_text_text {
-  GtextgraphData__asProverb_text_text__asI._();
-
-  factory GtextgraphData__asProverb_text_text__asI(
-      [Function(GtextgraphData__asProverb_text_text__asIBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asIBuilder b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asProverb_text_text__asI_textI> get textI;
-  static Serializer<GtextgraphData__asProverb_text_text__asI> get serializer =>
-      _$gtextgraphDataAsProverbTextTextAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_text_text__asI_textI>(
-            'GtextgraphData__asProverb_text_text__asI_textI',
-            GtextgraphData__asProverb_text_text__asI_textI__base,
-            {
-              'T': GtextgraphData__asProverb_text_text__asI_textI__asT,
-              'Q': GtextgraphData__asProverb_text_text__asI_textI__asQ,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI_textI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI_textI__base
-    implements
-        Built<GtextgraphData__asProverb_text_text__asI_textI__base,
-            GtextgraphData__asProverb_text_text__asI_textI__baseBuilder>,
-        GtextgraphData__asProverb_text_text__asI_textI {
-  GtextgraphData__asProverb_text_text__asI_textI__base._();
-
-  factory GtextgraphData__asProverb_text_text__asI_textI__base(
-      [Function(GtextgraphData__asProverb_text_text__asI_textI__baseBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asI_textI__baseBuilder b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text__asI_textI__base>
-      get serializer => _$gtextgraphDataAsProverbTextTextAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI_textI__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI_textI__asT
-    implements
-        Built<GtextgraphData__asProverb_text_text__asI_textI__asT,
-            GtextgraphData__asProverb_text_text__asI_textI__asTBuilder>,
-        GtextgraphData__asProverb_text_text__asI_textI {
-  GtextgraphData__asProverb_text_text__asI_textI__asT._();
-
-  factory GtextgraphData__asProverb_text_text__asI_textI__asT(
-      [Function(GtextgraphData__asProverb_text_text__asI_textI__asTBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asI_textI__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asProverb_text_text__asI_textI__asT>
-      get serializer => _$gtextgraphDataAsProverbTextTextAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI_textI__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI_textI__asQ
-    implements
-        Built<GtextgraphData__asProverb_text_text__asI_textI__asQ,
-            GtextgraphData__asProverb_text_text__asI_textI__asQBuilder>,
-        GtextgraphData__asProverb_text_text__asI_textI {
-  GtextgraphData__asProverb_text_text__asI_textI__asQ._();
-
-  factory GtextgraphData__asProverb_text_text__asI_textI__asQ(
-      [Function(GtextgraphData__asProverb_text_text__asI_textI__asQBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asI_textI__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asI_textI__asQBuilder b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ>
-      get textQ;
-  static Serializer<GtextgraphData__asProverb_text_text__asI_textI__asQ>
-      get serializer => _$gtextgraphDataAsProverbTextTextAsITextIAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI_textI__asQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ>(
-            'GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ',
-            GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base,
-            {
-              'T':
-                  GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base
-    implements
-        Built<GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base,
-            GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__baseBuilder>,
-        GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base._();
-
-  factory GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base(
-          [Function(
-                  GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base>
-      get serializer =>
-          _$gtextgraphDataAsProverbTextTextAsITextIAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT
-    implements
-        Built<GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT,
-            GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asTBuilder>,
-        GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT._();
-
-  factory GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT(
-          [Function(
-                  GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT>
-      get serializer =>
-          _$gtextgraphDataAsProverbTextTextAsITextIAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_text_text__asI_textI__asQ_textQ__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asT
-    implements
-        Built<GtextgraphData__asProverb_text_text__asT,
-            GtextgraphData__asProverb_text_text__asTBuilder>,
-        GtextgraphData__asProverb_text_text {
-  GtextgraphData__asProverb_text_text__asT._();
-
-  factory GtextgraphData__asProverb_text_text__asT(
-      [Function(GtextgraphData__asProverb_text_text__asTBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asProverb_text_text__asT> get serializer =>
-      _$gtextgraphDataAsProverbTextTextAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asL
-    implements
-        Built<GtextgraphData__asProverb_text_text__asL,
-            GtextgraphData__asProverb_text_text__asLBuilder>,
-        GtextgraphData__asProverb_text_text {
-  GtextgraphData__asProverb_text_text__asL._();
-
-  factory GtextgraphData__asProverb_text_text__asL(
-      [Function(GtextgraphData__asProverb_text_text__asLBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asL;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asLBuilder b) =>
-      b..G__typename = 'L';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  GtextgraphData__asProverb_text_text__asL_link get link;
-  static Serializer<GtextgraphData__asProverb_text_text__asL> get serializer =>
-      _$gtextgraphDataAsProverbTextTextAsLSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asL.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asL? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asL.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_text_text__asL_link
-    implements
-        Built<GtextgraphData__asProverb_text_text__asL_link,
-            GtextgraphData__asProverb_text_text__asL_linkBuilder>,
-        Glemmalink {
-  GtextgraphData__asProverb_text_text__asL_link._();
-
-  factory GtextgraphData__asProverb_text_text__asL_link(
-      [Function(GtextgraphData__asProverb_text_text__asL_linkBuilder b)
-          updates]) = _$GtextgraphData__asProverb_text_text__asL_link;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_text_text__asL_linkBuilder b) =>
-      b..G__typename = 'LemmaLink';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  static Serializer<GtextgraphData__asProverb_text_text__asL_link>
-      get serializer => _$gtextgraphDataAsProverbTextTextAsLLinkSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_text_text__asL_link.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_text_text__asL_link? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_text_text__asL_link.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations
-    implements
-        Built<GtextgraphData__asProverb_translations,
-            GtextgraphData__asProverb_translationsBuilder> {
-  GtextgraphData__asProverb_translations._();
-
-  factory GtextgraphData__asProverb_translations(
-          [Function(GtextgraphData__asProverb_translationsBuilder b) updates]) =
-      _$GtextgraphData__asProverb_translations;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translationsBuilder b) =>
-      b..G__typename = 'TextTranslated';
-
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String? get id;
-  GtextgraphData__asProverb_translations_text get text;
-  _i2.GLangType get lang;
-  static Serializer<GtextgraphData__asProverb_translations> get serializer =>
-      _$gtextgraphDataAsProverbTranslationsSerializer;
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text
-    implements
-        Built<GtextgraphData__asProverb_translations_text,
-            GtextgraphData__asProverb_translations_textBuilder>,
-        GtxtDetails {
-  GtextgraphData__asProverb_translations_text._();
-
-  factory GtextgraphData__asProverb_translations_text(
-      [Function(GtextgraphData__asProverb_translations_textBuilder b)
-          updates]) = _$GtextgraphData__asProverb_translations_text;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_textBuilder b) =>
-      b..G__typename = 'FormattedText';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  BuiltList<GtextgraphData__asProverb_translations_text_text> get text;
-  static Serializer<GtextgraphData__asProverb_translations_text>
-      get serializer => _$gtextgraphDataAsProverbTranslationsTextSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text
-    implements GtxtDetails_text {
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_translations_text_text>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_translations_text_text>(
-            'GtextgraphData__asProverb_translations_text_text',
-            GtextgraphData__asProverb_translations_text_text__base,
-            {
-              'Q': GtextgraphData__asProverb_translations_text_text__asQ,
-              'I': GtextgraphData__asProverb_translations_text_text__asI,
-              'T': GtextgraphData__asProverb_translations_text_text__asT,
-              'L': GtextgraphData__asProverb_translations_text_text__asL,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__base
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__base,
-            GtextgraphData__asProverb_translations_text_text__baseBuilder>,
-        GtextgraphData__asProverb_translations_text_text {
-  GtextgraphData__asProverb_translations_text_text__base._();
-
-  factory GtextgraphData__asProverb_translations_text_text__base(
-      [Function(GtextgraphData__asProverb_translations_text_text__baseBuilder b)
-          updates]) = _$GtextgraphData__asProverb_translations_text_text__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__baseBuilder b) =>
-      b..G__typename = 'TextType';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__base>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__base.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__base? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__base.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asQ,
-            GtextgraphData__asProverb_translations_text_text__asQBuilder>,
-        GtextgraphData__asProverb_translations_text_text {
-  GtextgraphData__asProverb_translations_text_text__asQ._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asQ(
-      [Function(GtextgraphData__asProverb_translations_text_text__asQBuilder b)
-          updates]) = _$GtextgraphData__asProverb_translations_text_text__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asQBuilder b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asProverb_translations_text_text__asQ_textQ>
-      get textQ;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__asQ>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_translations_text_text__asQ_textQ>(
-            'GtextgraphData__asProverb_translations_text_text__asQ_textQ',
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__base,
-            {
-              'T':
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT,
-              'I':
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ_textQ? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ_textQ__base
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asQ_textQ__base,
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__baseBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ {
-  GtextgraphData__asProverb_translations_text_text__asQ_textQ__base._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asQ_textQ__base(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__base>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ_textQ__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT,
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asTBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ {
-  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI,
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asIBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ {
-  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asIBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asIBuilder
-              b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI>
-      get textI;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsQTextQAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI>(
-            'GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI',
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base,
-            {
-              'T':
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base
-    implements
-        Built<
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base,
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__baseBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsQTextQAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
-    implements
-        Built<
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT,
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asTBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI {
-  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsQTextQAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asQ_textQ__asI_textI__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asI,
-            GtextgraphData__asProverb_translations_text_text__asIBuilder>,
-        GtextgraphData__asProverb_translations_text_text {
-  GtextgraphData__asProverb_translations_text_text__asI._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asI(
-      [Function(GtextgraphData__asProverb_translations_text_text__asIBuilder b)
-          updates]) = _$GtextgraphData__asProverb_translations_text_text__asI;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asIBuilder b) =>
-      b..G__typename = 'I';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<GtextgraphData__asProverb_translations_text_text__asI_textI>
-      get textI;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__asI>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsISerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI_textI {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__asI_textI>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_translations_text_text__asI_textI>(
-            'GtextgraphData__asProverb_translations_text_text__asI_textI',
-            GtextgraphData__asProverb_translations_text_text__asI_textI__base,
-            {
-              'T':
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__asT,
-              'Q':
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__asQ,
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI_textI? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI_textI__base
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asI_textI__base,
-            GtextgraphData__asProverb_translations_text_text__asI_textI__baseBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asI_textI {
-  GtextgraphData__asProverb_translations_text_text__asI_textI__base._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asI_textI__base(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asI_textI__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asI_textI__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeI';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asI_textI__base>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsITextIBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI_textI__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asI_textI__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI_textI__asT
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asI_textI__asT,
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asTBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asI_textI {
-  GtextgraphData__asProverb_translations_text_text__asI_textI__asT._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asI_textI__asT(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asI_textI__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asT>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsITextIAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI_textI__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI_textI__asQ
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asI_textI__asQ,
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asI_textI {
-  GtextgraphData__asProverb_translations_text_text__asI_textI__asQ._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asI_textI__asQ(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__asQBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asI_textI__asQ;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQBuilder
-              b) =>
-      b..G__typename = 'Q';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  BuiltList<
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ>
-      get textQ;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsITextIAsQSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI__asQ
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI_textI__asQ?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ {
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ>
-      get serializer => _i3.InlineFragmentSerializer<
-              GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ>(
-            'GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ',
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base,
-            {
-              'T':
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
-            },
-          );
-
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base
-    implements
-        Built<
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base,
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__baseBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__baseBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__baseBuilder
-              b) =>
-      b..G__typename = 'TextTypeQ';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsITextIAsQTextQBaseSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__base
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
-    implements
-        Built<
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT,
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asTBuilder>,
-        GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ {
-  GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT(
-          [Function(
-                  GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asTBuilder
-                      b)
-              updates]) =
-      _$GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asTBuilder
-              b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<
-          GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsITextIAsQTextQAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
-            .serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT?
-      fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
-            GtextgraphData__asProverb_translations_text_text__asI_textI__asQ_textQ__asT
-                .serializer,
-            json,
-          );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asT
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asT,
-            GtextgraphData__asProverb_translations_text_text__asTBuilder>,
-        GtextgraphData__asProverb_translations_text_text {
-  GtextgraphData__asProverb_translations_text_text__asT._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asT(
-      [Function(GtextgraphData__asProverb_translations_text_text__asTBuilder b)
-          updates]) = _$GtextgraphData__asProverb_translations_text_text__asT;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asTBuilder b) =>
-      b..G__typename = 'T';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  String get textT;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__asT>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsTSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asT.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asT? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__asT.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asL
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asL,
-            GtextgraphData__asProverb_translations_text_text__asLBuilder>,
-        GtextgraphData__asProverb_translations_text_text {
-  GtextgraphData__asProverb_translations_text_text__asL._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asL(
-      [Function(GtextgraphData__asProverb_translations_text_text__asLBuilder b)
-          updates]) = _$GtextgraphData__asProverb_translations_text_text__asL;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asLBuilder b) =>
-      b..G__typename = 'L';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  GtextgraphData__asProverb_translations_text_text__asL_link get link;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__asL>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsLSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asL.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asL? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__asL.serializer,
-        json,
-      );
-}
-
-abstract class GtextgraphData__asProverb_translations_text_text__asL_link
-    implements
-        Built<GtextgraphData__asProverb_translations_text_text__asL_link,
-            GtextgraphData__asProverb_translations_text_text__asL_linkBuilder>,
-        Glemmalink {
-  GtextgraphData__asProverb_translations_text_text__asL_link._();
-
-  factory GtextgraphData__asProverb_translations_text_text__asL_link(
-      [Function(
-              GtextgraphData__asProverb_translations_text_text__asL_linkBuilder
-                  b)
-          updates]) = _$GtextgraphData__asProverb_translations_text_text__asL_link;
-
-  static void _initializeBuilder(
-          GtextgraphData__asProverb_translations_text_text__asL_linkBuilder
-              b) =>
-      b..G__typename = 'LemmaLink';
-
-  @override
-  @BuiltValueField(wireName: '__typename')
-  String get G__typename;
-  @override
-  String? get source;
-  @override
-  String get lemma;
-  @override
-  _i2.GGramType? get pos;
-  @override
-  _i2.GLangType? get lang;
-  @override
-  String? get id;
-  @override
-  String? get text;
-  static Serializer<GtextgraphData__asProverb_translations_text_text__asL_link>
-      get serializer =>
-          _$gtextgraphDataAsProverbTranslationsTextTextAsLLinkSerializer;
-
-  @override
-  Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
-        GtextgraphData__asProverb_translations_text_text__asL_link.serializer,
-        this,
-      ) as Map<String, dynamic>);
-
-  static GtextgraphData__asProverb_translations_text_text__asL_link? fromJson(
-          Map<String, dynamic> json) =>
-      _i1.serializers.deserializeWith(
-        GtextgraphData__asProverb_translations_text_text__asL_link.serializer,
         json,
       );
 }
