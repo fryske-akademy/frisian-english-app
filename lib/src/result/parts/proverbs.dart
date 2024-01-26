@@ -37,7 +37,6 @@ class _ProverbsState extends State<Proverbs> {
     List<FilteredData> filtered = [];
 
     for (var proverb in proverbs) {
-      print(proverb);
       var text = proverb.text.text;
       var textSpans = getRichText(text);
 

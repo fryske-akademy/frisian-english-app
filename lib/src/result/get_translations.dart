@@ -20,7 +20,6 @@ Future getTranslations() async {
     ..vars.englishTranslations = true);
 
   final response = await client.request(request).first;
-  print(response);
 
   if (response.graphqlErrors != null || response.hasErrors || response.data.lemmasearch.lemmas == null) {
     return [];

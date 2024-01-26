@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../main.dart';
 import 'parts/details.dart';
 import 'parts/examples.dart';
+import 'parts/lemma.dart';
 import 'parts/proverbs.dart';
 import 'parts/translations.dart';
 
@@ -65,6 +66,8 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 
               if (snapshot.hasData) {
                 var response = snapshot.data;
+                Lemma lemma = Lemma(response);
+                lemma.fillVariables();
                 return TabBarView(
                   controller: tabController,
                   children: [
@@ -77,7 +80,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                             padding: MediaQuery.of(context).size.width > 768
                                 ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
                                 : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                            child: Translations(),
+                            child: Translations(lemma),
                           ),
                         ),
                         Expanded(
@@ -86,7 +89,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                             padding: MediaQuery.of(context).size.width > 768
                                 ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
                                 : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                            child: Details(response),
+                            child: Details(lemma),
                           ),
                         ),
                         Padding(
@@ -95,7 +98,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                             child: IconButton(
                               icon: const Icon(Icons.home),
                               onPressed: () {
-                                varController.clearVariables();
+                                lemma.clearVariables();
                                 context.go('/home');
                               },
                             ),
@@ -103,8 +106,8 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                         ),
                       ],
                     ),
-                    Examples(response),
-                    Proverbs(response),
+                    Examples(lemma),
+                    Proverbs(lemma),
                   ],
                 );
               }

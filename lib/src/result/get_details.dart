@@ -28,9 +28,5 @@ Future getDetails() async {
 
   var response = await client.request(request).first;
 
-  if (response.hasErrors) {
-    print('Error: ${response.graphqlErrors}');
-  }
-
   return response.data;
 }

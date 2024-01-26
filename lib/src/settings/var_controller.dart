@@ -115,17 +115,6 @@ class VarController with ChangeNotifier {
 
   late List<ListItem> stagedItems = [];
 
-  late String query = '';
-
-  late List translations;
-
-  late String gramVar = '';
-  late String lemmaForm = '';
-  late String lemmaArticle = '';
-  late String lemmaPronunciation = '';
-
-  late var response;
-
   var customColor = const Color.fromARGB(255, 204, 111, 24);
 
   late OverlayEntry langSwapOverlayEntry;
@@ -152,14 +141,5 @@ class VarController with ChangeNotifier {
     }
   }
 
-  void clearVariables() {
-    stagedItems = [];
-    translations = [];
-    query = '';
-    gramVar = '';
-    lemmaForm = '';
-    lemmaArticle = '';
-    lemmaPronunciation = '';
-    response = null;
-  }
+  late var query = "";
 }

@@ -7,85 +7,21 @@ import '../../../main.dart';
 import 'details_overlay.dart';
 
 class Details extends StatefulWidget {
-  const Details(this.response, {super.key});
-
-  final response;
+  final lemma;
+  const Details(this.lemma, {super.key});
 
   @override
   State<Details> createState() => _DetailsState();
 }
 
 class _DetailsState extends State<Details> {
-  var lemma;
-
   @override
   void initState() {
     super.initState();
-    lemma = varController.isFryEn ? widget.response.details.first.lemma : widget.response.lemmasearch.lemmas.first;
-    fillVariables(lemma);
-  }
-
-  void fillVariables(lemma) {
-    if (varController.isFryEn) {
-      varController.gramVar = lemma.grammar.first.name;
-    } else {
-      varController.gramVar = lemma.grammar.first.name;
-    }
-
-    if (varController.gramVar == 'pos_x') {
-      varController.gramVar = '';
-    } else {
-      List<String> words = varController.gramVar.split('_');
-      String result = words[0].toLowerCase() + words.sublist(1).map((word) => word[0].toUpperCase() + word.substring(1)).join();
-      varController.gramVar = result;
-    }
-
-    if (varController.isFryEn) {
-      final lemma = this.lemma;
-      varController.lemmaForm = lemma.form;
-      varController.lemmaArticle = lemma?.article ?? ' ';
-      varController.lemmaPronunciation = lemma?.pronunciation ?? ' ';
-    } else {
-      varController.lemmaForm = lemma.form;
-    }
   }
 
   @override
   Widget build(BuildContext context) {
-    // if (widget.response.details.isEmpty) {
-    //   List<String> words = varController.query.split(RegExp(r'[ /,]'));
-
-    //   // Create a list of TextButtons or Text widgets
-    //   List<Widget> widgets = words
-    //       .where((word) => word.isNotEmpty)
-    //       .map((word) => RegExp(r'^[a-zA-Z\u00C0-\u017F]+$').hasMatch(word) && word.length >= 4
-    //           ? TextButton(
-    //               onPressed: () {
-    //                 varController.query = word;
-    //                 context.go('/result');
-    //               },
-    //               style: TextButton.styleFrom(
-    //                 minimumSize: Size.zero,
-    //                 padding: const EdgeInsets.all(5),
-    //                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-    //               ),
-    //               child: Text(
-    //                 '$word ',
-    //                 style: const TextStyle(fontSize: 14),
-    //               ),
-    //             )
-    //           : Text('$word ', style: const TextStyle(fontSize: 14)))
-    //       .toList();
-
-    //   return Center(
-    //       child: Column(
-    //     children: [
-    //       Text(AppLocalizations.of(context)!.searchedText, style: const TextStyle(fontSize: 25)),
-    //       Wrap(crossAxisAlignment: WrapCrossAlignment.center, alignment: WrapAlignment.center, spacing: 0.0, runSpacing: 0.0, children: widgets),
-    //     ],
-    //   ));
-    // }
-
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -103,7 +39,7 @@ class _DetailsState extends State<Details> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     AutoSizeText(
-                      varController.lemmaForm,
+                      widget.lemma.form,
                       maxLines: 1,
                       minFontSize: 25,
                       maxFontSize: 40,
@@ -115,12 +51,11 @@ class _DetailsState extends State<Details> {
                         varController.detailOverlayEntry = OverlayEntry(
                           builder: (context) {
                             return DetailOverlay(
-                              lemma,
+                              widget.lemma,
                               onPressed: (string) {
                                 varController.detailOverlayEntry.remove();
                                 varController.detailOverlayEntry.dispose();
                                 varController.detailOverlayLive = false;
-                                varController.query = string;
                                 context.pop();
                                 context.go('/result');
                               },
@@ -142,7 +77,7 @@ class _DetailsState extends State<Details> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "${AppLocalizations.of(context)!.selectPos(varController.gramVar)}${varController.lemmaArticle != ' ' ? ' - ' : ''}${varController.lemmaArticle}${varController.lemmaPronunciation != ' ' ? ' - ' : ''}${varController.lemmaPronunciation}",
+                        "${AppLocalizations.of(context)!.selectPos(widget.lemma.grammar)}${widget.lemma.article != ' ' ? ' - ' : ''}${widget.lemma.grammar}${widget.lemma.pronunciation != ' ' ? ' - ' : ''}${widget.lemma.pronunciation}",
                         softWrap: true, // this will make the text wrap onto the next line
                       ),
                     ],

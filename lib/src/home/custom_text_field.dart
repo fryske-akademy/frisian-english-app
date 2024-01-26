@@ -247,6 +247,12 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
           itemBuilder: (context, index) {
             String lemma = singleWordLemmas[index].form ?? '';
             return TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                elevation: MaterialStateProperty.all(0.0),
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: MaterialStateProperty.all(Colors.transparent),
+              ),
               onPressed: () => widget.onPressed(lemma),
               child: Text(lemma, style: const TextStyle(fontWeight: FontWeight.bold)),
             );

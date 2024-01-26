@@ -37,7 +37,6 @@ class _ExamplesState extends State<Examples> {
     List<FilteredData> filtered = [];
 
     for (var example in examples) {
-      print(example);
       var text = example.text.text;
       var textSpans = getRichText(text);
 

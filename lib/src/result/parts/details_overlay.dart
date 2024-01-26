@@ -4,7 +4,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../../__generated__/schema.schema.gql.dart';
 import '../../../main.dart';
 
 class DetailOverlay extends StatefulWidget {
@@ -18,46 +17,10 @@ class DetailOverlay extends StatefulWidget {
 }
 
 class _DetailOverlayState extends State<DetailOverlay> {
-  late Future subFormsFuture;
-
   @override
   void initState() {
     super.initState();
-    processSubForms(widget.lemma);
-    retrieveTenses(widget.lemma);
-
-    presPerson1Sing;
-    pastPerson1Sing;
-    pastParticiple;
   }
-
-  List<String> synonyms = [];
-  List<String> variants = [];
-  List<String> dutchisms = [];
-
-  List<Map<String, String>> singularForms = [];
-  List<Map<String, String>> pluralForms = [];
-  List<Map<String, String>> singularDimForms = [];
-  List<Map<String, String>> pluralDimForms = [];
-
-  List<Map<String, String>> presPerson1Sing = [];
-  List<Map<String, String>> presPerson1Plur = [];
-  List<Map<String, String>> presPerson2Sing = [];
-  List<Map<String, String>> presPerson2Plur = [];
-  List<Map<String, String>> presPerson2PlurFormal = [];
-  List<Map<String, String>> presPerson3Sing = [];
-  List<Map<String, String>> presPerson3Plur = [];
-
-  List<Map<String, String>> pastPerson1Sing = [];
-  List<Map<String, String>> pastPerson1Plur = [];
-  List<Map<String, String>> pastPerson2Sing = [];
-  List<Map<String, String>> pastPerson2Plur = [];
-  List<Map<String, String>> pastPerson2PlurFormal = [];
-  List<Map<String, String>> pastPerson3Sing = [];
-  List<Map<String, String>> pastPerson3Plur = [];
-
-  List<Map<String, String>> pastParticiple = [];
-  List<Map<String, String>> presentParticiple = [];
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +44,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
                 Expanded(
                   flex: 3,
                   child: AutoSizeText(
-                    varController.query,
+                    widget.lemma.form,
                     maxLines: 1,
                     maxFontSize: 40,
                     minFontSize: 25,
@@ -104,17 +67,17 @@ class _DetailOverlayState extends State<DetailOverlay> {
             Row(
               children: [
                 const SizedBox(width: 10),
-                Text(AppLocalizations.of(context)!.selectPos(varController.gramVar)),
+                Text(AppLocalizations.of(context)!.selectPos(widget.lemma.grammar)),
                 Visibility(
-                  visible: varController.lemmaArticle != ' ',
+                  visible: widget.lemma.article != ' ',
                   child: const Text(' - '),
                 ),
-                Text(varController.lemmaArticle),
+                Text(widget.lemma.article),
                 Visibility(
-                  visible: varController.lemmaPronunciation != ' ',
+                  visible: widget.lemma.pronunciation != ' ',
                   child: const Text(' - '),
                 ),
-                Text(varController.lemmaPronunciation),
+                Text(widget.lemma.pronunciation),
               ],
             ),
             const Divider(
@@ -122,7 +85,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
             ),
             const SizedBox(height: 10),
             Visibility(
-              visible: synonyms.isNotEmpty,
+              visible: widget.lemma.synonyms.isNotEmpty,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,11 +103,17 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       thickness: 3,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        itemCount: synonyms.length,
+                        itemCount: widget.lemma.synonyms.length,
                         itemBuilder: (context, index) {
                           return TextButton(
-                            child: Text(synonyms[index]),
-                            onPressed: () => widget.onPressed(synonyms[index]),
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                              elevation: MaterialStateProperty.all(0.0),
+                              splashFactory: NoSplash.splashFactory,
+                              overlayColor: MaterialStateProperty.all(Colors.transparent),
+                            ),
+                            child: Text(widget.lemma.synonyms[index]),
+                            onPressed: () => widget.onPressed(widget.lemma.synonyms[index]),
                           );
                         },
                       ),
@@ -158,7 +127,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
               ),
             ),
             Visibility(
-              visible: variants.isNotEmpty,
+              visible: widget.lemma.variants.isNotEmpty,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -169,8 +138,14 @@ class _DetailOverlayState extends State<DetailOverlay> {
                   ),
                   Row(
                     children: [
-                      for (var variant in variants)
+                      for (var variant in widget.lemma.variants)
                         TextButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                            elevation: MaterialStateProperty.all(0.0),
+                            splashFactory: NoSplash.splashFactory,
+                            overlayColor: MaterialStateProperty.all(Colors.transparent),
+                          ),
                           child: Text(variant),
                           onPressed: () => widget.onPressed(variant),
                         ),
@@ -184,7 +159,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
               ),
             ),
             Visibility(
-              visible: dutchisms.isNotEmpty,
+              visible: widget.lemma.dutchisms.isNotEmpty,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,7 +169,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
                     thickness: 2,
                   ),
                   Row(
-                    children: [for (var dutchism in dutchisms) Text(dutchism)],
+                    children: [for (var dutchism in widget.lemma.dutchisms) Text(dutchism)],
                   ),
                   const Divider(
                     thickness: 2,
@@ -215,7 +190,10 @@ class _DetailOverlayState extends State<DetailOverlay> {
               elevation: 5,
               surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
               child: Visibility(
-                visible: singularForms.isNotEmpty || pluralForms.isNotEmpty || singularDimForms.isNotEmpty || pluralDimForms.isNotEmpty,
+                visible: widget.lemma.singularForms.isNotEmpty ||
+                    widget.lemma.pluralForms.isNotEmpty ||
+                    widget.lemma.singularDimForms.isNotEmpty ||
+                    widget.lemma.pluralDimForms.isNotEmpty,
                 child: RawScrollbar(
                   mainAxisMargin: 25,
                   radius: const Radius.circular(20),
@@ -226,24 +204,24 @@ class _DetailOverlayState extends State<DetailOverlay> {
                     child: DataTable(
                       columns: [
                         DataColumn(label: Text(AppLocalizations.of(context)!.numberSing)),
-                        DataColumn(label: Text(singularForms.isNotEmpty ? singularForms.first['form']! : '')),
-                        DataColumn(label: Text(singularForms.isNotEmpty ? singularForms.first['hyphenation']! : '')),
+                        DataColumn(label: Text(widget.lemma.singularForms.isNotEmpty ? widget.lemma.singularForms.first['form']! : '')),
+                        DataColumn(label: Text(widget.lemma.singularForms.isNotEmpty ? widget.lemma.singularForms.first['hyphenation']! : '')),
                       ],
                       rows: [
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.numberPlur)),
-                          DataCell(Text(pluralForms.isNotEmpty ? pluralForms.first['form']! : '')),
-                          DataCell(Text(pluralForms.isNotEmpty ? pluralForms.first['hyphenation']! : '')),
+                          DataCell(Text(widget.lemma.pluralForms.isNotEmpty ? widget.lemma.pluralForms.first['form']! : '')),
+                          DataCell(Text(widget.lemma.pluralForms.isNotEmpty ? widget.lemma.pluralForms.first['hyphenation']! : '')),
                         ]),
                         DataRow(cells: [
                           DataCell(Text('${AppLocalizations.of(context)!.numberSing} ${AppLocalizations.of(context)!.diminutiveDim}')),
-                          DataCell(Text(singularDimForms.isNotEmpty ? singularDimForms.first['form']! : '')),
-                          DataCell(Text(singularDimForms.isNotEmpty ? singularDimForms.first['hyphenation']! : '')),
+                          DataCell(Text(widget.lemma.singularDimForms.isNotEmpty ? widget.lemma.singularDimForms.first['form']! : '')),
+                          DataCell(Text(widget.lemma.singularDimForms.isNotEmpty ? widget.lemma.singularDimForms.first['hyphenation']! : '')),
                         ]),
                         DataRow(cells: [
                           DataCell(Text('${AppLocalizations.of(context)!.numberPlur} ${AppLocalizations.of(context)!.diminutiveDim}')),
-                          DataCell(Text(pluralDimForms.isNotEmpty ? pluralDimForms.first['form']! : '')),
-                          DataCell(Text(pluralDimForms.isNotEmpty ? pluralDimForms.first['hyphenation']! : '')),
+                          DataCell(Text(widget.lemma.pluralDimForms.isNotEmpty ? widget.lemma.pluralDimForms.first['form']! : '')),
+                          DataCell(Text(widget.lemma.pluralDimForms.isNotEmpty ? widget.lemma.pluralDimForms.first['hyphenation']! : '')),
                         ]),
                       ],
                     ),
@@ -258,13 +236,13 @@ class _DetailOverlayState extends State<DetailOverlay> {
               elevation: 5,
               surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
               child: Visibility(
-                visible: presPerson1Sing.isNotEmpty ||
-                    presPerson1Plur.isNotEmpty ||
-                    presPerson2Sing.isNotEmpty ||
-                    presPerson2Plur.isNotEmpty ||
-                    presPerson2PlurFormal.isNotEmpty ||
-                    presPerson3Sing.isNotEmpty ||
-                    presPerson3Plur.isNotEmpty,
+                visible: widget.lemma.presPerson1Sing.isNotEmpty ||
+                    widget.lemma.presPerson1Plur.isNotEmpty ||
+                    widget.lemma.presPerson2Sing.isNotEmpty ||
+                    widget.lemma.presPerson2Plur.isNotEmpty ||
+                    widget.lemma.presPerson2PlurFormal.isNotEmpty ||
+                    widget.lemma.presPerson3Sing.isNotEmpty ||
+                    widget.lemma.presPerson3Plur.isNotEmpty,
                 child: RawScrollbar(
                   mainAxisMargin: 25,
                   radius: const Radius.circular(20),
@@ -288,40 +266,40 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       rows: [
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person1Sing)),
-                          DataCell(Text(presPerson1Sing.isEmpty ? '' : presPerson1Sing.first['form']!)),
-                          DataCell(Text(presPerson1Sing.isEmpty ? '' : presPerson1Sing.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.presPerson1Sing.isEmpty ? '' : widget.lemma.presPerson1Sing.first['form']!)),
+                          DataCell(Text(widget.lemma.presPerson1Sing.isEmpty ? '' : widget.lemma.presPerson1Sing.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person2Sing)),
                           DataCell(Text(
-                              '${presPerson2Sing.isEmpty ? '' : '${presPerson2Sing.first['form']!},'} ${presPerson2Sing.isEmpty ? '' : presPerson2Sing.last['form']!}')),
+                              '${widget.lemma.presPerson2Sing.isEmpty ? '' : '${widget.lemma.presPerson2Sing.first['form']!},'} ${widget.lemma.presPerson2Sing.isEmpty ? '' : widget.lemma.presPerson2Sing.last['form']!}')),
                           DataCell(Text(
-                              '${presPerson2Sing.isEmpty ? '' : '${presPerson2Sing.first['hyphenation']!},'} ${presPerson2Sing.isEmpty ? '' : presPerson2Sing.last['hyphenation']!}')),
+                              '${widget.lemma.presPerson2Sing.isEmpty ? '' : '${widget.lemma.presPerson2Sing.first['hyphenation']!},'} ${widget.lemma.presPerson2Sing.isEmpty ? '' : widget.lemma.presPerson2Sing.last['hyphenation']!}')),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person2PlurFormal)),
-                          DataCell(Text(presPerson2PlurFormal.isEmpty ? '' : presPerson2PlurFormal.first['form']!)),
-                          DataCell(Text(presPerson2PlurFormal.isEmpty ? '' : presPerson2PlurFormal.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.presPerson2PlurFormal.isEmpty ? '' : widget.lemma.presPerson2PlurFormal.first['form']!)),
+                          DataCell(Text(widget.lemma.presPerson2PlurFormal.isEmpty ? '' : widget.lemma.presPerson2PlurFormal.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person3Sing)),
-                          DataCell(Text(presPerson3Sing.isEmpty ? '' : presPerson3Sing.first['form']!)),
-                          DataCell(Text(presPerson3Sing.isEmpty ? '' : presPerson3Sing.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.presPerson3Sing.isEmpty ? '' : widget.lemma.presPerson3Sing.first['form']!)),
+                          DataCell(Text(widget.lemma.presPerson3Sing.isEmpty ? '' : widget.lemma.presPerson3Sing.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person1Plur)),
-                          DataCell(Text(presPerson1Plur.isEmpty ? '' : presPerson1Plur.first['form']!)),
-                          DataCell(Text(presPerson1Plur.isEmpty ? '' : presPerson1Plur.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.presPerson1Plur.isEmpty ? '' : widget.lemma.presPerson1Plur.first['form']!)),
+                          DataCell(Text(widget.lemma.presPerson1Plur.isEmpty ? '' : widget.lemma.presPerson1Plur.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person2Plur)),
-                          DataCell(Text(presPerson2Plur.isEmpty ? '' : presPerson2Plur.first['form']!)),
-                          DataCell(Text(presPerson2Plur.isEmpty ? '' : presPerson2Plur.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.presPerson2Plur.isEmpty ? '' : widget.lemma.presPerson2Plur.first['form']!)),
+                          DataCell(Text(widget.lemma.presPerson2Plur.isEmpty ? '' : widget.lemma.presPerson2Plur.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person3Plur)),
-                          DataCell(Text(presPerson3Plur.isEmpty ? '' : presPerson3Plur.first['form']!)),
-                          DataCell(Text(presPerson3Plur.isEmpty ? '' : presPerson3Plur.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.presPerson3Plur.isEmpty ? '' : widget.lemma.presPerson3Plur.first['form']!)),
+                          DataCell(Text(widget.lemma.presPerson3Plur.isEmpty ? '' : widget.lemma.presPerson3Plur.first['hyphenation']!)),
                         ]),
                       ],
                     ),
@@ -337,13 +315,13 @@ class _DetailOverlayState extends State<DetailOverlay> {
               elevation: 5,
               surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
               child: Visibility(
-                visible: pastPerson1Sing.isNotEmpty ||
-                    pastPerson1Plur.isNotEmpty ||
-                    pastPerson2Sing.isNotEmpty ||
-                    pastPerson2Plur.isNotEmpty ||
-                    pastPerson2PlurFormal.isNotEmpty ||
-                    pastPerson3Sing.isNotEmpty ||
-                    pastPerson3Plur.isNotEmpty,
+                visible: widget.lemma.pastPerson1Sing.isNotEmpty ||
+                    widget.lemma.pastPerson1Plur.isNotEmpty ||
+                    widget.lemma.pastPerson2Sing.isNotEmpty ||
+                    widget.lemma.pastPerson2Plur.isNotEmpty ||
+                    widget.lemma.pastPerson2PlurFormal.isNotEmpty ||
+                    widget.lemma.pastPerson3Sing.isNotEmpty ||
+                    widget.lemma.pastPerson3Plur.isNotEmpty,
                 child: RawScrollbar(
                   mainAxisMargin: 25,
                   radius: const Radius.circular(20),
@@ -367,40 +345,40 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       rows: [
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person1Sing)),
-                          DataCell(Text(pastPerson1Sing.isEmpty ? '' : pastPerson1Sing.first['form']!)),
-                          DataCell(Text(pastPerson1Sing.isEmpty ? '' : pastPerson1Sing.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.pastPerson1Sing.isEmpty ? '' : widget.lemma.pastPerson1Sing.first['form']!)),
+                          DataCell(Text(widget.lemma.pastPerson1Sing.isEmpty ? '' : widget.lemma.pastPerson1Sing.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person2Sing)),
                           DataCell(Text(
-                              '${pastPerson2Sing.isEmpty ? '' : pastPerson2Sing.first['form']!}, ${pastPerson2Sing.isEmpty ? '' : pastPerson2Sing.last['form']!}')),
+                              '${widget.lemma.pastPerson2Sing.isEmpty ? '' : widget.lemma.pastPerson2Sing.first['form']!}, ${widget.lemma.pastPerson2Sing.isEmpty ? '' : widget.lemma.pastPerson2Sing.last['form']!}')),
                           DataCell(Text(
-                              '${pastPerson2Sing.isEmpty ? '' : pastPerson2Sing.first['hyphenation']!}, ${pastPerson2Sing.isEmpty ? '' : pastPerson2Sing.last['hyphenation']!}')),
+                              '${widget.lemma.pastPerson2Sing.isEmpty ? '' : widget.lemma.pastPerson2Sing.first['hyphenation']!}, ${widget.lemma.pastPerson2Sing.isEmpty ? '' : widget.lemma.pastPerson2Sing.last['hyphenation']!}')),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person2PlurFormal)),
-                          DataCell(Text(pastPerson2PlurFormal.isEmpty ? '' : pastPerson2PlurFormal.first['form']!)),
-                          DataCell(Text(pastPerson2PlurFormal.isEmpty ? '' : pastPerson2PlurFormal.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.pastPerson2PlurFormal.isEmpty ? '' : widget.lemma.pastPerson2PlurFormal.first['form']!)),
+                          DataCell(Text(widget.lemma.pastPerson2PlurFormal.isEmpty ? '' : widget.lemma.pastPerson2PlurFormal.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person3Sing)),
-                          DataCell(Text(pastPerson3Sing.isEmpty ? '' : pastPerson1Sing.first['form']!)),
-                          DataCell(Text(pastPerson3Sing.isEmpty ? '' : pastPerson1Sing.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.pastPerson3Sing.isEmpty ? '' : widget.lemma.pastPerson1Sing.first['form']!)),
+                          DataCell(Text(widget.lemma.pastPerson3Sing.isEmpty ? '' : widget.lemma.pastPerson1Sing.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person1Plur)),
-                          DataCell(Text(pastPerson1Plur.isEmpty ? '' : pastPerson1Plur.first['form']!)),
-                          DataCell(Text(pastPerson1Plur.isEmpty ? '' : pastPerson1Plur.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.pastPerson1Plur.isEmpty ? '' : widget.lemma.pastPerson1Plur.first['form']!)),
+                          DataCell(Text(widget.lemma.pastPerson1Plur.isEmpty ? '' : widget.lemma.pastPerson1Plur.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person2Plur)),
-                          DataCell(Text(pastPerson2Plur.isEmpty ? '' : pastPerson2Plur.first['form']!)),
-                          DataCell(Text(pastPerson2Plur.isEmpty ? '' : pastPerson2Plur.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.pastPerson2Plur.isEmpty ? '' : widget.lemma.pastPerson2Plur.first['form']!)),
+                          DataCell(Text(widget.lemma.pastPerson2Plur.isEmpty ? '' : widget.lemma.pastPerson2Plur.first['hyphenation']!)),
                         ]),
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.person3Plur)),
-                          DataCell(Text(pastPerson3Plur.isEmpty ? '' : pastPerson3Plur.first['form']!)),
-                          DataCell(Text(pastPerson3Plur.isEmpty ? '' : pastPerson3Plur.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.pastPerson3Plur.isEmpty ? '' : widget.lemma.pastPerson3Plur.first['form']!)),
+                          DataCell(Text(widget.lemma.pastPerson3Plur.isEmpty ? '' : widget.lemma.pastPerson3Plur.first['hyphenation']!)),
                         ]),
                       ],
                     ),
@@ -416,7 +394,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
               elevation: 5,
               surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
               child: Visibility(
-                visible: pastParticiple.isNotEmpty || presentParticiple.isNotEmpty,
+                visible: widget.lemma.pastParticiple.isNotEmpty || widget.lemma.presentParticiple.isNotEmpty,
                 child: RawScrollbar(
                   mainAxisMargin: 25,
                   radius: const Radius.circular(20),
@@ -429,14 +407,14 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       dividerThickness: 0,
                       columns: [
                         DataColumn(label: Expanded(child: Text(AppLocalizations.of(context)!.pastParticiple))),
-                        DataColumn(label: Expanded(child: Text(pastParticiple.isEmpty ? '' : pastParticiple.first['form']!))),
-                        DataColumn(label: Expanded(child: Text(pastParticiple.isEmpty ? '' : pastParticiple.first['hyphenation']!)))
+                        DataColumn(label: Expanded(child: Text(widget.lemma.pastParticiple.isEmpty ? '' : widget.lemma.pastParticiple.first['form']!))),
+                        DataColumn(label: Expanded(child: Text(widget.lemma.pastParticiple.isEmpty ? '' : widget.lemma.pastParticiple.first['hyphenation']!)))
                       ],
                       rows: [
                         DataRow(cells: [
                           DataCell(Text(AppLocalizations.of(context)!.presentParticiple)),
-                          DataCell(Text(presentParticiple.isEmpty ? '' : presentParticiple.first['form']!)),
-                          DataCell(Text(presentParticiple.isEmpty ? '' : presentParticiple.first['hyphenation']!)),
+                          DataCell(Text(widget.lemma.presentParticiple.isEmpty ? '' : widget.lemma.presentParticiple.first['form']!)),
+                          DataCell(Text(widget.lemma.presentParticiple.isEmpty ? '' : widget.lemma.presentParticiple.first['hyphenation']!)),
                         ]),
                       ],
                     ),
@@ -448,157 +426,5 @@ class _DetailOverlayState extends State<DetailOverlay> {
         ),
       ),
     ));
-  }
-
-  Future<void> processSubForms(lemma) async {
-    for (var subForm in lemma.subForms) {
-      switch (subForm?.G__typename) {
-        case 'Synonym':
-          synonyms.add(subForm.form);
-          break;
-        case 'Variant':
-          variants.add(subForm.form);
-          break;
-        case 'Dutchism':
-          dutchisms.add(subForm.form);
-          break;
-        case 'Paradigm':
-          var form = subForm?.form;
-          var hyphenation = subForm?.hyphenation;
-
-          if (subForm.grammar.first.contains(GGramType.islemma_yes) || subForm.grammar.first.contains(GGramType.number_sing)) {
-            if (subForm.grammar.first.contains(GGramType.degree_dim)) {
-              singularDimForms.add({'form': form, 'hyphenation': hyphenation});
-            } else {
-              singularForms.add({'form': form, 'hyphenation': hyphenation});
-            }
-          } else if (subForm.grammar.first.contains(GGramType.number_plur)) {
-            if (subForm.grammar.first.contains(GGramType.degree_dim)) {
-              pluralDimForms.add({'form': form, 'hyphenation': hyphenation});
-            } else {
-              pluralForms.add({'form': form, 'hyphenation': hyphenation});
-            }
-          }
-          break;
-      }
-    }
-  }
-
-  Future<void> retrieveTenses(lemma) async {
-    for (var subForm in lemma.subForms) {
-      if (subForm.G__typename == "ParadigmCategory") {
-        if (subForm.type == GCategoryType.tense_pres) {
-          for (var form in subForm.forms) {
-            if (form.preferred) {
-              for (var grammar in form.grammar) {
-                // person_1
-                if (grammar.contains(GGramType.person_1)) {
-                  if (grammar.contains(GGramType.number_sing)) {
-                    presPerson1Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  } else if (grammar.contains(GGramType.number_plur)) {
-                    presPerson1Plur.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  }
-                }
-                // person_2
-                else if (grammar.contains(GGramType.person_2)) {
-                  if (grammar.contains(GGramType.number_sing)) {
-                    // Should be added to end of list
-                    if (grammar.contains(GGramType.clitic_yes)) {
-                      presPerson2Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                    // Should be added to front of list
-                    else if (grammar.contains(GGramType.prodrop_yes)) {
-                      presPerson2Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                    // Should be added to front of list
-                    else {
-                      presPerson2Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                  } else if (grammar.contains(GGramType.number_plur)) {
-                    // Don't really get this because should be singular person 2 formal
-                    if (grammar.contains(GGramType.polite_form)) {
-                      presPerson2PlurFormal.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    } else {
-                      presPerson2Plur.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                  }
-                }
-                // person_3
-                else if (grammar.contains(GGramType.person_3)) {
-                  if (grammar.contains(GGramType.number_plur)) {
-                    presPerson3Plur.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  } else if (grammar.contains(GGramType.number_sing)) {
-                    presPerson3Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  }
-                }
-              }
-            }
-          }
-        } else if (subForm.type == GCategoryType.tense_past) {
-          for (var form in subForm.forms) {
-            if (form.preferred) {
-              for (var grammar in form.grammar) {
-                // person_1
-                if (grammar.contains(GGramType.person_1)) {
-                  if (grammar.contains(GGramType.number_sing)) {
-                    pastPerson1Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  } else if (grammar.contains(GGramType.number_plur)) {
-                    pastPerson1Plur.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  }
-                }
-                // person_2
-                else if (grammar.contains(GGramType.person_2)) {
-                  if (grammar.contains(GGramType.number_sing)) {
-                    // Should be added to end of list
-                    if (grammar.contains(GGramType.clitic_yes)) {
-                      pastPerson2Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                    // Should be added to front of list
-                    else if (grammar.contains(GGramType.prodrop_yes)) {
-                      pastPerson2Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                    // Should be added to front of list
-                    else {
-                      pastPerson2Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                  } else if (grammar.contains(GGramType.number_plur)) {
-                    // Don't really get this because should be singular person 2 formal
-                    if (grammar.contains(GGramType.polite_form)) {
-                      pastPerson2PlurFormal.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    } else {
-                      pastPerson2Plur.add({'form': form.form, 'hyphenation': form.hyphenation});
-                    }
-                  }
-                }
-                // person_3
-                else if (grammar.contains(GGramType.person_3)) {
-                  if (grammar.contains(GGramType.number_plur)) {
-                    pastPerson3Plur.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  } else if (grammar.contains(GGramType.number_sing)) {
-                    pastPerson3Sing.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  }
-                }
-              }
-            }
-          }
-        } else if (subForm.type == GCategoryType.verbform_part) {
-          for (var form in subForm.forms) {
-            if (form.preferred) {
-              for (var grammar in form.grammar) {
-                if (grammar.contains(GGramType.tense_past)) {
-                  if (grammar.contains(GGramType.inflection_uninf)) {
-                    pastParticiple.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  } else if (grammar.contains(GGramType.inflection_infl)) {}
-                } else if (grammar.contains(GGramType.tense_pres)) {
-                  if (grammar.contains(GGramType.inflection_uninf)) {
-                    presentParticiple.add({'form': form.form, 'hyphenation': form.hyphenation});
-                  } else if (grammar.contains(GGramType.inflection_infl)) {}
-                }
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
