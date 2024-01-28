@@ -1,9 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
+import '../../../lemma.dart';
 import '../../../main.dart';
-import '../../list_item.dart';
 
 class FavoritesModal extends StatefulWidget {
   const FavoritesModal({super.key});
@@ -31,7 +30,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
           child: ListView.builder(
             itemCount: varController.stagedItems.length,
             itemBuilder: (context, index) {
-              ListItem listItem = varController.stagedItems[index];
+              Lemma lemma = varController.stagedItems[index];
               return Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: ListTile(
@@ -40,16 +39,16 @@ class _FavoritesModalState extends State<FavoritesModal> {
                       // Lemma
                       Flexible(
                         child: TextButton(
-                          onPressed: !listItem.toBeDeleted
+                          onPressed: !lemma.toBeDeleted
                               ? () {
-                                  varController.query = listItem.lemma;
-                                  varController.updateisFryEn(listItem.isFryEn);
-                                  context.go('/result');
+                                  varController.query = lemma.translations.first['form'];
+                                  varController.updateisFryEn(lemma.translations.first['lang'] == 'fry' ? true : false);
+                                  Navigator.pushNamed(context, '/result');
                                 }
                               : null,
                           child: AutoSizeText(
-                            listItem.lemma,
-                            style: listItem.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
+                            lemma.translations.first['form'],
+                            style: lemma.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
                             maxFontSize: 40,
                             minFontSize: 12,
                             maxLines: 2,
@@ -61,16 +60,16 @@ class _FavoritesModalState extends State<FavoritesModal> {
                       // Translation
                       Flexible(
                         child: TextButton(
-                          onPressed: !listItem.toBeDeleted
+                          onPressed: !lemma.toBeDeleted
                               ? () {
-                                  varController.query = listItem.translation;
-                                  varController.updateisFryEn(listItem.isFryEn);
-                                  context.go('/result');
+                                  varController.query = lemma.form;
+                                  varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
+                                  Navigator.pushNamed(context, '/result');
                                 }
                               : null,
                           child: AutoSizeText(
-                            listItem.translation,
-                            style: listItem.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
+                            lemma.form,
+                            style: lemma.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
                             maxFontSize: 40,
                             minFontSize: 12,
                             maxLines: 2,
@@ -83,11 +82,11 @@ class _FavoritesModalState extends State<FavoritesModal> {
                   trailing: Padding(
                     padding: const EdgeInsets.only(right: 20.0),
                     child: IconButton(
-                      icon: listItem.toBeDeleted ? const Icon(Icons.favorite_border) : const Icon(Icons.favorite),
+                      icon: lemma.toBeDeleted ? const Icon(Icons.favorite_border) : const Icon(Icons.favorite),
                       onPressed: () {
                         setState(
                           () {
-                            listItem.toBeDeleted = !listItem.toBeDeleted;
+                            lemma.toBeDeleted = !lemma.toBeDeleted;
                           },
                         );
                       },

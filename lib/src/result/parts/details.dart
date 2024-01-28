@@ -1,23 +1,24 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:go_router/go_router.dart';
 
+import '../../../lemma.dart';
 import '../../../main.dart';
 import 'details_overlay.dart';
 
-class Details extends StatefulWidget {
-  final lemma;
-  const Details(this.lemma, {super.key});
+class DetailsView extends StatefulWidget {
+  final Lemma lemma;
+  const DetailsView(this.lemma, {super.key});
 
   @override
-  State<Details> createState() => _DetailsState();
+  State<DetailsView> createState() => _DetailsViewState();
 }
 
-class _DetailsState extends State<Details> {
+class _DetailsViewState extends State<DetailsView> {
   @override
   void initState() {
     super.initState();
+    widget.lemma;
   }
 
   @override
@@ -56,8 +57,9 @@ class _DetailsState extends State<Details> {
                                 varController.detailOverlayEntry.remove();
                                 varController.detailOverlayEntry.dispose();
                                 varController.detailOverlayLive = false;
-                                context.pop();
-                                context.go('/result');
+                                varController.query = string;
+                                Navigator.pop(context);
+                                Navigator.pushNamed(context, '/result');
                               },
                             );
                           },
@@ -76,10 +78,12 @@ class _DetailsState extends State<Details> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "${AppLocalizations.of(context)!.selectPos(widget.lemma.grammar)}${widget.lemma.article != ' ' ? ' - ' : ''}${widget.lemma.grammar}${widget.lemma.pronunciation != ' ' ? ' - ' : ''}${widget.lemma.pronunciation}",
-                        softWrap: true, // this will make the text wrap onto the next line
-                      ),
+                      Text(AppLocalizations.of(context)!.selectPos(widget.lemma.grammar.first ?? '')),
+                      const Text(' '),
+                      Text(widget.lemma.article),
+                      const Text(' '),
+                      Text(widget.lemma.hyphenation),
+                      //Text(widget.lemma['pronunciation'])
                     ],
                   ),
                 )

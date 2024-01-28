@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_offline/flutter_offline.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../main.dart';
 import 'custom_text_field.dart';
 
 class HomeView extends StatefulWidget {
+  static const routeName = '/home';
+
   const HomeView({super.key});
 
   @override
@@ -107,14 +108,14 @@ class _HomeViewState extends State<HomeView> {
                 icon: const Icon(Icons.account_circle),
                 onPressed: () {
                   varController.removeOverlay();
-                  context.go('/account');
+                  Navigator.pushNamed(context, '/account');
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.settings),
                 onPressed: () {
                   varController.removeOverlay();
-                  context.go('/settings');
+                  Navigator.pushNamed(context, '/settings');
                 },
               ),
             ],
@@ -150,9 +151,8 @@ class _HomeViewState extends State<HomeView> {
                         if (connected) {
                           return CustomTextField(
                                 onPressed: (value) async {
-                                  varController.query = value;
                                   varController.removeOverlay();
-                                  context.go('/result');
+                                  Navigator.pushNamed(context, '/result');
                                 },
                               );
                         } else {

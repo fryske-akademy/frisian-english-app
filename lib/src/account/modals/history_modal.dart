@@ -1,9 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
+import '../../../lemma.dart';
 import '../../../main.dart';
-import '../../list_item.dart';
 
 // Same principle as FavoritesModal
 class HistoryModal extends StatefulWidget {
@@ -22,10 +21,11 @@ class _HistoryModalState extends State<HistoryModal> {
     varController.stagedItems = varController.history;
   }
 
-  void goToResultView(ListItem listItem, BuildContext context) {
-    varController.query = listItem.lemma;
-    varController.updateisFryEn(listItem.isFryEn);
-    context.go('/result');
+  void goToResultView(Lemma lemma, BuildContext context) {
+    varController.query = lemma.form;
+    varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
+
+    Navigator.pushNamed(context, '/result');
   }
 
   @override
@@ -37,21 +37,21 @@ class _HistoryModalState extends State<HistoryModal> {
           child: ListView.builder(
             itemCount: varController.stagedItems.length,
             itemBuilder: (context, index) {
-              ListItem listItem = varController.stagedItems[index];
+              Lemma lemma = varController.stagedItems[index];
               return Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: ListTile(
                   title: Row(
                     children: [
                       TextButton(
-                        onPressed: !listItem.toBeDeleted
+                        onPressed: !lemma.toBeDeleted
                             ? () {
-                                goToResultView(listItem, context);
+                                goToResultView(lemma, context);
                               }
                             : null,
                         child: AutoSizeText(
-                          listItem.lemma,
-                          style: listItem.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
+                          lemma.form,
+                          style: lemma.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
                           maxFontSize: 40,
                           minFontSize: 12,
                           maxLines: 2,
@@ -63,11 +63,11 @@ class _HistoryModalState extends State<HistoryModal> {
                   trailing: Padding(
                     padding: const EdgeInsets.only(right: 20.0),
                     child: IconButton(
-                      icon: listItem.toBeDeleted ? const Icon(Icons.restore_from_trash) : const Icon(Icons.delete),
+                      icon: lemma.toBeDeleted ? const Icon(Icons.restore_from_trash) : const Icon(Icons.delete),
                       onPressed: () {
                         setState(
                           () {
-                            listItem.toBeDeleted = !listItem.toBeDeleted;
+                            lemma.toBeDeleted = !lemma.toBeDeleted;
                           },
                         );
                       },

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../main.dart';
 import 'pages/featuresPage.dart';
@@ -77,7 +76,7 @@ class OnboardingView extends StatelessWidget {
       finishButtonStyle: FinishButtonStyle(backgroundColor: customColor),
       onFinish: () {
         varController.updateOnboardingShown(true);
-        context.go('/home');
+        Navigator.pushNamed(context, '/home');
       },
       background: const [
         Text(''),

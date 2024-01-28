@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:frysish/src/onboarding/onboarding.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../main.dart';
@@ -10,47 +8,6 @@ import 'account/account_view.dart';
 import 'home/home_view.dart';
 import 'result/result_view.dart';
 import 'settings/settings_view.dart';
-
-final GoRouter _router = GoRouter(
-  routes: <RouteBase>[
-    GoRoute(
-      path: '/',
-      builder: (BuildContext context, GoRouterState state) {
-        if (varController.onboardingShow) {
-          return const HomeView();
-        } else {
-          return const OnboardingView();
-        }
-      },
-      routes: <RouteBase>[
-        GoRoute(
-          path: 'home',
-          builder: (BuildContext context, GoRouterState state) {
-            return const HomeView();
-          },
-        ),
-        GoRoute(
-          path: 'account',
-          builder: (BuildContext context, GoRouterState state) {
-            return const AccountView();
-          },
-        ),
-        GoRoute(
-          path: 'settings',
-          builder: (BuildContext context, GoRouterState state) {
-            return SettingsView();
-          },
-        ),
-        GoRoute(
-          path: 'result',
-          builder: (BuildContext context, GoRouterState state) {
-            return const ResultView();
-          },
-        ),
-      ],
-    ),
-  ],
-);
 
 class MyApp extends StatelessWidget {
   const MyApp({
@@ -69,7 +26,7 @@ class MyApp extends StatelessWidget {
     return ListenableBuilder(
       listenable: varController,
       builder: (BuildContext context, Widget? child) {
-        return MaterialApp.router(
+        return MaterialApp(
           restorationScopeId: 'app',
 
           // Uses the generated AppLocalizations class to provide localized strings
@@ -82,7 +39,8 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             applyElevationOverlayColor: true,
             // fromSeed generates automatic color palettes based on the primary color
-            colorScheme: ColorScheme.fromSeed(seedColor: varController.primaryColor),
+            colorScheme:
+                ColorScheme.fromSeed(seedColor: varController.primaryColor),
             fontFamily: GoogleFonts.notoSansMono().fontFamily,
           ),
           darkTheme: ThemeData(
@@ -99,7 +57,32 @@ class MyApp extends StatelessWidget {
           themeMode: varController.themeMode,
 
           // Uses the GoRouter package to handle routing
-          routerConfig: _router,
+          // routerConfig: _router,
+
+          onGenerateRoute: (RouteSettings routeSettings) {
+            return MaterialPageRoute<void>(
+              settings: routeSettings,
+              builder: (BuildContext context) {
+                switch (routeSettings.name) {
+                  case SettingsView.routeName:
+                    return SettingsView();
+                  case AccountView.routeName:
+                    return const AccountView();
+                  case ResultView.routeName:
+                    return const ResultView();
+                  case HomeView.routeName:
+                    return const HomeView();
+                  default:
+                    return const HomeView();  
+                    // if (varController.onboardingShow) {
+                    //   return const HomeView();
+                    // } else {
+                    //   return const OnboardingView();
+                    // }
+                }
+              },
+            );
+          },
         );
       },
     );

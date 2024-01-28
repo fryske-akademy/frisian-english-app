@@ -11,12 +11,8 @@ dependencies:
   
   dynamic_color: ^1.6.8                   #https://pub.dev/packages/dynamic_color
 
-  ferry: ^0.15.0+1                        #https://pub.dev/packages/ferry
-  ferry_generator: ^0.8.2                 #https://pub.dev/packages/ferry_generator
-  ferry_hive_store: ^0.5.2                #https://pub.dev/packages/ferry_hive_store
-  gql_http_link: ^1.0.1+1                 #https://pub.dev/packages/gql_http_link
-  hive_flutter: ^1.1.0                    #https://pub.dev/packages/hive_flutter
-  get_it: ^7.6.4                          #https://pub.dev/packages/get_it
+  get_it: ^7.6.7
+  graphql: ^5.1.3
   
   build_runner: ^2.4.7                    #https://pub.dev/packages/build_runner
   
@@ -28,7 +24,6 @@ dependencies:
   flutter_onboarding_slider: ^1.0.11      #https://pub.dev/packages/flutter_onboarding_slider
   flutter_svg: ^2.0.9                     #https://pub.dev/packages/flutter_svg
   
-  go_router: ^13.0.1                      #https://pub.dev/packages/go_router
   google_fonts: ^6.1.0                    #https://pub.dev/packages/google_fonts
 
   path_provider: ^2.1.1                   #https://pub.dev/packages/path_provider
@@ -41,6 +36,8 @@ dependencies:
   url_launcher: ^6.2.2                    #https://pub.dev/packages/url_launcher            
   provider: ^6.1.1                        #https://pub.dev/packages/provider                
   cupertino_icons: ^1.0.6                 #https://pub.dev/packages/cupertino_icons
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
 
 dev_dependencies:
   flutter_test:

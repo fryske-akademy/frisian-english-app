@@ -1,9 +1,11 @@
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../list_item.dart';
+import '../../lemma.dart';
+
 
 class SettingsService {
   Future<ThemeMode> themeMode() async {
@@ -25,16 +27,16 @@ class SettingsService {
     return Colors.primaries[primaryColorIndex];
   }
 
-  Future<List<ListItem>> history() async {
+  Future<List<Lemma>> history() async {
     final prefs = await SharedPreferences.getInstance();
     final listItemsString = prefs.getStringList('history') ?? [];
-    return listItemsString.map((item) => ListItem.fromJson(jsonDecode(item))).toList();
+    return listItemsString.map((item) => Lemma.fromJson(jsonDecode(item))).toList();
   }
 
-  Future<List<ListItem>> favorites() async {
+  Future<List<Lemma>> favorites() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     final listItemsString = prefs.getStringList('favorites') ?? [];
-    return listItemsString.map((item) => ListItem.fromJson(jsonDecode(item))).toList();
+    return listItemsString.map((item) => Lemma.fromJson(jsonDecode(item))).toList();
   }
 
   Future<Locale> locale() async {
@@ -68,13 +70,13 @@ class SettingsService {
     } else {}
   }
 
-  Future<void> updateHistory(List<ListItem> history) async {
+  Future<void> updateHistory(List<Lemma> history) async {
     final prefs = await SharedPreferences.getInstance();
     final listItemsEncoded = history.map((item) => jsonEncode(item.toJson())).toList();
     await prefs.setStringList('history', listItemsEncoded);
   }
 
-  Future<void> updateFavorites(List<ListItem> favorites) async {
+  Future<void> updateFavorites(List<Lemma> favorites) async {
     final prefs = await SharedPreferences.getInstance();
     final listItemsEncoded = favorites.map((item) => jsonEncode(item.toJson())).toList();
     await prefs.setStringList('favorites', listItemsEncoded);

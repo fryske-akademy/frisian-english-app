@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../main.dart';
@@ -10,6 +9,8 @@ import 'modals/history_modal.dart';
 import 'modals/information_modal.dart';
 
 class AccountView extends StatelessWidget {
+  static const routeName = '/account';
+
   const AccountView({super.key});
 
   final String faLogo = 'assets/logos/fa.svg';
@@ -32,7 +33,7 @@ class AccountView extends StatelessWidget {
         leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              context.go('/home');
+              Navigator.pushNamed(context, '/home');
             }),
         title: Text(
           AppLocalizations.of(context)!.account,

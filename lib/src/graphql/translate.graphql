@@ -1,4 +1,0 @@
-query translate {translatetext(
-    text: "Het KNMI adviseert en waarschuwt de samenleving om risico’s met een atmosferische of seismologische oorsprong terug te dringen. Daarvoor ontwikkelt het KNMI hoogwaardige kennis, verricht waarnemingen en zet die om in producten en diensten die de veiligheidsrisico’s verminderen, bijdragen aan een duurzame samenleving en economische mogelijkheden bevorderen."
-    lang: nl
-) {translation}}

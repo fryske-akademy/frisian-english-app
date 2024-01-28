@@ -1,5 +1,4 @@
 
-import 'package:ferry/ferry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get_it/get_it.dart';
@@ -21,7 +20,7 @@ void main() async {
   final client = await initClient();
 
   // package:get_it makes it so client can be accessed from anywhere
-  GetIt.I.registerLazySingleton<TypedLink>(() => client);
+  GetIt.I.registerLazySingleton(() => client);
 
   // If system theme is set to dark, theme in app is set to dark
   var brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;

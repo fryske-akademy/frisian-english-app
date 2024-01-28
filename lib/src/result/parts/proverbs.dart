@@ -11,8 +11,8 @@ class FilteredData {
 }
 
 class Proverbs extends StatefulWidget {
-  final response;
-  const Proverbs(this.response, {super.key});
+  final texts;
+  const Proverbs(this.texts, {super.key});
 
   @override
   State<Proverbs> createState() => _ProverbsState();
@@ -26,10 +26,10 @@ class _ProverbsState extends State<Proverbs> {
   @override
   void initState() {
     super.initState();
-    var texts = widget.response.details.first.texts;
+    var texts = widget.texts;
 
     for (var text in texts) {
-      if (text.G__typename == "Proverb") {
+      if (text['__typename'] == "Proverb") {
         proverbs.add(text);
       }
     }
@@ -37,10 +37,10 @@ class _ProverbsState extends State<Proverbs> {
     List<FilteredData> filtered = [];
 
     for (var proverb in proverbs) {
-      var text = proverb.text.text;
+      var text = proverb['text']['text'];
       var textSpans = getRichText(text);
 
-      var translations = proverb.translations.first.text.text;
+      var translations = proverb['translations'][0]['text']['text'];
       var transSpans = getRichText(translations);
 
       if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
@@ -67,17 +67,11 @@ class _ProverbsState extends State<Proverbs> {
               controller: _scrollController,
               itemCount: proverbs.length,
               itemBuilder: (context, index) {
-                var texts = proverbs[index].text.text;
+                var texts = proverbs[index]['text']['text'];
                 var textSpans = getRichText(texts);
 
-                var translations = proverbs[index].translations.first.text.text;
+                var translations = proverbs[index]['translations'][0]['text']['text'];
                 var transSpans = getRichText(translations);
-
-                // for (var item in textSpans) {
-                //   if (item.text == '') {
-                //     textSpans.remove(item);
-                //   }
-                // }
 
                 return Padding(
                   padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),

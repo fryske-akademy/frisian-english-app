@@ -11,8 +11,8 @@ class FilteredData {
 }
 
 class Examples extends StatefulWidget {
-  final response;
-  const Examples(this.response, {super.key});
+  final texts;
+  const Examples(this.texts, {super.key});
 
   @override
   State<Examples> createState() => _ExamplesState();
@@ -26,10 +26,11 @@ class _ExamplesState extends State<Examples> {
   @override
   void initState() {
     super.initState();
-    var texts = widget.response.details.first.texts;
+    var texts = widget.texts;
+    texts;
 
     for (var text in texts) {
-      if (text.G__typename == "Example") {
+      if (text['__typename'] == "Example") {
         examples.add(text);
       }
     }
@@ -37,10 +38,10 @@ class _ExamplesState extends State<Examples> {
     List<FilteredData> filtered = [];
 
     for (var example in examples) {
-      var text = example.text.text;
+      var text = example['text']['text'];
       var textSpans = getRichText(text);
 
-      var translations = example.translations.first.text.text;
+      var translations = example['translations'][0]['text']['text'];
       var transSpans = getRichText(translations);
 
       if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
@@ -67,10 +68,10 @@ class _ExamplesState extends State<Examples> {
               controller: _scrollController,
               itemCount: examples.length,
               itemBuilder: (context, index) {
-                var texts = examples[index].text.text;
+                var texts = examples[index]['text']['text'];
                 var textSpans = getRichText(texts);
 
-                var translations = examples[index].translations.first.text.text;
+                var translations = examples[index]['translations'][0]['text']['text'];
                 var transSpans = getRichText(translations);
 
                 // for (var item in textSpans) {

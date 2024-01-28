@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../main.dart';
 
 class SettingsView extends StatelessWidget {
+  static const routeName = '/settings';
+
   SettingsView({super.key});
 
   static const List<MaterialColor> primaries = <MaterialColor>[
@@ -38,7 +39,7 @@ class SettingsView extends StatelessWidget {
         leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              context.go('/home');
+              Navigator.pushNamed(context, '/home');
             }),
         title: Text(AppLocalizations.of(context)!.settings, style: const TextStyle(fontSize: 25)),
       ),
