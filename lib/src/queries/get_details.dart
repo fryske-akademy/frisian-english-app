@@ -107,21 +107,11 @@ Future getDetails(dynamic link) async {
     'source': link['source'],
   });
 
-  // final QueryOptions texts = QueryOptions(document: gql(textsQuery), variables: <String, dynamic>{
-  //   'lemma': link['lemma'],
-  //   'source': link['source'],
-  // });
-
   final QueryResult detailsResult = await client.query(detailsOptions);
-  // await Future.delayed(const Duration(milliseconds: 500));
-  // final QueryResult textsResult = await client.query(texts);
 
   if (detailsResult.hasException) {}
 
-  // if (textsResult.hasException) {}
-
   final Map<String, dynamic> detailsData = detailsResult.data as Map<String, dynamic>;
-  // final Map<String, dynamic> textsData = textsResult.data as Map<String, dynamic>;
 
   List<Details> details = [];
 

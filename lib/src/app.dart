@@ -7,6 +7,8 @@ import '../main.dart';
 import 'account/account_view.dart';
 import 'home/home_view.dart';
 import 'result/result_view.dart';
+import 'text_search/text_result.dart';
+import 'text_search/text_search.dart';
 import 'settings/settings_view.dart';
 
 class MyApp extends StatelessWidget {
@@ -71,6 +73,10 @@ class MyApp extends StatelessWidget {
                     return const ResultView();
                   case HomeView.routeName:
                     return const HomeView();
+                  case TextSearch.routeName:
+                    return const TextSearch();
+                  case TextResult.routeName:
+                    return const TextResult();
                   default:
                     return const HomeView();
                   // if (varController.onboardingShow) {

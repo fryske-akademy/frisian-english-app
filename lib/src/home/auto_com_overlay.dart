@@ -31,15 +31,14 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
     var uniqueLemmas = widget.lemmas.toSet().toList();
     var singleWordLemmas = uniqueLemmas.where((lemma) => !lemma['form'].contains(' ')).toList();
 
-    return Material(
-      elevation: 1,
-      //borderRadius: BorderRadius.circular(25),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12.5, 0, 25, 0),
+      child: Material(
+        borderRadius: BorderRadius.circular(25),
         child: RawScrollbar(
           controller: _scrollController,
           thickness: 2,
-          //padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
+          padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
           radius: const Radius.circular(25),
           thumbVisibility: true,
           child: ListView.builder(

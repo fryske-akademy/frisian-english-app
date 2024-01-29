@@ -125,12 +125,9 @@ class _HomeViewState extends State<HomeView> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const Spacer(
-              flex: 1,
-            ),
             OutlinedButton.icon(
                 onPressed: () {
-                  Navigator.pushNamed(context, 'globalSearch');
+                  Navigator.pushNamed(context, '/globalSearch');
                 },
                 icon: Icon(Icons.search),
                 label: Text('Global Search')),
@@ -138,7 +135,7 @@ class _HomeViewState extends State<HomeView> {
               flex: 1,
             ),
             Expanded(
-              flex: 6,
+              flex: 5,
               child: Center(
                   child: Row(
                 children: [

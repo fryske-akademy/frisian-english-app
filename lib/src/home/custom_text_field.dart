@@ -15,7 +15,7 @@ class CustomTextField extends StatefulWidget {
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
 
-class _CustomTextFieldState extends State<CustomTextField> {
+class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingObserver {
   final GlobalKey textstackKey = GlobalKey();
   final GlobalKey textFieldKey = GlobalKey();
   final GlobalKey submitKey = GlobalKey();
@@ -25,13 +25,17 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   bool autoComOverlayLive = false;
 
+  late var lemmas;
+
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     textController.dispose();
     varController.removeOverlay();
     autoComOverlayEntry.remove();
@@ -49,6 +53,16 @@ class _CustomTextFieldState extends State<CustomTextField> {
         _buildSubmitButton(),
       ],
     );
+  }
+
+  @override
+  void didChangeMetrics() {
+    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
+    final isKeyboardActive = bottomInset > 0.0;
+    if (!isKeyboardActive && autoComOverlayLive) {
+      autoComOverlayEntry.remove();
+      autoComOverlayLive = false;
+    }
   }
 
   Widget _buildTextField(BuildContext context) {
@@ -170,16 +184,16 @@ class _CustomTextFieldState extends State<CustomTextField> {
               left: textOffset.dx,
               width: textSize.width,
               height: textSize.height,
-              child: Center(
+              child: const Center(
                 child: CircularProgressIndicator(),
               ),
             );
           } else if (snapshot.hasError) {
             return const Text('');
           } else {
-            var lemmas = snapshot.data;
+            lemmas = snapshot.data;
 
-            if (lemmas.isEmpty) {
+            if (lemmas == null) {
               return const SizedBox.shrink(); // Return an empty widget
             }
 
@@ -187,9 +201,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
               children: [
                 Positioned(
                   height: 50,
-                  top: submitOffset.dy - (56 * 2),
+                  top: submitOffset.dy,
                   left: textOffset.dx,
-                  width: textSize.width,
+                  width: textSize.width - 56,
                   child: AutoComOverlay(
                     lemmas: lemmas,
                   ),
