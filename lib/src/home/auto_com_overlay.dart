@@ -29,15 +29,17 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
   @override
   Widget build(BuildContext context) {
     var uniqueLemmas = widget.lemmas.toSet().toList();
-    var singleWordLemmas =
-        uniqueLemmas.where((lemma) => !lemma['form'].contains(' ')).toList();
+    var singleWordLemmas = uniqueLemmas.where((lemma) => !lemma['form'].contains(' ')).toList();
 
     return Material(
       elevation: 1,
+      //borderRadius: BorderRadius.circular(25),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
-        child: Scrollbar(
+        child: RawScrollbar(
           controller: _scrollController,
+          thickness: 2,
+          //padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
           radius: const Radius.circular(25),
           thumbVisibility: true,
           child: ListView.builder(
@@ -58,8 +60,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
                   varController.query = lemma['form'];
                   Navigator.pushReplacementNamed(context, '/result');
                 },
-                child: Text(lemma['form'],
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                child: Text(lemma['form'], style: const TextStyle(fontWeight: FontWeight.bold)),
               );
             },
           ),

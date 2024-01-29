@@ -21,13 +21,6 @@ class _HistoryModalState extends State<HistoryModal> {
     varController.stagedItems = varController.history;
   }
 
-  void goToResultView(Lemma lemma, BuildContext context) {
-    varController.query = lemma.form;
-    varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
-
-    Navigator.pushNamed(context, '/result');
-  }
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -46,7 +39,9 @@ class _HistoryModalState extends State<HistoryModal> {
                       TextButton(
                         onPressed: !lemma.toBeDeleted
                             ? () {
-                                goToResultView(lemma, context);
+                                varController.query = lemma.form;
+                                varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
+                                Navigator.pushNamed(context, '/result');
                               }
                             : null,
                         child: AutoSizeText(

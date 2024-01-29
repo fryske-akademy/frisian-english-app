@@ -31,6 +31,10 @@ class _FavoritesModalState extends State<FavoritesModal> {
             itemCount: varController.stagedItems.length,
             itemBuilder: (context, index) {
               Lemma lemma = varController.stagedItems[index];
+              print(lemma.translations.first);
+              var translation = lemma.translations.first.form;
+              var favorite = lemma.form;
+              favorite;
               return Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: ListTile(
@@ -41,13 +45,13 @@ class _FavoritesModalState extends State<FavoritesModal> {
                         child: TextButton(
                           onPressed: !lemma.toBeDeleted
                               ? () {
-                                  varController.query = lemma.translations.first['form'];
-                                  varController.updateisFryEn(lemma.translations.first['lang'] == 'fry' ? true : false);
+                                  varController.query = translation;
+                                  varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
                                   Navigator.pushNamed(context, '/result');
                                 }
                               : null,
                           child: AutoSizeText(
-                            lemma.translations.first['form'],
+                            translation,
                             style: lemma.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
                             maxFontSize: 40,
                             minFontSize: 12,
@@ -62,13 +66,13 @@ class _FavoritesModalState extends State<FavoritesModal> {
                         child: TextButton(
                           onPressed: !lemma.toBeDeleted
                               ? () {
-                                  varController.query = lemma.form;
+                                  varController.query = favorite;
                                   varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
                                   Navigator.pushNamed(context, '/result');
                                 }
                               : null,
                           child: AutoSizeText(
-                            lemma.form,
+                            favorite,
                             style: lemma.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
                             maxFontSize: 40,
                             minFontSize: 12,

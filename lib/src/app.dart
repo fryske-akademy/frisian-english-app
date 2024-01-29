@@ -39,8 +39,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             applyElevationOverlayColor: true,
             // fromSeed generates automatic color palettes based on the primary color
-            colorScheme:
-                ColorScheme.fromSeed(seedColor: varController.primaryColor),
+            colorScheme: ColorScheme.fromSeed(seedColor: varController.primaryColor),
             fontFamily: GoogleFonts.notoSansMono().fontFamily,
           ),
           darkTheme: ThemeData(
@@ -73,12 +72,12 @@ class MyApp extends StatelessWidget {
                   case HomeView.routeName:
                     return const HomeView();
                   default:
-                    return const HomeView();  
-                    // if (varController.onboardingShow) {
-                    //   return const HomeView();
-                    // } else {
-                    //   return const OnboardingView();
-                    // }
+                    return const HomeView();
+                  // if (varController.onboardingShow) {
+                  //   return const HomeView();
+                  // } else {
+                  //   return const OnboardingView();
+                  // }
                 }
               },
             );

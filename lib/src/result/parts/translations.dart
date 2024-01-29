@@ -79,9 +79,7 @@ class _TranslationsState extends State<Translations> {
                           onPressed: () {
                             setState(
                               () {
-                                currentIndex = currentIndex > 0
-                                    ? currentIndex - 1
-                                    : listLength - 1;
+                                currentIndex = currentIndex > 0 ? currentIndex - 1 : listLength - 1;
                               },
                             );
                           },
@@ -92,33 +90,27 @@ class _TranslationsState extends State<Translations> {
                       Expanded(
                         child: TextButton(
                           style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.transparent),
+                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
                             elevation: MaterialStateProperty.all(0.0),
                             splashFactory: NoSplash.splashFactory,
-                            overlayColor:
-                                MaterialStateProperty.all(Colors.transparent),
+                            overlayColor: MaterialStateProperty.all(Colors.transparent),
                           ),
                           child: AutoSizeText(
                             widget.lemma.translations[currentIndex]['form'],
                             maxLines: 3,
                             minFontSize: 24,
                             maxFontSize: 40,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
                           ),
                           onPressed: () {
-                            if (widget.lemma.translations[currentIndex]
-                                    ['lang'] ==
-                                'fry') {
+                            if (widget.lemma.translations[currentIndex]['lang'] == 'fry') {
                               varController.updateisFryEn(true);
                             } else {
                               varController.updateisFryEn(false);
                             }
-                            varController.query =
-                                widget.lemma.translations[currentIndex]['form'];
+                            varController.query = widget.lemma.translations[currentIndex]['form'];
                             Navigator.pushReplacementNamed(context, '/result');
                             //Navigator.pushNamed(context, '/result');
                           },
@@ -131,9 +123,7 @@ class _TranslationsState extends State<Translations> {
                         child: IconButton(
                           onPressed: () {
                             setState(() {
-                              currentIndex = currentIndex < listLength - 1
-                                  ? currentIndex + 1
-                                  : 0;
+                              currentIndex = currentIndex < listLength - 1 ? currentIndex + 1 : 0;
                             });
                           },
                           icon: const Icon(Icons.arrow_forward),
@@ -148,14 +138,9 @@ class _TranslationsState extends State<Translations> {
                     top: 0,
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
-                      child: Text(
-                          AppLocalizations.of(context)!
-                              .vertalingen
-                              .toUpperCase(),
+                      child: Text(AppLocalizations.of(context)!.vertalingen.toUpperCase(),
                           style: TextStyle(
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onPrimaryContainer,
+                            color: Theme.of(context).colorScheme.onPrimaryContainer,
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                           )),
@@ -166,31 +151,23 @@ class _TranslationsState extends State<Translations> {
                   top: 0,
                   right: 0,
                   child: IconButton(
-                    icon: varController.favorites.any((item) =>
-                            item.form == widget.lemma.translations[currentIndex]['form'])
+                    icon: varController.favorites.any((item) => item.form == widget.lemma.translations[currentIndex]['form'])
                         ? const Icon(Icons.favorite)
                         : const Icon(Icons.favorite_border),
-                    onPressed: () {
+                    onPressed: () async {
                       List<Lemma> favorites = varController.favorites;
                       setState(() {
-                        if (favorites.any((item) =>
-                            item.form ==
-                            widget.lemma.translations[currentIndex]['form'])) {
-                          favorites.removeWhere((item) =>
-                              item.form ==
-                              widget.lemma.translations[currentIndex]['form']);
+                        if (favorites.any((item) => item.form == widget.lemma.translations[currentIndex]['form'])) {
+                          favorites.removeWhere((item) => item.form == widget.lemma.translations[currentIndex]['form']);
                         } else {
                           Lemma lemma = Lemma();
-                          lemma.form =
-                              widget.lemma.translations[currentIndex]['form'];
+                          lemma.form = widget.lemma.translations[currentIndex]['form'];
                           lemma.translations.add(widget.lemma);
-                          lemma.lang =
-                              widget.lemma.translations[currentIndex]['lang'];
-                          favorites
-                              .add(lemma);
+                          lemma.lang = widget.lemma.translations[currentIndex]['lang'];
+                          favorites.add(lemma);
                         }
                       });
-                      varController.updateFavorites(favorites);
+                      await varController.updateFavorites(favorites);
                     },
                     iconSize: 20,
                   ),
@@ -202,9 +179,7 @@ class _TranslationsState extends State<Translations> {
                   right: 0,
                   child: IconButton(
                     onPressed: () async {
-                      await Clipboard.setData(ClipboardData(
-                          text: widget.lemma.translations[currentIndex]
-                              ['translation']));
+                      await Clipboard.setData(ClipboardData(text: widget.lemma.translations[currentIndex]['translation']));
                     },
                     iconSize: 20,
                     icon: const Icon(Icons.copy),
@@ -217,16 +192,13 @@ class _TranslationsState extends State<Translations> {
                   left: 0,
                   child: IconButton(
                     onPressed: () async {
-                      String email =
-                          Uri.encodeComponent("frysker@fryske-akademy.nl");
-                      String subject =
-                          Uri.encodeComponent("Feedback Oersetter");
+                      String email = Uri.encodeComponent("frysker@fryske-akademy.nl");
+                      String subject = Uri.encodeComponent("Feedback Oersetter");
 
                       // Add translation to body of email
-                      String body = Uri.encodeComponent(
-                          "Vertaling: ${varController.query} - ${widget.lemma.translations[currentIndex]['translation']} \n\n Feedback:");
-                      Uri mail = Uri.parse(
-                          "mailto:$email?subject=$subject&body=$body");
+                      String body =
+                          Uri.encodeComponent("Vertaling: ${varController.query} - ${widget.lemma.translations[currentIndex]['translation']} \n\n Feedback:");
+                      Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
                       if (await launchUrl(mail)) {
                       } else {}
                     },
@@ -241,15 +213,11 @@ class _TranslationsState extends State<Translations> {
         Padding(
           padding: const EdgeInsets.only(right: 30),
           child: ClipRRect(
-            borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(5),
-                bottomRight: Radius.circular(5)),
+            borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(5), bottomRight: Radius.circular(5)),
             child: SizedBox.fromSize(
               size: const Size.fromRadius(8),
               child: Image(
-                image: varController.isFryEn
-                    ? const AssetImage('assets/flags/en.png')
-                    : const AssetImage('assets/flags/fry.png'),
+                image: varController.isFryEn ? const AssetImage('assets/flags/en.png') : const AssetImage('assets/flags/fry.png'),
                 fit: BoxFit.cover,
               ),
             ),

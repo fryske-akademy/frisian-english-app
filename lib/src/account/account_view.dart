@@ -14,6 +14,7 @@ class AccountView extends StatelessWidget {
   const AccountView({super.key});
 
   final String faLogo = 'assets/logos/fa.svg';
+
   final String nhlLogo = 'assets/logos/nhl.svg';
 
   Future<void> handleFeedback() async {
@@ -58,9 +59,9 @@ class AccountView extends StatelessWidget {
                           showModalBottomSheet(
                             context: context,
                             builder: (context) => const FavoritesModal(),
-                          ).whenComplete(() {
+                          ).whenComplete(() async {
                             // When the modal is closed, favorites is replaced with stagedItems.
-                            varController.updateFavorites(varController.stagedItems);
+                            await varController.updateFavorites(varController.stagedItems);
                             varController.stagedItems = [];
                           });
                         }),
@@ -70,8 +71,8 @@ class AccountView extends StatelessWidget {
                         showModalBottomSheet(
                           context: context,
                           builder: (context) => const FavoritesModal(),
-                        ).whenComplete(() {
-                          varController.updateFavorites(varController.stagedItems);
+                        ).whenComplete(() async {
+                          await varController.updateFavorites(varController.stagedItems);
                           varController.stagedItems = [];
                         });
                       },

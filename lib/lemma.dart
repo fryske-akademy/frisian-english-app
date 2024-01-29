@@ -1,19 +1,19 @@
-class Synonym{
+class Synonym {
   String form = '';
   String meaning = '';
 
   Synonym();
 }
 
-class Lemma{
+class Lemma {
   String typename = '';
   String form = '';
   String lang = '';
   String article = '';
   String hyphenation = '';
-  
+
   Map<String, dynamic> link = {};
-  
+
   List grammar = [];
   List translations = [];
   List subForms = [];
@@ -51,7 +51,7 @@ class Lemma{
       subForms = other.subForms;
     }
   }
-  
+
   List synonyms = [];
   List<String> variants = [];
   List<String> dutchisms = [];

@@ -35,8 +35,7 @@ class _HomeViewState extends State<HomeView> {
   }
 
   void showLanguageOverlay() {
-    final RenderBox renderBox =
-        languageIconKey.currentContext!.findRenderObject() as RenderBox;
+    final RenderBox renderBox = languageIconKey.currentContext!.findRenderObject() as RenderBox;
     final Offset offset = renderBox.localToGlobal(Offset.zero);
 
     varController.langSwapOverlayEntry = OverlayEntry(
@@ -129,6 +128,15 @@ class _HomeViewState extends State<HomeView> {
             const Spacer(
               flex: 1,
             ),
+            OutlinedButton.icon(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'globalSearch');
+                },
+                icon: Icon(Icons.search),
+                label: Text('Global Search')),
+            const Spacer(
+              flex: 1,
+            ),
             Expanded(
               flex: 6,
               child: Center(
@@ -146,27 +154,25 @@ class _HomeViewState extends State<HomeView> {
                         ConnectivityResult connectivity,
                         Widget child,
                       ) {
-                        final bool connected =
-                            connectivity != ConnectivityResult.none;
+                        final bool connected = connectivity != ConnectivityResult.none;
                         if (connected) {
                           return CustomTextField(
-                                onPressed: (value) async {
-                                  varController.removeOverlay();
-                                  Navigator.pushNamed(context, '/result');
-                                },
-                              );
+                            onPressed: (value) async {
+                              varController.removeOverlay();
+                              Navigator.pushNamed(context, '/result');
+                            },
+                          );
                         } else {
                           return const Icon(
-                                Icons.wifi_off,
-                                size: 48,
-                              );
+                            Icons.wifi_off,
+                            size: 48,
+                          );
                         } // Internet Connection not available.
                       },
                       child: const Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text(
-                              'There seems to be an issue with your network connection.'),
+                          Text('There seems to be an issue with your network connection.'),
                         ],
                       ),
                     ),
@@ -199,17 +205,13 @@ class _HomeViewState extends State<HomeView> {
                           children: [
                             Material(
                               elevation: 5,
-                              surfaceTintColor: Theme.of(context)
-                                  .colorScheme
-                                  .onPrimaryContainer,
+                              surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
                               borderRadius: BorderRadius.circular(20),
                               child: Padding(
                                 padding: const EdgeInsets.all(10),
                                 child: Align(
                                   alignment: Alignment.center,
-                                  child: Text(varController.isFryEn
-                                      ? AppLocalizations.of(context)!.fry
-                                      : AppLocalizations.of(context)!.en),
+                                  child: Text(varController.isFryEn ? AppLocalizations.of(context)!.fry : AppLocalizations.of(context)!.en),
                                 ),
                               ),
                             ),
@@ -223,8 +225,7 @@ class _HomeViewState extends State<HomeView> {
                           onPressed: () {
                             varController.removeOverlay();
                             setState(() {
-                              varController
-                                  .updateisFryEn(!varController.isFryEn);
+                              varController.updateisFryEn(!varController.isFryEn);
                             });
                           },
                         ),
@@ -235,17 +236,13 @@ class _HomeViewState extends State<HomeView> {
                           children: [
                             Material(
                               elevation: 5,
-                              surfaceTintColor: Theme.of(context)
-                                  .colorScheme
-                                  .onPrimaryContainer,
+                              surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
                               borderRadius: BorderRadius.circular(20),
                               child: Padding(
                                 padding: const EdgeInsets.all(10),
                                 child: Align(
                                   alignment: Alignment.center,
-                                  child: Text(varController.isFryEn
-                                      ? AppLocalizations.of(context)!.en
-                                      : AppLocalizations.of(context)!.fry),
+                                  child: Text(varController.isFryEn ? AppLocalizations.of(context)!.en : AppLocalizations.of(context)!.fry),
                                 ),
                               ),
                             ),

@@ -6,7 +6,7 @@ import '../../lemma.dart';
 
 Future getLemmas(String query) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
-  
+
   const String lemmasQuery = r'''
     query lemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $pos: GramType $sensitive: Boolean!=false $source: String $lexiconFallback: Boolean!=false) {
         lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm pos: $pos sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
@@ -35,27 +35,18 @@ Future getLemmas(String query) async {
     }
   ''';
 
-  
+  final QueryOptions lemmasOptions = QueryOptions(
+      document: gql(lemmasQuery), variables: <String, dynamic>{'searchterm': query, 'lang': varController.isFryEn ? 'fry' : 'en', 'source': 'fiwb'});
 
-  final QueryOptions lemmasOptions = QueryOptions(document: gql(lemmasQuery), variables: <String, dynamic>{
-    'searchterm': query,
-    'lang': varController.isFryEn ? 'fry' : 'en',
-    'source': 'fiwb'
-  });
-
-  
   final QueryResult lemmasResult = await client.query(lemmasOptions);
-  
-  
 
-  if (lemmasResult.hasException) {
-  }
+  if (lemmasResult.hasException) {}
 
   final Map<String, dynamic> lemmasData = lemmasResult.data as Map<String, dynamic>;
 
   List<Lemma> lemmas = [];
 
-  for (var lemma in lemmasData['lemmasearch']['lemmas']){
+  for (var lemma in lemmasData['lemmasearch']['lemmas']) {
     Lemma newlemma = Lemma();
 
     newlemma.typename = lemma['__typename'] ?? '';

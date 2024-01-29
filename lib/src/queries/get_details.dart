@@ -5,7 +5,7 @@ import '../../details.dart';
 
 Future getDetails(dynamic link) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
-  
+
   const String detailsQuery = r'''
     query details( # case and diacrit sensitive lemma (article) to find
         $lemma: String! $pos: GramType $source: String! $englishTranslations: Boolean!=false) {
@@ -13,6 +13,18 @@ Future getDetails(dynamic link) async {
             lemma { ...lemmagraph }
             translations { ...lemmagraph }
             senses { translations { ...lemmagraph }  texts { ...textgraph } }
+            texts { 
+              __typename
+              ... on Example {
+                text {...txt} translations { text {...txt} }
+              }
+              ... on Collocation {
+                  text {...txt} translations { text {...txt} }
+              }
+              ... on Proverb {
+                  text {...txt} translations { text {...txt} }
+              }
+            }
         }
     }
     fragment lemmagraph  on Lemma {
@@ -58,6 +70,11 @@ Future getDetails(dynamic link) async {
     fragment par on Paradigm {
         form splitForm lang grammar hyphenation pronunciation
     }
+    fragment txt on FormattedText { text {
+        ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
+        ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
+        ... on T {textT}}
+    }
   ''';
 
   const String textsQuery = r'''
@@ -87,47 +104,44 @@ Future getDetails(dynamic link) async {
 
   final QueryOptions detailsOptions = QueryOptions(document: gql(detailsQuery), variables: <String, dynamic>{
     'lemma': link['lemma'],
-    // TODO: change to fkw
-    'source': 'fiwb',
-  });
-
-  final QueryOptions texts = QueryOptions(document: gql(textsQuery), variables: <String, dynamic>{
-    'lemma': link['lemma'],
     'source': link['source'],
   });
 
-  final QueryResult detailsResult = await client.query(detailsOptions);
-  await Future.delayed(const Duration(milliseconds: 500));
-  final QueryResult textsResult = await client.query(texts);
-  
-  if (detailsResult.hasException) {
-  }
+  // final QueryOptions texts = QueryOptions(document: gql(textsQuery), variables: <String, dynamic>{
+  //   'lemma': link['lemma'],
+  //   'source': link['source'],
+  // });
 
-  if (textsResult.hasException) {
-  }
+  final QueryResult detailsResult = await client.query(detailsOptions);
+  // await Future.delayed(const Duration(milliseconds: 500));
+  // final QueryResult textsResult = await client.query(texts);
+
+  if (detailsResult.hasException) {}
+
+  // if (textsResult.hasException) {}
 
   final Map<String, dynamic> detailsData = detailsResult.data as Map<String, dynamic>;
-  final Map<String, dynamic> textsData = textsResult.data as Map<String, dynamic>;
+  // final Map<String, dynamic> textsData = textsResult.data as Map<String, dynamic>;
 
   List<Details> details = [];
 
-  for (var detail in detailsData['details']){
+  for (var detail in detailsData['details']) {
     Details newdetails = Details();
 
     newdetails.typename = detail['__typename'] ?? '';
     newdetails.source = detail['source'] ?? '';
-    
+
     newdetails.lemma.typename = detail['lemma']['__typename'] ?? '';
     newdetails.lemma.form = detail['lemma']['form'] ?? '';
     newdetails.lemma.lang = detail['lemma']['lang'] ?? '';
     newdetails.lemma.article = detail['lemma']['article'] ?? '';
     newdetails.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
     newdetails.lemma.subForms = detail['lemma']['subForms'] ?? '';
-    
+
     newdetails.translations = detail['translations'] ?? [];
     newdetails.link = detail['link'] ?? {};
     newdetails.senses = detail['senses'] ?? [];
-    newdetails.texts = textsData['details'][0]['texts'] ?? [];
+    newdetails.texts = detail['texts'] ?? [];
 
     details.add(newdetails);
   }

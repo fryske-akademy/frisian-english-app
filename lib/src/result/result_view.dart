@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
@@ -51,14 +53,19 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 
     return Material(
       child: FutureBuilder(
-        future: getLemmas(query),
+        future: getLemmas(query).timeout(
+          const Duration(seconds: 3),
+          onTimeout: () {
+            return [];
+          },
+        ),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return const Center(child: CircularProgressIndicator());
           }
-      
+
           Lemma lemma = Lemma();
-      
+
           for (Lemma item in snapshot.data) {
             if (item.form == query) {
               lemma.typename = item.typename;
@@ -69,12 +76,12 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               lemma.subForms.addAll(item.subForms);
             }
           }
-      
+
           lemma;
-      
+
           if (lemma.form == '') {
             List<String> words = varController.query.split(RegExp(r'[ /,]'));
-      
+
             // Create a list of TextButtons or Text widgets
             List<Widget> widgets = words
                 .where((word) => word.isNotEmpty)
@@ -102,7 +109,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                         ),
                 )
                 .toList();
-      
+
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -112,38 +119,38 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                     style: const TextStyle(fontSize: 25),
                   ),
                   const SizedBox(height: 25),
-                  Wrap(
-                      crossAxisAlignment: WrapCrossAlignment.center,
-                      alignment: WrapAlignment.center,
-                      spacing: 0.0,
-                      runSpacing: 0.0,
-                      children: widgets),
+                  Wrap(crossAxisAlignment: WrapCrossAlignment.center, alignment: WrapAlignment.center, spacing: 0.0, runSpacing: 0.0, children: widgets),
+                  const SizedBox(height: 25),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    icon: const Icon(Icons.home),
+                  )
                 ],
               ),
             );
           }
-      
+
           return FutureBuilder(
-            future: varController.isFryEn
-                ? getDetails(lemma.link)
-                : Future.value('isEnglish'),
+            future: varController.isFryEn ? getDetails(lemma.link) : Future.value('isEnglish'),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return const Center(child: CircularProgressIndicator());
               }
-      
+
               Details details = Details();
-      
+
               if (varController.isFryEn) {
                 for (Details detail in snapshot.data) {
                   if (detail.lemma.form == lemma.form) {
                     details.typename = detail.typename;
                     details.source = detail.source;
-      
+
                     details.lemma = detail.lemma;
-      
+
                     details.link = detail.link;
-      
+
                     details.translations.addAll(detail.translations);
                     details.senses.addAll(detail.senses);
                     details.texts.addAll(detail.texts);
@@ -152,19 +159,25 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               } else {
                 details.lemma = lemma;
               }
-      
+
               details.lemma.merge(lemma);
-      
+
               details.lemma;
-      
+
+              var history = varController.history;
+
+              if (!history.any((item) => item.form == details.lemma.form)) {
+                history.add(details.lemma);
+                varController.updateHistory(history);
+              }
+
               return PopScope(
                 canPop: false,
                 child: DefaultTabController(
                   length: 3,
                   child: Scaffold(
                     appBar: AppBar(
-                      title: Text(AppLocalizations.of(context)!.result,
-                          style: const TextStyle(fontSize: 25)),
+                      title: Text(AppLocalizations.of(context)!.result, style: const TextStyle(fontSize: 25)),
                       centerTitle: true,
                       automaticallyImplyLeading: false,
                     ),

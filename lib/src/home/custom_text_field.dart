@@ -18,6 +18,7 @@ class CustomTextField extends StatefulWidget {
 class _CustomTextFieldState extends State<CustomTextField> {
   final GlobalKey textstackKey = GlobalKey();
   final GlobalKey textFieldKey = GlobalKey();
+  final GlobalKey submitKey = GlobalKey();
   final TextEditingController textController = TextEditingController();
 
   late OverlayEntry autoComOverlayEntry;
@@ -61,8 +62,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           key: textFieldKey,
           controller: textController,
           inputFormatters: [
-            FilteringTextInputFormatter.allow(
-                RegExp(r'[a-zA-Zäëïöüàèìòùáéíóúâêîôû ]')),
+            FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Zäëïöüàèìòùáéíóúâêîôû ]')),
           ],
           expands: true,
           minLines: null,
@@ -89,6 +89,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: FloatingActionButton(
+        key: submitKey,
         shape: const CircleBorder(),
         child: const Icon(Icons.send),
         onPressed: () async {
@@ -99,7 +100,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   }
 
   Future<void> _handleTextChanged(String value, BuildContext context) async {
-    if (textController.text.length < 3) {
+    if (textController.text.length < 3 && autoComOverlayLive) {
       autoComOverlayEntry.remove();
       autoComOverlayLive = false;
     }
@@ -132,16 +133,21 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-    autoComOverlayEntry.remove();
-    autoComOverlayLive = false;
+    if (autoComOverlayLive) {
+      autoComOverlayEntry.remove();
+      autoComOverlayLive = false;
+    }
     Navigator.pushNamed(context, '/result');
   }
 
   Future<void> renderOverlay(String value, BuildContext context) async {
-    final RenderBox renderBox =
-        textstackKey.currentContext!.findRenderObject() as RenderBox;
-    final size = renderBox.size;
-    final offset = renderBox.localToGlobal(Offset.zero);
+    final RenderBox submitButton = submitKey.currentContext!.findRenderObject() as RenderBox;
+    final submitSize = submitButton.size;
+    final submitOffset = submitButton.localToGlobal(Offset.zero);
+
+    final RenderBox textField = textFieldKey.currentContext!.findRenderObject() as RenderBox;
+    final textSize = textField.size;
+    final textOffset = textField.localToGlobal(Offset.zero);
 
     if (autoComOverlayLive) {
       autoComOverlayEntry.remove();
@@ -153,10 +159,21 @@ class _CustomTextFieldState extends State<CustomTextField> {
         future: Future.wait([
           autoComplete(value),
           Future.delayed(const Duration(milliseconds: 250)),
-        ]).then((results) => results[0]),
+        ]).timeout(const Duration(seconds: 3), onTimeout: () {
+          // Handle the timeout here if necessary
+          return [];
+        }).then((results) => results.isNotEmpty ? results[0] : []),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return Positioned(
+              top: textOffset.dy,
+              left: textOffset.dx,
+              width: textSize.width,
+              height: textSize.height,
+              child: Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
           } else if (snapshot.hasError) {
             return const Text('');
           } else {
@@ -169,10 +186,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
             return Stack(
               children: [
                 Positioned(
-                  bottom: offset.dy + size.height / 3,
-                  left: offset.dx,
-                  width: size.width,
-                  height: size.height / 10,
+                  height: 50,
+                  top: submitOffset.dy - (56 * 2),
+                  left: textOffset.dx,
+                  width: textSize.width,
                   child: AutoComOverlay(
                     lemmas: lemmas,
                   ),
