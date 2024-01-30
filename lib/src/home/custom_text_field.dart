@@ -38,8 +38,10 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
     WidgetsBinding.instance.removeObserver(this);
     textController.dispose();
     varController.removeOverlay();
-    autoComOverlayEntry.remove();
-    autoComOverlayLive = false;
+    if (autoComOverlayLive) {
+      autoComOverlayEntry.remove();
+      autoComOverlayLive = false;
+    }
     super.dispose();
   }
 
@@ -156,7 +158,6 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
 
   Future<void> renderOverlay(String value, BuildContext context) async {
     final RenderBox submitButton = submitKey.currentContext!.findRenderObject() as RenderBox;
-    final submitSize = submitButton.size;
     final submitOffset = submitButton.localToGlobal(Offset.zero);
 
     final RenderBox textField = textFieldKey.currentContext!.findRenderObject() as RenderBox;

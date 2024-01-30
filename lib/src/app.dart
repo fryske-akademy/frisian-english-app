@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../main.dart';
 import 'account/account_view.dart';
 import 'home/home_view.dart';
+import 'onboarding/onboarding.dart';
 import 'result/result_view.dart';
 import 'text_search/text_result.dart';
 import 'text_search/text_search.dart';
@@ -78,12 +79,11 @@ class MyApp extends StatelessWidget {
                   case TextResult.routeName:
                     return const TextResult();
                   default:
-                    return const HomeView();
-                  // if (varController.onboardingShow) {
-                  //   return const HomeView();
-                  // } else {
-                  //   return const OnboardingView();
-                  // }
+                    if (varController.onboardingShow) {
+                      return const HomeView();
+                    } else {
+                      return const OnboardingView();
+                    }
                 }
               },
             );

@@ -238,7 +238,6 @@ class Lemma {
     lemma.hyphenation = jsonData['hyphenation'];
     lemma.link = jsonData['link'];
     lemma.grammar = jsonData['grammar'];
-    lemma.translations = jsonData['translations'];
     lemma.subForms = jsonData['subForms'];
     lemma.toBeDeleted = jsonData['toBeDeleted'];
     return lemma;

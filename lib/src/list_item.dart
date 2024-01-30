@@ -1,29 +1,26 @@
-// class ListItem {
-//   ListItem({
-//     required this.lemma,
-//     required this.translation,
-//     this.isFryEn = false,
-//     this.toBeDeleted = false,
-//   });
+class ListItem {
+  String form = '';
+  bool isFryEn = false;
+  String translation = '';
+  bool toBeDeleted = false;
 
-//   final String lemma;
-//   final String translation;
-//   final bool isFryEn;
-//   late bool toBeDeleted;
+  ListItem();
 
-//   factory ListItem.fromJson(Map<String, dynamic> jsonData) {
-//     return ListItem(
-//       lemma: jsonData['lemma'],
-//       translation: jsonData['translation'],
-//       isFryEn: jsonData['isFryEn'],
-//       toBeDeleted: jsonData['toBeDeleted'],
-//     );
-//   }
+  factory ListItem.fromJson(Map<String, dynamic> json) {
+    ListItem favorite = ListItem();
 
-//   Map<String, dynamic> toJson() => {
-//         'lemma': lemma,
-//         'translation': translation,
-//         'isFryEn': isFryEn,
-//         'toBeDeleted': toBeDeleted,
-//       };
-// }
+    favorite.form = json['form'];
+    favorite.isFryEn = json['lang'];
+    favorite.translation = json['translation'];
+    favorite.toBeDeleted = json['toBeDeleted'];
+
+    return favorite;
+  }
+
+  Map<String, dynamic> toJson() => {
+        'form': form,
+        'lang': isFryEn,
+        'translation': translation,
+        'toBeDeleted': toBeDeleted,
+      };
+}

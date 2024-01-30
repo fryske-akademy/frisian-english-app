@@ -19,6 +19,8 @@ class _TextSearchState extends State<TextSearch> {
   final TextEditingController textController = TextEditingController();
   late ScrollController scrollController;
 
+  String language = 'fry';
+
   @override
   void initState() {
     super.initState();
@@ -38,6 +40,13 @@ class _TextSearchState extends State<TextSearch> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Global Search'),
+        leading: IconButton(
+          icon: const Icon(Icons.home),
+          onPressed: () {
+            Navigator.pushNamed(context, '/home');
+          },
+        ),
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Stack(
@@ -101,13 +110,8 @@ class _TextSearchState extends State<TextSearch> {
   }
 
   void _handleSubmitButtonPressed() async {
-    // if (textController.text.contains("AND") || textController.text.contains("OR")) {
-    //   if (textController.text[textController.text.length - 1] != '"') {
-    //     textController.text = '${textController.text}"';
-    //   }
-    // }
     varController.query = textController.text;
-    Navigator.pushNamed(context, '/textResult');
+    Navigator.pushNamed(context, '/textResult', arguments: {'language': language});
   }
 
   _buildOperators(BuildContext context) {
@@ -133,7 +137,12 @@ class _TextSearchState extends State<TextSearch> {
                       int position = textController.selection.baseOffset;
                       String leftText = textController.text.substring(0, position);
                       String rightText = textController.text.substring(position);
-                      String newText = leftText + ' AND ' + rightText; // replace 'Your String' with the string you want to insert
+
+                      // Check if leftText ends with a space or rightText starts with a space
+                      String leftSpace = leftText.endsWith(' ') ? '' : ' ';
+                      String rightSpace = rightText.startsWith(' ') ? '' : ' ';
+
+                      String newText = leftText + leftSpace + 'AND' + rightSpace + rightText;
                       textController.text = newText;
                       textController.selection =
                           TextSelection.collapsed(offset: position + ' AND '.length); // move the cursor to the end of the inserted string
@@ -151,12 +160,29 @@ class _TextSearchState extends State<TextSearch> {
                       int position = textController.selection.baseOffset;
                       String leftText = textController.text.substring(0, position);
                       String rightText = textController.text.substring(position);
-                      String newText = leftText + ' OR ' + rightText; // replace 'Your String' with the string you want to insert
+
+                      // Check if leftText ends with a space or rightText starts with a space
+                      String leftSpace = leftText.endsWith(' ') ? '' : ' ';
+                      String rightSpace = rightText.startsWith(' ') ? '' : ' ';
+
+                      String newText = leftText + leftSpace + 'OR' + rightSpace + rightText;
                       textController.text = newText;
                       textController.selection =
                           TextSelection.collapsed(offset: position + ' AND '.length); // move the cursor to the end of the inserted string
                     },
                     child: const Text('OR', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  IconButton(
+                    icon: CircleAvatar(
+                        radius: 10,
+                        backgroundImage: language == 'fry'
+                            ? const ResizeImage(AssetImage('assets/flags/fry.png'), width: 100, height: 100)
+                            : const ResizeImage(AssetImage('assets/flags/en.png'), width: 100, height: 100)),
+                    onPressed: () {
+                      setState(() {
+                        language = language == 'fry' ? 'en' : 'fry';
+                      });
+                    },
                   ),
                 ],
               ),

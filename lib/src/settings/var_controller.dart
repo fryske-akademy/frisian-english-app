@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../lemma.dart';
+import 'package:frysish/src/list_item.dart';
 import 'settings_service.dart';
 
 class VarController with ChangeNotifier {
@@ -11,8 +10,8 @@ class VarController with ChangeNotifier {
   late ThemeMode _themeMode;
   late bool _systemThemeOverruled;
   late Color _primaryColor;
-  late List<Lemma> _history;
-  late List<Lemma> _favorites;
+  late List<ListItem> _history;
+  late List<ListItem> _favorites;
   late Locale _locale;
   late bool _onboardingShown;
   late bool _isFryEn;
@@ -20,8 +19,8 @@ class VarController with ChangeNotifier {
   ThemeMode get themeMode => _themeMode;
   bool get systemThemeOverruled => _systemThemeOverruled;
   Color get primaryColor => _primaryColor;
-  List<Lemma> get history => _history;
-  List<Lemma> get favorites => _favorites;
+  List<ListItem> get history => _history;
+  List<ListItem> get favorites => _favorites;
   Locale get locale => _locale;
   bool get onboardingShow => _onboardingShown;
   bool get isFryEn => _isFryEn;
@@ -77,7 +76,7 @@ class VarController with ChangeNotifier {
     await _settingsService.updatePrimaryColor(newColor);
   }
 
-  Future<void> updateHistory(List<Lemma> newHistory) async {
+  Future<void> updateHistory(List<ListItem> newHistory) async {
     _history = newHistory.where((item) => !item.toBeDeleted).toList();
 
     notifyListeners();
@@ -85,7 +84,7 @@ class VarController with ChangeNotifier {
     await _settingsService.updateHistory(_history);
   }
 
-  Future<void> updateFavorites(List<Lemma> newFavorites) async {
+  Future<void> updateFavorites(List<ListItem> newFavorites) async {
     _favorites = newFavorites.where((item) => !item.toBeDeleted).toList();
 
     notifyListeners();
@@ -113,7 +112,7 @@ class VarController with ChangeNotifier {
     await _settingsService.updateisFryEn(newisFryEn);
   }
 
-  late List<Lemma> stagedItems = [];
+  late List<ListItem> stagedItems = [];
 
   var customColor = const Color.fromARGB(255, 204, 111, 24);
 

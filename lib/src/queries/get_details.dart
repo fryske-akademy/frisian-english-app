@@ -77,31 +77,6 @@ Future getDetails(dynamic link) async {
     }
   ''';
 
-  const String textsQuery = r'''
-    query details( # case and diacrit sensitive lemma (article) to find
-        $lemma: String! $pos: GramType $source: String! $englishTranslations: Boolean!=false) {
-        details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
-            texts { 
-              __typename
-              ... on Example {
-                text {...txt} translations { text {...txt} }
-              }
-              ... on Collocation {
-                  text {...txt} translations { text {...txt} }
-              }
-              ... on Proverb {
-                  text {...txt} translations { text {...txt} }
-              }
-            }
-        }
-    }
-    fragment txt on FormattedText { text {
-        ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
-        ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
-        ... on T {textT}}
-    }
-  ''';
-
   final QueryOptions detailsOptions = QueryOptions(document: gql(detailsQuery), variables: <String, dynamic>{
     'lemma': link['lemma'],
     'source': link['source'],

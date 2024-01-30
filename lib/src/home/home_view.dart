@@ -129,8 +129,8 @@ class _HomeViewState extends State<HomeView> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/globalSearch');
                 },
-                icon: Icon(Icons.search),
-                label: Text('Global Search')),
+                icon: const Icon(Icons.search),
+                label: const Text('Global Search')),
             const Spacer(
               flex: 1,
             ),

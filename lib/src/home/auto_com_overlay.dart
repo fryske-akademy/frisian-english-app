@@ -31,38 +31,33 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
     var uniqueLemmas = widget.lemmas.toSet().toList();
     var singleWordLemmas = uniqueLemmas.where((lemma) => !lemma['form'].contains(' ')).toList();
 
+    singleWordLemmas;
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(12.5, 0, 25, 0),
       child: Material(
         borderRadius: BorderRadius.circular(25),
-        child: RawScrollbar(
+        child: ListView.builder(
           controller: _scrollController,
-          thickness: 2,
-          padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
-          radius: const Radius.circular(25),
-          thumbVisibility: true,
-          child: ListView.builder(
-            controller: _scrollController,
-            scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.zero,
-            itemCount: singleWordLemmas.length,
-            itemBuilder: (context, index) {
-              dynamic lemma = singleWordLemmas[index];
-              return TextButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                  elevation: MaterialStateProperty.all(0.0),
-                  splashFactory: NoSplash.splashFactory,
-                  overlayColor: MaterialStateProperty.all(Colors.transparent),
-                ),
-                onPressed: () {
-                  varController.query = lemma['form'];
-                  Navigator.pushReplacementNamed(context, '/result');
-                },
-                child: Text(lemma['form'], style: const TextStyle(fontWeight: FontWeight.bold)),
-              );
-            },
-          ),
+          scrollDirection: Axis.horizontal,
+          padding: EdgeInsets.zero,
+          itemCount: singleWordLemmas.length,
+          itemBuilder: (context, index) {
+            dynamic lemma = singleWordLemmas[index];
+            return TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                elevation: MaterialStateProperty.all(0.0),
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: MaterialStateProperty.all(Colors.transparent),
+              ),
+              onPressed: () {
+                varController.query = lemma['form'];
+                Navigator.pushReplacementNamed(context, '/result');
+              },
+              child: Text(lemma['form'], style: const TextStyle(fontWeight: FontWeight.bold)),
+            );
+          },
         ),
       ),
     );

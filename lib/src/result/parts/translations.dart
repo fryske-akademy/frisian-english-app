@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:frysish/src/list_item.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -155,16 +156,16 @@ class _TranslationsState extends State<Translations> {
                         ? const Icon(Icons.favorite)
                         : const Icon(Icons.favorite_border),
                     onPressed: () async {
-                      List<Lemma> favorites = varController.favorites;
+                      List<ListItem> favorites = varController.favorites;
                       setState(() {
                         if (favorites.any((item) => item.form == widget.lemma.translations[currentIndex]['form'])) {
                           favorites.removeWhere((item) => item.form == widget.lemma.translations[currentIndex]['form']);
                         } else {
-                          Lemma lemma = Lemma();
-                          lemma.form = widget.lemma.translations[currentIndex]['form'];
-                          lemma.translations.add(widget.lemma);
-                          lemma.lang = widget.lemma.translations[currentIndex]['lang'];
-                          favorites.add(lemma);
+                          ListItem favorite = ListItem();
+                          favorite.form = widget.lemma.translations[currentIndex]['form'];
+                          favorite.isFryEn = widget.lemma.translations[currentIndex]['lang'] == 'fry' ? true : false;
+                          favorite.translation = widget.lemma.form;
+                          favorites.add(favorite);
                         }
                       });
                       await varController.updateFavorites(favorites);

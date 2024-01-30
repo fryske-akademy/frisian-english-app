@@ -46,6 +46,8 @@ Future getLemmas(String query) async {
 
   List<Lemma> lemmas = [];
 
+  if (lemmasData['lemmasearch']['lemmas'] == null) return lemmas;
+
   for (var lemma in lemmasData['lemmasearch']['lemmas']) {
     Lemma newlemma = Lemma();
 

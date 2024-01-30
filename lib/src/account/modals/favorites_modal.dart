@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../lemma.dart';
 import '../../../main.dart';
+import '../../list_item.dart';
 
 class FavoritesModal extends StatefulWidget {
   const FavoritesModal({super.key});
@@ -30,11 +30,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
           child: ListView.builder(
             itemCount: varController.stagedItems.length,
             itemBuilder: (context, index) {
-              Lemma lemma = varController.stagedItems[index];
-              print(lemma.translations.first);
-              var translation = lemma.translations.first.form;
-              var favorite = lemma.form;
-              favorite;
+              ListItem listItem = varController.stagedItems[index];
               return Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: ListTile(
@@ -43,16 +39,16 @@ class _FavoritesModalState extends State<FavoritesModal> {
                       // Lemma
                       Flexible(
                         child: TextButton(
-                          onPressed: !lemma.toBeDeleted
+                          onPressed: !listItem.toBeDeleted
                               ? () {
-                                  varController.query = translation;
-                                  varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
+                                  varController.query = listItem.translation;
+                                  varController.updateisFryEn(!listItem.isFryEn);
                                   Navigator.pushNamed(context, '/result');
                                 }
                               : null,
                           child: AutoSizeText(
-                            translation,
-                            style: lemma.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
+                            listItem.translation,
+                            style: listItem.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
                             maxFontSize: 40,
                             minFontSize: 12,
                             maxLines: 2,
@@ -61,19 +57,19 @@ class _FavoritesModalState extends State<FavoritesModal> {
                         ),
                       ),
                       const Icon(Icons.arrow_forward),
-                      // Translation
+                      // Favorite
                       Flexible(
                         child: TextButton(
-                          onPressed: !lemma.toBeDeleted
+                          onPressed: !listItem.toBeDeleted
                               ? () {
-                                  varController.query = favorite;
-                                  varController.updateisFryEn(lemma.lang == 'fry' ? true : false);
+                                  varController.query = listItem.form;
+                                  varController.updateisFryEn(listItem.isFryEn);
                                   Navigator.pushNamed(context, '/result');
                                 }
                               : null,
                           child: AutoSizeText(
-                            favorite,
-                            style: lemma.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
+                            listItem.form,
+                            style: listItem.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
                             maxFontSize: 40,
                             minFontSize: 12,
                             maxLines: 2,
@@ -86,11 +82,11 @@ class _FavoritesModalState extends State<FavoritesModal> {
                   trailing: Padding(
                     padding: const EdgeInsets.only(right: 20.0),
                     child: IconButton(
-                      icon: lemma.toBeDeleted ? const Icon(Icons.favorite_border) : const Icon(Icons.favorite),
+                      icon: listItem.toBeDeleted ? const Icon(Icons.favorite_border) : const Icon(Icons.favorite),
                       onPressed: () {
                         setState(
                           () {
-                            lemma.toBeDeleted = !lemma.toBeDeleted;
+                            listItem.toBeDeleted = !listItem.toBeDeleted;
                           },
                         );
                       },

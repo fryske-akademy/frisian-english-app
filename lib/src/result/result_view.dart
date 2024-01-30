@@ -8,6 +8,7 @@ import 'package:frysish/src/result/parts/details.dart';
 
 import '../../details.dart';
 import '../../main.dart';
+import '../list_item.dart';
 import '../queries/get_details.dart';
 
 import 'parts/examples.dart';
@@ -167,7 +168,10 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               var history = varController.history;
 
               if (!history.any((item) => item.form == details.lemma.form)) {
-                history.add(details.lemma);
+                ListItem item = ListItem();
+                item.form = details.lemma.form;
+                item.isFryEn = details.lemma.lang == 'fry' ? true : false;
+                history.add(item);
                 varController.updateHistory(history);
               }
 

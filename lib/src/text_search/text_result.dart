@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/main.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../result/parts/get_rich_text.dart';
 
@@ -15,7 +16,7 @@ class TextResult extends StatefulWidget {
 }
 
 class _TextResultState extends State<TextResult> {
-  Future fetchData(String searchTerm) async {
+  Future fetchData(String searchTerm, language) async {
     final GraphQLClient client = GetIt.I<GraphQLClient>();
 
     const String textsQuery = r'''
@@ -48,7 +49,7 @@ class _TextResultState extends State<TextResult> {
     final QueryOptions texts = QueryOptions(document: gql(textsQuery), variables: <String, dynamic>{
       'searchterm': searchTerm,
       'source': 'fiwb',
-      'lang': 'fry',
+      'lang': language,
     });
 
     final QueryResult textsResult = await client.query(texts);
@@ -61,13 +62,15 @@ class _TextResultState extends State<TextResult> {
 
   @override
   Widget build(BuildContext context) {
+    final Map arguments = ModalRoute.of(context)!.settings.arguments as Map;
+
     return FutureBuilder(
-      future: fetchData(varController.query), // replace 'your_search_term' with your actual search term
+      future: fetchData(varController.query, arguments['language']),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator()); // show a loading spinner while waiting for the data
+          return const Center(child: CircularProgressIndicator());
         } else if (snapshot.hasError) {
-          return Text('Error: ${snapshot.error}'); // show an error message if there's an error
+          return Text('Error: ${snapshot.error}');
         } else {
           var textsData = snapshot.data['textsearch']['texts'];
           textsData;
@@ -103,7 +106,7 @@ class _TextResultState extends State<TextResult> {
 
           return Scaffold(
             appBar: AppBar(
-              title: Text('${varController.query}'),
+              title: Text(varController.query),
             ),
             body: Material(
               child: ListView.builder(
