@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:frysish/src/list_item.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../lemma.dart';
-
 class SettingsService {
   Future<ThemeMode> themeMode() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

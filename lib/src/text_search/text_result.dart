@@ -3,7 +3,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/main.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../result/parts/get_rich_text.dart';
 

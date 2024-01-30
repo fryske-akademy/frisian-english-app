@@ -6,7 +6,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../../lemma.dart';
 import '../../../main.dart';
 
 class Translations extends StatefulWidget {
