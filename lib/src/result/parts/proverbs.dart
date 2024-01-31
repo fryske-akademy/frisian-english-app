@@ -22,6 +22,7 @@ class _ProverbsState extends State<Proverbs> {
   final ScrollController _scrollController = ScrollController();
 
   var proverbs = [];
+  List<FilteredData> filtered = [];
 
   @override
   void initState() {
@@ -34,8 +35,6 @@ class _ProverbsState extends State<Proverbs> {
       }
     }
 
-    List<FilteredData> filtered = [];
-
     for (var proverb in proverbs) {
       var text = proverb['text']['text'];
       var textSpans = getRichText(text);
@@ -43,12 +42,14 @@ class _ProverbsState extends State<Proverbs> {
       var translations = proverb['translations'][0]['text']['text'];
       var transSpans = getRichText(translations);
 
-      if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
+      if (textSpans.isEmpty || textSpans.first.text == '' || transSpans.isEmpty) {
         continue;
       }
 
       filtered.add(FilteredData(textSpans, transSpans));
     }
+
+    filtered;
   }
 
   @override
@@ -65,14 +66,8 @@ class _ProverbsState extends State<Proverbs> {
             controller: _scrollController,
             child: ListView.builder(
               controller: _scrollController,
-              itemCount: proverbs.length,
+              itemCount: filtered.length,
               itemBuilder: (context, index) {
-                var texts = proverbs[index]['text']['text'];
-                var textSpans = getRichText(texts);
-
-                var translations = proverbs[index]['translations'][0]['text']['text'];
-                var transSpans = getRichText(translations);
-
                 return Padding(
                   padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),
                   child: Material(
@@ -88,7 +83,7 @@ class _ProverbsState extends State<Proverbs> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
-                          children: textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                          children: filtered[index].textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
                         ),
                       ),
                       subtitle: Padding(
@@ -100,7 +95,7 @@ class _ProverbsState extends State<Proverbs> {
                               color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                               fontSize: 16,
                             ),
-                            children: transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                            children: filtered[index].transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
                           ),
                         ),
                       ),

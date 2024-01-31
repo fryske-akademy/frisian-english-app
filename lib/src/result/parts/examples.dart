@@ -22,6 +22,7 @@ class _ExamplesState extends State<Examples> {
   final ScrollController _scrollController = ScrollController();
 
   var examples = [];
+  List<FilteredData> filtered = [];
 
   @override
   void initState() {
@@ -35,8 +36,6 @@ class _ExamplesState extends State<Examples> {
       }
     }
 
-    List<FilteredData> filtered = [];
-
     for (var example in examples) {
       var text = example['text']['text'];
       var textSpans = getRichText(text);
@@ -44,12 +43,14 @@ class _ExamplesState extends State<Examples> {
       var translations = example['translations'][0]['text']['text'];
       var transSpans = getRichText(translations);
 
-      if (textSpans.first.text == '' || textSpans.isEmpty || transSpans.isEmpty) {
+      if (textSpans.isEmpty || textSpans.first.text == '' || transSpans.isEmpty) {
         continue;
       }
 
       filtered.add(FilteredData(textSpans, transSpans));
     }
+
+    filtered;
   }
 
   @override
@@ -66,20 +67,8 @@ class _ExamplesState extends State<Examples> {
             controller: _scrollController,
             child: ListView.builder(
               controller: _scrollController,
-              itemCount: examples.length,
+              itemCount: filtered.length,
               itemBuilder: (context, index) {
-                var texts = examples[index]['text']['text'];
-                var textSpans = getRichText(texts);
-
-                var translations = examples[index]['translations'][0]['text']['text'];
-                var transSpans = getRichText(translations);
-
-                // for (var item in textSpans) {
-                //   if (item.text == '') {
-                //     textSpans.remove(item);
-                //   }
-                // }
-
                 return Padding(
                   padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),
                   child: Material(
@@ -95,7 +84,7 @@ class _ExamplesState extends State<Examples> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
-                          children: textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                          children: filtered[index].textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
                         ),
                       ),
                       subtitle: Padding(
@@ -107,7 +96,7 @@ class _ExamplesState extends State<Examples> {
                               color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                               fontSize: 16,
                             ),
-                            children: transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                            children: filtered[index].transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
                           ),
                         ),
                       ),
