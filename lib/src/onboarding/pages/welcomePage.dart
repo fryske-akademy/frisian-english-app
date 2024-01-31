@@ -14,8 +14,8 @@ class welcomePage extends StatelessWidget {
 
   final Color customColor;
 
-  final String logoDark = 'assets/logos/frysish dark.svg';
-  final String logoLight = 'assets/logos/frysish light.svg';
+  final String logoDark = 'assets/logos/frysishDark.svg';
+  final String logoLight = 'assets/logos/frysishLight.svg';
 
   @override
   Widget build(BuildContext context) {
@@ -23,22 +23,30 @@ class welcomePage extends StatelessWidget {
       alignment: Alignment.center,
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-        SvgPicture.asset(
-          varController.themeMode == ThemeMode.dark ? logoDark : logoLight,
-          width: 400,
-        ),
-        Text(
-          AppLocalizations.of(context)!.welcome,
-          textAlign: TextAlign.center,
-          style: TextStyle(color: customColor, fontSize: 30, fontWeight: FontWeight.bold),
-        ),
-        Text(
-          AppLocalizations.of(context)!.slogan,
-          textAlign: TextAlign.center,
-          style: TextStyle(color: customColor, fontSize: 20),
-        ),
-      ]),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            varController.themeMode == ThemeMode.dark ? logoDark : logoLight,
+            width: 300,
+          ),
+          Column(
+            children: [
+              Text(
+                AppLocalizations.of(context)!.welcome,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: customColor, fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                AppLocalizations.of(context)!.slogan,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: customColor, fontSize: 20),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
