@@ -127,6 +127,7 @@ class _HomeViewState extends State<HomeView> {
           children: [
             OutlinedButton.icon(
                 onPressed: () {
+                  varController.removeOverlay();
                   Navigator.pushNamed(context, '/globalSearch');
                 },
                 icon: const Icon(Icons.search),

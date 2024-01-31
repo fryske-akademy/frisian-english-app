@@ -160,5 +160,9 @@
     "person3Sing":"Hij/Zij/Het/Men",
     "person1Plur":"Wij",
     "person2Plur":"Jullie",
-    "person3Plur":"Zij"
+    "person3Plur":"Zij",
+    "wildcards":"je kunt ? en * als wildcard gebruiken bijvoorbeeld beam*",
+    "doubleqoutes":"Bij zoeken in teksten kun je dubbele quotes gebruiken om te zoeken op zinsdelen (\"vele handen\")",
+    "occurrence":"Zonder dubbele quotes wordt gezocht op het voorkomen van minstens één van de woorden",
+    "andOr":"Je kunt ook \" AND \" of \" OR \" gebruiken"
 }

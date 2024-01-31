@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
 
 import '../../main.dart';
@@ -19,12 +20,26 @@ class _TextSearchState extends State<TextSearch> {
   final TextEditingController textController = TextEditingController();
   late ScrollController scrollController;
 
+  late OverlayEntry overlayEntry;
+
   String language = 'fry';
+
+  bool infoOverlayLive = false;
 
   @override
   void initState() {
     super.initState();
     scrollController = ScrollController();
+    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+      await _showDialogAfterDelay();
+    });
+  }
+
+  Future<void> _showDialogAfterDelay() async {
+    await Future.delayed(const Duration(seconds: 2));
+    if (!varController.onboardingShow) {
+      _buildInfoDialog(context);
+    }
   }
 
   @override
@@ -35,11 +50,18 @@ class _TextSearchState extends State<TextSearch> {
     super.dispose();
   }
 
+  void removeOverlay() {
+    if (infoOverlayLive) {
+      infoOverlayLive = false;
+      overlayEntry.remove();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Global Search'),
+        title: Text(AppLocalizations.of(context)!.textSearch),
         leading: IconButton(
           icon: const Icon(Icons.home),
           onPressed: () {
@@ -56,13 +78,81 @@ class _TextSearchState extends State<TextSearch> {
             _buildTextField(context),
             _buildSubmitButton(context),
             Align(
-              alignment: Alignment.bottomLeft,
+              alignment: Alignment.bottomCenter,
               child: _buildOperators(context),
             ),
+            Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: IconButton(
+                    icon: const Icon(Icons.info),
+                    onPressed: () {
+                      _buildInfoDialog(context);
+                    },
+                  ),
+                ))
           ],
         ),
       ),
     );
+  }
+
+  void _buildInfoDialog(BuildContext context) {
+    overlayEntry = OverlayEntry(
+      builder: (context) => Center(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+          child: Material(
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            //surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ListView(
+                    shrinkWrap: true,
+                    padding: const EdgeInsets.all(20.0),
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          IconButton(
+                            icon: const Icon(Icons.close),
+                            onPressed: () {
+                              removeOverlay();
+                            },
+                          )
+                        ],
+                      ),
+                      Text(AppLocalizations.of(context)!.wildcards),
+                      const Divider(
+                        thickness: 2,
+                      ),
+                      Text(AppLocalizations.of(context)!.doubleqoutes),
+                      const Divider(
+                        thickness: 2,
+                      ),
+                      Text(AppLocalizations.of(context)!.occurrence),
+                      const Divider(
+                        thickness: 2,
+                      ),
+                      Text(AppLocalizations.of(context)!.andOr),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    Overlay.of(context).insert(overlayEntry);
+    infoOverlayLive = true;
   }
 
   Widget _buildTextField(BuildContext context) {
@@ -75,19 +165,19 @@ class _TextSearchState extends State<TextSearch> {
         child: TextField(
           key: textFieldKey,
           controller: textController,
-          inputFormatters: [
-            FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Zäëïöüàèìòùáéíóúâêîôû "]')),
-          ],
+          // inputFormatters: [
+          //   FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Zäëïöüàèìòùáéíóúâêîôû "]')),
+          // ],
           expands: true,
           minLines: null,
           maxLines: null,
           enableSuggestions: true,
           autocorrect: true,
-          decoration: const InputDecoration(
+          decoration: InputDecoration(
             border: InputBorder.none,
             contentPadding: EdgeInsets.all(30),
             hintStyle: TextStyle(fontSize: 18),
-            hintText: 'Enter Words',
+            hintText: AppLocalizations.of(context)!.searchedText,
           ),
           style: const TextStyle(fontSize: 25),
         ),
@@ -97,7 +187,7 @@ class _TextSearchState extends State<TextSearch> {
 
   Widget _buildSubmitButton(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.fromLTRB(8, 8, 25, 72),
       child: FloatingActionButton(
         key: submitKey,
         shape: const CircleBorder(),
@@ -118,13 +208,14 @@ class _TextSearchState extends State<TextSearch> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             height: 56,
             child: Material(
               borderRadius: BorderRadius.circular(25),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
                     style: ButtonStyle(
@@ -144,10 +235,11 @@ class _TextSearchState extends State<TextSearch> {
 
                       String newText = leftText + leftSpace + 'AND' + rightSpace + rightText;
                       textController.text = newText;
-                      textController.selection =
-                          TextSelection.collapsed(offset: position + ' AND '.length); // move the cursor to the end of the inserted string
                     },
-                    child: const Text('AND', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: const Text(
+                      'AND',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   ),
                   TextButton(
                     style: ButtonStyle(
@@ -167,10 +259,71 @@ class _TextSearchState extends State<TextSearch> {
 
                       String newText = leftText + leftSpace + 'OR' + rightSpace + rightText;
                       textController.text = newText;
-                      textController.selection =
-                          TextSelection.collapsed(offset: position + ' AND '.length); // move the cursor to the end of the inserted string
                     },
-                    child: const Text('OR', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: const Text(
+                      'OR',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                      elevation: MaterialStateProperty.all(0.0),
+                      splashFactory: NoSplash.splashFactory,
+                      overlayColor: MaterialStateProperty.all(Colors.transparent),
+                    ),
+                    onPressed: () {
+                      int position = textController.selection.baseOffset;
+                      String leftText = textController.text.substring(0, position);
+                      String rightText = textController.text.substring(position);
+
+                      String newText = leftText + '"' + rightText;
+                      textController.text = newText;
+                    },
+                    child: const Text(
+                      '"',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                      elevation: MaterialStateProperty.all(0.0),
+                      splashFactory: NoSplash.splashFactory,
+                      overlayColor: MaterialStateProperty.all(Colors.transparent),
+                    ),
+                    onPressed: () {
+                      int position = textController.selection.baseOffset;
+                      String leftText = textController.text.substring(0, position);
+                      String rightText = textController.text.substring(position);
+
+                      String newText = leftText + '?' + rightText;
+                      textController.text = newText;
+                    },
+                    child: const Text(
+                      '?',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                      elevation: MaterialStateProperty.all(0.0),
+                      splashFactory: NoSplash.splashFactory,
+                      overlayColor: MaterialStateProperty.all(Colors.transparent),
+                    ),
+                    onPressed: () {
+                      int position = textController.selection.baseOffset;
+                      String leftText = textController.text.substring(0, position);
+                      String rightText = textController.text.substring(position);
+
+                      String newText = leftText + '*' + rightText;
+                      textController.text = newText;
+                    },
+                    child: const Text(
+                      '*',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   ),
                   IconButton(
                     icon: CircleAvatar(

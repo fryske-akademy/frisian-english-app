@@ -160,5 +160,9 @@
     "person3Sing":"Hy/Hja/It/Men",
     "person1Plur":"Wy",
     "person2Plur":"Jimme",
-    "person3Plur":"Hja"
+    "person3Plur":"Hja",
+    "wildcards":"Kist ? en * as wildcard brûke, bygelyks beam*",
+    "doubleqoutes":"By sykjen yn teksten kist skrapkes brûke om te sykjen op sinsdielen (\"vele handen\")",
+    "occurrence":"Sûnder skrapkes wurdt socht op it foarkommen fan op syn minst ien fan de wurden",
+    "andOr":"Kist ek \" AND \" of \" OR \" brûke"
 }
