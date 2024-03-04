@@ -179,7 +179,7 @@ class _TranslationsState extends State<Translations> {
                   right: 0,
                   child: IconButton(
                     onPressed: () async {
-                      await Clipboard.setData(ClipboardData(text: widget.lemma.translations[currentIndex]['translation']));
+                      await Clipboard.setData(ClipboardData(text: widget.lemma.translations[currentIndex]['form']));
                     },
                     iconSize: 20,
                     icon: const Icon(Icons.copy),

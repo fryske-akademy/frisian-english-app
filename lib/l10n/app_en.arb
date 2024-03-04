@@ -164,5 +164,6 @@
     "wildcards":"You can use ? and * as wildcards, for example beam*",
     "doubleqoutes":"For text searches you can use double quotes to search for phrases (\"many hands\")",
     "occurrence":"Without double quotes the search is done on the occurrence of at least one of the words",
-    "andOr":"You can also use \" AND \" or \" OR \""
+    "andOr":"You can also use \" AND \" or \" OR \"",
+    "launch": "Launch"
 }

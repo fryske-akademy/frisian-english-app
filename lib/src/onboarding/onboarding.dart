@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../main.dart';
 import 'pages/featuresPage.dart';
@@ -72,7 +73,7 @@ class OnboardingView extends StatelessWidget {
       skipIcon: const Icon(Icons.skip_next, color: Colors.white, size: 32.0),
       totalPage: 5,
       headerBackgroundColor: Theme.of(context).canvasColor,
-      finishButtonText: 'Launch',
+      finishButtonText: AppLocalizations.of(context)!.launch,
       finishButtonStyle: FinishButtonStyle(backgroundColor: customColor),
       onFinish: () {
         varController.updateOnboardingShown(true);
