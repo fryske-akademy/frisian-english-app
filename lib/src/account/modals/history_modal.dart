@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:frysish/src/result/result_view.dart';
 
 import '../../../main.dart';
 import '../../list_item.dart';
@@ -24,7 +25,7 @@ class _HistoryModalState extends State<HistoryModal> {
   void goToResultView(ListItem listItem, BuildContext context) {
     varController.query = listItem.form;
     varController.updateisFryEn(listItem.isFryEn);
-    Navigator.pushNamed(context, '/result');
+    Navigator.pushNamed(context, ResultView.routeName);
   }
 
   @override

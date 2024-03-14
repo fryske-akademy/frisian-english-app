@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/src/queries/autocomplete.dart';
+import 'package:frysish/src/result/result_view.dart';
 
 import '../../../main.dart';
 import 'auto_com_overlay.dart';
@@ -153,7 +154,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
       autoComOverlayEntry.remove();
       autoComOverlayLive = false;
     }
-    Navigator.pushNamed(context, '/result');
+    Navigator.pushNamed(context, ResultView.routeName);
   }
 
   Future<void> renderOverlay(String value, BuildContext context) async {

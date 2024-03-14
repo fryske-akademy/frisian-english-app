@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_offline/flutter_offline.dart';
+import 'package:frysish/src/account/account_view.dart';
+import 'package:frysish/src/result/result_view.dart';
+import 'package:frysish/src/settings/settings_view.dart';
+import 'package:frysish/src/text_search/text_search.dart';
 
 import '../../main.dart';
 import 'custom_text_field.dart';
@@ -107,14 +111,14 @@ class _HomeViewState extends State<HomeView> {
                 icon: const Icon(Icons.account_circle),
                 onPressed: () {
                   varController.removeOverlay();
-                  Navigator.pushNamed(context, '/account');
+                  Navigator.pushNamed(context, AccountView.routeName);
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.settings),
                 onPressed: () {
                   varController.removeOverlay();
-                  Navigator.pushNamed(context, '/settings');
+                  Navigator.pushNamed(context, SettingsView.routeName);
                 },
               ),
             ],
@@ -128,7 +132,7 @@ class _HomeViewState extends State<HomeView> {
             OutlinedButton.icon(
                 onPressed: () {
                   varController.removeOverlay();
-                  Navigator.pushNamed(context, '/globalSearch');
+                  Navigator.pushNamed(context, TextSearch.routeName);
                 },
                 icon: const Icon(Icons.search),
                 label: Text(AppLocalizations.of(context)!.textSearch)),
@@ -157,7 +161,7 @@ class _HomeViewState extends State<HomeView> {
                           return CustomTextField(
                             onPressed: (value) async {
                               varController.removeOverlay();
-                              Navigator.pushNamed(context, '/result');
+                              Navigator.pushNamed(context, ResultView.routeName);
                             },
                           );
                         } else {

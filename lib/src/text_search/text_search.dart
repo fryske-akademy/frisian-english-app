@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/services.dart';
+import 'package:frysish/src/home/home_view.dart';
+import 'package:frysish/src/text_search/text_result.dart';
 
 import '../../main.dart';
 
 class TextSearch extends StatefulWidget {
-  static const routeName = '/globalSearch';
+  static const routeName = '/textSearch';
 
   const TextSearch({super.key});
 
@@ -65,7 +67,7 @@ class _TextSearchState extends State<TextSearch> {
         leading: IconButton(
           icon: const Icon(Icons.home),
           onPressed: () {
-            Navigator.pushNamed(context, '/home');
+            Navigator.pushNamed(context, HomeView.routeName);
           },
         ),
         automaticallyImplyLeading: false,
@@ -201,7 +203,7 @@ class _TextSearchState extends State<TextSearch> {
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-    Navigator.pushNamed(context, '/textResult', arguments: {'language': language});
+    Navigator.pushNamed(context, TextResult.routeName, arguments: {'language': language});
   }
 
   _buildOperators(BuildContext context) {

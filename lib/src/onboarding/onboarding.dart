@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/src/home/home_view.dart';
 
 import '../../main.dart';
 import 'pages/featuresPage.dart';
@@ -77,7 +78,7 @@ class OnboardingView extends StatelessWidget {
       finishButtonStyle: FinishButtonStyle(backgroundColor: customColor),
       onFinish: () {
         varController.updateOnboardingShown(true);
-        Navigator.pushNamed(context, '/home');
+        Navigator.pushNamed(context, HomeView.routeName);
       },
       background: const [
         Text(''),

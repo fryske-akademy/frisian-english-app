@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:frysish/src/home/home_view.dart';
 import 'package:frysish/src/list_item.dart';
+import 'package:frysish/src/result/result_view.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -48,7 +50,7 @@ class _TranslationsState extends State<Translations> {
               icon: const Icon(Icons.home),
               onPressed: () {
                 Navigator.of(context).pushReplacementNamed(
-                  '/home',
+                  HomeView.routeName,
                 );
               },
             ),
@@ -111,8 +113,8 @@ class _TranslationsState extends State<Translations> {
                               varController.updateisFryEn(false);
                             }
                             varController.query = widget.lemma.translations[currentIndex]['form'];
-                            Navigator.pushReplacementNamed(context, '/result');
-                            //Navigator.pushNamed(context, '/result');
+                            Navigator.pushReplacementNamed(context, ResultView.routeName);
+                            //Navigator.pushNamed(context, ResultView.routeName);
                           },
                         ),
                       ),
@@ -204,7 +206,7 @@ class _TranslationsState extends State<Translations> {
                     },
                     iconSize: 20,
                     icon: const Icon(Icons.email),
-                    tooltip: "Give feedback via mail",
+                    tooltip: AppLocalizations.of(context)!.translation,
                   ),
                 ),
               ],

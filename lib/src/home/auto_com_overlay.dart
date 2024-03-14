@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frysish/src/result/result_view.dart';
 
 import '../../main.dart';
 
@@ -53,7 +54,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
               ),
               onPressed: () {
                 varController.query = lemma['form'];
-                Navigator.pushReplacementNamed(context, '/result');
+                Navigator.pushReplacementNamed(context, ResultView.routeName);
               },
               child: Text(lemma['form'], style: const TextStyle(fontWeight: FontWeight.bold)),
             );

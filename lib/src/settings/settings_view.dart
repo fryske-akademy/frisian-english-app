@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/src/home/home_view.dart';
 
 import '../../main.dart';
 
@@ -39,7 +40,7 @@ class SettingsView extends StatelessWidget {
         leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.pushNamed(context, '/home');
+              Navigator.pushNamed(context, HomeView.routeName);
             }),
         title: Text(AppLocalizations.of(context)!.settings, style: const TextStyle(fontSize: 25)),
       ),

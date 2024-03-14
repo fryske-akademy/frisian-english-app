@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
+import 'package:frysish/src/home/home_view.dart';
 import 'package:frysish/src/queries/get_lemmas.dart';
 import 'package:frysish/src/result/parts/details.dart';
 
@@ -91,7 +92,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                       ? TextButton(
                           onPressed: () {
                             varController.query = word;
-                            Navigator.pushReplacementNamed(context, '/result');
+                            Navigator.pushReplacementNamed(context, ResultView.routeName);
                           },
                           style: TextButton.styleFrom(
                             minimumSize: Size.zero,
@@ -124,7 +125,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                   const SizedBox(height: 25),
                   IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/home');
+                      Navigator.pushNamed(context, HomeView.routeName);
                     },
                     icon: const Icon(Icons.home),
                   )
@@ -230,7 +231,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                                 child: IconButton(
                                   icon: const Icon(Icons.home),
                                   onPressed: () {
-                                    Navigator.pushNamed(context, '/home');
+                                    Navigator.pushNamed(context, HomeView.routeName);
                                   },
                                 ),
                               ),

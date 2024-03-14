@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:frysish/src/result/result_view.dart';
 
 import '../../../main.dart';
 import '../../list_item.dart';
@@ -43,7 +44,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
                               ? () {
                                   varController.query = listItem.translation;
                                   varController.updateisFryEn(!listItem.isFryEn);
-                                  Navigator.pushNamed(context, '/result');
+                                  Navigator.pushNamed(context, ResultView.routeName);
                                 }
                               : null,
                           child: AutoSizeText(
@@ -64,7 +65,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
                               ? () {
                                   varController.query = listItem.form;
                                   varController.updateisFryEn(listItem.isFryEn);
-                                  Navigator.pushNamed(context, '/result');
+                                  Navigator.pushNamed(context, ResultView.routeName);
                                 }
                               : null,
                           child: AutoSizeText(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/main.dart';
+import 'package:frysish/src/text_search/text_search.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
 
@@ -94,7 +95,7 @@ class _TextResultState extends State<TextResult> {
                   const SizedBox(height: 25),
                   IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/globalSearch');
+                      Navigator.pushNamed(context, TextSearch.routeName);
                     },
                     icon: const Icon(Icons.arrow_back),
                   )
