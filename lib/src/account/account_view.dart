@@ -19,7 +19,7 @@ class AccountView extends StatelessWidget {
 
   Future<void> handleFeedback() async {
     String email = Uri.encodeComponent("frysker@fryske-akademy.nl");
-    String subject = Uri.encodeComponent("Feedback Oersetter");
+    String subject = Uri.encodeComponent("Feedback Frysish");
     String body = Uri.encodeComponent("");
     Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
     if (await launchUrl(mail)) {

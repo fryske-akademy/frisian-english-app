@@ -193,17 +193,18 @@ class _TranslationsState extends State<Translations> {
                   child: IconButton(
                     onPressed: () async {
                       String email = Uri.encodeComponent("frysker@fryske-akademy.nl");
-                      String subject = Uri.encodeComponent("Feedback Oersetter");
+                      String subject = Uri.encodeComponent("Feedback Frysish");
 
                       // Add translation to body of email
                       String body =
-                          Uri.encodeComponent("Vertaling: ${varController.query} - ${widget.lemma.translations[currentIndex]['translation']} \n\n Feedback:");
+                          Uri.encodeComponent(AppLocalizations.of(context)!.translation + ": ${varController.query} - ${widget.lemma.translations[currentIndex]['form']} \n\n Feedback:");
                       Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
                       if (await launchUrl(mail)) {
                       } else {}
                     },
                     iconSize: 20,
-                    icon: const Icon(Icons.thumbs_up_down_outlined),
+                    icon: const Icon(Icons.email),
+                    tooltip: "Give feedback via mail",
                   ),
                 ),
               ],
