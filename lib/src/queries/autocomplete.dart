@@ -9,8 +9,7 @@ Future autoComplete(String value) async {
     # append * to the searchterm
     query lemmas ($lang: LangType!=fry $searchterm: String! $source: String="fkw") {
         lemmasearch(lang: $lang searchterm: $searchterm source: $source) {
-            message { level text }
-            lemmas { form link {source lemma lang pos id text}}
+            lemmas { form }
         }
     }
   ''';
