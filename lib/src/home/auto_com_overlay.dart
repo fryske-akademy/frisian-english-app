@@ -54,7 +54,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
               ),
               onPressed: () {
                 varController.query = lemma['form'];
-                Navigator.pushNamed(context, ResultView.routeName);
+                Navigator.pushReplacementNamed(context, ResultView.routeName);
               },
               child: Text(lemma['form'], style: const TextStyle(fontWeight: FontWeight.bold)),
             );

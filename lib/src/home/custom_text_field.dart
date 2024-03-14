@@ -31,10 +31,6 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   @override
   void initState() {
     super.initState();
-    textController.addListener(() {
-      _handleTextChanged(context);
-    });
-    textController.text=varController.query;
     WidgetsBinding.instance.addObserver(this);
   }
 
@@ -98,6 +94,9 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
           ),
           style: const TextStyle(fontSize: 25),
           onSubmitted: (value) async {},
+          onChanged: (value) async {
+            _handleTextChanged(value, context);
+          },
         ),
       ),
     );
@@ -117,9 +116,8 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
     );
   }
 
-  Future<void> _handleTextChanged(BuildContext context) async {
-    var value = textController.text;
-    if (value.length < 3 && autoComOverlayLive) {
+  Future<void> _handleTextChanged(String value, BuildContext context) async {
+    if (textController.text.length < 3 && autoComOverlayLive) {
       autoComOverlayEntry.remove();
       autoComOverlayLive = false;
     }
