@@ -134,5 +134,5 @@ class VarController with ChangeNotifier {
     }
   }
 
-  late String query = 'rinne';
+  late String query = '';
 }
