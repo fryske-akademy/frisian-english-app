@@ -12,6 +12,8 @@ class CustomTextField extends StatefulWidget {
 
   const CustomTextField({super.key, required this.onPressed});
 
+  static const allowed = '[a-zA-Zäëïöüàèìòùáéíóúâêîôû]';
+
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -22,15 +24,19 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   final GlobalKey submitKey = GlobalKey();
   final TextEditingController textController = TextEditingController();
 
-  late OverlayEntry autoComOverlayEntry;
-
-  bool autoComOverlayLive = false;
+  OverlayEntry? autoComOverlayEntry;
 
   late var lemmas;
 
   @override
   void initState() {
     super.initState();
+    textController.addListener(() {
+      _handleTextChanged(context);
+    });
+    if (varController.query.contains(RegExp(r'^' + CustomTextField.allowed + '*\$'))) {
+      textController.text=varController.query;
+    }
     WidgetsBinding.instance.addObserver(this);
   }
 
@@ -38,11 +44,8 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     textController.dispose();
+    if (autoComOverlayEntry!=null) {autoComOverlayEntry?.remove();autoComOverlayEntry?.dispose();}
     varController.removeOverlay();
-    if (autoComOverlayLive) {
-      autoComOverlayEntry.remove();
-      autoComOverlayLive = false;
-    }
     super.dispose();
   }
 
@@ -58,16 +61,6 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
     );
   }
 
-  @override
-  void didChangeMetrics() {
-    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
-    final isKeyboardActive = bottomInset > 0.0;
-    if (!isKeyboardActive && autoComOverlayLive) {
-      autoComOverlayEntry.remove();
-      autoComOverlayLive = false;
-    }
-  }
-
   Widget _buildTextField(BuildContext context) {
     return Material(
       elevation: 5,
@@ -79,7 +72,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
           key: textFieldKey,
           controller: textController,
           inputFormatters: [
-            FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Zäëïöüàèìòùáéíóúâêîôû ]')),
+            FilteringTextInputFormatter.allow(RegExp(CustomTextField.allowed)),
           ],
           expands: true,
           minLines: null,
@@ -94,9 +87,6 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
           ),
           style: const TextStyle(fontSize: 25),
           onSubmitted: (value) async {},
-          onChanged: (value) async {
-            _handleTextChanged(value, context);
-          },
         ),
       ),
     );
@@ -116,64 +106,33 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
     );
   }
 
-  Future<void> _handleTextChanged(String value, BuildContext context) async {
-    if (textController.text.length < 3 && autoComOverlayLive) {
-      autoComOverlayEntry.remove();
-      autoComOverlayLive = false;
+  Future<void> _handleTextChanged(BuildContext context) async {
+    if (textController.text.length >= 3) {
+      await renderOverlay(context);
     }
-    if (value.contains(' ')) {
-      _showSnackbar(context);
-    }
-    if (value.length >= 3 && !value.contains(' ')) {
-      await renderOverlay(value, context);
-    }
-  }
-
-  void _showSnackbar(BuildContext context) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Center(
-          child: Text(
-            AppLocalizations.of(context)!.noSpaces,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
-        duration: const Duration(milliseconds: 2000),
-        behavior: SnackBarBehavior.floating,
-        width: 210,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-        ),
-      ),
-    );
   }
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-    if (autoComOverlayLive) {
-      autoComOverlayEntry.remove();
-      autoComOverlayLive = false;
-    }
-    Navigator.pushNamed(context, ResultView.routeName);
+      autoComOverlayEntry?.remove();
+    Navigator.pushReplacementNamed(context, ResultView.routeName);
   }
 
-  Future<void> renderOverlay(String value, BuildContext context) async {
+  Future<void> renderOverlay(BuildContext context) async {
     final RenderBox submitButton = submitKey.currentContext!.findRenderObject() as RenderBox;
     final submitOffset = submitButton.localToGlobal(Offset.zero);
 
     final RenderBox textField = textFieldKey.currentContext!.findRenderObject() as RenderBox;
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
+    final aco = autoComOverlayEntry;
 
-    if (autoComOverlayLive) {
-      autoComOverlayEntry.remove();
-      autoComOverlayLive = false;
-    }
+    if (aco!=null) aco.remove();
 
     autoComOverlayEntry = OverlayEntry(
       builder: (context) => FutureBuilder(
         future: Future.wait([
-          autoComplete(value),
+          autoComplete(textController.text),
           Future.delayed(const Duration(milliseconds: 250)),
         ]).timeout(const Duration(seconds: 3), onTimeout: () {
           // Handle the timeout here if necessary
@@ -207,7 +166,8 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
                   left: textOffset.dx,
                   width: textSize.width - 56,
                   child: AutoComOverlay(
-                    lemmas: lemmas,
+                      textController: textController,
+                    lemmas: lemmas
                   ),
                 ),
               ],
@@ -217,7 +177,6 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
       ),
     );
 
-    Overlay.of(context).insert(autoComOverlayEntry);
-    autoComOverlayLive = true;
+    Overlay.of(context).insert(autoComOverlayEntry!);
   }
 }

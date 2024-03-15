@@ -5,8 +5,9 @@ import '../../main.dart';
 
 class AutoComOverlay extends StatefulWidget {
   final dynamic lemmas;
+  final TextEditingController textController;
 
-  const AutoComOverlay({super.key, required this.lemmas});
+  const AutoComOverlay({super.key, required this.lemmas, required this.textController});
 
   @override
   State<AutoComOverlay> createState() => _AutoComOverlayState();
@@ -54,6 +55,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
               ),
               onPressed: () {
                 varController.query = lemma['form'];
+                widget.textController.text=varController.query;
                 Navigator.pushReplacementNamed(context, ResultView.routeName);
               },
               child: Text(lemma['form'], style: const TextStyle(fontWeight: FontWeight.bold)),

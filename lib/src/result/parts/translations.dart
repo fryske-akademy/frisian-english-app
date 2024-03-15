@@ -206,7 +206,7 @@ class _TranslationsState extends State<Translations> {
                     },
                     iconSize: 20,
                     icon: const Icon(Icons.email),
-                    tooltip: AppLocalizations.of(context)!.translation,
+                    tooltip: "Feedback " + AppLocalizations.of(context)!.translation,
                   ),
                 ),
               ],
