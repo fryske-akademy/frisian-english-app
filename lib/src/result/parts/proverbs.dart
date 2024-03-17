@@ -75,8 +75,8 @@ class _ProverbsState extends State<Proverbs> {
                     surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
                     borderRadius: BorderRadius.circular(10),
                     child: ListTile(
-                      title: RichText(
-                        text: TextSpan(
+                      title: SelectableText.rich(
+                        TextSpan(
                           text: '',
                           style: TextStyle(
                             color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
@@ -88,8 +88,8 @@ class _ProverbsState extends State<Proverbs> {
                       ),
                       subtitle: Padding(
                         padding: const EdgeInsets.only(top: 15.0),
-                        child: RichText(
-                          text: TextSpan(
+                        child: SelectableText.rich(
+                          TextSpan(
                             text: '',
                             style: TextStyle(
                               color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
