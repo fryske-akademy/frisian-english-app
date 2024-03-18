@@ -50,7 +50,7 @@ class SettingsService {
 
   Future<bool> isFryEn() async {
     final prefs = await SharedPreferences.getInstance();
-    final isFryEn = prefs.getBool('isFryEn') ?? false;
+    final isFryEn = prefs.getBool('isFryEn') ?? true;
     return isFryEn;
   }
 

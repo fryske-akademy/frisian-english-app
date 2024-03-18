@@ -67,19 +67,16 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
           }
 
           Lemma lemma = Lemma();
-
+          // TODO we can have multiple results here, now we just pick the first
           for (Lemma item in snapshot.data) {
-            if (item.form == query) {
-              lemma.typename = item.typename;
-              lemma.link = item.link;
-              lemma.form = item.form;
-              lemma.grammar.addAll(item.grammar);
-              lemma.translations.addAll(item.translations);
-              lemma.subForms.addAll(item.subForms);
-            }
+            lemma.typename = item.typename;
+            lemma.link = item.link;
+            lemma.form = item.form;
+            lemma.grammar.addAll(item.grammar);
+            lemma.translations.addAll(item.translations);
+            lemma.subForms.addAll(item.subForms);
+            break;
           }
-
-          lemma;
 
           if (lemma.form == '') {
             List<String> words = varController.query.split(RegExp(r'[ /,]'));
@@ -135,7 +132,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
           }
 
           return FutureBuilder(
-            future: varController.isFryEn ? getDetails(lemma.link) : Future.value('isEnglish'),
+            future: getDetails(lemma.link),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return const Center(child: CircularProgressIndicator());
@@ -143,28 +140,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 
               Details details = Details();
 
-              if (varController.isFryEn) {
-                for (Details detail in snapshot.data) {
-                  if (detail.lemma.form == lemma.form) {
-                    details.typename = detail.typename;
-                    details.source = detail.source;
-
-                    details.lemma = detail.lemma;
-
-                    details.link = detail.link;
-
-                    details.translations.addAll(detail.translations);
-                    details.senses.addAll(detail.senses);
-                    details.texts.addAll(detail.texts);
-                  }
-                }
-              } else {
-                details.lemma = lemma;
-              }
-
-              details.lemma.merge(lemma);
-
-              details.lemma;
+              details.lemma = lemma;
 
               var history = varController.history;
 

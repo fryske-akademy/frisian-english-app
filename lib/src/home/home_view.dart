@@ -24,7 +24,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     super.initState();
-    varController.updateisFryEn(true);
+    varController.updateisFryEn(varController.isFryEn);
   }
 
   @override
