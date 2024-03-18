@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:frysish/main.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
@@ -25,7 +27,7 @@ Future autoComplete(String value) async {
   if (lemmasResult.hasException) {
   }
 
-  final Map<String, dynamic> lemmasData = lemmasResult.data as Map<String, dynamic>;
+  final List lemmasData = lemmasResult.data!['lemmasearch']['lemmas'] as List;
 
-  return lemmasData['lemmasearch']['lemmas'];
+  return lemmasData.map((e) => e['form']).toSet().toList();
 }

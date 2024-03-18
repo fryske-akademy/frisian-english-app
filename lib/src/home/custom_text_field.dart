@@ -137,7 +137,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
         ]).timeout(const Duration(seconds: 3), onTimeout: () {
           // Handle the timeout here if necessary
           return [];
-        }).then((results) => results.isNotEmpty ? results[0] : []),
+        }).then((results) => results.isNotEmpty ? results : []),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Positioned(

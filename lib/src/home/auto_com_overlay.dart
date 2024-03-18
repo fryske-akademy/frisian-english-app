@@ -30,10 +30,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
 
   @override
   Widget build(BuildContext context) {
-    var uniqueLemmas = widget.lemmas.toSet().toList();
-    var singleWordLemmas = uniqueLemmas.where((lemma) => !lemma['form'].contains(' ')).toList();
-
-    singleWordLemmas;
+    var singleWordLemmas = widget.lemmas[0];
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(12.5, 0, 25, 0),
@@ -54,11 +51,11 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
               ),
               onPressed: () {
-                varController.query = lemma['form'];
+                varController.query = lemma;
                 widget.textController.text=varController.query;
                 Navigator.pushReplacementNamed(context, ResultView.routeName);
               },
-              child: Text(lemma['form'], style: const TextStyle(fontWeight: FontWeight.bold)),
+              child: Text(lemma, style: const TextStyle(fontWeight: FontWeight.bold)),
             );
           },
         ),
