@@ -130,6 +130,9 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               }
 
               Details details = snapshot.data as Details;
+              if (!varController.isFryEn) {
+                details=toEnglish(details);
+              }
 
               var history = varController.history;
 

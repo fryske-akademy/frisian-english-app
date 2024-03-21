@@ -34,7 +34,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
     textController.addListener(() {
       _handleTextChanged(context);
     });
-    if (varController.query.contains(RegExp(r'^' + CustomTextField.allowed + '*\$'))) {
+    if (varController.query.contains(RegExp(r'^$(CustomTextField.allowed)*\$'))) {
       textController.text=varController.query;
     }
     WidgetsBinding.instance.addObserver(this);
@@ -119,10 +119,10 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   }
 
   Future<void> renderOverlay(BuildContext context) async {
-    final RenderBox submitButton = submitKey.currentContext!.findRenderObject() as RenderBox;
+    final RenderBox submitButton = submitKey.currentContext?.findRenderObject() as RenderBox;
     final submitOffset = submitButton.localToGlobal(Offset.zero);
 
-    final RenderBox textField = textFieldKey.currentContext!.findRenderObject() as RenderBox;
+    final RenderBox textField = textFieldKey.currentContext?.findRenderObject() as RenderBox;
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
     final aco = autoComOverlayEntry;

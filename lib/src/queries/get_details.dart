@@ -1,3 +1,4 @@
+import 'package:frysish/main.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
 
@@ -92,7 +93,6 @@ Future<Details> getDetails(dynamic link) async {
   Details details = Details();
   for (var detail in detailsData['details']) {
 
-    details.typename = detail['__typename'] ?? '';
     details.source = detail['source'] ?? '';
 
     details.lemma.form = detail['lemma']['form'] ?? '';
@@ -111,4 +111,13 @@ Future<Details> getDetails(dynamic link) async {
   }
   return details;
 
+}
+Details toEnglish(Details details) {
+  Details english = Details();
+  english.lemma.form=varController.query;
+  english.lemma.lang="en";
+  english.lemma.grammar.addAll(details.lemma.grammar);
+  english.translations.add({'form': details.lemma.form, "lang": "fry"});
+  english.texts=details.texts;
+  return english;
 }

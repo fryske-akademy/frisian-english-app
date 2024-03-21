@@ -1,7 +1,6 @@
 import 'package:frysish/lemma.dart';
 
 class Details{
-  String typename = '';
   String source = '';
   
   Lemma lemma = Lemma();

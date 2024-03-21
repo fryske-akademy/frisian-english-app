@@ -59,6 +59,7 @@ class _DetailsViewState extends State<DetailsView> {
                                 varController.detailOverlayEntry.dispose();
                                 varController.detailOverlayLive = false;
                                 varController.query = string;
+                                varController.updateisFryEn(true);
                                 Navigator.pop(context);
                                 Navigator.pushNamed(context, ResultView.routeName);
                               },
