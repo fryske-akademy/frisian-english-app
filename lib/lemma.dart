@@ -6,7 +6,6 @@ class Synonym {
 }
 
 class Lemma {
-  String typename = '';
   String form = '';
   String lang = '';
   String article = '';
@@ -22,9 +21,6 @@ class Lemma {
   Lemma();
 
   void merge(Lemma other) {
-    if (other.typename.isNotEmpty) {
-      typename = other.typename;
-    }
     if (other.form.isNotEmpty) {
       form = other.form;
     }
@@ -227,7 +223,6 @@ class Lemma {
 
   factory Lemma.fromJson(Map<String, dynamic> jsonData) {
     Lemma lemma = Lemma();
-    lemma.typename = jsonData['typename'];
     lemma.form = jsonData['form'];
     lemma.lang = jsonData['lang'];
     lemma.article = jsonData['article'];
@@ -240,7 +235,6 @@ class Lemma {
   }
 
   Map<String, dynamic> toJson() => {
-        'typename': typename,
         'form': form,
         'lang': lang,
         'article': article,

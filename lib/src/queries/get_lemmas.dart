@@ -10,22 +10,8 @@ Future<List<Lemma>> getLemmas(String query) async {
   const String lemmasQuery = r'''
     query lemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $pos: GramType $sensitive: Boolean!=false $source: String $lexiconFallback: Boolean!=false) {
         lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm pos: $pos sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
-            message {
-                level text
-            }
-            offset max total lemmas {
-                link {...detaillink} form grammar translations {
-                    form
-                    lang
-                }
-                subForms {
-                    __typename
-                    ... on ParadigmCategory { type forms { form lang grammar hyphenation } }
-                    ... on Paradigm { form lang grammar hyphenation }
-                    ... on Synonym { form lang meaning }
-                    ... on Variant { form lang }
-                    ... on Dutchism { form lang }
-                }
+            lemmas {
+                link {...detaillink} form
             }
         }
     }
@@ -51,11 +37,8 @@ Future<List<Lemma>> getLemmas(String query) async {
   for (var lemma in lemmasData['lemmasearch']['lemmas']) {
     Lemma newlemma = Lemma();
 
-    newlemma.typename = lemma['__typename'] ?? '';
     newlemma.link = lemma['link'] ?? '';
     newlemma.form = lemma['form'] ?? '';
-    newlemma.grammar = lemma['grammar'] ?? '';
-    newlemma.subForms = lemma['subForms'] ?? [];
 
     lemmas.add(newlemma);
   }

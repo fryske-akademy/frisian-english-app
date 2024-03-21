@@ -95,7 +95,6 @@ Future<Details> getDetails(dynamic link) async {
     details.typename = detail['__typename'] ?? '';
     details.source = detail['source'] ?? '';
 
-    details.lemma.typename = detail['lemma']['__typename'] ?? '';
     details.lemma.form = detail['lemma']['form'] ?? '';
     details.lemma.lang = detail['lemma']['lang'] ?? '';
     details.lemma.article = detail['lemma']['article'] ?? '';
