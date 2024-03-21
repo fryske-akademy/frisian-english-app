@@ -122,7 +122,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
                               overlayColor: MaterialStateProperty.all(Colors.transparent),
                             ),
                             child: Text(widget.lemma.synonyms[index].form),
-                            onPressed: () => widget.onPressed(widget.lemma.synonyms[index]),
+                            onPressed: () => widget.onPressed(widget.lemma.synonyms[index].form),
                             onLongPress: () {
                               RenderBox renderBox = keys[index].currentContext!.findRenderObject() as RenderBox;
                               var size = renderBox.size;
