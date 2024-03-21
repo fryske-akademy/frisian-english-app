@@ -15,7 +15,6 @@ class Lemma {
   Map<String, dynamic> link = {};
 
   List grammar = [];
-  List translations = [];
   List subForms = [];
 
   bool toBeDeleted = false;
@@ -43,9 +42,6 @@ class Lemma {
     }
     if (other.grammar.isNotEmpty) {
       grammar = other.grammar;
-    }
-    if (other.translations.isNotEmpty) {
-      translations = other.translations;
     }
     if (other.subForms.isNotEmpty) {
       subForms = other.subForms;
@@ -251,7 +247,6 @@ class Lemma {
         'hyphenation': hyphenation,
         'link': link,
         'grammar': grammar,
-        'translations': translations,
         'subForms': subForms,
         'toBeDeleted': toBeDeleted,
       };

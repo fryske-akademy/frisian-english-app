@@ -55,7 +55,6 @@ Future<List<Lemma>> getLemmas(String query) async {
     newlemma.link = lemma['link'] ?? '';
     newlemma.form = lemma['form'] ?? '';
     newlemma.grammar = lemma['grammar'] ?? '';
-    newlemma.translations = lemma['translations'] ?? [];
     newlemma.subForms = lemma['subForms'] ?? [];
 
     lemmas.add(newlemma);
