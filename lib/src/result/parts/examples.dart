@@ -11,7 +11,7 @@ class FilteredData {
 }
 
 class Examples extends StatefulWidget {
-  final texts;
+  final List texts;
   const Examples(this.texts, {super.key});
 
   @override

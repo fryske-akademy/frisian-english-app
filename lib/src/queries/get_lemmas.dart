@@ -4,7 +4,7 @@ import 'package:graphql/client.dart';
 
 import '../../lemma.dart';
 
-Future getLemmas(String query) async {
+Future<List<Lemma>> getLemmas(String query) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String lemmasQuery = r'''

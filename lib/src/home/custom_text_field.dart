@@ -26,7 +26,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
 
   OverlayEntry? autoComOverlayEntry;
 
-  late var lemmas;
+  late List<dynamic>? lemmas;
 
   @override
   void initState() {
@@ -44,7 +44,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     textController.dispose();
-    if (autoComOverlayEntry!=null) {autoComOverlayEntry?.remove();autoComOverlayEntry?.dispose();}
+    if (autoComOverlayEntry!=null&&autoComOverlayEntry!.mounted) {autoComOverlayEntry?.remove();autoComOverlayEntry?.dispose();}
     varController.removeOverlay();
     super.dispose();
   }

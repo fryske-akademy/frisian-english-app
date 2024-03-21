@@ -1,18 +1,18 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/details.dart';
 import 'package:frysish/src/home/home_view.dart';
 import 'package:frysish/src/list_item.dart';
 import 'package:frysish/src/result/result_view.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import '../../../main.dart';
 
 class Translations extends StatefulWidget {
-  final lemma;
-  const Translations(this.lemma, {super.key});
+  final Details details;
+  const Translations(this.details, {super.key});
 
   @override
   State<Translations> createState() => _TranslationsState();
@@ -34,7 +34,7 @@ class _TranslationsState extends State<Translations> {
 
   @override
   Widget build(BuildContext context) {
-    var listLength = widget.lemma.translations.length;
+    var listLength = widget.details.translations.length;
 
     if (listLength == 0) {
       return Card(
@@ -98,7 +98,7 @@ class _TranslationsState extends State<Translations> {
                             overlayColor: MaterialStateProperty.all(Colors.transparent),
                           ),
                           child: AutoSizeText(
-                            widget.lemma.translations[currentIndex]['form'],
+                            widget.details.translations[currentIndex]['form'],
                             maxLines: 3,
                             minFontSize: 24,
                             maxFontSize: 40,
@@ -107,12 +107,12 @@ class _TranslationsState extends State<Translations> {
                             textAlign: TextAlign.center,
                           ),
                           onPressed: () {
-                            if (widget.lemma.translations[currentIndex]['lang'] == 'fry') {
+                            if (widget.details.translations[currentIndex]['lang'] == 'fry') {
                               varController.updateisFryEn(true);
                             } else {
                               varController.updateisFryEn(false);
                             }
-                            varController.query = widget.lemma.translations[currentIndex]['form'];
+                            varController.query = widget.details.translations[currentIndex]['form'];
                             Navigator.pushReplacementNamed(context, ResultView.routeName);
                             //Navigator.pushNamed(context, ResultView.routeName);
                           },
@@ -153,19 +153,19 @@ class _TranslationsState extends State<Translations> {
                   top: 0,
                   right: 0,
                   child: IconButton(
-                    icon: varController.favorites.any((item) => item.form == widget.lemma.translations[currentIndex]['form'])
+                    icon: varController.favorites.any((item) => item.form == widget.details.translations[currentIndex]['form'])
                         ? const Icon(Icons.favorite)
                         : const Icon(Icons.favorite_border),
                     onPressed: () async {
                       List<ListItem> favorites = varController.favorites;
                       setState(() {
-                        if (favorites.any((item) => item.form == widget.lemma.translations[currentIndex]['form'])) {
-                          favorites.removeWhere((item) => item.form == widget.lemma.translations[currentIndex]['form']);
+                        if (favorites.any((item) => item.form == widget.details.translations[currentIndex]['form'])) {
+                          favorites.removeWhere((item) => item.form == widget.details.translations[currentIndex]['form']);
                         } else {
                           ListItem favorite = ListItem();
-                          favorite.form = widget.lemma.translations[currentIndex]['form'];
-                          favorite.isFryEn = widget.lemma.translations[currentIndex]['lang'] == 'fry' ? true : false;
-                          favorite.translation = widget.lemma.form;
+                          favorite.form = widget.details.translations[currentIndex]['form'];
+                          favorite.isFryEn = widget.details.translations[currentIndex]['lang'] == 'fry' ? true : false;
+                          favorite.translation = widget.details.lemma.form;
                           favorites.add(favorite);
                         }
                       });
@@ -181,7 +181,7 @@ class _TranslationsState extends State<Translations> {
                   right: 0,
                   child: IconButton(
                     onPressed: () async {
-                      await Clipboard.setData(ClipboardData(text: widget.lemma.translations[currentIndex]['form']));
+                      await Clipboard.setData(ClipboardData(text: widget.details.translations[currentIndex]['form']));
                     },
                     iconSize: 20,
                     icon: const Icon(Icons.copy),
@@ -199,7 +199,7 @@ class _TranslationsState extends State<Translations> {
 
                       // Add translation to body of email
                       String body =
-                          Uri.encodeComponent(AppLocalizations.of(context)!.translation + ": ${varController.query} - ${widget.lemma.translations[currentIndex]['form']} \n\n Feedback:");
+                          Uri.encodeComponent(AppLocalizations.of(context)!.translation + ": ${varController.query} - ${widget.details.translations[currentIndex]['form']} \n\n Feedback:");
                       Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
                       if (await launchUrl(mail)) {
                       } else {}

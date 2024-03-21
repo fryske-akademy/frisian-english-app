@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter/services.dart';
 import 'package:frysish/src/home/home_view.dart';
 import 'package:frysish/src/text_search/text_result.dart';
 
@@ -33,7 +32,7 @@ class _TextSearchState extends State<TextSearch> {
     super.initState();
     scrollController = ScrollController();
     textController.text=varController.query;
-    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       await _showDialogAfterDelay();
     });
   }
@@ -178,8 +177,8 @@ class _TextSearchState extends State<TextSearch> {
           autocorrect: true,
           decoration: InputDecoration(
             border: InputBorder.none,
-            contentPadding: EdgeInsets.all(30),
-            hintStyle: TextStyle(fontSize: 18),
+            contentPadding: const EdgeInsets.all(30),
+            hintStyle: const TextStyle(fontSize: 18),
             hintText: AppLocalizations.of(context)!.searchedText,
           ),
           style: const TextStyle(fontSize: 25),

@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
@@ -66,19 +64,9 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
             return const Center(child: CircularProgressIndicator());
           }
 
-          Lemma lemma = Lemma();
-          // TODO we can have multiple results here, now we just pick the first
-          for (Lemma item in snapshot.data) {
-            lemma.typename = item.typename;
-            lemma.link = item.link;
-            lemma.form = item.form;
-            lemma.grammar.addAll(item.grammar);
-            lemma.translations.addAll(item.translations);
-            lemma.subForms.addAll(item.subForms);
-            break;
-          }
+          final List<Lemma> lemmas = snapshot.data as List<Lemma>;
 
-          if (lemma.form == '') {
+          if (!snapshot.hasData || lemmas.isEmpty) {
             List<String> words = varController.query.split(RegExp(r'[ /,]'));
 
             // Create a list of TextButtons or Text widgets
@@ -131,16 +119,17 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
             );
           }
 
+          Lemma lemma = lemmas[0];
+          // TODO deal with multiple lemmas
+
           return FutureBuilder(
             future: getDetails(lemma.link),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) {
+              if (!snapshot.hasData || snapshot.data!.lemma.form=="") {
                 return const Center(child: CircularProgressIndicator());
               }
 
-              Details details = Details();
-
-              details.lemma = lemma;
+              Details details = snapshot.data as Details;
 
               var history = varController.history;
 
@@ -189,7 +178,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                                 padding: MediaQuery.of(context).size.width > 768
                                     ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
                                     : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                                child: Translations(details.lemma),
+                                child: Translations(details),
                               ),
                             ),
                             Expanded(

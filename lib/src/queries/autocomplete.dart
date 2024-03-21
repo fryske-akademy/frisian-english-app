@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:frysish/main.dart';
 import 'package:get_it/get_it.dart';

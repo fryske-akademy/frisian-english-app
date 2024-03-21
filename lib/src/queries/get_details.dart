@@ -3,7 +3,7 @@ import 'package:graphql/client.dart';
 
 import '../../details.dart';
 
-Future getDetails(dynamic link) async {
+Future<Details> getDetails(dynamic link) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String detailsQuery = r'''
@@ -80,6 +80,7 @@ Future getDetails(dynamic link) async {
   final QueryOptions detailsOptions = QueryOptions(document: gql(detailsQuery), variables: <String, dynamic>{
     'lemma': link['lemma'],
     'source': link['source'],
+    'pos': link['pos']
   });
 
   final QueryResult detailsResult = await client.query(detailsOptions);
@@ -88,28 +89,28 @@ Future getDetails(dynamic link) async {
 
   final Map<String, dynamic> detailsData = detailsResult.data as Map<String, dynamic>;
 
-  List<Details> details = [];
-
+  Details details = Details();
   for (var detail in detailsData['details']) {
-    Details newdetails = Details();
 
-    newdetails.typename = detail['__typename'] ?? '';
-    newdetails.source = detail['source'] ?? '';
+    details.typename = detail['__typename'] ?? '';
+    details.source = detail['source'] ?? '';
 
-    newdetails.lemma.typename = detail['lemma']['__typename'] ?? '';
-    newdetails.lemma.form = detail['lemma']['form'] ?? '';
-    newdetails.lemma.lang = detail['lemma']['lang'] ?? '';
-    newdetails.lemma.article = detail['lemma']['article'] ?? '';
-    newdetails.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
-    newdetails.lemma.subForms = detail['lemma']['subForms'] ?? '';
+    details.lemma.typename = detail['lemma']['__typename'] ?? '';
+    details.lemma.form = detail['lemma']['form'] ?? '';
+    details.lemma.lang = detail['lemma']['lang'] ?? '';
+    details.lemma.article = detail['lemma']['article'] ?? '';
+    details.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
+    details.lemma.subForms = detail['lemma']['subForms'] ?? '';
+    details.lemma.grammar = detail['lemma']['grammar'] ?? [];
+    details.lemma.translations = detail['lemma']['translations'] ?? [];
 
-    newdetails.translations = detail['translations'] ?? [];
-    newdetails.link = detail['link'] ?? {};
-    newdetails.senses = detail['senses'] ?? [];
-    newdetails.texts = detail['texts'] ?? [];
-
-    details.add(newdetails);
+    details.translations = detail['translations'] ?? [];
+    details.link = detail['link'] ?? {};
+    details.senses = detail['senses'] ?? [];
+    details.texts = detail['texts'] ?? [];
+    // TODO multiple details should not occur, review this
+    break;
   }
-
   return details;
+
 }
