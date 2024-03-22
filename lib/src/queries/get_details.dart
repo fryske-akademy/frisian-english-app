@@ -117,24 +117,38 @@ Future<List<Details>> getDetails(dynamic link) async {
 
 // construct english details from the given frisian details with english translations
 Details toEnglish(List<Details> details) {
-  List<String> trs = [];
-  // when we have more details, these will be different meanings
-  for (Details d in details) {
-    String _tr = d.lemma.form;
-    if (!d.translations.isEmpty) _tr += " (" + d.translations[0]["form"];
-    for (int i = 1; i < d.translations.length; i++) {
-      _tr += "; " + d.translations[i]["form"];
-    }
-    if (!d.translations.isEmpty) _tr += ")";
-    trs.add(_tr);
-  }
+  Iterable<String> trs = details.map((e) => fromPlusTrans(e) );
   Details english = Details();
   english.lemma.form = varController.query;
   english.lemma.lang = "en";
   english.lemma.grammar.addAll(details[0].lemma.grammar);
   english.translations.addAll(trs.map((e) => {"form": e, "lang": "fry"}));
   for (Details d in details) {
+    english.texts.add(header(fromPlusTrans(d)));
     english.texts.addAll(d.texts);
   }
   return english;
+}
+
+String fromPlusTrans(Details e) {
+  List<String> one = ["",""];
+  if (e.translations.length==1) {
+    one[0]=" ("; one[1]=")";
+  }
+  return e.lemma.form + one[0] +
+    e.translations.map((e) => e["form"]).reduce((value, element) => ' (${value}; ${element})') + one[1];
+}
+
+dynamic header(String t) {
+  return {
+    "__typename": "Example",
+    "text": {
+      "__typename": "FormattedText",
+      "text": [{
+        "__typename": "T",
+        "textT": "Examples for: $t:"
+      }]
+    },
+    "translations": []
+  };
 }

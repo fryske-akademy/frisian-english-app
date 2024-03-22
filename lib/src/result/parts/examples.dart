@@ -40,10 +40,10 @@ class _ExamplesState extends State<Examples> {
       var text = example['text']['text'];
       var textSpans = getRichText(text);
 
-      var translations = example['translations'][0]['text']['text'];
+      var translations = example['translations'].length==0?[]:example['translations'][0]['text']['text'];
       var transSpans = getRichText(translations);
 
-      if (textSpans.isEmpty || textSpans.first.text == '' || transSpans.isEmpty) {
+      if (textSpans.isEmpty || textSpans.first.text == '') {
         continue;
       }
 
