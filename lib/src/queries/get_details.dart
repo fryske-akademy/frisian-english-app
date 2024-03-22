@@ -117,14 +117,14 @@ Future<List<Details>> getDetails(dynamic link) async {
 
 // construct english details from the given frisian details with english translations
 Details toEnglish(List<Details> details) {
-  Iterable<String> trs = details.map((e) => fromPlusTrans(e) );
+  Iterable<String> trs = details.map((e) => details.length==1?e.lemma.form:fromPlusTrans(e) );
   Details english = Details();
   english.lemma.form = varController.query;
   english.lemma.lang = "en";
   english.lemma.grammar.addAll(details[0].lemma.grammar);
   english.translations.addAll(trs.map((e) => {"form": e, "lang": "fry"}));
   for (Details d in details) {
-    english.texts.add(header(fromPlusTrans(d)));
+    if (details.length>1) english.texts.add(header(fromPlusTrans(d)));
     english.texts.addAll(d.texts);
   }
   return english;
