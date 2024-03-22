@@ -34,9 +34,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
     textController.addListener(() {
       _handleTextChanged(context);
     });
-    if (varController.query.contains(RegExp(r'^$(CustomTextField.allowed)*\$'))) {
-      textController.text=varController.query;
-    }
+    textController.text=varController.query.replaceFirst(RegExp(r'\s.*'),"");
     WidgetsBinding.instance.addObserver(this);
   }
 

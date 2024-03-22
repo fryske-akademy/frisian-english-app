@@ -9,7 +9,6 @@ import '../../details.dart';
 import '../../main.dart';
 import '../list_item.dart';
 import '../queries/get_details.dart';
-
 import 'parts/examples.dart';
 import 'parts/proverbs.dart';
 import 'parts/translations.dart';
@@ -125,24 +124,17 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
           return FutureBuilder(
             future: getDetails(lemma.link),
             builder: (context, snapshot) {
-              if (!snapshot.hasData || snapshot.data!.lemma.form=="") {
+              if (!snapshot.hasData || snapshot.data!.isEmpty) {
                 return const Center(child: CircularProgressIndicator());
               }
 
-              Details details = snapshot.data as Details;
+              List<Details> all = snapshot.data as List<Details>;
+              Details details = all[0];
               if (!varController.isFryEn) {
-                details=toEnglish(details);
+                details = toEnglish(all);
               }
 
-              var history = varController.history;
-
-              if (!history.any((item) => item.form == details.lemma.form)) {
-                ListItem item = ListItem();
-                item.form = details.lemma.form;
-                item.isFryEn = details.lemma.lang == 'fry' ? true : false;
-                history.add(item);
-                varController.updateHistory(history);
-              }
+              remember(details);
 
               return PopScope(
                 canPop: false,
@@ -218,5 +210,16 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
         },
       ),
     );
+  }
+
+  void remember(Details details) {
+    var history = varController.history;
+    
+    if (!history.any((item) => item.form == details.lemma.form)) {
+      ListItem item = ListItem();
+      item.form = details.lemma.form;
+      item.isFryEn = details.lemma.lang == 'fry' ? true : false;
+      history.add(item);
+    }
   }
 }

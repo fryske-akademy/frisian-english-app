@@ -4,7 +4,7 @@ import 'package:graphql/client.dart';
 
 import '../../details.dart';
 
-Future<Details> getDetails(dynamic link) async {
+Future<List<Details>> getDetails(dynamic link) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String detailsQuery = r'''
@@ -78,20 +78,24 @@ Future<Details> getDetails(dynamic link) async {
     }
   ''';
 
-  final QueryOptions detailsOptions = QueryOptions(document: gql(detailsQuery), variables: <String, dynamic>{
-    'lemma': link['lemma'],
-    'source': link['source'],
-    'pos': link['pos']
-  });
+  final QueryOptions detailsOptions = QueryOptions(
+      document: gql(detailsQuery),
+      variables: <String, dynamic>{
+        'lemma': link['lemma'],
+        'source': link['source'],
+        'pos': link['pos']
+      });
 
   final QueryResult detailsResult = await client.query(detailsOptions);
 
   if (detailsResult.hasException) {}
 
-  final Map<String, dynamic> detailsData = detailsResult.data as Map<String, dynamic>;
+  final Map<String, dynamic> detailsData =
+      detailsResult.data as Map<String, dynamic>;
 
-  Details details = Details();
+  List<Details> l = [];
   for (var detail in detailsData['details']) {
+    Details details = Details();
 
     details.source = detail['source'] ?? '';
 
@@ -106,18 +110,31 @@ Future<Details> getDetails(dynamic link) async {
     details.link = detail['link'] ?? {};
     details.senses = detail['senses'] ?? [];
     details.texts = detail['texts'] ?? [];
-    // TODO multiple details should not occur, review this
-    break;
+    l.add(details);
   }
-  return details;
-
+  return l;
 }
-Details toEnglish(Details details) {
+
+// construct english details from the given frisian details with english translations
+Details toEnglish(List<Details> details) {
+  List<String> trs = [];
+  // when we have more details, these will be different meanings
+  for (Details d in details) {
+    String _tr = d.lemma.form;
+    if (!d.translations.isEmpty) _tr += " (" + d.translations[0]["form"];
+    for (int i = 1; i < d.translations.length; i++) {
+      _tr += "; " + d.translations[i]["form"];
+    }
+    if (!d.translations.isEmpty) _tr += ")";
+    trs.add(_tr);
+  }
   Details english = Details();
-  english.lemma.form=varController.query;
-  english.lemma.lang="en";
-  english.lemma.grammar.addAll(details.lemma.grammar);
-  english.translations.add({'form': details.lemma.form, "lang": "fry"});
-  english.texts=details.texts;
+  english.lemma.form = varController.query;
+  english.lemma.lang = "en";
+  english.lemma.grammar.addAll(details[0].lemma.grammar);
+  english.translations.addAll(trs.map((e) => {"form": e, "lang": "fry"}));
+  for (Details d in details) {
+    english.texts.addAll(d.texts);
+  }
   return english;
 }
