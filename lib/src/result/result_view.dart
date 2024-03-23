@@ -59,6 +59,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               }
 
               List<Details> all = snapshot.data as List<Details>;
+              // TODO deal with multiple details
               Details details = all[0];
               if (!varController.isFryEn) {
                 details = toEnglish(all);

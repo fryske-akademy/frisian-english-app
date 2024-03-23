@@ -113,6 +113,7 @@ class _TranslationsState extends State<Translations> {
                               varController.updateisFryEn(false);
                             }
                             varController.query = widget.details.translations[currentIndex]['form'];
+                            // TODO here we better go to details directly, not via lemma search
                             findDetails(varController.query, context);
                           },
                         ),
