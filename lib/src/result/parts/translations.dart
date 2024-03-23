@@ -113,8 +113,7 @@ class _TranslationsState extends State<Translations> {
                               varController.updateisFryEn(false);
                             }
                             varController.query = widget.details.translations[currentIndex]['form'];
-                            Navigator.pushReplacementNamed(context, ResultView.routeName);
-                            //Navigator.pushNamed(context, ResultView.routeName);
+                            findDetails(varController.query, context);
                           },
                         ),
                       ),

@@ -61,7 +61,7 @@ class _DetailsViewState extends State<DetailsView> {
                                 varController.query = string;
                                 varController.updateisFryEn(true);
                                 Navigator.pop(context);
-                                Navigator.pushNamed(context, ResultView.routeName);
+                                findDetails(string, context);
                               },
                             );
                           },

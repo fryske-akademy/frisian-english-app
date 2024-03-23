@@ -158,10 +158,10 @@ class _HomeViewState extends State<HomeView> {
                       ) {
                         final bool connected = connectivity != ConnectivityResult.none;
                         if (connected) {
-                          return CustomTextField(
+                          return CustomTextField (
                             onPressed: (value) async {
                               varController.removeOverlay();
-                              Navigator.pushNamed(context, ResultView.routeName);
+                              findDetails(value, context);
                             },
                           );
                         } else {

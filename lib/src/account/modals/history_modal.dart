@@ -25,7 +25,7 @@ class _HistoryModalState extends State<HistoryModal> {
   void goToResultView(ListItem listItem, BuildContext context) {
     varController.query = listItem.form;
     varController.updateisFryEn(listItem.isFryEn);
-    Navigator.pushNamed(context, ResultView.routeName);
+    findDetails(varController.query, context);
   }
 
   @override

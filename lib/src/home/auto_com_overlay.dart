@@ -30,7 +30,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
 
   @override
   Widget build(BuildContext context) {
-    var singleWordLemmas = widget.lemmas[0];
+    var singleWordLemmas = widget.lemmas.isEmpty ? "" : widget.lemmas[0];
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(12.5, 0, 25, 0),
@@ -53,7 +53,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
               onPressed: () {
                 varController.query = lemma;
                 widget.textController.text=varController.query;
-                Navigator.pushReplacementNamed(context, ResultView.routeName);
+                findDetails(lemma, context);
               },
               child: Text(lemma, style: const TextStyle(fontWeight: FontWeight.bold)),
             );

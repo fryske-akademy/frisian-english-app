@@ -44,7 +44,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
                               ? () {
                                   varController.query = listItem.translation;
                                   varController.updateisFryEn(!listItem.isFryEn);
-                                  Navigator.pushNamed(context, ResultView.routeName);
+                                  findDetails(varController.query, context);
                                 }
                               : null,
                           child: AutoSizeText(
@@ -65,7 +65,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
                               ? () {
                                   varController.query = listItem.form;
                                   varController.updateisFryEn(listItem.isFryEn);
-                                  Navigator.pushNamed(context, ResultView.routeName);
+                                  findDetails(varController.query, context);
                                 }
                               : null,
                           child: AutoSizeText(

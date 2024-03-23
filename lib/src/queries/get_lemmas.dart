@@ -17,7 +17,7 @@ Future<List<Lemma>> getLemmas(String query) async {
     }
     # use lemma, pos and source from results to link to details
     fragment detaillink on LemmaLink {
-        source lemma pos lang
+        source lemma pos
     }
   ''';
 

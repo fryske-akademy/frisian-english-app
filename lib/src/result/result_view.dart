@@ -4,6 +4,7 @@ import 'package:frysish/lemma.dart';
 import 'package:frysish/src/home/home_view.dart';
 import 'package:frysish/src/queries/get_lemmas.dart';
 import 'package:frysish/src/result/parts/details.dart';
+import 'package:select_dialog/select_dialog.dart';
 
 import '../../details.dart';
 import '../../main.dart';
@@ -47,81 +48,10 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    String query = varController.query;
-    query;
+    final arguments = (ModalRoute.of(context)?.settings.arguments ?? <String, dynamic>{}) as Map;
+    final Lemma lemma = arguments["lemma"];
 
-    return Material(
-      child: FutureBuilder(
-        future: getLemmas(query).timeout(
-          const Duration(seconds: 3),
-          onTimeout: () {
-            return [];
-          },
-        ),
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-
-          final List<Lemma> lemmas = snapshot.data as List<Lemma>;
-
-          if (!snapshot.hasData || lemmas.isEmpty) {
-            List<String> words = varController.query.split(RegExp(r'[ /,]'));
-
-            // Create a list of TextButtons or Text widgets
-            List<Widget> widgets = words
-                .where((word) => word.isNotEmpty)
-                .map(
-                  (word) => RegExp(r'^[a-zA-Z\u00C0-\u017F]+$').hasMatch(word)
-                      ? TextButton(
-                          onPressed: () {
-                            varController.query = word;
-                            Navigator.pushReplacementNamed(context, ResultView.routeName);
-                          },
-                          style: TextButton.styleFrom(
-                            minimumSize: Size.zero,
-                            padding: const EdgeInsets.all(5),
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                          ),
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            '$word ',
-                            style: const TextStyle(fontSize: 20),
-                          ),
-                        )
-                      : Text(
-                          '$word ',
-                          style: const TextStyle(fontSize: 20),
-                        ),
-                )
-                .toList();
-
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    AppLocalizations.of(context)!.searchedText,
-                    style: const TextStyle(fontSize: 25),
-                  ),
-                  const SizedBox(height: 25),
-                  Wrap(crossAxisAlignment: WrapCrossAlignment.center, alignment: WrapAlignment.center, spacing: 0.0, runSpacing: 0.0, children: widgets),
-                  const SizedBox(height: 25),
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, HomeView.routeName);
-                    },
-                    icon: const Icon(Icons.home),
-                  )
-                ],
-              ),
-            );
-          }
-
-          Lemma lemma = lemmas[0];
-          // TODO deal with multiple lemmas
-
-          return FutureBuilder(
+    return FutureBuilder(
             future: getDetails(lemma.link),
             builder: (context, snapshot) {
               if (!snapshot.hasData || snapshot.data!.isEmpty) {
@@ -207,14 +137,11 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               );
             },
           );
-        },
-      ),
-    );
   }
 
   void remember(Details details) {
     var history = varController.history;
-    
+
     if (!history.any((item) => item.form == details.lemma.form)) {
       ListItem item = ListItem();
       item.form = details.lemma.form;
@@ -222,4 +149,33 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
       history.add(item);
     }
   }
+}
+void findDetails(String text, BuildContext context) {
+  getLemmas(text).timeout(
+      const Duration(seconds: 3),
+      onTimeout: () => []).then((value) => toDetails(value, context));
+}
+
+void toDetails(List<Lemma> value, BuildContext context) {
+  Lemma l = value.isEmpty ? Lemma() : value[0];
+  if (value.length>1) {
+    SelectDialog.showModal<Lemma>(
+      context,
+      label: AppLocalizations.of(context)!.choose,
+      selectedValue: l,
+      items: List.of(value),
+      onChange: (Lemma selected) {
+          l = selected;
+          Future.microtask(() => Navigator.pushReplacementNamed(
+              context, ResultView.routeName, arguments: {"lemma": l})
+          );
+      },
+    );
+  } else {
+    if (l.form!="") {
+      Navigator.pushReplacementNamed(
+          context, ResultView.routeName, arguments: {"lemma": l});
+    }
+  }
+
 }

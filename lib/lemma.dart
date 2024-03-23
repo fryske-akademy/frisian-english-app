@@ -11,6 +11,9 @@ class Lemma {
   String article = '';
   String hyphenation = '';
 
+  @override
+  String toString() =>  link["lemma"] + (link["lemma"]==form ? "" : " ($form)");
+
   Map<String, dynamic> link = {};
 
   List grammar = [];

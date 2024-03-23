@@ -112,8 +112,8 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-      autoComOverlayEntry?.remove();
-    Navigator.pushReplacementNamed(context, ResultView.routeName);
+    if (autoComOverlayEntry!.mounted) autoComOverlayEntry?.remove();
+    findDetails(textController.text, context);
   }
 
   Future<void> renderOverlay(BuildContext context) async {
