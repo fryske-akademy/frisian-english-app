@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -26,7 +28,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
 
   OverlayEntry? autoComOverlayEntry;
 
-  late List<dynamic>? lemmas;
+  List<String> lemmas=[];
 
   @override
   void initState() {
@@ -117,7 +119,8 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   }
 
   Future<void> renderOverlay(BuildContext context) async {
-    final RenderBox submitButton = submitKey.currentContext?.findRenderObject() as RenderBox;
+    var renderObject = submitKey.currentContext!.findRenderObject();
+    final RenderBox submitButton = renderObject as RenderBox;
     final submitOffset = submitButton.localToGlobal(Offset.zero);
 
     final RenderBox textField = textFieldKey.currentContext?.findRenderObject() as RenderBox;
@@ -150,7 +153,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
           } else if (snapshot.hasError) {
             return const Text('');
           } else {
-            lemmas = snapshot.data;
+            lemmas = snapshot.data![0];
 
             if (lemmas == null) {
               return const SizedBox.shrink(); // Return an empty widget
@@ -163,10 +166,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
                   top: submitOffset.dy,
                   left: textOffset.dx,
                   width: textSize.width - 56,
-                  child: AutoComOverlay(
-                      textController: textController,
-                    lemmas: lemmas
-                  ),
+                  child: AutoComOverlay(lemmas: lemmas),
                 ),
               ],
             );

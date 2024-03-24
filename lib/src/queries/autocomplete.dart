@@ -1,9 +1,11 @@
 
+import 'dart:async';
+
 import 'package:frysish/main.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
 
-Future autoComplete(String value) async {
+Future<List<String>> autoComplete(String value) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String lemmas = r'''
@@ -28,5 +30,5 @@ Future autoComplete(String value) async {
 
   final List lemmasData = lemmasResult.data!['lemmasearch']['lemmas'] as List;
 
-  return lemmasData.map((e) => e['form']).toSet().toList();
+  return lemmasData.map((e) => e['form'] as String).toSet().toList();
 }

@@ -24,24 +24,17 @@ class ResultView extends StatefulWidget {
 }
 
 class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
-  TabController? tabController;
+  late TabController tabController;
 
   @override
   void initState() {
     super.initState();
     tabController = TabController(length: 3, vsync: this);
-    tabController!.addListener(handleTabSelection);
-  }
-
-  @override
-  void dispose() {
-    tabController!.removeListener(handleTabSelection);
-    tabController!.dispose();
-    super.dispose();
+    if (!tabController.hasListeners) tabController.addListener(handleTabSelection);
   }
 
   void handleTabSelection() {
-    if (tabController!.indexIsChanging) {
+    if (tabController.indexIsChanging) {
       varController.removeOverlay();
     }
   }
