@@ -30,7 +30,8 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     tabController = TabController(length: 3, vsync: this);
-    if (!tabController.hasListeners) tabController.addListener(handleTabSelection);
+    tabController.removeListener(handleTabSelection);
+    tabController.addListener(handleTabSelection);
   }
 
   void handleTabSelection() {
@@ -158,6 +159,7 @@ void toDetails(List<Lemma> value, BuildContext context) {
       label: AppLocalizations.of(context)!.choose,
       selectedValue: l,
       items: List.of(value),
+      useRootNavigator: true,
       onChange: (Lemma selected) {
           l = selected;
           Future.microtask(() => Navigator.pushReplacementNamed(

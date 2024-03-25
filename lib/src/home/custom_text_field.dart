@@ -119,6 +119,7 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   }
 
   Future<void> renderOverlay(BuildContext context) async {
+    if (submitKey.currentContext==null) return;
     var renderObject = submitKey.currentContext!.findRenderObject();
     final RenderBox submitButton = renderObject as RenderBox;
     final submitOffset = submitButton.localToGlobal(Offset.zero);
@@ -154,10 +155,6 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
             return const Text('');
           } else {
             lemmas = snapshot.data![0];
-
-            if (lemmas == null) {
-              return const SizedBox.shrink(); // Return an empty widget
-            }
 
             return Stack(
               children: [

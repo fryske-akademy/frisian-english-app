@@ -103,7 +103,7 @@ Future<List<Details>> getDetails(dynamic link) async {
     details.lemma.lang = detail['lemma']['lang'] ?? '';
     details.lemma.article = detail['lemma']['article'] ?? '';
     details.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
-    details.lemma.subForms = detail['lemma']['subForms'] ?? '';
+    details.lemma.subForms = detail['lemma']['subForms'] ?? [];
     details.lemma.grammar = detail['lemma']['grammar'] ?? [];
 
     details.translations = detail['translations'] ?? [];
