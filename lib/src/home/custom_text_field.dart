@@ -127,9 +127,11 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
     final RenderBox textField = textFieldKey.currentContext?.findRenderObject() as RenderBox;
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
-    final aco = autoComOverlayEntry;
 
-    if (aco!=null) aco.remove();
+    if (autoComOverlayEntry!=null && autoComOverlayEntry!.mounted) {
+      autoComOverlayEntry?.remove();
+      autoComOverlayEntry?.dispose();
+    }
 
     autoComOverlayEntry = OverlayEntry(
       builder: (context) => FutureBuilder(
