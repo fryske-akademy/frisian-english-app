@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frysish/src/list_item.dart';
 import 'settings_service.dart';
@@ -16,6 +17,14 @@ class VarController with ChangeNotifier {
   late bool _onboardingShown;
   late bool _isFryEn;
 
+  OverlayEntry? autoComOverlayEntry;
+
+  void hideAutocomplete() {
+    if (autoComOverlayEntry != null && autoComOverlayEntry!.mounted) {
+      autoComOverlayEntry?.remove();
+      autoComOverlayEntry?.dispose();
+    }
+  }
   ThemeMode get themeMode => _themeMode;
   bool get systemThemeOverruled => _systemThemeOverruled;
   Color get primaryColor => _primaryColor;

@@ -28,8 +28,6 @@ class _CustomTextFieldState extends State<CustomTextField>
   final GlobalKey submitKey = GlobalKey();
   final TextEditingController textController = TextEditingController();
 
-  OverlayEntry? autoComOverlayEntry;
-
   @override
   void initState() {
     super.initState();
@@ -42,10 +40,7 @@ class _CustomTextFieldState extends State<CustomTextField>
   }
 
   void hideAutocomplete() {
-    if (autoComOverlayEntry != null && autoComOverlayEntry!.mounted) {
-      autoComOverlayEntry?.remove();
-      autoComOverlayEntry?.dispose();
-    }
+    varController.hideAutocomplete();
   }
 
   @override
@@ -125,7 +120,7 @@ class _CustomTextFieldState extends State<CustomTextField>
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-    if (autoComOverlayEntry!.mounted) autoComOverlayEntry?.remove();
+    varController.hideAutocomplete();
     findDetails(textController.text, context);
   }
 
@@ -157,7 +152,7 @@ class _CustomTextFieldState extends State<CustomTextField>
             List<String> lemmas = results[0];
             var aco = AutoComOverlay(lemmas: lemmas);
 
-            autoComOverlayEntry = OverlayEntry(
+            varController.autoComOverlayEntry = OverlayEntry(
               builder: (context) =>
                   Builder(
                     builder: (context) {
@@ -176,7 +171,7 @@ class _CustomTextFieldState extends State<CustomTextField>
                   ),
             );
 
-            Overlay.of(context).insert(autoComOverlayEntry!);
+            Overlay.of(context).insert(varController.autoComOverlayEntry!);
           }
         }
 

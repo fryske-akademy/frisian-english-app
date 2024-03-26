@@ -146,12 +146,14 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
   }
 }
 void findDetails(String text, BuildContext context) {
+  varController.hideAutocomplete();
   getLemmas(text).timeout(
       const Duration(seconds: 3),
       onTimeout: () => []).then((value) => toDetails(value, context));
 }
 
 void toDetails(List<Lemma> value, BuildContext context) {
+  varController.hideAutocomplete();
   Lemma l = value.isEmpty ? Lemma() : value[0];
   if (value.length>1) {
     SelectDialog.showModal<Lemma>(
