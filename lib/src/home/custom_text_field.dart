@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/lemma.dart';
 import 'package:frysish/src/queries/autocomplete.dart';
 import 'package:frysish/src/result/result_view.dart';
 
@@ -20,7 +21,8 @@ class CustomTextField extends StatefulWidget {
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
 
-class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingObserver {
+class _CustomTextFieldState extends State<CustomTextField>
+    with WidgetsBindingObserver {
   final GlobalKey textstackKey = GlobalKey();
   final GlobalKey textFieldKey = GlobalKey();
   final GlobalKey submitKey = GlobalKey();
@@ -28,23 +30,29 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
 
   OverlayEntry? autoComOverlayEntry;
 
-  List<String> lemmas=[];
-
   @override
   void initState() {
     super.initState();
     textController.addListener(() {
       _handleTextChanged(context);
     });
-    textController.text=varController.query.replaceFirst(RegExp(r'\s.*'),"");
+    hideAutocomplete();
+    textController.text = varController.query.replaceFirst(RegExp(r'\s.*'), "");
     WidgetsBinding.instance.addObserver(this);
+  }
+
+  void hideAutocomplete() {
+    if (autoComOverlayEntry != null && autoComOverlayEntry!.mounted) {
+      autoComOverlayEntry?.remove();
+      autoComOverlayEntry?.dispose();
+    }
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     textController.dispose();
-    if (autoComOverlayEntry!=null&&autoComOverlayEntry!.mounted) {autoComOverlayEntry?.remove();autoComOverlayEntry?.dispose();}
+    hideAutocomplete();
     varController.removeOverlay();
     super.dispose();
   }
@@ -64,7 +72,10 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   Widget _buildTextField(BuildContext context) {
     return Material(
       elevation: 5,
-      surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+      surfaceTintColor: Theme
+          .of(context)
+          .colorScheme
+          .onPrimaryContainer,
       borderRadius: BorderRadius.circular(20),
       child: Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
@@ -119,61 +130,56 @@ class _CustomTextFieldState extends State<CustomTextField> with WidgetsBindingOb
   }
 
   Future<void> renderOverlay(BuildContext context) async {
-    if (submitKey.currentContext==null) return;
+    if (submitKey.currentContext == null) return;
     var renderObject = submitKey.currentContext!.findRenderObject();
     final RenderBox submitButton = renderObject as RenderBox;
     final submitOffset = submitButton.localToGlobal(Offset.zero);
 
-    final RenderBox textField = textFieldKey.currentContext?.findRenderObject() as RenderBox;
+    final RenderBox textField = textFieldKey.currentContext
+        ?.findRenderObject() as RenderBox;
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
 
-    if (autoComOverlayEntry!=null && autoComOverlayEntry!.mounted) {
-      autoComOverlayEntry?.remove();
-      autoComOverlayEntry?.dispose();
-    }
+    hideAutocomplete();
 
-    autoComOverlayEntry = OverlayEntry(
-      builder: (context) => FutureBuilder(
-        future: Future.wait([
-          autoComplete(textController.text),
-          Future.delayed(const Duration(milliseconds: 250)),
-        ]).timeout(const Duration(seconds: 3), onTimeout: () {
-          // Handle the timeout here if necessary
-          return [];
-        }).then((results) => results.isNotEmpty ? results : []),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Positioned(
-              top: textOffset.dy,
-              left: textOffset.dx,
-              width: textSize.width,
-              height: textSize.height,
-              child: const Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
-          } else if (snapshot.hasError) {
-            return const Text('');
-          } else {
-            lemmas = snapshot.data![0];
+    Future
+        .wait([
+      autoComplete(textController.text),
+      Future.delayed(const Duration(milliseconds: 250)),
+    ])
+        .timeout(const Duration(seconds: 3), onTimeout: () {
+      // Handle the timeout here if necessary
+      return [];
+    })
+        .then(
+            (results) {
+          if (results.isNotEmpty) {
+            List<String> lemmas = results[0];
+            var aco = AutoComOverlay(lemmas: lemmas);
 
-            return Stack(
-              children: [
-                Positioned(
-                  height: 50,
-                  top: submitOffset.dy,
-                  left: textOffset.dx,
-                  width: textSize.width - 56,
-                  child: AutoComOverlay(lemmas: lemmas),
-                ),
-              ],
+            autoComOverlayEntry = OverlayEntry(
+              builder: (context) =>
+                  Builder(
+                    builder: (context) {
+                      return Stack(
+                        children: [
+                          Positioned(
+                            height: 50,
+                            top: submitOffset.dy,
+                            left: textOffset.dx,
+                            width: textSize.width - 56,
+                            child: aco,
+                          ),
+                        ],
+                      );
+                    }
+                  ),
             );
+
+            Overlay.of(context).insert(autoComOverlayEntry!);
           }
-        },
-      ),
-    );
+        }
 
-    Overlay.of(context).insert(autoComOverlayEntry!);
-  }
-}
+  );
+
+}}
