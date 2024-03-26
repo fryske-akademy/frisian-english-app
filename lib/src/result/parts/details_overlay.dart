@@ -32,6 +32,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
 
   @override
   Widget build(BuildContext context) {
+    final ScrollController scrollController = ScrollController();
     return Center(
         child: Padding(
       padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(550, 80, 550, 80) : const EdgeInsets.fromLTRB(25, 100, 25, 50),
@@ -109,6 +110,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       radius: const Radius.circular(20),
                       thumbVisibility: true,
                       thickness: 3,
+                      controller: scrollController,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: widget.lemma.synonyms.length,

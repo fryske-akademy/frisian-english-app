@@ -149,30 +149,27 @@ void findDetails(String text, BuildContext context) {
   varController.hideAutocomplete();
   getLemmas(text).timeout(
       const Duration(seconds: 3),
-      onTimeout: () => []).then((value) => toDetails(value, context));
+      onTimeout: () => []).then((value) => _toDetails(value, context));
 }
 
-void toDetails(List<Lemma> value, BuildContext context) {
-  varController.hideAutocomplete();
+void _toDetails(List<Lemma> value, BuildContext context) async {
   Lemma l = value.isEmpty ? Lemma() : value[0];
   if (value.length>1) {
-    SelectDialog.showModal<Lemma>(
+    await SelectDialog.showModal<Lemma>(
       context,
       label: AppLocalizations.of(context)!.choose,
       selectedValue: l,
       items: List.of(value),
-      useRootNavigator: true,
       onChange: (Lemma selected) {
           l = selected;
-          Future.microtask(() => Navigator.pushReplacementNamed(
-              context, ResultView.routeName, arguments: {"lemma": l})
-          );
       },
     );
-  } else {
-    if (l.form!="") {
-      Navigator.pushReplacementNamed(
-          context, ResultView.routeName, arguments: {"lemma": l});
+  }
+  if (l.form!=""&&l.form!="???") {
+    try {
+      Navigator.of(context,rootNavigator: true).pushNamed(ResultView.routeName, arguments: {"lemma": l});
+    } on Exception catch (e) {
+      Navigator.of(context,rootNavigator: true).pushNamed(HomeView.routeName);
     }
   }
 

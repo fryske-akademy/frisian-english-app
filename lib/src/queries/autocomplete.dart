@@ -25,7 +25,8 @@ Future<List<String>> autoComplete(String value) async {
 
   final QueryResult lemmasResult = await client.query(lemmasOptions);
 
-  if (lemmasResult.hasException) {
+  if (lemmasResult.hasException||lemmasResult.data==null||lemmasResult.data!.isEmpty||lemmasResult.data!['lemmasearch']['lemmas']==Null) {
+    return [];
   }
 
   final List lemmasData = lemmasResult.data!['lemmasearch']['lemmas'] as List;

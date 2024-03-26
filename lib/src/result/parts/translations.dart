@@ -26,6 +26,10 @@ class _TranslationsState extends State<Translations> {
     super.dispose();
     currentIndex = 0;
   }
+  
+  String showForm() {
+    return 0 <= currentIndex && currentIndex < widget.details.translations.length ? widget.details.translations[currentIndex]['form'] : 'h';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,13 +77,7 @@ class _TranslationsState extends State<Translations> {
                         visible: listLength > 1,
                         child: IconButton(
                           icon: const Icon(Icons.arrow_back),
-                          onPressed: () {
-                            setState(
-                              () {
-                                currentIndex = currentIndex > 0 ? currentIndex - 1 : listLength - 1;
-                              },
-                            );
-                          },
+                          onPressed: () => setState(() => currentIndex = currentIndex > 0 ? currentIndex - 1 : listLength - 1)
                         ),
                       ),
 
@@ -93,7 +91,7 @@ class _TranslationsState extends State<Translations> {
                             overlayColor: MaterialStateProperty.all(Colors.transparent),
                           ),
                           child: AutoSizeText(
-                            widget.details.translations[currentIndex]['form'],
+                            showForm(),
                             maxLines: 3,
                             minFontSize: 24,
                             maxFontSize: 40,
@@ -107,7 +105,7 @@ class _TranslationsState extends State<Translations> {
                             } else {
                               varController.updateisFryEn(false);
                             }
-                            varController.query = widget.details.translations[currentIndex]['form'];
+                            varController.query = showForm();
                             // TODO here we better go to details directly, not via lemma search
                             findDetails(varController.query, context);
                           },
@@ -118,11 +116,7 @@ class _TranslationsState extends State<Translations> {
                       Visibility(
                         visible: listLength > 1,
                         child: IconButton(
-                          onPressed: () {
-                            setState(() {
-                              currentIndex = currentIndex < listLength - 1 ? currentIndex + 1 : 0;
-                            });
-                          },
+                          onPressed: () => setState(() => currentIndex = currentIndex < listLength - 1 ? currentIndex + 1 : 0),
                           icon: const Icon(Icons.arrow_forward),
                         ),
                       ),
@@ -148,17 +142,17 @@ class _TranslationsState extends State<Translations> {
                   top: 0,
                   right: 0,
                   child: IconButton(
-                    icon: varController.favorites.any((item) => item.form == widget.details.translations[currentIndex]['form'])
+                    icon: varController.favorites.any((item) => item.form == showForm())
                         ? const Icon(Icons.favorite)
                         : const Icon(Icons.favorite_border),
                     onPressed: () async {
                       List<ListItem> favorites = varController.favorites;
                       setState(() {
-                        if (favorites.any((item) => item.form == widget.details.translations[currentIndex]['form'])) {
-                          favorites.removeWhere((item) => item.form == widget.details.translations[currentIndex]['form']);
+                        if (favorites.any((item) => item.form == showForm())) {
+                          favorites.removeWhere((item) => item.form == showForm());
                         } else {
                           ListItem favorite = ListItem();
-                          favorite.form = widget.details.translations[currentIndex]['form'];
+                          favorite.form = showForm();
                           favorite.isFryEn = widget.details.translations[currentIndex]['lang'] == 'fry' ? true : false;
                           favorite.translation = widget.details.lemma.form;
                           favorites.add(favorite);
@@ -176,7 +170,7 @@ class _TranslationsState extends State<Translations> {
                   right: 0,
                   child: IconButton(
                     onPressed: () async {
-                      await Clipboard.setData(ClipboardData(text: widget.details.translations[currentIndex]['form']));
+                      await Clipboard.setData(ClipboardData(text: showForm()));
                     },
                     iconSize: 20,
                     icon: const Icon(Icons.copy),
@@ -194,7 +188,7 @@ class _TranslationsState extends State<Translations> {
 
                       // Add translation to body of email
                       String body =
-                          Uri.encodeComponent(AppLocalizations.of(context)!.translation + ": ${varController.query} - ${widget.details.translations[currentIndex]['form']} \n\n Feedback:");
+                          Uri.encodeComponent(AppLocalizations.of(context)!.translation + ": ${varController.query} - ${showForm()} \n\n Feedback:");
                       Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
                       if (await launchUrl(mail)) {
                       } else {}

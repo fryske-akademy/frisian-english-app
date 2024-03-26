@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frysish/src/list_item.dart';
 import 'settings_service.dart';
 
 class VarController with ChangeNotifier {
   VarController(this._settingsService);
+
 
   late final SettingsService _settingsService;
 
@@ -16,15 +16,28 @@ class VarController with ChangeNotifier {
   late Locale _locale;
   late bool _onboardingShown;
   late bool _isFryEn;
+  OverlayEntry _autoComOverlayEntry = OverlayEntry(builder: (context) => Builder (builder: (context) => const Text('')));
+  bool _autoComp = false;
 
-  OverlayEntry? autoComOverlayEntry;
+  OverlayEntry get autoComOverlayEntry => _autoComOverlayEntry;
 
   void hideAutocomplete() {
-    if (autoComOverlayEntry != null && autoComOverlayEntry!.mounted) {
-      autoComOverlayEntry?.remove();
-      autoComOverlayEntry?.dispose();
-    }
+      if (_autoComp&&_autoComOverlayEntry.mounted) {
+        try {
+          _autoComOverlayEntry.remove();
+          _autoComOverlayEntry.dispose();
+        } on Exception catch (e) {
+          // TODO
+        }
+      }
   }
+
+
+  set autoComOverlayEntry(OverlayEntry value) {
+    _autoComp=true;
+    _autoComOverlayEntry = value;
+  }
+
   ThemeMode get themeMode => _themeMode;
   bool get systemThemeOverruled => _systemThemeOverruled;
   Color get primaryColor => _primaryColor;

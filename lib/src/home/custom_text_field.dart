@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:frysish/lemma.dart';
 import 'package:frysish/src/queries/autocomplete.dart';
 import 'package:frysish/src/result/result_view.dart';
 
@@ -171,7 +170,7 @@ class _CustomTextFieldState extends State<CustomTextField>
                   ),
             );
 
-            Overlay.of(context).insert(varController.autoComOverlayEntry!);
+            Overlay.of(context).insert(varController.autoComOverlayEntry);
           }
         }
 
