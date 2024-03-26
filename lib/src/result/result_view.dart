@@ -166,10 +166,14 @@ void _toDetails(List<Lemma> value, BuildContext context) async {
     );
   }
   if (l.form!=""&&l.form!="???") {
-    try {
-      Navigator.of(context,rootNavigator: true).pushNamed(ResultView.routeName, arguments: {"lemma": l});
-    } on Exception catch (e) {
-      Navigator.of(context,rootNavigator: true).pushNamed(HomeView.routeName);
+    if (context.mounted) {
+      try {
+        Navigator.of(context, rootNavigator: true).pushNamed(
+            ResultView.routeName, arguments: {"lemma": l});
+      } on Exception catch (e) {
+        Navigator.of(context, rootNavigator: true).pushNamed(
+            HomeView.routeName);
+      }
     }
   }
 
