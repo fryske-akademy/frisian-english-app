@@ -146,18 +146,18 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
   }
 }
 void findDetails(String text, BuildContext context) {
-  varController.hideAutocomplete();
   getLemmas(text).timeout(
       const Duration(seconds: 3),
       onTimeout: () => []).then((value) => _toDetails(value, context));
 }
 
 void _toDetails(List<Lemma> value, BuildContext context) async {
-  Lemma l = value.isEmpty ? Lemma() : value[0];
+  if (value.isEmpty) return;
+  Lemma l = value[0];
   if (value.length>1) {
     await SelectDialog.showModal<Lemma>(
       context,
-      label: AppLocalizations.of(context)!.choose,
+      label: context.mounted?AppLocalizations.of(context)!.choose:'Choose',
       selectedValue: l,
       items: List.of(value),
       onChange: (Lemma selected) {

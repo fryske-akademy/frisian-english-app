@@ -22,9 +22,9 @@ class VarController with ChangeNotifier {
   OverlayEntry get autoComOverlayEntry => _autoComOverlayEntry;
 
   void hideAutocomplete() {
-      if (_autoComp&&_autoComOverlayEntry.mounted) {
+      if (_autoComp) {
         try {
-          _autoComOverlayEntry.remove();
+          if (_autoComOverlayEntry.mounted) _autoComOverlayEntry.remove();
           _autoComOverlayEntry.dispose();
         } on Exception catch (e) {
           // TODO

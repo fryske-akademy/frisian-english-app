@@ -81,7 +81,7 @@ class Lemma {
         case 'Synonym':
           Synonym synonym = Synonym();
           synonym.form = subForm?['form'];
-          synonym.meaning = subForm?['meaning'];
+          synonym.meaning = subForm['meaning'] ?? '';
           synonyms.add(synonym);
           break;
         case 'Variant':

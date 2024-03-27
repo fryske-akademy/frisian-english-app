@@ -33,6 +33,10 @@ class _DetailOverlayState extends State<DetailOverlay> {
   @override
   Widget build(BuildContext context) {
     final ScrollController scrollController = ScrollController();
+    final ScrollController scrollController2 = ScrollController();
+    final ScrollController scrollController3 = ScrollController();
+    final ScrollController scrollController4 = ScrollController();
+    final ScrollController scrollController5 = ScrollController();
     return Center(
         child: Padding(
       padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(550, 80, 550, 80) : const EdgeInsets.fromLTRB(25, 100, 25, 50),
@@ -112,6 +116,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       thickness: 3,
                       controller: scrollController,
                       child: ListView.builder(
+                        controller: scrollController,
                         scrollDirection: Axis.horizontal,
                         itemCount: widget.lemma.synonyms.length,
                         itemBuilder: (context, index) {
@@ -244,7 +249,9 @@ class _DetailOverlayState extends State<DetailOverlay> {
                   radius: const Radius.circular(20),
                   thumbVisibility: true,
                   thickness: 3,
+                  controller: scrollController2,
                   child: SingleChildScrollView(
+                    controller: scrollController2,
                     scrollDirection: Axis.horizontal,
                     child: DataTable(
                       columns: [
@@ -293,7 +300,9 @@ class _DetailOverlayState extends State<DetailOverlay> {
                   radius: const Radius.circular(20),
                   thumbVisibility: true,
                   thickness: 3,
+                  controller: scrollController3,
                   child: SingleChildScrollView(
+                    controller: scrollController3,
                     scrollDirection: Axis.horizontal,
                     child: DataTable(
                       showBottomBorder: false,
@@ -372,7 +381,9 @@ class _DetailOverlayState extends State<DetailOverlay> {
                   radius: const Radius.circular(20),
                   thumbVisibility: true,
                   thickness: 3,
+                  controller: scrollController4,
                   child: SingleChildScrollView(
+                    controller: scrollController4,
                     scrollDirection: Axis.horizontal,
                     child: DataTable(
                       showBottomBorder: false,
@@ -445,7 +456,9 @@ class _DetailOverlayState extends State<DetailOverlay> {
                   radius: const Radius.circular(20),
                   thumbVisibility: true,
                   thickness: 3,
+                  controller: scrollController5,
                   child: SingleChildScrollView(
+                    controller: scrollController5,
                     scrollDirection: Axis.horizontal,
                     child: DataTable(
                       showBottomBorder: false,

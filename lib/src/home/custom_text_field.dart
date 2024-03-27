@@ -119,7 +119,6 @@ class _CustomTextFieldState extends State<CustomTextField>
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-    varController.hideAutocomplete();
     findDetails(textController.text, context);
   }
 
@@ -133,8 +132,6 @@ class _CustomTextFieldState extends State<CustomTextField>
         ?.findRenderObject() as RenderBox;
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
-
-    hideAutocomplete();
 
     Future
         .wait([
