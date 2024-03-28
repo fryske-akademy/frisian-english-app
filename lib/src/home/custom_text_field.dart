@@ -132,7 +132,6 @@ class _CustomTextFieldState extends State<CustomTextField>
       // Handle the timeout here if necessary
       return [];
     }).then((lemmas) {
-      if (lemmas.isNotEmpty) {
         var aco = AutoComOverlay(lemmas: lemmas);
 
         varController.autoComOverlayEntry = OverlayEntry(
@@ -154,7 +153,6 @@ class _CustomTextFieldState extends State<CustomTextField>
         Overlay.of(context).insert(varController.autoComOverlayEntry);
 
         varController.autoComp = true;
-      }
     });
   }
 }
