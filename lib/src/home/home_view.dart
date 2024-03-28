@@ -11,6 +11,7 @@ import 'custom_text_field.dart';
 
 class HomeView extends StatefulWidget {
   static const routeName = '/home';
+  final CustomTextField customTextField = const CustomTextField();
 
   const HomeView({super.key});
 
@@ -158,12 +159,7 @@ class _HomeViewState extends State<HomeView> {
                       ) {
                         final bool connected = connectivity != ConnectivityResult.none;
                         if (connected) {
-                          return CustomTextField (
-                            onPressed: (value) async {
-                              varController.removeOverlay();
-                              findDetails(value, context);
-                            },
-                          );
+                          return widget.customTextField;
                         } else {
                           return const Icon(
                             Icons.wifi_off,

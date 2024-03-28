@@ -123,6 +123,16 @@ class VarController with ChangeNotifier {
   bool langSwapOverlayLive = false;
   bool detailOverlayLive = false;
 
+  late OverlayEntry autoComOverlayEntry;
+  bool autoComp = false;
+
+  void hideAutocomplete() {
+    if (autoComp) {
+      autoComOverlayEntry.remove();
+      autoComp=false;
+    }
+  }
+
   void removeOverlay() {
     if (langSwapOverlayLive) {
       langSwapOverlayEntry.remove();
