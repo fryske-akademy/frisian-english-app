@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       listenable: varController,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
+          navigatorKey: varController.navigatorKey,
           restorationScopeId: 'app',
 
           // Uses the generated AppLocalizations class to provide localized strings
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
           // routerConfig: _router,
 
           onGenerateRoute: (RouteSettings routeSettings) {
-            return MaterialPageRoute<void>(
+            return MaterialPageRoute(
               settings: routeSettings,
               builder: (BuildContext context) {
                 switch (routeSettings.name) {

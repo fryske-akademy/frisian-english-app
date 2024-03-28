@@ -67,7 +67,7 @@ class _TextSearchState extends State<TextSearch> {
         leading: IconButton(
           icon: const Icon(Icons.home),
           onPressed: () {
-            Navigator.pushNamed(context, HomeView.routeName);
+            varController.route( HomeView.routeName);
           },
         ),
         automaticallyImplyLeading: false,
@@ -203,7 +203,7 @@ class _TextSearchState extends State<TextSearch> {
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-    Navigator.pushNamed(context, TextResult.routeName, arguments: {'language': language});
+    varController.route( TextResult.routeName, args: {'language': language});
   }
 
   _buildOperators(BuildContext context) {

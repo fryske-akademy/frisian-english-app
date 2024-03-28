@@ -43,7 +43,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
               onPressed: () {
                 varController.query = lemma;
                 varController.hideAutocomplete();
-                findDetails(lemma, context);
+                findDetails(lemma);
               },
               child: Text(lemma, style: const TextStyle(fontWeight: FontWeight.bold)),
             );

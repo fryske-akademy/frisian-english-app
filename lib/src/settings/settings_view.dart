@@ -40,7 +40,7 @@ class SettingsView extends StatelessWidget {
         leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.pushNamed(context, HomeView.routeName);
+              varController.route( HomeView.routeName);
             }),
         title: Text(AppLocalizations.of(context)!.settings, style: const TextStyle(fontSize: 25)),
       ),

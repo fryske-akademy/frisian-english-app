@@ -58,7 +58,7 @@ class _DetailsViewState extends State<DetailsView> {
                                 varController.detailOverlayEntry.remove();
                                 varController.detailOverlayEntry.dispose();
                                 varController.detailOverlayLive = false;
-                                findDetails(string, context);
+                                findDetails(string);
                               },
                             );
                           },

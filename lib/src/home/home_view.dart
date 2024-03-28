@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:frysish/src/account/account_view.dart';
-import 'package:frysish/src/result/result_view.dart';
 import 'package:frysish/src/settings/settings_view.dart';
 import 'package:frysish/src/text_search/text_search.dart';
 
@@ -112,14 +111,14 @@ class _HomeViewState extends State<HomeView> {
                 icon: const Icon(Icons.account_circle),
                 onPressed: () {
                   varController.removeOverlay();
-                  Navigator.pushNamed(context, AccountView.routeName);
+                  varController.route( AccountView.routeName);
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.settings),
                 onPressed: () {
                   varController.removeOverlay();
-                  Navigator.pushNamed(context, SettingsView.routeName);
+                  varController.route( SettingsView.routeName);
                 },
               ),
             ],
@@ -133,7 +132,7 @@ class _HomeViewState extends State<HomeView> {
             OutlinedButton.icon(
                 onPressed: () {
                   varController.removeOverlay();
-                  Navigator.pushNamed(context, TextSearch.routeName);
+                  varController.route( TextSearch.routeName);
                 },
                 icon: const Icon(Icons.search),
                 label: Text(AppLocalizations.of(context)!.textSearch)),

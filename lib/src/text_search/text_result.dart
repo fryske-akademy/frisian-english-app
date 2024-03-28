@@ -95,7 +95,7 @@ class _TextResultState extends State<TextResult> {
                   const SizedBox(height: 25),
                   IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, TextSearch.routeName);
+                      varController.route( TextSearch.routeName);
                     },
                     icon: const Icon(Icons.arrow_back),
                   )

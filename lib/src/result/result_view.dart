@@ -117,7 +117,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                                 child: IconButton(
                                   icon: const Icon(Icons.home),
                                   onPressed: () {
-                                    Navigator.pushNamed(context, HomeView.routeName);
+                                    varController.route( HomeView.routeName);
                                   },
                                 ),
                               ),
@@ -146,36 +146,27 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
     }
   }
 }
-void findDetails(String text, BuildContext context) {
+void findDetails(String text) {
   getLemmas(text).timeout(
       const Duration(seconds: 3),
-      onTimeout: () => []).then((value) => _toDetails(value, context));
+      onTimeout: () => []).then((value) => _toDetails(value, varController.navigatorKey.currentContext));
 }
 
-void _toDetails(List<Lemma> value, BuildContext context) async {
+void _toDetails(List<Lemma> value, BuildContext? context) async {
   if (value.isEmpty) return;
   Lemma l = value[0];
-  if (value.length>1&&context.mounted) {
+  if (value.length>1) {
     await SelectDialog.showModal<Lemma>(
-      context,
+      context!,
       label: context.mounted?AppLocalizations.of(context)!.choose:'Choose',
       selectedValue: l,
       items: List.of(value),
       onChange: (Lemma selected) {
-          l = selected;
+        Future.microtask(() => varController.route(ResultView.routeName, args: {"lemma": selected}));
       },
     );
-  }
-  if (l.form!=""&&l.form!="???") {
-    if (context.mounted) {
-      try {
-        Navigator.of(context, rootNavigator: true).pushNamed(
-            ResultView.routeName, arguments: {"lemma": l});
-      } on Exception catch (e) {
-        Navigator.of(context, rootNavigator: true).pushNamed(
-            HomeView.routeName);
-      }
-    }
+  } else if (l.form!=""&&l.form!="???") {
+    varController.route(ResultView.routeName, args: {"lemma": l});
   }
 
 }

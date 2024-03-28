@@ -10,7 +10,6 @@ import '../../../main.dart';
 import 'auto_com_overlay.dart';
 
 class CustomTextField extends StatefulWidget {
-
   const CustomTextField({super.key});
 
   static const allowed = '[a-zA-Zäëïöüàèìòùáéíóúâêîôû]';
@@ -56,18 +55,19 @@ class _CustomTextFieldState extends State<CustomTextField>
   Widget _buildTextField(BuildContext context) {
     return Material(
       elevation: 5,
-      surfaceTintColor: Theme
-          .of(context)
-          .colorScheme
-          .onPrimaryContainer,
+      surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
       borderRadius: BorderRadius.circular(20),
       child: Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
         child: TextField(
           key: textFieldKey,
           controller: textController,
-          onTap: () async {_handleTextChanged(context);},
-          onChanged: (value) async {_handleTextChanged(context);},
+          onTap: () async {
+            _handleTextChanged(context);
+          },
+          onChanged: (value) async {
+            _handleTextChanged(context);
+          },
           inputFormatters: [
             FilteringTextInputFormatter.allow(RegExp(CustomTextField.allowed)),
           ],
@@ -105,14 +105,14 @@ class _CustomTextFieldState extends State<CustomTextField>
 
   Future<void> _handleTextChanged(BuildContext context) async {
     if (textController.text.length >= 3) {
-      await renderOverlay(context);
+      await Future.delayed(const Duration(milliseconds: 500), () {renderOverlay(context);});
     }
   }
 
   void _handleSubmitButtonPressed() async {
     varController.hideAutocomplete();
     varController.query = textController.text;
-    findDetails(textController.text, context);
+    findDetails(textController.text);
   }
 
   Future<void> renderOverlay(BuildContext context) async {
@@ -121,52 +121,40 @@ class _CustomTextFieldState extends State<CustomTextField>
     final RenderBox submitButton = renderObject as RenderBox;
     final submitOffset = submitButton.localToGlobal(Offset.zero);
 
-    final RenderBox textField = textFieldKey.currentContext
-        ?.findRenderObject() as RenderBox;
+    final RenderBox textField =
+        textFieldKey.currentContext?.findRenderObject() as RenderBox;
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
 
     varController.hideAutocomplete();
-    Future
-        .wait([
-      autoComplete(textController.text),
-      Future.delayed(const Duration(milliseconds: 250)),
-    ])
-        .timeout(const Duration(seconds: 3), onTimeout: () {
+    autoComplete(textController.text).timeout(const Duration(seconds: 3),
+        onTimeout: () {
       // Handle the timeout here if necessary
       return [];
-    })
-        .then(
-            (results) {
-          if (results.isNotEmpty) {
-            List<String> lemmas = results[0];
-            var aco = AutoComOverlay(lemmas: lemmas);
+    }).then((lemmas) {
+      if (lemmas.isNotEmpty) {
+        var aco = AutoComOverlay(lemmas: lemmas);
 
-            varController.autoComOverlayEntry = OverlayEntry(
-              builder: (context) =>
-                  Builder(
-                    builder: (context) {
-                      return Stack(
-                        children: [
-                          Positioned(
-                            height: 50,
-                            top: submitOffset.dy,
-                            left: textOffset.dx,
-                            width: textSize.width - 56,
-                            child: aco,
-                          ),
-                        ],
-                      );
-                    }
-                  ),
+        varController.autoComOverlayEntry = OverlayEntry(
+          builder: (context) => Builder(builder: (context) {
+            return Stack(
+              children: [
+                Positioned(
+                  height: 50,
+                  top: submitOffset.dy,
+                  left: textOffset.dx,
+                  width: textSize.width - 56,
+                  child: aco,
+                ),
+              ],
             );
+          }),
+        );
 
-            Overlay.of(context).insert(varController.autoComOverlayEntry);
+        Overlay.of(context).insert(varController.autoComOverlayEntry);
 
-            varController.autoComp=true;
-          }
-        }
-
-  );
-
-}}
+        varController.autoComp = true;
+      }
+    });
+  }
+}

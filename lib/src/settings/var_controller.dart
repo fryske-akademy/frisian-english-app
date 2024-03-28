@@ -5,6 +5,14 @@ import 'settings_service.dart';
 class VarController with ChangeNotifier {
   VarController(this._settingsService);
 
+  final navigatorKey = GlobalKey<NavigatorState>();
+
+  void route(String route, {Object? args}) {
+    navigatorKey.currentState?.pushNamed(route, arguments: args);
+  }
+  void replace(String route, {Object? args}) {
+    navigatorKey.currentState?.pushReplacementNamed(route,arguments: args);
+  }
 
   late final SettingsService _settingsService;
 
@@ -128,8 +136,7 @@ class VarController with ChangeNotifier {
 
   void hideAutocomplete() {
     if (autoComp) {
-      autoComOverlayEntry.remove();
-      autoComp=false;
+      autoComOverlayEntry.remove(); autoComp=false;
     }
   }
 

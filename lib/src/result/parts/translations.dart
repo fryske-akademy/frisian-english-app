@@ -47,11 +47,7 @@ class _TranslationsState extends State<Translations> {
             ),
             IconButton(
               icon: const Icon(Icons.home),
-              onPressed: () {
-                Navigator.of(context).pushReplacementNamed(
-                  HomeView.routeName,
-                );
-              },
+              onPressed: () => varController.replace(HomeView.routeName)
             ),
           ],
         ),
@@ -107,7 +103,7 @@ class _TranslationsState extends State<Translations> {
                             }
                             varController.query = showForm();
                             // TODO here we better go to details directly, not via lemma search
-                            findDetails(varController.query, context);
+                            findDetails(varController.query);
                           },
                         ),
                       ),

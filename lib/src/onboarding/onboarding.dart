@@ -78,7 +78,7 @@ class OnboardingView extends StatelessWidget {
       finishButtonStyle: FinishButtonStyle(backgroundColor: customColor),
       onFinish: () {
         varController.updateOnboardingShown(true);
-        Navigator.pushNamed(context, HomeView.routeName);
+        varController.route( HomeView.routeName);
       },
       background: const [
         Text(''),
