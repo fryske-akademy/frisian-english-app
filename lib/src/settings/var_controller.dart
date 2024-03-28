@@ -16,27 +16,6 @@ class VarController with ChangeNotifier {
   late Locale _locale;
   late bool _onboardingShown;
   late bool _isFryEn;
-  OverlayEntry _autoComOverlayEntry = OverlayEntry(builder: (context) => Builder (builder: (context) => const Text('')));
-  bool _autoComp = false;
-
-  OverlayEntry get autoComOverlayEntry => _autoComOverlayEntry;
-
-  void hideAutocomplete() {
-      if (_autoComp) {
-        try {
-          if (_autoComOverlayEntry.mounted) _autoComOverlayEntry.remove();
-          _autoComOverlayEntry.dispose();
-        } on Exception catch (e) {
-          // TODO
-        }
-      }
-  }
-
-
-  set autoComOverlayEntry(OverlayEntry value) {
-    _autoComp=true;
-    _autoComOverlayEntry = value;
-  }
 
   ThemeMode get themeMode => _themeMode;
   bool get systemThemeOverruled => _systemThemeOverruled;

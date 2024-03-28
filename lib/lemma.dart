@@ -76,6 +76,7 @@ class Lemma {
   List<Map<String, String>> presentParticiple = [];
 
   Future<void> processSubForms() async {
+    synonyms=[]; variants=[];dutchisms=[];singularDimForms=[];singularForms=[];pluralDimForms=[];pluralForms=[];
     for (var subForm in subForms) {
       switch (subForm?['__typename']) {
         case 'Synonym':
@@ -113,6 +114,10 @@ class Lemma {
   }
 
   Future<void> retrieveTenses() async {
+    presentParticiple=[];presPerson1Plur=[];presPerson1Sing=[];presPerson2Plur=[];presPerson2PlurFormal=[];
+    presPerson2Sing=[];presPerson3Plur=[];presPerson3Sing=[];
+    pastParticiple=[];pastPerson1Plur=[];pastPerson1Sing=[];pastPerson2Plur=[];pastPerson2PlurFormal=[];
+    pastPerson2Sing=[];pastPerson3Plur=[];pastPerson3Sing=[];
     for (var subForm in subForms) {
       if (subForm['__typename'] == "ParadigmCategory") {
         if (subForm['type'] == 'tense_pres') {

@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
@@ -43,7 +44,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final arguments = (ModalRoute.of(context)?.settings.arguments ?? <String, dynamic>{}) as Map;
-    final Lemma lemma = arguments["lemma"];
+    final Lemma lemma =  arguments['lemma'] is Lemma ? arguments["lemma"] : Lemma();
 
     return FutureBuilder(
             future: getDetails(lemma.link),
@@ -154,7 +155,7 @@ void findDetails(String text, BuildContext context) {
 void _toDetails(List<Lemma> value, BuildContext context) async {
   if (value.isEmpty) return;
   Lemma l = value[0];
-  if (value.length>1) {
+  if (value.length>1&&context.mounted) {
     await SelectDialog.showModal<Lemma>(
       context,
       label: context.mounted?AppLocalizations.of(context)!.choose:'Choose',

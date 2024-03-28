@@ -30,16 +30,19 @@ class _CustomTextFieldState extends State<CustomTextField>
   @override
   void initState() {
     super.initState();
-    textController.addListener(() {
-      _handleTextChanged(context);
-    });
     hideAutocomplete();
     textController.text = varController.query.replaceFirst(RegExp(r'\s.*'), "");
     WidgetsBinding.instance.addObserver(this);
   }
 
+  late OverlayEntry _autoComOverlayEntry;
+  bool _autoComp = false;
+
   void hideAutocomplete() {
-    varController.hideAutocomplete();
+    if (_autoComp) {
+      _autoComOverlayEntry.remove();
+      _autoComp=false;
+    }
   }
 
   @override
@@ -63,6 +66,15 @@ class _CustomTextFieldState extends State<CustomTextField>
     );
   }
 
+  @override
+  void didChangeMetrics() {
+    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
+    final isKeyboardActive = bottomInset > 0.0;
+    if (!isKeyboardActive) {
+      hideAutocomplete();
+    }
+  }
+
   Widget _buildTextField(BuildContext context) {
     return Material(
       elevation: 5,
@@ -76,6 +88,7 @@ class _CustomTextFieldState extends State<CustomTextField>
         child: TextField(
           key: textFieldKey,
           controller: textController,
+          onChanged: (value) async {_handleTextChanged(context);},
           inputFormatters: [
             FilteringTextInputFormatter.allow(RegExp(CustomTextField.allowed)),
           ],
@@ -112,12 +125,14 @@ class _CustomTextFieldState extends State<CustomTextField>
   }
 
   Future<void> _handleTextChanged(BuildContext context) async {
+    hideAutocomplete();
     if (textController.text.length >= 3) {
       await renderOverlay(context);
     }
   }
 
   void _handleSubmitButtonPressed() async {
+    hideAutocomplete();
     varController.query = textController.text;
     findDetails(textController.text, context);
   }
@@ -133,6 +148,7 @@ class _CustomTextFieldState extends State<CustomTextField>
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
 
+    hideAutocomplete();
     Future
         .wait([
       autoComplete(textController.text),
@@ -148,7 +164,7 @@ class _CustomTextFieldState extends State<CustomTextField>
             List<String> lemmas = results[0];
             var aco = AutoComOverlay(lemmas: lemmas);
 
-            varController.autoComOverlayEntry = OverlayEntry(
+            _autoComOverlayEntry = OverlayEntry(
               builder: (context) =>
                   Builder(
                     builder: (context) {
@@ -167,7 +183,8 @@ class _CustomTextFieldState extends State<CustomTextField>
                   ),
             );
 
-            Overlay.of(context).insert(varController.autoComOverlayEntry);
+            Overlay.of(context).insert(_autoComOverlayEntry);
+            _autoComp=true;
           }
         }
 
