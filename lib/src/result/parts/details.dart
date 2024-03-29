@@ -34,34 +34,7 @@ class _DetailsViewState extends State<DetailsView> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                        onPressed: () {
-                          varController.detailOverlayEntry = OverlayEntry(
-                            builder: (context) {
-                              return DetailOverlay(
-                                widget.lemma,
-                                onPressed: (string) {
-                                  varController.detailOverlayEntry.remove();
-                                  varController.detailOverlayEntry.dispose();
-                                  varController.detailOverlayLive = false;
-                                  findDetails(string);
-                                },
-                              );
-                            },
-                          );
-                          Overlay.of(context)
-                              .insert(varController.detailOverlayEntry);
-                          varController.detailOverlayLive = true;
-                        },
-                        child: AutoSizeText(
-                          widget.lemma.form,
-                          maxLines: 1,
-                          minFontSize: 25,
-                          maxFontSize: 40,
-                          overflow: TextOverflow.ellipsis,
-                        ))
-                  ],
+                  children: [buildTextChild(context)],
                 ),
                 const Divider(
                   thickness: 2,
@@ -104,5 +77,41 @@ class _DetailsViewState extends State<DetailsView> {
         ),
       ],
     );
+  }
+
+  Widget buildTextChild(BuildContext context) {
+    return varController.isFryEn
+        ? TextButton(
+            onPressed: () {
+              varController.detailOverlayEntry = OverlayEntry(
+                builder: (context) {
+                  return DetailOverlay(
+                    widget.lemma,
+                    onPressed: (string) {
+                      varController.detailOverlayEntry.remove();
+                      varController.detailOverlayEntry.dispose();
+                      varController.detailOverlayLive = false;
+                      findDetails(string);
+                    },
+                  );
+                },
+              );
+              Overlay.of(context).insert(varController.detailOverlayEntry);
+              varController.detailOverlayLive = true;
+            },
+            child: AutoSizeText(
+              widget.lemma.form,
+              maxLines: 1,
+              minFontSize: 25,
+              maxFontSize: 40,
+              overflow: TextOverflow.ellipsis,
+            ))
+        : AutoSizeText(
+            widget.lemma.form,
+            maxLines: 1,
+            minFontSize: 25,
+            maxFontSize: 40,
+            overflow: TextOverflow.ellipsis,
+          );
   }
 }
