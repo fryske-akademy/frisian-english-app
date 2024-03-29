@@ -16,11 +16,6 @@ class DetailsView extends StatefulWidget {
 }
 
 class _DetailsViewState extends State<DetailsView> {
-  @override
-  void initState() {
-    super.initState();
-    widget.lemma;
-  }
 
   @override
   Widget build(BuildContext context) {

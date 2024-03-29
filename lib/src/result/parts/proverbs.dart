@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frysish/details.dart';
 
 import '../../../main.dart';
 import 'get_rich_text.dart';
@@ -21,35 +22,23 @@ class Proverbs extends StatefulWidget {
 class _ProverbsState extends State<Proverbs> {
   final ScrollController _scrollController = ScrollController();
 
-  var proverbs = [];
   List<FilteredData> filtered = [];
 
   @override
   void initState() {
     super.initState();
-    var texts = widget.texts;
-
-    for (var text in texts) {
-      if (text['__typename'] == "Proverb") {
-        proverbs.add(text);
-      }
-    }
-
-    for (var proverb in proverbs) {
+    Details.proverbs(widget.texts).forEach((proverb) {
       var text = proverb['text']['text'];
       var textSpans = getRichText(text);
 
-      var translations = proverb['translations'][0]['text']['text'];
+      var translations = proverb['translations'].length==0?[]:proverb['translations'][0]['text']['text'];
       var transSpans = getRichText(translations);
 
-      if (textSpans.isEmpty || textSpans.first.text == '' || transSpans.isEmpty) {
-        continue;
+      if (textSpans.isNotEmpty && textSpans.first.text != '') {
+        filtered.add(FilteredData(textSpans, transSpans));
       }
 
-      filtered.add(FilteredData(textSpans, transSpans));
-    }
-
-    filtered;
+    });
   }
 
   @override
