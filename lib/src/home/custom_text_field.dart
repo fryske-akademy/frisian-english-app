@@ -28,6 +28,7 @@ class _CustomTextFieldState extends State<CustomTextField>
   @override
   void initState() {
     super.initState();
+    varController.hideAutocomplete();
     textController.text = varController.query.replaceFirst(RegExp(r'\s.*'), "");
     WidgetsBinding.instance.addObserver(this);
   }
@@ -36,6 +37,7 @@ class _CustomTextFieldState extends State<CustomTextField>
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     textController.dispose();
+    varController.hideAutocomplete();
     varController.removeOverlay();
     super.dispose();
   }

@@ -157,7 +157,7 @@ class _HomeViewState extends State<HomeView> {
                       ) {
                         final bool connected = connectivity != ConnectivityResult.none;
                         if (connected) {
-                          return CustomTextField();;
+                          return const CustomTextField();
                         } else {
                           return const Icon(
                             Icons.wifi_off,
