@@ -9,6 +9,7 @@ import 'details_overlay.dart';
 
 class DetailsView extends StatefulWidget {
   final Lemma lemma;
+
   const DetailsView(this.lemma, {super.key});
 
   @override
@@ -16,7 +17,6 @@ class DetailsView extends StatefulWidget {
 }
 
 class _DetailsViewState extends State<DetailsView> {
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -35,33 +35,32 @@ class _DetailsViewState extends State<DetailsView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    AutoSizeText(
-                      widget.lemma.form,
-                      maxLines: 1,
-                      minFontSize: 25,
-                      maxFontSize: 40,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.more_vert),
-                      onPressed: () {
-                        varController.detailOverlayEntry = OverlayEntry(
-                          builder: (context) {
-                            return DetailOverlay(
-                              widget.lemma,
-                              onPressed: (string) {
-                                varController.detailOverlayEntry.remove();
-                                varController.detailOverlayEntry.dispose();
-                                varController.detailOverlayLive = false;
-                                findDetails(string);
-                              },
-                            );
-                          },
-                        );
-                        Overlay.of(context).insert(varController.detailOverlayEntry);
-                        varController.detailOverlayLive = true;
-                      },
-                    ),
+                    TextButton(
+                        onPressed: () {
+                          varController.detailOverlayEntry = OverlayEntry(
+                            builder: (context) {
+                              return DetailOverlay(
+                                widget.lemma,
+                                onPressed: (string) {
+                                  varController.detailOverlayEntry.remove();
+                                  varController.detailOverlayEntry.dispose();
+                                  varController.detailOverlayLive = false;
+                                  findDetails(string);
+                                },
+                              );
+                            },
+                          );
+                          Overlay.of(context)
+                              .insert(varController.detailOverlayEntry);
+                          varController.detailOverlayLive = true;
+                        },
+                        child: AutoSizeText(
+                          widget.lemma.form,
+                          maxLines: 1,
+                          minFontSize: 25,
+                          maxFontSize: 40,
+                          overflow: TextOverflow.ellipsis,
+                        ))
                   ],
                 ),
                 const Divider(
@@ -72,7 +71,8 @@ class _DetailsViewState extends State<DetailsView> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(AppLocalizations.of(context)!.selectPos(widget.lemma.grammar.first ?? '')),
+                      Text(AppLocalizations.of(context)!
+                          .selectPos(widget.lemma.grammar.first ?? '')),
                       const Text(' '),
                       Text(widget.lemma.article),
                       const Text(' '),
@@ -88,11 +88,15 @@ class _DetailsViewState extends State<DetailsView> {
         Padding(
           padding: const EdgeInsets.only(right: 30),
           child: ClipRRect(
-            borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(5), bottomRight: Radius.circular(5)),
+            borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(5),
+                bottomRight: Radius.circular(5)),
             child: SizedBox.fromSize(
               size: const Size.fromRadius(8),
               child: Image(
-                image: varController.isFryEn ? const AssetImage('assets/flags/fry.png') : const AssetImage('assets/flags/en.png'),
+                image: varController.isFryEn
+                    ? const AssetImage('assets/flags/fry.png')
+                    : const AssetImage('assets/flags/en.png'),
                 fit: BoxFit.cover,
               ),
             ),

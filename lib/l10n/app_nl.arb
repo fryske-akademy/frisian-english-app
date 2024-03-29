@@ -107,7 +107,7 @@
     "searchtext":"Zoek in tekst",
     "section":"Waarin zoeken",
     "see":"Zie",
-    "selectPos":"{pos, select, posAdj {bijvoeglijk naamwoord} posAdp {voorzetsel} posAdv {bijwoord} posAux {hulpwerkwoord} posCconj {nevenschikkend voegwoord} posDet {lidwoord} posIntj {tussenwerpsel} posNoun {zelfstandig naamwoord} posNum {telwoord} posPron {voornaamwoord} posPropn {eigennaam} posSconj {onderschikkend voegwoord} posVerb {werkwoord} other {Andere}}",
+    "selectPos":"{pos, select, posAdj {bijvoeglijk naamwoord} posAdp {voorzetsel} posAdv {bijwoord} posAux {hulpwerkwoord} posCconj {nevenschikkend voegwoord} posDet {lidwoord} posIntj {tussenwerpsel} posNoun {zelfstandig naamwoord} posNum {telwoord} posPron {voornaamwoord} posPropn {eigennaam} posSconj {onderschikkend voegwoord} posVerb {werkwoord} other {}}",
     "sense":"betekenis",
     "senses":"betekenissen",
     "settings":"Instellingen",

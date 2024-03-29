@@ -9,7 +9,7 @@
     "autoComplete":"autocomplete",
     "based":"Based on the dictionary made by",
     "birdName":"bird",
-    "borrowing":"borrowing",
+    "borrowing":"borrowing",Oare
     "caseAcc":"object",
     "caseNom":"subject",
     "casePar":"partitive",
@@ -107,7 +107,7 @@
     "searchtext":"Search in text",
     "section":"Where to search",
     "see":"See",
-    "selectPos":"{pos, select, posAdj {adjective} posAdp {adposition} posAdv {adverb} posAux {auxiliary verb} posCconj {coordinating conjunction} posDet {article} posIntj {interjection} posNoun {noun} posNum {numeral} posPron {pronoun} posPropn {proper noun} posSconj {subordinating conjunction} posVerb {verb} other {Other}}",
+    "selectPos":"{pos, select, posAdj {adjective} posAdp {adposition} posAdv {adverb} posAux {auxiliary verb} posCconj {coordinating conjunction} posDet {article} posIntj {interjection} posNoun {noun} posNum {numeral} posPron {pronoun} posPropn {proper noun} posSconj {subordinating conjunction} posVerb {verb} other {}}",
     "sense":"sense",
     "senses":"senses",
     "settings":"Settings",

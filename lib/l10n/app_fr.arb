@@ -107,7 +107,7 @@
     "searchtext":"Sykje yn tekst",
     "section":"Wêryn sykje",
     "see":"Sjoch",
-    "selectPos":"{pos, select, posAdj {eigenskipswurd} posAdp {ferhâldingswurd} posAdv {bywurd} posAux {helptiidwurd} posCconj {lykskikkend bynwurd} posDet {lidwurd} posIntj {útropwurd} posNoun {substantyf} posNum {telwurd} posPron {foarnamwurd} posPropn {eigennamme} posSconj {ûnderskikkend bynwurd} posVerb {tiidwurd} other {Oare}}",
+    "selectPos":"{pos, select, posAdj {eigenskipswurd} posAdp {ferhâldingswurd} posAdv {bywurd} posAux {helptiidwurd} posCconj {lykskikkend bynwurd} posDet {lidwurd} posIntj {útropwurd} posNoun {substantyf} posNum {telwurd} posPron {foarnamwurd} posPropn {eigennamme} posSconj {ûnderskikkend bynwurd} posVerb {tiidwurd} other {}}",
     "sense":"betsjutting",
     "senses":"betsjuttingen",
     "settings":"Ynstellingen",
