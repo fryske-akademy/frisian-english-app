@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/lemma.dart';
 import 'package:frysish/main.dart';
 import 'package:frysish/src/text_search/text_search.dart';
 import 'package:get_it/get_it.dart';
@@ -119,8 +120,10 @@ class _TextResultState extends State<TextResult> {
                   var translations = textsData[index]['translations'][0]['text']['text'];
                   var transSpans = getRichText(translations);
 
-                  textSpans;
-                  transSpans;
+                  var link = textsData[index]['link'];
+                  Lemma lemma = Lemma();
+                  lemma.link=link;
+                  lemma.form=link['lemma'];
 
                   return Padding(
                     padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),
@@ -137,7 +140,7 @@ class _TextResultState extends State<TextResult> {
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
-                            children: textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                            children: textSpans,
                           ),
                         ),
                         subtitle: Padding(
@@ -149,7 +152,7 @@ class _TextResultState extends State<TextResult> {
                                 color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                                 fontSize: 16,
                               ),
-                              children: transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                              children: transSpans,
                             ),
                           ),
                         ),

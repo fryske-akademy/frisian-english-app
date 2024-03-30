@@ -28,8 +28,8 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
 
   void _hideAutocomplete(OverlayEntry? oe) {
     if (oe!=null) {
-      oe?.remove();
-      oe?.dispose();
+      oe.remove();
+      oe.dispose();
     }
   }
 

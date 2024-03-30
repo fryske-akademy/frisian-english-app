@@ -72,7 +72,7 @@ class _ProverbsState extends State<Proverbs> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
-                          children: filtered[index].textSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                          children: filtered[index].textSpans,
                         ),
                       ),
                       subtitle: Padding(
@@ -84,7 +84,7 @@ class _ProverbsState extends State<Proverbs> {
                               color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                               fontSize: 16,
                             ),
-                            children: filtered[index].transSpans.map((span) => TextSpan(text: '${span.text} ')).toList(),
+                            children: filtered[index].transSpans,
                           ),
                         ),
                       ),
