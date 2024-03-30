@@ -43,6 +43,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   void didChangeDependencies() {
     super.didChangeDependencies();
     varController.routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
+    varController.addListener(() => _handleTextChanged(context));
   }
 
 
@@ -54,6 +55,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   @override
   void dispose() {
     textController.dispose();
+    varController.removeListener(() => _handleTextChanged(context));
     varController.removeOverlay();
     varController.routeObserver.unsubscribe(this);
     super.dispose();
@@ -148,8 +150,6 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
       // Handle the timeout here if necessary
       return [];
     }).then((lemmas) {
-        var aco = AutoComOverlay(lemmas: lemmas);
-
         OverlayEntry? oe = _autoComOverlayEntry;
         _hideAutocomplete(oe);
 
@@ -162,7 +162,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
                   top: submitOffset.dy,
                   left: textOffset.dx,
                   width: textSize.width - 56,
-                  child: aco,
+                  child: AutoComOverlay(lemmas: lemmas),
                 ),
               ],
             );
