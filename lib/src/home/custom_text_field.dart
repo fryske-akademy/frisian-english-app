@@ -18,27 +18,50 @@ class CustomTextField extends StatefulWidget {
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
 
-class _CustomTextFieldState extends State<CustomTextField>
-    with WidgetsBindingObserver {
+class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   final GlobalKey textstackKey = GlobalKey();
   final GlobalKey textFieldKey = GlobalKey();
   final GlobalKey submitKey = GlobalKey();
   final TextEditingController textController = TextEditingController();
 
+  OverlayEntry? _autoComOverlayEntry;
+
+  void _hideAutocomplete() {
+    if (_autoComOverlayEntry!=null) {
+      _autoComOverlayEntry?.remove();
+      _autoComOverlayEntry?.dispose();
+      _autoComOverlayEntry=null;
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-    varController.hideAutocomplete();
     textController.text = varController.query.replaceFirst(RegExp(r'\s.*'), "");
-    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    varController.routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
+  }
+
+
+  @override
+  void didPushNext() {
+    _hideAutocomplete();
+  }
+
+  @override
+  void didPush() {
+    _hideAutocomplete();
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
     textController.dispose();
-    varController.hideAutocomplete();
     varController.removeOverlay();
+    varController.routeObserver.unsubscribe(this);
     super.dispose();
   }
 
@@ -112,7 +135,6 @@ class _CustomTextFieldState extends State<CustomTextField>
   }
 
   void _handleSubmitButtonPressed() async {
-    varController.hideAutocomplete();
     varController.query = textController.text;
     findDetails(textController.text);
   }
@@ -128,7 +150,8 @@ class _CustomTextFieldState extends State<CustomTextField>
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
 
-    varController.hideAutocomplete();
+    _hideAutocomplete();
+
     autoComplete(textController.text).timeout(const Duration(seconds: 3),
         onTimeout: () {
       // Handle the timeout here if necessary
@@ -136,7 +159,7 @@ class _CustomTextFieldState extends State<CustomTextField>
     }).then((lemmas) {
         var aco = AutoComOverlay(lemmas: lemmas);
 
-        varController.autoComOverlayEntry = OverlayEntry(
+        _autoComOverlayEntry = OverlayEntry(
           builder: (context) => Builder(builder: (context) {
             return Stack(
               children: [
@@ -152,9 +175,8 @@ class _CustomTextFieldState extends State<CustomTextField>
           }),
         );
 
-        Overlay.of(context).insert(varController.autoComOverlayEntry);
+        if (_autoComOverlayEntry!=null) Overlay.of(context).insert(_autoComOverlayEntry!);
 
-        varController.autoComp = true;
     });
   }
 }

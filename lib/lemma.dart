@@ -126,9 +126,9 @@ class Lemma {
               // person_1
               if (grammar.contains('person_1')) {
                 if (grammar.contains('number_sing')) {
-                  presPerson1Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  presPerson1Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 } else if (grammar.contains('number_plur')) {
-                  presPerson1Plur.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  presPerson1Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 }
               }
               // person_2
@@ -136,31 +136,31 @@ class Lemma {
                 if (grammar.contains('number_sing')) {
                   // Should be added to end of list
                   if (grammar.contains('clitic_yes')) {
-                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                   // Should be added to front of list
                   else if (grammar.contains('prodrop_yes')) {
-                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                   // Should be added to front of list
                   else {
-                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                 } else if (grammar.contains('number_plur')) {
                   // Don't really get this because should be singular person 2 formal
                   if (grammar.contains('polite_form')) {
-                    presPerson2PlurFormal.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    presPerson2PlurFormal.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   } else {
-                    presPerson2Plur.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    presPerson2Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                 }
               }
               // person_3
               else if (grammar.contains('person_3')) {
                 if (grammar.contains('number_plur')) {
-                  presPerson3Plur.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  presPerson3Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 } else if (grammar.contains('number_sing')) {
-                  presPerson3Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  presPerson3Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 }
               }
             }
@@ -171,9 +171,9 @@ class Lemma {
               // person_1
               if (grammar.contains('person_1')) {
                 if (grammar.contains('number_sing')) {
-                  pastPerson1Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  pastPerson1Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 } else if (grammar.contains('number_plur')) {
-                  pastPerson1Plur.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  pastPerson1Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 }
               }
               // person_2
@@ -181,31 +181,31 @@ class Lemma {
                 if (grammar.contains('number_sing')) {
                   // Should be added to end of list
                   if (grammar.contains('clitic_yes')) {
-                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                   // Should be added to front of list
                   else if (grammar.contains('prodrop_yes')) {
-                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                   // Should be added to front of list
                   else {
-                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                 } else if (grammar.contains('number_plur')) {
                   // Don't really get this because should be singular person 2 formal
                   if (grammar.contains('polite_form')) {
-                    pastPerson2PlurFormal.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    pastPerson2PlurFormal.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   } else {
-                    pastPerson2Plur.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                    pastPerson2Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                   }
                 }
               }
               // person_3
               else if (grammar.contains('person_3')) {
                 if (grammar.contains('number_plur')) {
-                  pastPerson3Plur.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  pastPerson3Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 } else if (grammar.contains('number_sing')) {
-                  pastPerson3Sing.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  pastPerson3Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 }
               }
             }
@@ -215,11 +215,11 @@ class Lemma {
             for (var grammar in form['grammar']) {
               if (grammar.contains('tense_past')) {
                 if (grammar.contains('inflection_uninf')) {
-                  pastParticiple.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  pastParticiple.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 } else if (grammar.contains('inflection_infl')) {}
               } else if (grammar.contains('tense_pres')) {
                 if (grammar.contains('inflection_uninf')) {
-                  presentParticiple.add({'form': form['form'], 'hyphenation': form['hyphenation']});
+                  presentParticiple.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
                 } else if (grammar.contains('inflection_infl')) {}
               }
             }

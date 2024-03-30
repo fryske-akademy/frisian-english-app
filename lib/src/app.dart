@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           navigatorKey: varController.navigatorKey,
+          navigatorObservers: [varController.routeObserver],
           restorationScopeId: 'app',
 
           // Uses the generated AppLocalizations class to provide localized strings

@@ -6,6 +6,7 @@ class VarController with ChangeNotifier {
   VarController(this._settingsService);
 
   final navigatorKey = GlobalKey<NavigatorState>();
+  final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
   void route(String route, {Object? args}) {
     navigatorKey.currentState?.pushNamed(route, arguments: args);
@@ -130,15 +131,6 @@ class VarController with ChangeNotifier {
 
   bool langSwapOverlayLive = false;
   bool detailOverlayLive = false;
-
-  late OverlayEntry autoComOverlayEntry;
-  bool autoComp = false;
-
-  void hideAutocomplete() {
-    if (autoComp) {
-      autoComOverlayEntry.remove(); autoComp=false;
-    }
-  }
 
   void removeOverlay() {
     if (langSwapOverlayLive) {
