@@ -80,10 +80,10 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                           text: AppLocalizations.of(context)!.forms,
                         ),
                         Tab(
-                          text: "${AppLocalizations.of(context)!.examples}: ${Details.examples(details.texts).length-1}",
+                          text: "${AppLocalizations.of(context)!.examples}: ${Details.examples(details.texts).length}",
                         ),
                         Tab(
-                          text: "${AppLocalizations.of(context)!.proverbs}: ${Details.proverbs(details.texts).length-1}",
+                          text: "${AppLocalizations.of(context)!.proverbs}: ${Details.proverbs(details.texts).length}",
                         ),
                       ],
                     ),
