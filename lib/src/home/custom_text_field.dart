@@ -26,11 +26,10 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
 
   OverlayEntry? _autoComOverlayEntry;
 
-  void _hideAutocomplete() {
-    if (_autoComOverlayEntry!=null) {
-      _autoComOverlayEntry?.remove();
-      _autoComOverlayEntry?.dispose();
-      _autoComOverlayEntry=null;
+  void _hideAutocomplete(OverlayEntry? oe) {
+    if (oe!=null) {
+      oe?.remove();
+      oe?.dispose();
     }
   }
 
@@ -49,12 +48,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
 
   @override
   void didPushNext() {
-    _hideAutocomplete();
-  }
-
-  @override
-  void didPush() {
-    _hideAutocomplete();
+    _hideAutocomplete(_autoComOverlayEntry);
   }
 
   @override
@@ -107,8 +101,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
             hintStyle: const TextStyle(fontSize: 18),
             hintText: AppLocalizations.of(context)!.enterText,
           ),
-          style: const TextStyle(fontSize: 25),
-          onSubmitted: (value) async {},
+          style: const TextStyle(fontSize: 25)
         ),
       ),
     );
@@ -130,7 +123,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
 
   Future<void> _handleTextChanged(BuildContext context) async {
     if (textController.text.length >= 3) {
-      await Future.delayed(const Duration(milliseconds: 500), () {renderOverlay(context);});
+      Future.delayed(const Duration(milliseconds: 500), () {renderOverlay(context);});
     }
   }
 
@@ -150,14 +143,15 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
     final textSize = textField.size;
     final textOffset = textField.localToGlobal(Offset.zero);
 
-    _hideAutocomplete();
-
     autoComplete(textController.text).timeout(const Duration(seconds: 3),
         onTimeout: () {
       // Handle the timeout here if necessary
       return [];
     }).then((lemmas) {
         var aco = AutoComOverlay(lemmas: lemmas);
+
+        OverlayEntry? oe = _autoComOverlayEntry;
+        _hideAutocomplete(oe);
 
         _autoComOverlayEntry = OverlayEntry(
           builder: (context) => Builder(builder: (context) {
@@ -175,7 +169,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
           }),
         );
 
-        if (_autoComOverlayEntry!=null) Overlay.of(context).insert(_autoComOverlayEntry!);
+        Overlay.of(context).insert(_autoComOverlayEntry!);
 
     });
   }
