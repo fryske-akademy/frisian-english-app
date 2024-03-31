@@ -133,22 +133,22 @@ class _TextResultState extends State<TextResult> {
                       surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
                       borderRadius: BorderRadius.circular(10),
                       child: ListTile(
-                        title: TextButton(child:  SelectableText.rich(
+                        title: Row(children: [
+                          TextButton(onPressed: () => toDetails(List.filled(1, lemma),context),
+                              child: Text(lemma.form)),
+                          SelectableText.rich(
                           TextSpan(
-                            text: '',
                             style: TextStyle(
                               color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                             children: textSpans,
-                          ),
-                        ), onPressed: () => toDetails(List.filled(1,lemma), context),),
+                          ))]),
                         subtitle: Padding(
                           padding: const EdgeInsets.only(top: 15.0),
                           child: SelectableText.rich(
                             TextSpan(
-                              text: '',
                               style: TextStyle(
                                 color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                                 fontSize: 16,
