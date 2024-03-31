@@ -134,7 +134,7 @@ class _TextResultState extends State<TextResult> {
                       borderRadius: BorderRadius.circular(10),
                       child: ListTile(
                         title: Row(children: [
-                          TextButton(onPressed: () => toDetails(List.filled(1, lemma),context),
+                          TextButton(onPressed: () => toDetails([lemma],context),
                               child: Text(lemma.form)),
                           SelectableText.rich(
                           TextSpan(

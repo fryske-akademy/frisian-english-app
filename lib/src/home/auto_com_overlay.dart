@@ -43,7 +43,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
               ),
               onPressed: () {
                 varController.query = lemma.form;
-                toDetails(List.filled(1, lemma),context);
+                toDetails([lemma],context);
               },
               child: Text(lemma.form, style: const TextStyle(fontWeight: FontWeight.bold)),
             );
