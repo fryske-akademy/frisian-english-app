@@ -63,7 +63,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               remember(details);
 
               return PopScope(
-                canPop: false,
+                canPop: true,
                 child: DefaultTabController(
                   length: 3,
                   child: Scaffold(
