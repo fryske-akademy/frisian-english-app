@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
 import 'package:frysish/main.dart';
+import 'package:frysish/src/result/result_view.dart';
 import 'package:frysish/src/text_search/text_search.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
@@ -132,7 +133,7 @@ class _TextResultState extends State<TextResult> {
                       surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
                       borderRadius: BorderRadius.circular(10),
                       child: ListTile(
-                        title: SelectableText.rich(
+                        title: TextButton(child:  SelectableText.rich(
                           TextSpan(
                             text: '',
                             style: TextStyle(
@@ -142,7 +143,7 @@ class _TextResultState extends State<TextResult> {
                             ),
                             children: textSpans,
                           ),
-                        ),
+                        ), onPressed: () => toDetails(List.filled(1,lemma), context),),
                         subtitle: Padding(
                           padding: const EdgeInsets.only(top: 15.0),
                           child: SelectableText.rich(

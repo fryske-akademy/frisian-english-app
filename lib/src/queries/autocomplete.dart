@@ -1,26 +1,30 @@
 
 import 'dart:async';
 
+import 'package:frysish/lemma.dart';
 import 'package:frysish/main.dart';
 import 'package:get_it/get_it.dart';
 import 'package:graphql/client.dart';
 
-Future<List<String>> autoComplete(String value) async {
+Future<List<Lemma>> autoComplete(String value) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String lemmas = r'''
     # append * to the searchterm
     query lemmas ($lang: LangType!=fry $searchterm: String! $source: String="fkw") {
-        lemmasearch(lang: $lang searchterm: $searchterm source: $source) {
-            lemmas { form }
+        lemmasearch(lang: $lang searchterm: $searchterm source: $source lexiconFallback: false) {
+            lemmas { form link {...detaillink} }
         }
+    }
+    fragment detaillink on LemmaLink {
+        source lemma pos
     }
   ''';
 
   final QueryOptions lemmasOptions = QueryOptions(document: gql(lemmas), variables: <String, dynamic>{
-    'searchterm': '$value*',
+    'searchterm': '${value}*',
     'lang': varController.isFryEn ? 'fry' : 'en',
-    'source': varController.isFryEn ? 'fiwb' : '',
+    'source': 'fiwb'
   });
 
   final QueryResult lemmasResult = await client.query(lemmasOptions);
@@ -31,5 +35,10 @@ Future<List<String>> autoComplete(String value) async {
 
   final List lemmasData = lemmasResult.data!['lemmasearch']['lemmas'] as List;
 
-  return lemmasData.map((e) => e['form'] as String).toSet().toList();
+  return lemmasData.map((e) {
+    Lemma l = Lemma();
+    l.link = e['link'];
+    l.form = l.link['lemma'];
+    return l;
+  }).toSet().toList();
 }

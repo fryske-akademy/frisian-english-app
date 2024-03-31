@@ -23,6 +23,18 @@ class Lemma {
 
   Lemma();
 
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Lemma &&
+          runtimeType == other.runtimeType &&
+          form == other.form &&
+          lang == other.lang;
+
+  @override
+  int get hashCode => form.hashCode ^ lang.hashCode;
+
   void merge(Lemma other) {
     if (other.form.isNotEmpty) {
       form = other.form;

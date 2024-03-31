@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:frysish/lemma.dart';
 import 'package:frysish/src/result/result_view.dart';
 
 import '../../main.dart';
 
 class AutoComOverlay extends StatefulWidget {
-  final List<String> lemmas;
+  final List<Lemma> lemmas;
 
   const AutoComOverlay({super.key, required this.lemmas});
 
@@ -32,7 +33,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
           padding: EdgeInsets.zero,
           itemCount: widget.lemmas.length,
           itemBuilder: (context, index) {
-            String lemma = widget.lemmas[index];
+            Lemma lemma = widget.lemmas[index];
             return TextButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.transparent),
@@ -41,10 +42,10 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
               ),
               onPressed: () {
-                varController.query = lemma;
-                findDetails(lemma);
+                varController.query = lemma.form;
+                toDetails(List.filled(1, lemma),context);
               },
-              child: Text(lemma, style: const TextStyle(fontWeight: FontWeight.bold)),
+              child: Text(lemma.form, style: const TextStyle(fontWeight: FontWeight.bold)),
             );
           },
         ),

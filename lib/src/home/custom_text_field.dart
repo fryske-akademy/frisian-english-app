@@ -28,6 +28,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
 
   void _hideAutocomplete(OverlayEntry? oe) {
     if (oe!=null) {
+      _autoComOverlayEntry=null;
       oe.remove();
       oe.dispose();
     }
@@ -152,6 +153,8 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
     }).then((lemmas) {
         OverlayEntry? oe = _autoComOverlayEntry;
         _hideAutocomplete(oe);
+
+        if (lemmas.isEmpty) return;
 
         _autoComOverlayEntry = OverlayEntry(
           builder: (context) => Builder(builder: (context) {
