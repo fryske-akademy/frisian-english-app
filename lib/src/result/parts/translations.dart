@@ -24,6 +24,7 @@ class _TranslationsState extends State<Translations> {
   @override
   void dispose() {
     super.dispose();
+    varController.removeOverlay();
     currentIndex = 0;
   }
   

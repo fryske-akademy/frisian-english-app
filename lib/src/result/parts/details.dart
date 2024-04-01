@@ -88,9 +88,7 @@ class _DetailsViewState extends State<DetailsView> {
                   return DetailOverlay(
                     widget.lemma,
                     onPressed: (string) {
-                      varController.detailOverlayEntry.remove();
-                      varController.detailOverlayEntry.dispose();
-                      varController.detailOverlayLive = false;
+                      varController.removeOverlay();
                       findDetails(string);
                     },
                   );
