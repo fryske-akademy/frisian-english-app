@@ -35,12 +35,6 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   }
 
   @override
-  void initState() {
-    super.initState();
-    textController.text = varController.query.replaceFirst(RegExp(r'\s.*'), "");
-  }
-
-  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     varController.routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
@@ -51,11 +45,16 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   @override
   void didPushNext() {
     _hideAutocomplete(_autoComOverlayEntry);
+    textController.text = '';
+  }
+
+  @override
+  void didPush() {
+    textController.text = varController.query.replaceFirst(RegExp(r'\s.*'), "");
   }
 
   @override
   void dispose() {
-    textController.dispose();
     varController.removeListener(() => _handleTextChanged(context));
     varController.removeOverlay();
     varController.routeObserver.unsubscribe(this);
