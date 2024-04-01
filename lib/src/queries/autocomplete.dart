@@ -13,7 +13,7 @@ Future<List<Lemma>> autoComplete(String value) async {
     # append * to the searchterm
     query lemmas ($lang: LangType!=fry $searchterm: String! $source: String="fkw") {
         lemmasearch(lang: $lang searchterm: $searchterm source: $source lexiconFallback: false) {
-            lemmas { form link {...detaillink} }
+            lemmas { form link {...detaillink} translations {form} }
         }
     }
     fragment detaillink on LemmaLink {
@@ -38,7 +38,8 @@ Future<List<Lemma>> autoComplete(String value) async {
   return lemmasData.map((e) {
     Lemma l = Lemma();
     l.link = e['link'];
-    l.form = l.link['lemma'];
+    l.form = e['form'];
+    l.translations = e['translations'];
     return l;
   }).toSet().toList();
 }

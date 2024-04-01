@@ -18,6 +18,11 @@ class Lemma {
 
   List grammar = [];
   List subForms = [];
+  List translations = [];
+
+  String getFirstTranslation() {
+    return translations.isEmpty ? "" : translations[0]['form'];
+  }
 
   bool toBeDeleted = false;
 

@@ -34,6 +34,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
           itemCount: widget.lemmas.length,
           itemBuilder: (context, index) {
             Lemma lemma = widget.lemmas[index];
+            String extra = varController.isFryEn?'':lemma.getFirstTranslation()==''?'':' (${lemma.getFirstTranslation()})';
             return TextButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.transparent),
@@ -45,7 +46,7 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
                 varController.query = lemma.form;
                 toDetails([lemma],context);
               },
-              child: Text(lemma.form, style: const TextStyle(fontWeight: FontWeight.bold)),
+              child: Text("${lemma.form}$extra", style: const TextStyle(fontWeight: FontWeight.bold)),
             );
           },
         ),
