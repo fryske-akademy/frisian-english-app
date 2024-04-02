@@ -9,7 +9,6 @@ import 'package:select_dialog/select_dialog.dart';
 
 import '../../details.dart';
 import '../../main.dart';
-import '../list_item.dart';
 import '../queries/get_details.dart';
 import 'parts/examples.dart';
 import 'parts/proverbs.dart';
@@ -43,109 +42,115 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final arguments = (ModalRoute.of(context)?.settings.arguments ?? <String, dynamic>{}) as Map;
-    final Lemma lemma =  arguments['lemma'] is Lemma ? arguments["lemma"] : Lemma();
+    final arguments = (ModalRoute
+        .of(context)
+        ?.settings
+        .arguments ?? <String, dynamic>{}) as Map;
+    final Lemma lemma = arguments['lemma'] is Lemma
+        ? arguments["lemma"]
+        : Lemma();
 
     return FutureBuilder(
-            future: getDetails(lemma.link),
-            builder: (context, snapshot) {
-              if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return const Center(child: CircularProgressIndicator());
-              }
+      future: getDetails(lemma.link),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return const Center(child: CircularProgressIndicator());
+        }
 
-              List<Details> all = snapshot.data as List<Details>;
-              // TODO deal with multiple details
-              Details details = all[0];
-              if (!varController.isFryEn) {
-                details = toEnglish(all);
-              }
+        List<Details> all = snapshot.data as List<Details>;
+        // TODO deal with multiple details
+        Details details = all[0];
+        if (!varController.isFryEn) {
+          details = toEnglish(all);
+        }
 
-              remember(details);
+        remember(details);
 
-              return PopScope(
-                canPop: true,
-                child: DefaultTabController(
-                  length: 3,
-                  child: Scaffold(
-                    appBar: AppBar(
-                      title: Text(AppLocalizations.of(context)!.result, style: const TextStyle(fontSize: 25)),
-                      centerTitle: true,
-                      automaticallyImplyLeading: false,
-                    ),
-                    bottomNavigationBar: TabBar(
-                      controller: tabController,
-                      labelStyle: const TextStyle(fontSize: 12),
-                      tabs: [
-                        Tab(
-                          text: AppLocalizations.of(context)!.forms,
-                        ),
-                        Tab(
-                          text: "${AppLocalizations.of(context)!.examples}: ${Details.examples(details.texts).length}",
-                        ),
-                        Tab(
-                          text: "${AppLocalizations.of(context)!.proverbs}: ${Details.proverbs(details.texts).length}",
-                        ),
-                      ],
-                    ),
-                    body: TabBarView(
-                      controller: tabController,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              flex: 3,
-                              child: Padding(
-                                padding: MediaQuery.of(context).size.width > 768
-                                    ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
-                                    : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                                child: Translations(details),
-                              ),
-                            ),
-                            Expanded(
-                              flex: 3,
-                              child: Padding(
-                                padding: MediaQuery.of(context).size.width > 768
-                                    ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
-                                    : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                                child: DetailsView(details.lemma),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 25),
-                              child: Center(
-                                child: IconButton(
-                                  icon: const Icon(Icons.home),
-                                  onPressed: () {
-                                    varController.route( HomeView.routeName);
-                                  },
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Examples(details.texts),
-                        Proverbs(details.texts),
-                      ],
-                    ),
+        return PopScope(
+          canPop: true,
+          child: DefaultTabController(
+            length: 3,
+            child: Scaffold(
+              appBar: AppBar(
+                title: Text(AppLocalizations.of(context)!.result,
+                    style: const TextStyle(fontSize: 25)),
+                centerTitle: true,
+                automaticallyImplyLeading: false,
+              ),
+              bottomNavigationBar: TabBar(
+                controller: tabController,
+                labelStyle: const TextStyle(fontSize: 12),
+                tabs: [
+                  Tab(
+                    text: AppLocalizations.of(context)!.forms,
                   ),
-                ),
-              );
-            },
-          );
-  }
-
-  void remember(Details details) {
-    var history = varController.history;
-
-    if (!history.any((item) => item.form == details.lemma.form)) {
-      ListItem item = ListItem();
-      item.form = details.lemma.form;
-      item.isFryEn = details.lemma.lang == 'fry' ? true : false;
-      history.add(item);
-    }
+                  Tab(
+                    text: "${AppLocalizations.of(context)!.examples}: ${Details
+                        .examples(details.texts)
+                        .length}",
+                  ),
+                  Tab(
+                    text: "${AppLocalizations.of(context)!.proverbs}: ${Details
+                        .proverbs(details.texts)
+                        .length}",
+                  ),
+                ],
+              ),
+              body: TabBarView(
+                controller: tabController,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        flex: 3,
+                        child: Padding(
+                          padding: MediaQuery
+                              .of(context)
+                              .size
+                              .width > 768
+                              ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
+                              : const EdgeInsets.fromLTRB(50, 50, 50, 50),
+                          child: Translations(details),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 3,
+                        child: Padding(
+                          padding: MediaQuery
+                              .of(context)
+                              .size
+                              .width > 768
+                              ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
+                              : const EdgeInsets.fromLTRB(50, 50, 50, 50),
+                          child: DetailsView(details.lemma),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 25),
+                        child: Center(
+                          child: IconButton(
+                            icon: const Icon(Icons.home),
+                            onPressed: () {
+                              varController.route(HomeView.routeName);
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Examples(details.texts),
+                  Proverbs(details.texts),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 }
+
 void findDetails(String text) {
   getLemmas(text).timeout(
       const Duration(seconds: 3),

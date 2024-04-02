@@ -35,6 +35,7 @@ class _HistoryModalState extends State<HistoryModal> {
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
           child: ListView.builder(
+            reverse: true,
             itemCount: varController.stagedItems.length,
             itemBuilder: (context, index) {
               ListItem listItem = varController.stagedItems[index];

@@ -30,6 +30,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
           padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
           child: ListView.builder(
             itemCount: varController.stagedItems.length,
+            reverse: true,
             itemBuilder: (context, index) {
               ListItem listItem = varController.stagedItems[index];
               return Padding(
