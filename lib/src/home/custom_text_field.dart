@@ -29,7 +29,6 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   void didChangeDependencies() {
     super.didChangeDependencies();
     varController.routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
-    // TODO this causes a request a lot of taps
     varController.addListener(() => _handleTextChanged(context));
   }
 
@@ -75,9 +74,6 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
         child: TextField(
           key: textFieldKey,
           controller: textController,
-          onTap: () async {
-            _handleTextChanged(context);
-          },
           onChanged: (value) async {
             _handleTextChanged(context);
           },
