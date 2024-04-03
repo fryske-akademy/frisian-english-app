@@ -125,6 +125,16 @@ class VarController with ChangeNotifier {
   late List<ListItem> stagedItems = [];
 
   var customColor = const Color.fromARGB(255, 204, 111, 24);
+  
+  OverlayEntry? autoComOverlayEntry;
+
+  void hideAutocomplete(OverlayEntry? oe) {
+    if (oe!=null) {
+      autoComOverlayEntry=null;
+      oe.remove();
+      oe.dispose();
+    }
+  }
 
   late OverlayEntry langSwapOverlayEntry;
   late OverlayEntry detailOverlayEntry;

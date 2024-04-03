@@ -24,27 +24,19 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   final GlobalKey submitKey = GlobalKey();
   final TextEditingController textController = TextEditingController();
 
-  OverlayEntry? _autoComOverlayEntry;
-
-  void _hideAutocomplete(OverlayEntry? oe) {
-    if (oe!=null) {
-      _autoComOverlayEntry=null;
-      oe.remove();
-      oe.dispose();
-    }
-  }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     varController.routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
+    // TODO this causes a request a lot of taps
     varController.addListener(() => _handleTextChanged(context));
   }
 
 
   @override
   void didPushNext() {
-    _hideAutocomplete(_autoComOverlayEntry);
+    varController.hideAutocomplete(varController.autoComOverlayEntry);
     textController.text = '';
   }
 
@@ -144,12 +136,12 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
       // Handle the timeout here if necessary
       return [];
     }).then((lemmas) {
-        OverlayEntry? oe = _autoComOverlayEntry;
-        _hideAutocomplete(oe);
+        OverlayEntry? oe = varController.autoComOverlayEntry;
+        varController.hideAutocomplete(oe);
 
         if (lemmas.isEmpty) return;
 
-        _autoComOverlayEntry = OverlayEntry(
+        varController.autoComOverlayEntry = OverlayEntry(
           builder: (context) => Builder(builder: (context) {
             return Stack(
               children: [
@@ -165,7 +157,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
           }),
         );
 
-        Overlay.of(context).insert(_autoComOverlayEntry!);
+        Overlay.of(context).insert(varController.autoComOverlayEntry!);
 
     });
   }
