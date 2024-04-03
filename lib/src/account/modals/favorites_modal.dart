@@ -43,9 +43,8 @@ class _FavoritesModalState extends State<FavoritesModal> {
                         child: TextButton(
                           onPressed: !listItem.toBeDeleted
                               ? () {
-                                  varController.query = listItem.translation;
                                   varController.updateisFryEn(!listItem.isFryEn);
-                                  findDetails(varController.query);
+                                  findDetails(listItem.translation);
                                 }
                               : null,
                           child: AutoSizeText(
@@ -64,9 +63,8 @@ class _FavoritesModalState extends State<FavoritesModal> {
                         child: TextButton(
                           onPressed: !listItem.toBeDeleted
                               ? () {
-                                  varController.query = listItem.form;
                                   varController.updateisFryEn(listItem.isFryEn);
-                                  findDetails(varController.query);
+                                  findDetails(listItem.form);
                                 }
                               : null,
                           child: AutoSizeText(

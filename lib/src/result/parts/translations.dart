@@ -97,13 +97,8 @@ class _TranslationsState extends State<Translations> {
                             textAlign: TextAlign.center,
                           ),
                           onPressed: () {
-                            if (widget.details.translations[currentIndex]['lang'] == 'fry') {
-                              varController.updateisFryEn(true);
-                            } else {
-                              varController.updateisFryEn(false);
-                            }
-                            varController.query = showForm();
-                            findDetails(varController.query);
+                            varController.updateisFryEn(widget.details.translations[currentIndex]['lang'] == 'fry');
+                            findDetails(showForm());
                           },
                         ),
                       ),

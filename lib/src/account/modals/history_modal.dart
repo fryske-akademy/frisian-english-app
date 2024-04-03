@@ -23,9 +23,8 @@ class _HistoryModalState extends State<HistoryModal> {
   }
 
   void goToResultView(ListItem listItem, BuildContext context) {
-    varController.query = listItem.form;
     varController.updateisFryEn(listItem.isFryEn);
-    findDetails(varController.query);
+    findDetails(listItem.form);
   }
 
   @override

@@ -22,7 +22,7 @@ Future<List<Lemma>> autoComplete(String value) async {
   ''';
 
   final QueryOptions lemmasOptions = QueryOptions(document: gql(lemmas), variables: <String, dynamic>{
-    'searchterm': '${value}*',
+    'searchterm': '$value*',
     'lang': varController.isFryEn ? 'fry' : 'en',
     'source': 'fiwb'
   });

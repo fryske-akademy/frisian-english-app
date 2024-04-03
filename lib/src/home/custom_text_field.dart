@@ -116,9 +116,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
         key: submitKey,
         shape: const CircleBorder(),
         child: const Icon(Icons.send),
-        onPressed: () async {
-          _handleSubmitButtonPressed();
-        },
+        onPressed: () => findDetails(textController.text),
       ),
     );
   }
@@ -129,10 +127,6 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
     }
   }
 
-  void _handleSubmitButtonPressed() async {
-    varController.query = textController.text;
-    findDetails(textController.text);
-  }
 
   Future<void> renderOverlay(BuildContext context) async {
     if (submitKey.currentContext == null) return;

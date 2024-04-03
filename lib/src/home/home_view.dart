@@ -23,12 +23,6 @@ class _HomeViewState extends State<HomeView> {
   final GlobalKey languageIconKey = GlobalKey();
 
   @override
-  void initState() {
-    super.initState();
-    varController.updateisFryEn(varController.isFryEn);
-  }
-
-  @override
   void dispose() {
     super.dispose();
     if (varController.langSwapOverlayLive) {
