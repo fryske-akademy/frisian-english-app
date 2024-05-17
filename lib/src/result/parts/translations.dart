@@ -82,10 +82,10 @@ class _TranslationsState extends State<Translations> {
                       Expanded(
                         child: TextButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                            elevation: MaterialStateProperty.all(0.0),
+                            backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                            elevation: WidgetStateProperty.all(0.0),
                             splashFactory: NoSplash.splashFactory,
-                            overlayColor: MaterialStateProperty.all(Colors.transparent),
+                            overlayColor: WidgetStateProperty.all(Colors.transparent),
                           ),
                           child: AutoSizeText(
                             showForm(),

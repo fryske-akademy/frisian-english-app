@@ -123,10 +123,10 @@ class _DetailOverlayState extends State<DetailOverlay> {
                           return TextButton(
                             key: keys[index],
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                              elevation: MaterialStateProperty.all(0.0),
+                              backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                              elevation: WidgetStateProperty.all(0.0),
                               splashFactory: NoSplash.splashFactory,
-                              overlayColor: MaterialStateProperty.all(Colors.transparent),
+                              overlayColor: WidgetStateProperty.all(Colors.transparent),
                             ),
                             child: Text(widget.lemma.synonyms[index].form),
                             onPressed: () => widget.onPressed(widget.lemma.synonyms[index].form),
@@ -191,10 +191,10 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       for (var variant in widget.lemma.variants)
                         TextButton(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                            elevation: MaterialStateProperty.all(0.0),
+                            backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                            elevation: WidgetStateProperty.all(0.0),
                             splashFactory: NoSplash.splashFactory,
-                            overlayColor: MaterialStateProperty.all(Colors.transparent),
+                            overlayColor: WidgetStateProperty.all(Colors.transparent),
                           ),
                           child: Text(variant),
                           onPressed: () => widget.onPressed(variant),

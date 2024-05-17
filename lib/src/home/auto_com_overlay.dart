@@ -35,10 +35,10 @@ class _AutoComOverlayState extends State<AutoComOverlay> {
             Lemma lemma = widget.lemmas[index];
             return TextButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                elevation: MaterialStateProperty.all(0.0),
+                backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                elevation: WidgetStateProperty.all(0.0),
                 splashFactory: NoSplash.splashFactory,
-                overlayColor: MaterialStateProperty.all(Colors.transparent),
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
               ),
               onPressed: ()  => findDetails(lemma.form),
               child: Text(lemma.form, style: const TextStyle(fontWeight: FontWeight.bold)),
