@@ -11,7 +11,7 @@ class TextSearch extends StatefulWidget {
   const TextSearch({super.key});
 
   @override
-  _TextSearchState createState() => _TextSearchState();
+  State<TextSearch> createState() => _TextSearchState();
 }
 
 class _TextSearchState extends State<TextSearch> {
@@ -235,7 +235,7 @@ class _TextSearchState extends State<TextSearch> {
                       String leftSpace = leftText.endsWith(' ') ? '' : ' ';
                       String rightSpace = rightText.startsWith(' ') ? '' : ' ';
 
-                      String newText = leftText + leftSpace + 'AND' + rightSpace + rightText;
+                      String newText = '$leftText${leftSpace}AND$rightSpace$rightText';
                       textController.text = newText;
                     },
                     child: const Text(
@@ -259,7 +259,7 @@ class _TextSearchState extends State<TextSearch> {
                       String leftSpace = leftText.endsWith(' ') ? '' : ' ';
                       String rightSpace = rightText.startsWith(' ') ? '' : ' ';
 
-                      String newText = leftText + leftSpace + 'OR' + rightSpace + rightText;
+                      String newText = '$leftText${leftSpace}OR$rightSpace$rightText';
                       textController.text = newText;
                     },
                     child: const Text(
@@ -279,7 +279,7 @@ class _TextSearchState extends State<TextSearch> {
                       String leftText = textController.text.substring(0, position);
                       String rightText = textController.text.substring(position);
 
-                      String newText = leftText + '"' + rightText;
+                      String newText = '$leftText"$rightText';
                       textController.text = newText;
                     },
                     child: const Text(
@@ -299,7 +299,7 @@ class _TextSearchState extends State<TextSearch> {
                       String leftText = textController.text.substring(0, position);
                       String rightText = textController.text.substring(position);
 
-                      String newText = leftText + '?' + rightText;
+                      String newText = '$leftText?$rightText';
                       textController.text = newText;
                     },
                     child: const Text(
@@ -319,7 +319,7 @@ class _TextSearchState extends State<TextSearch> {
                       String leftText = textController.text.substring(0, position);
                       String rightText = textController.text.substring(position);
 
-                      String newText = leftText + '*' + rightText;
+                      String newText = '$leftText*$rightText';
                       textController.text = newText;
                     },
                     child: const Text(

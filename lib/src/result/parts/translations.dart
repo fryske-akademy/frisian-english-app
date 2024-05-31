@@ -179,14 +179,14 @@ class _TranslationsState extends State<Translations> {
 
                       // Add translation to body of email
                       String body =
-                          Uri.encodeComponent(AppLocalizations.of(context)!.translation + ": ${varController.query} - ${showForm()} \n\n Feedback:");
+                          Uri.encodeComponent("${AppLocalizations.of(context)!.translation}: ${varController.query} - ${showForm()} \n\n Feedback:");
                       Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
                       if (await launchUrl(mail)) {
                       } else {}
                     },
                     iconSize: 20,
                     icon: const Icon(Icons.email),
-                    tooltip: "Feedback " + AppLocalizations.of(context)!.translation,
+                    tooltip: "Feedback ${AppLocalizations.of(context)!.translation}",
                   ),
                 ),
               ],
