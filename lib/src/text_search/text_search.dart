@@ -32,15 +32,11 @@ class _TextSearchState extends State<TextSearch> {
     super.initState();
     scrollController = ScrollController();
     textController.text=varController.query;
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await _showDialogAfterDelay();
-    });
-  }
 
-  Future<void> _showDialogAfterDelay() async {
-    await Future.delayed(const Duration(seconds: 2));
     if (!varController.onboardingShow) {
-      _buildInfoDialog(context);
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _buildInfoDialog(context);
+      });
     }
   }
 
