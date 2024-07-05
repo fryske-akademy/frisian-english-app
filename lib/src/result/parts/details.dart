@@ -45,7 +45,7 @@ class _DetailsViewState extends State<DetailsView> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(AppLocalizations.of(context)!
-                          .selectPos(widget.lemma.grammar.first ?? '')),
+                          .selectPos(widget.lemma.pos)),
                       const Text(' '),
                       Text(widget.lemma.article),
                       const Text(' '),

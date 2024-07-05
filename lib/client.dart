@@ -3,7 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 Future<GraphQLClient> initClient() async {
   final HttpLink httpLink = HttpLink(
-    'https://frisian.eu/languageapi',
+    'https://frisian.eu/TEST/languageapi',
   );
 
   await Hive.initFlutter();

@@ -24,8 +24,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
   void initState() {
     super.initState();
     widget.lemma.processSubForms();
-    widget.lemma.retrieveTenses();
-    widget.lemma.grammar.first;
+    widget.lemma.pos;
 
     keys = List<GlobalKey>.generate(widget.lemma.synonyms.length, (index) => GlobalKey());
   }
@@ -80,7 +79,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
             Row(
               children: [
                 const SizedBox(width: 10),
-                Text(AppLocalizations.of(context)!.selectPos(widget.lemma.grammar.first)),
+                Text(AppLocalizations.of(context)!.selectPos(widget.lemma.pos)),
                 Visibility(
                   visible: widget.lemma.article != ' ',
                   child: const Text(' - '),

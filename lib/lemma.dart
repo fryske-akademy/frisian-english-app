@@ -16,7 +16,7 @@ class Lemma {
 
   Map<String, dynamic> link = {};
 
-  List grammar = [];
+  String pos = "x";
   List subForms = [];
   List translations = [];
 
@@ -56,9 +56,7 @@ class Lemma {
     if (other.link.isNotEmpty) {
       link = other.link;
     }
-    if (other.grammar.isNotEmpty) {
-      grammar = other.grammar;
-    }
+    pos = other.pos;
     if (other.subForms.isNotEmpty) {
       subForms = other.subForms;
     }
@@ -67,33 +65,10 @@ class Lemma {
   List synonyms = [];
   List<String> variants = [];
   List<String> dutchisms = [];
-
-  List<Map<String, String>> singularForms = [];
-  List<Map<String, String>> pluralForms = [];
-  List<Map<String, String>> singularDimForms = [];
-  List<Map<String, String>> pluralDimForms = [];
-
-  List<Map<String, String>> presPerson1Sing = [];
-  List<Map<String, String>> presPerson1Plur = [];
-  List<Map<String, String>> presPerson2Sing = [];
-  List<Map<String, String>> presPerson2Plur = [];
-  List<Map<String, String>> presPerson2PlurFormal = [];
-  List<Map<String, String>> presPerson3Sing = [];
-  List<Map<String, String>> presPerson3Plur = [];
-
-  List<Map<String, String>> pastPerson1Sing = [];
-  List<Map<String, String>> pastPerson1Plur = [];
-  List<Map<String, String>> pastPerson2Sing = [];
-  List<Map<String, String>> pastPerson2Plur = [];
-  List<Map<String, String>> pastPerson2PlurFormal = [];
-  List<Map<String, String>> pastPerson3Sing = [];
-  List<Map<String, String>> pastPerson3Plur = [];
-
-  List<Map<String, String>> pastParticiple = [];
-  List<Map<String, String>> presentParticiple = [];
+  List paradigm = [];
 
   Future<void> processSubForms() async {
-    synonyms=[]; variants=[];dutchisms=[];singularDimForms=[];singularForms=[];pluralDimForms=[];pluralForms=[];
+    synonyms=[]; variants=[];dutchisms=[];paradigm=[];
     for (var subForm in subForms) {
       switch (subForm?['__typename']) {
         case 'Synonym':
@@ -108,140 +83,15 @@ class Lemma {
         case 'Dutchism':
           dutchisms.add(subForm['form']);
           break;
-        case 'Paradigm':
-          var form = subForm?['form'];
-          var hyphenation = subForm?['hyphenation'];
-
-          if (subForm['grammar'][0].contains('islemma_yes') || subForm['grammar'][0].contains('number_sing')) {
-            if (subForm['grammar'][0].contains('degree_dim')) {
-              singularDimForms.add({'form': form, 'hyphenation': hyphenation});
-            } else {
-              singularForms.add({'form': form, 'hyphenation': hyphenation});
-            }
-          } else if (subForm['grammar'][0].contains('number_plur')) {
-            if (subForm['grammar'][0].contains('degree_dim')) {
-              pluralDimForms.add({'form': form, 'hyphenation': hyphenation});
-            } else {
-              pluralForms.add({'form': form, 'hyphenation': hyphenation});
+        case 'FormInfo':
+          var forms = [];
+          for (var p in subForm?['paradigms']) {
+            if (p['preferred']==true) {
+              forms.add({"form": p['form'], "hyphenation": p["hyphenation"]});
             }
           }
+          paradigm.add({"linguistics":subForm?['linguistics'],"description":subForm?['description'],"forms":forms});
           break;
-      }
-    }
-  }
-
-  Future<void> retrieveTenses() async {
-    presentParticiple=[];presPerson1Plur=[];presPerson1Sing=[];presPerson2Plur=[];presPerson2PlurFormal=[];
-    presPerson2Sing=[];presPerson3Plur=[];presPerson3Sing=[];
-    pastParticiple=[];pastPerson1Plur=[];pastPerson1Sing=[];pastPerson2Plur=[];pastPerson2PlurFormal=[];
-    pastPerson2Sing=[];pastPerson3Plur=[];pastPerson3Sing=[];
-    for (var subForm in subForms) {
-      if (subForm['__typename'] == "ParadigmCategory") {
-        if (subForm['type'] == 'tense_pres') {
-          for (var form in subForm['forms']) {
-            for (var grammar in form['grammar']) {
-              // person_1
-              if (grammar.contains('person_1')) {
-                if (grammar.contains('number_sing')) {
-                  presPerson1Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                } else if (grammar.contains('number_plur')) {
-                  presPerson1Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                }
-              }
-              // person_2
-              else if (grammar.contains('person_2')) {
-                if (grammar.contains('number_sing')) {
-                  // Should be added to end of list
-                  if (grammar.contains('clitic_yes')) {
-                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                  // Should be added to front of list
-                  else if (grammar.contains('prodrop_yes')) {
-                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                  // Should be added to front of list
-                  else {
-                    presPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                } else if (grammar.contains('number_plur')) {
-                  // Don't really get this because should be singular person 2 formal
-                  if (grammar.contains('polite_form')) {
-                    presPerson2PlurFormal.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  } else {
-                    presPerson2Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                }
-              }
-              // person_3
-              else if (grammar.contains('person_3')) {
-                if (grammar.contains('number_plur')) {
-                  presPerson3Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                } else if (grammar.contains('number_sing')) {
-                  presPerson3Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                }
-              }
-            }
-          }
-        } else if (subForm['type'] == 'tense_past') {
-          for (var form in subForm['forms']) {
-            for (var grammar in form['grammar']) {
-              // person_1
-              if (grammar.contains('person_1')) {
-                if (grammar.contains('number_sing')) {
-                  pastPerson1Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                } else if (grammar.contains('number_plur')) {
-                  pastPerson1Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                }
-              }
-              // person_2
-              else if (grammar.contains('person_2')) {
-                if (grammar.contains('number_sing')) {
-                  // Should be added to end of list
-                  if (grammar.contains('clitic_yes')) {
-                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                  // Should be added to front of list
-                  else if (grammar.contains('prodrop_yes')) {
-                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                  // Should be added to front of list
-                  else {
-                    pastPerson2Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                } else if (grammar.contains('number_plur')) {
-                  // Don't really get this because should be singular person 2 formal
-                  if (grammar.contains('polite_form')) {
-                    pastPerson2PlurFormal.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  } else {
-                    pastPerson2Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                  }
-                }
-              }
-              // person_3
-              else if (grammar.contains('person_3')) {
-                if (grammar.contains('number_plur')) {
-                  pastPerson3Plur.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                } else if (grammar.contains('number_sing')) {
-                  pastPerson3Sing.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                }
-              }
-            }
-          }
-        } else if (subForm['type'] == 'verbform_part') {
-          for (var form in subForm['forms']) {
-            for (var grammar in form['grammar']) {
-              if (grammar.contains('tense_past')) {
-                if (grammar.contains('inflection_uninf')) {
-                  pastParticiple.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                } else if (grammar.contains('inflection_infl')) {}
-              } else if (grammar.contains('tense_pres')) {
-                if (grammar.contains('inflection_uninf')) {
-                  presentParticiple.add({'form': form['form'], 'hyphenation': form['hyphenation'] ?? ''});
-                } else if (grammar.contains('inflection_infl')) {}
-              }
-            }
-          }
-        }
       }
     }
   }
@@ -253,7 +103,7 @@ class Lemma {
     lemma.article = jsonData['article'];
     lemma.hyphenation = jsonData['hyphenation'];
     lemma.link = jsonData['link'];
-    lemma.grammar = jsonData['grammar'];
+    lemma.pos = jsonData['pos'];
     lemma.subForms = jsonData['subForms'];
     lemma.toBeDeleted = jsonData['toBeDeleted'];
     return lemma;
@@ -265,7 +115,7 @@ class Lemma {
         'article': article,
         'hyphenation': hyphenation,
         'link': link,
-        'grammar': grammar,
+        'pos': pos,
         'subForms': subForms,
         'toBeDeleted': toBeDeleted,
       };
