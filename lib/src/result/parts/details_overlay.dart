@@ -250,6 +250,14 @@ class _DetailOverlayState extends State<DetailOverlay> {
                     controller: scrollController2,
                     scrollDirection: Axis.horizontal,
                     child: DataTable(
+                      columns: const [
+                        DataColumn(label: Text("linguistics")),
+                        DataColumn(label: Text("forms"))
+                      ],
+                      rows: widget.lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
+                        DataCell(Text(e["linguistics"])),
+                        DataCell(Text(e["forms"].map((f) => f["form"]).toList().join(", ")))
+                      ]) ).toList(),
                       // TODO here we just want to loop over paradigm entries
                     ),
                   ),
