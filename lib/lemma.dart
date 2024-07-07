@@ -84,6 +84,7 @@ class Lemma {
           dutchisms.add(subForm['form']);
           break;
         case 'FormInfo':
+          if (subForm?['linguistics']=='unsupported') break;
           var forms = [];
           for (var p in subForm?['paradigms']) {
             if (p['preferred']==true) {

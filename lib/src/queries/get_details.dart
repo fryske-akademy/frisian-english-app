@@ -28,12 +28,9 @@ fragment lemmagraph  on Lemma {
     article
     hyphenation
     pronunciation
-    note { ...note }
-    meaning
-    usage { type text }
     subForms {
         ... on FormInfo {__typename ...forminfo }
-        ... on Synonym { __typename form lang meaning }
+        ... on Synonym { __typename form lang }
         ... on Variant { __typename form lang }
         ... on Dutchism { __typename form lang }
     }
@@ -42,12 +39,11 @@ fragment textgraph on Text {
     ...nestedtextgraph
     ... on Collocation {
         ...text
-        definition { ...def }
         senses { ...senses translations { ...texttrans } texts { ...nestedtextgraph } }
         translations { ...texttrans }
         examples { ...text translations {...texttrans} }
     }
-    ... on Proverb { ...text definition { ...def } translations {...texttrans} }
+    ... on Proverb { ...text translations {...texttrans} }
 }
 fragment nestedtextgraph on Text {
     __typename
@@ -55,10 +51,10 @@ fragment nestedtextgraph on Text {
 }
 
 fragment texttrans on TextTranslated {
-    id text {...txtDetails} lang note {...note} usage {type text}
+    id text {...txtDetails} lang
 }
 fragment text on TextInterface {
-    id text {...txtDetails} lang note {...note} usage {type text}
+    id text {...txtDetails} lang
 }
 fragment lemmalink on LemmaLink {
     source lemma pos lang id text
@@ -70,15 +66,8 @@ fragment txtDetails on FormattedText { text {
     ... on L { link { ...lemmalink } }
     }
 }
-fragment note on Note {text {...txtDetails} link {...lemmalink}}
 fragment senses on Sense {
-    id article definition { ...def } link {...lemmalink} groupNote { ...note } notes { ...note }
-}
-fragment def on Definition {
-    def {
-        ... on FormattedText { ...txtDetails }
-        ... on Gloss { gloss { ...txtDetails } }
-    } usage { type text }
+    id article link {...lemmalink}
 }
 fragment forminfo on FormInfo {
 	linguistics description paradigms {...par}
