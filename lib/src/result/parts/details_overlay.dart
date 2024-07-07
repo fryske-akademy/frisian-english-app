@@ -33,9 +33,6 @@ class _DetailOverlayState extends State<DetailOverlay> {
   Widget build(BuildContext context) {
     final ScrollController scrollController = ScrollController();
     final ScrollController scrollController2 = ScrollController();
-    final ScrollController scrollController3 = ScrollController();
-    final ScrollController scrollController4 = ScrollController();
-    final ScrollController scrollController5 = ScrollController();
     return Center(
         child: Padding(
       padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(550, 80, 550, 80) : const EdgeInsets.fromLTRB(25, 100, 25, 50),
@@ -250,9 +247,10 @@ class _DetailOverlayState extends State<DetailOverlay> {
                     controller: scrollController2,
                     scrollDirection: Axis.horizontal,
                     child: DataTable(
+                      headingRowHeight: 0,
                       columns: const [
-                        DataColumn(label: Text("linguistics")),
-                        DataColumn(label: Text("forms"))
+                        DataColumn(label: Text("")),
+                        DataColumn(label: Text(""))
                       ],
                       rows: widget.lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
                         DataCell(Text(e["linguistics"])),
