@@ -8,7 +8,7 @@ Future<List<Lemma>> getLemmas(String query) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String lemmasQuery = r'''
-    query lemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $pos: GramType $sensitive: Boolean!=false $source: String $lexiconFallback: Boolean!=false) {
+    query lemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $pos: Pos $sensitive: Boolean!=false $source: String $lexiconFallback: Boolean!=false) {
         lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm pos: $pos sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
             lemmas {
                 link {...detaillink} form

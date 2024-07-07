@@ -8,67 +8,80 @@ Future<List<Details>> getDetails(dynamic link) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String detailsQuery = r'''
-    query details( # case and diacrit sensitive lemma (article) to find
-        $lemma: String! $pos: Pos $source: String! $englishTranslations: Boolean!=false) {
-        details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
-            lemma { ...lemmagraph }
-            translations { ...lemmagraph }
-            senses { translations { ...lemmagraph }  texts { ...textgraph } }
-            texts { 
-              __typename
-              ... on Example {
-                text {...txt} translations { text {...txt} }
-              }
-              ... on Collocation {
-                  text {...txt} translations { text {...txt} }
-              }
-              ... on Proverb {
-                  text {...txt} translations { text {...txt} }
-              }
-            }
-        }
+query details( # case and diacrit sensitive lemma (article) to find
+    $lemma: String! $pos: Pos $source: String! $englishTranslations: Boolean!=true) {
+    details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
+        source
+        message { level text}
+        lemma { ...lemmagraph }
+        translations { ...lemmagraph }
+        link {lemma text}
+        senses { ...senses translations { ...lemmagraph }  texts { ...textgraph } }
+        texts { ...textgraph }
+#        referrers { ...lemmalink }
     }
-    fragment lemmagraph  on Lemma {
-        form
-        pos
-        lang
-        article
-        hyphenation
-        pronunciation
-        subForms {
-            ... on FormInfo {__typename ...forminfo }
-            ... on Synonym { __typename form lang meaning }
-            ... on Variant { __typename form lang }
-            ... on Dutchism { __typename form lang }
-        }
+}
+fragment lemmagraph  on Lemma {
+    form
+    lang
+    pos
+    article
+    hyphenation
+    pronunciation
+    note { ...note }
+    meaning
+    usage { type text }
+    subForms {
+        ... on FormInfo {__typename ...forminfo }
+        ... on Synonym { __typename form lang meaning }
+        ... on Variant { __typename form lang }
+        ... on Dutchism { __typename form lang }
     }
-    fragment textgraph on Text {
-        ...nestedtextgraph
-        ... on Proverb { ...text translations {...texttrans} }
+}
+fragment textgraph on Text {
+    ...nestedtextgraph
+    ... on Collocation {
+        ...text
+        definition { ...def }
+        senses { ...senses translations { ...texttrans } texts { ...nestedtextgraph } }
+        translations { ...texttrans }
+        examples { ...text translations {...texttrans} }
     }
-    fragment nestedtextgraph on Text {
-        __typename
-        ... on Example { ...text translations {...texttrans} }
-    }
+    ... on Proverb { ...text definition { ...def } translations {...texttrans} }
+}
+fragment nestedtextgraph on Text {
+    __typename
+    ... on Example { ...text translations {...texttrans} }
+}
 
-    fragment texttrans on TextTranslated {
-        id text {...txtDetails} lang
+fragment texttrans on TextTranslated {
+    id text {...txtDetails} lang note {...note} usage {type text}
+}
+fragment text on TextInterface {
+    id text {...txtDetails} lang note {...note} usage {type text}
+}
+fragment lemmalink on LemmaLink {
+    source lemma pos lang id text
+}
+fragment txtDetails on FormattedText { text {
+    ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
+    ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
+    ... on T {textT}
+    ... on L { link { ...lemmalink } }
     }
-    fragment text on TextInterface {
-        id text {...txtDetails} lang
-    }
-    fragment lemmalink on LemmaLink {
-        source lemma pos lang id text
-    }
-    fragment txtDetails on FormattedText { text {
-        ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
-        ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
-        ... on T {textT}
-        ... on L { link { ...lemmalink } }
-        }
-    }
+}
+fragment note on Note {text {...txtDetails} link {...lemmalink}}
+fragment senses on Sense {
+    id article definition { ...def } link {...lemmalink} groupNote { ...note } notes { ...note }
+}
+fragment def on Definition {
+    def {
+        ... on FormattedText { ...txtDetails }
+        ... on Gloss { gloss { ...txtDetails } }
+    } usage { type text }
+}
 fragment forminfo on FormInfo {
-    linguistics description paradigms {...par}
+	linguistics description paradigms {...par}
 }
 fragment par on Paradigm {
     form splitForm lang hyphenation pronunciation preferred
