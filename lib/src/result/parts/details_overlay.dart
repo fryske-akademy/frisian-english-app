@@ -253,8 +253,8 @@ class _DetailOverlayState extends State<DetailOverlay> {
                         DataColumn(label: Text(""))
                       ],
                       rows: widget.lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
-                        DataCell(Text(e["linguistics"])),
-                        DataCell(Text(e["forms"].map((f) => f["form"]).toList().join(", ")))
+                        DataCell(Text(e["linguistics"])), // TODO flutter does not support dynamic keys
+                        DataCell(Text(e["forms"].join(", ")))
                       ]) ).toList(),
                       // TODO here we just want to loop over paradigm entries
                     ),

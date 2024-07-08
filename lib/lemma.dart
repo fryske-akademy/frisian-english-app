@@ -88,10 +88,10 @@ class Lemma {
           var forms = [];
           for (var p in subForm?['paradigms']) {
             if (p['preferred']==true) {
-              forms.add({"form": p['form'], "hyphenation": p["hyphenation"]});
+              forms.add(p["form"]);
             }
           }
-          paradigm.add({"linguistics":subForm?['linguistics'],"description":subForm?['description'],"forms":forms});
+          paradigm.add({"linguistics":subForm?['linguistics'],"forms":forms});
           break;
       }
     }
