@@ -6,6 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../lemma.dart';
 import '../../../main.dart';
+import '../../dynTranslate.dart';
 
 class DetailOverlay extends StatefulWidget {
   final Function onPressed;
@@ -27,6 +28,13 @@ class _DetailOverlayState extends State<DetailOverlay> {
     widget.lemma.pos;
 
     keys = List<GlobalKey>.generate(widget.lemma.synonyms.length, (index) => GlobalKey());
+  }
+
+  String _translate(BuildContext context, String dynKey) {
+    var localizations = AppLocalizations.of(context);
+    switch (dynKey) {
+    }
+    return dynKey;
   }
 
   @override
@@ -253,7 +261,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
                         DataColumn(label: Text(""))
                       ],
                       rows: widget.lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
-                        DataCell(Text(e["linguistics"])), // TODO flutter does not support dynamic keys
+                        DataCell(Text(Dyntranslate.translate(context, e["linguistics"]))),
                         DataCell(Text(e["forms"].join(", ")))
                       ]) ).toList(),
                       // TODO here we just want to loop over paradigm entries
