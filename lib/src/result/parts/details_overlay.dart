@@ -6,7 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../lemma.dart';
 import '../../../main.dart';
-import '../../dynTranslate.dart';
+import '../../dyn_translate.dart';
 
 class DetailOverlay extends StatefulWidget {
   final Function onPressed;
@@ -27,13 +27,6 @@ class _DetailOverlayState extends State<DetailOverlay> {
     widget.lemma.processSubForms();
 
     keys = List<GlobalKey>.generate(widget.lemma.synonyms.length, (index) => GlobalKey());
-  }
-
-  String _translate(BuildContext context, String dynKey) {
-    var localizations = AppLocalizations.of(context);
-    switch (dynKey) {
-    }
-    return dynKey;
   }
 
   @override
@@ -276,10 +269,10 @@ class _DetailOverlayState extends State<DetailOverlay> {
     if (true) {
       return [DataRow(cells: <DataCell>[
         DataCell(Text(Dyntranslate.translate(context, "present"))),
-        DataCell(Text(""))
+        const DataCell(Text(""))
       ]),DataRow(cells: <DataCell>[
       DataCell(Text(Dyntranslate.translate(context, "present"))),
-        DataCell(Text(""))
+        const DataCell(Text(""))
     ])];
     } else {
       return lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
