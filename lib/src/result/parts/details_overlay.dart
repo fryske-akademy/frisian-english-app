@@ -25,7 +25,6 @@ class _DetailOverlayState extends State<DetailOverlay> {
   void initState() {
     super.initState();
     widget.lemma.processSubForms();
-    widget.lemma.pos;
 
     keys = List<GlobalKey>.generate(widget.lemma.synonyms.length, (index) => GlobalKey());
   }
@@ -260,10 +259,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
                         DataColumn(label: Text("")),
                         DataColumn(label: Text(""))
                       ],
-                      rows: widget.lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
-                        DataCell(Text(Dyntranslate.translate(context, e["linguistics"]))),
-                        DataCell(Text(e["forms"].join(", ")))
-                      ]) ).toList(),
+                      rows: paradigms(widget.lemma),
                       // TODO here we just want to loop over paradigm entries
                     ),
                   ),
@@ -274,5 +270,22 @@ class _DetailOverlayState extends State<DetailOverlay> {
         ),
       ),
     ));
+  }
+
+  List<DataRow> paradigms(Lemma lemma) {
+    if (true) {
+      return [DataRow(cells: <DataCell>[
+        DataCell(Text(Dyntranslate.translate(context, "present"))),
+        DataCell(Text(""))
+      ]),DataRow(cells: <DataCell>[
+      DataCell(Text(Dyntranslate.translate(context, "present"))),
+        DataCell(Text(""))
+    ])];
+    } else {
+      return lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
+        DataCell(Text(Dyntranslate.translate(context, e["linguistics"]))),
+        DataCell(Text(e["forms"].join(", ")))
+      ]) ).toList();
+    }
   }
 }
