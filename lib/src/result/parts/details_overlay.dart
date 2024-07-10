@@ -266,19 +266,36 @@ class _DetailOverlayState extends State<DetailOverlay> {
   }
 
   List<DataRow> paradigms(Lemma lemma) {
-    if (true) {
+    var verb = lemma.pos=="verb"||lemma.pos=="aux";
+    if (!verb&&lemma.pos=="x") {
+      for (var p in lemma.paradigm) {
+        String l = p["linguistics"];
+        if (l.contains("pres")) {
+          verb=true;
+          break;
+        }
+      }
+    }
+    if (verb) {
       return [DataRow(cells: <DataCell>[
         DataCell(Text(Dyntranslate.translate(context, "present"))),
         const DataCell(Text(""))
-      ]),DataRow(cells: <DataCell>[
-      DataCell(Text(Dyntranslate.translate(context, "present"))),
+      ]),...lemma.paradigm.where((e) => e["linguistics"].contains("pres")).map((e) => lingRow(e) )
+        ,DataRow(cells: <DataCell>[
+      DataCell(Text(Dyntranslate.translate(context, "past"))),
         const DataCell(Text(""))
-    ])];
+      ]),...lemma.paradigm.where((e) => e["linguistics"].contains("past")).map((e) => lingRow(e) ),
+        ...lemma.paradigm.where((e) => e["linguistics"].contains("noun")).map((e) => lingRow(e) )
+      ];
     } else {
-      return lemma.paradigm.map((e) => DataRow(cells: <DataCell>[
-        DataCell(Text(Dyntranslate.translate(context, e["linguistics"]))),
-        DataCell(Text(e["forms"].join(", ")))
-      ]) ).toList();
+      return lemma.paradigm.map((e) =>  lingRow(e)).toList();
     }
+  }
+
+  DataRow lingRow(e) {
+    return DataRow(cells: <DataCell>[
+      DataCell(Text(Dyntranslate.translate(context, e["linguistics"]))),
+      DataCell(Text(e["forms"].join(", ")))
+    ]);
   }
 }
