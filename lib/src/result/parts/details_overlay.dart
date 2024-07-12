@@ -253,7 +253,6 @@ class _DetailOverlayState extends State<DetailOverlay> {
                         DataColumn(label: Text(""))
                       ],
                       rows: paradigms(widget.lemma),
-                      // TODO here we just want to loop over paradigm entries
                     ),
                   ),
                 ),
