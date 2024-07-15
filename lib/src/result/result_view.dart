@@ -136,7 +136,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                             },
                           ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                   Examples(details.texts),

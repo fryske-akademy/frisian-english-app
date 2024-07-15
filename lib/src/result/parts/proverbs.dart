@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frysish/details.dart';
+import 'package:frysish/src/home/home_view.dart';
 
 import '../../../main.dart';
 import 'get_rich_text.dart';
@@ -91,6 +92,17 @@ class _ProverbsState extends State<Proverbs> {
                     ),
                   ),
                 );
+              },
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 0),
+          child: Center(
+            child: IconButton(
+              icon: const Icon(Icons.home),
+              onPressed: () {
+                varController.route(HomeView.routeName);
               },
             ),
           ),

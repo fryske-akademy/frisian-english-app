@@ -44,7 +44,7 @@ class _featuresPage2State extends State<featuresPage2> with SingleTickerProvider
         ]),
         const Spacer(flex: 1),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.searchtext, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          Text(AppLocalizations.of(context)!.textSearch, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
         ]),
         const Spacer(flex: 2),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [

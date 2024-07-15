@@ -7,54 +7,24 @@ class Dyntranslate {
     switch (dynKey) {
       case "choose":
         return localizations!.choose;
-      case "abbrYes":
-        return localizations!.abbrYes;
       case "account":
         return localizations!.account;
       case "addFavorites":
         return localizations!.addFavorites;
       case "alltext":
         return localizations!.alltext;
-      case "animalName":
-        return localizations!.animalName;
-      case "article":
-        return localizations!.article;
       case "based":
         return localizations!.based;
-      case "birdName":
-        return localizations!.birdName;
-      case "borrowing":
-        return localizations!.borrowing;
-      case "caseAcc":
-        return localizations!.caseAcc;
-      case "caseNom":
-        return localizations!.caseNom;
-      case "casePar":
-        return localizations!.casePar;
       case "checkfields":
         return localizations!.checkfields;
-      case "collocation":
-        return localizations!.collocation;
-      case "collocations":
-        return localizations!.collocations;
       case "completedict":
         return localizations!.completedict;
-      case "constructionAttr":
-        return localizations!.constructionAttr;
       case "copy":
         return localizations!.copy;
-      case "countryName":
-        return localizations!.countryName;
       case "darkTheme":
         return localizations!.darkTheme;
       case "definition":
         return localizations!.definition;
-      case "degreeCmp":
-        return localizations!.degreeCmp;
-      case "degreeSup":
-        return localizations!.degreeSup;
-      case "diminutiveDim":
-        return localizations!.diminutiveDim;
       case "duchtisms":
         return localizations!.duchtisms;
       case "en":
@@ -69,46 +39,22 @@ class Dyntranslate {
         return localizations!.favorites;
       case "feedback":
         return localizations!.feedback;
-      case "firstpage":
-        return localizations!.firstpage;
       case "forms":
         return localizations!.forms;
       case "found":
         return localizations!.found;
       case "fry":
         return localizations!.fry;
-      case "fryXbiltsk":
-        return localizations!.fryXbiltsk;
-      case "genderCom":
-        return localizations!.genderCom;
-      case "genderFem":
-        return localizations!.genderFem;
-      case "genderMasc":
-        return localizations!.genderMasc;
-      case "genderNeut":
-        return localizations!.genderNeut;
-      case "geoName":
-        return localizations!.geoName;
       case "grammar":
         return localizations!.grammar;
       case "history":
         return localizations!.history;
-      case "hom":
-        return localizations!.hom;
-      case "homs":
-        return localizations!.homs;
-      case "inflectionInfl":
-        return localizations!.inflectionInfl;
-      case "inflectionUninf":
-        return localizations!.inflectionUninf;
       case "information":
         return localizations!.information;
       case "inside":
         return localizations!.inside;
       case "issues":
         return localizations!.issues;
-      case "lastpage":
-        return localizations!.lastpage;
       case "lemmas":
         return localizations!.lemmas;
       case "lightTheme":
@@ -119,8 +65,6 @@ class Dyntranslate {
         return localizations!.more;
       case "muchMore":
         return localizations!.muchMore;
-      case "nextpage":
-        return localizations!.nextpage;
       case "nl":
         return localizations!.nl;
       case "notranslations":
@@ -129,114 +73,30 @@ class Dyntranslate {
         return localizations!.noresults;
       case "noSpaces":
         return localizations!.noSpaces;
-      case "numberColl":
-        return localizations!.numberColl;
-      case "numberPlur":
-        return localizations!.numberPlur;
-      case "numberPtan":
-        return localizations!.numberPtan;
-      case "numberSing":
-        return localizations!.numberSing;
-      case "numtypeCard":
-        return localizations!.numtypeCard;
-      case "numtypeOrd":
-        return localizations!.numtypeOrd;
       case "options":
         return localizations!.options;
-      case "orgName":
-        return localizations!.orgName;
-      case "orthresults":
-        return localizations!.orthresults;
-      case "paradigm":
-        return localizations!.paradigm;
-      case "person1":
-        return localizations!.person1;
-      case "person2":
-        return localizations!.person2;
-      case "person3":
-        return localizations!.person3;
-      case "personName":
-        return localizations!.personName;
-      case "placeName":
-        return localizations!.placeName;
-      case "plantName":
-        return localizations!.plantName;
-      case "politeForm":
-        return localizations!.politeForm;
       case "pos":
         return localizations!.pos;
       case "poschoice":
         return localizations!.poschoice;
-      case "possYes":
-        return localizations!.possYes;
-      case "predicatePred":
-        return localizations!.predicatePred;
-      case "prefixYes":
-        return localizations!.prefixYes;
-      case "prevpage":
-        return localizations!.prevpage;
       case "primaryColor":
         return localizations!.primaryColor;
       case "pron":
         return localizations!.pron;
-      case "pronounClitic":
-        return localizations!.pronounClitic;
-      case "prontypeArt":
-        return localizations!.prontypeArt;
-      case "prontypeDem":
-        return localizations!.prontypeDem;
-      case "prontypeInd":
-        return localizations!.prontypeInd;
-      case "prontypePrs":
-        return localizations!.prontypePrs;
-      case "prontypeRel":
-        return localizations!.prontypeRel;
       case "proverb":
         return localizations!.proverb;
       case "proverbs":
         return localizations!.proverbs;
-      case "referrers":
-        return localizations!.referrers;
-      case "reflexYes":
-        return localizations!.reflexYes;
       case "result":
         return localizations!.result;
       case "retrHistory":
         return localizations!.retrHistory;
-      case "search":
-        return localizations!.search;
-      case "searchedText":
-        return localizations!.searchedText;
-      case "searchhelp":
-        return localizations!.searchhelp;
-      case "searchlang":
-        return localizations!.searchlang;
-      case "searchterm":
-        return localizations!.searchterm;
-      case "searchtext":
-        return localizations!.searchtext;
-      case "section":
-        return localizations!.section;
-      case "see":
-        return localizations!.see;
-      case "sense":
-        return localizations!.sense;
-      case "senses":
-        return localizations!.senses;
       case "settings":
         return localizations!.settings;
-      case "showfrom":
-        return localizations!.showfrom;
       case "slogan":
         return localizations!.slogan;
       case "stage":
         return localizations!.stage;
-      case "stress":
-        return localizations!.stress;
-      case "structure":
-        return localizations!.structure;
-      case "suffixYes":
-        return localizations!.suffixYes;
       case "swapLang":
         return localizations!.swapLang;
       case "synonym":
@@ -245,16 +105,6 @@ class Dyntranslate {
         return localizations!.synonyms;
       case "systemTheme":
         return localizations!.systemTheme;
-      case "tenseFut":
-        return localizations!.tenseFut;
-      case "tensePast":
-        return localizations!.tensePast;
-      case "tensePres":
-        return localizations!.tensePres;
-      case "textoffset":
-        return localizations!.textoffset;
-      case "textresults":
-        return localizations!.textresults;
       case "textSearch":
         return localizations!.textSearch;
       case "theme":
@@ -263,38 +113,14 @@ class Dyntranslate {
         return localizations!.translate;
       case "translation":
         return localizations!.translation;
-      case "usgConcerning":
-        return localizations!.usgConcerning;
-      case "usgConnotation":
-        return localizations!.usgConnotation;
-      case "usgFreq":
-        return localizations!.usgFreq;
-      case "usgHint":
-        return localizations!.usgHint;
-      case "usgLang":
-        return localizations!.usgLang;
-      case "usgMedium":
-        return localizations!.usgMedium;
-      case "usgStyle":
-        return localizations!.usgStyle;
-      case "usgTime":
-        return localizations!.usgTime;
       case "variant":
         return localizations!.variant;
       case "variants":
         return localizations!.variants;
-      case "verbformGer":
-        return localizations!.verbformGer;
-      case "verbformInf":
-        return localizations!.verbformInf;
-      case "verbformPart":
-        return localizations!.verbformPart;
       case "vertalingen":
         return localizations!.vertalingen;
       case "viewExamples":
         return localizations!.viewExamples;
-      case "textsearch":
-        return localizations!.textsearch;
       case "welcome":
         return localizations!.welcome;
       case "wordform":
@@ -307,24 +133,6 @@ class Dyntranslate {
         return localizations!.present;
       case "past":
         return localizations!.past;
-      case "presentParticiple":
-        return localizations!.presentParticiple;
-      case "pastParticiple":
-        return localizations!.pastParticiple;
-      case "person1Sing":
-        return localizations!.person1Sing;
-      case "person2Sing":
-        return localizations!.person2Sing;
-      case "person2PlurFormal":
-        return localizations!.person2PlurFormal;
-      case "person3Sing":
-        return localizations!.person3Sing;
-      case "person1Plur":
-        return localizations!.person1Plur;
-      case "person2Plur":
-        return localizations!.person2Plur;
-      case "person3Plur":
-        return localizations!.person3Plur;
       case "wildcards":
         return localizations!.wildcards;
       case "doubleqoutes":

@@ -12,7 +12,13 @@ Future<GraphQLClient> initClient() async {
   final GraphQLClient client = GraphQLClient(
     cache: GraphQLCache(store: store),
     link: httpLink,
+    defaultPolicies: DefaultPolicies(
+      query: Policies(
+        // introduced because of corrupt cache
+          cacheReread: CacheRereadPolicy.ignoreAll,
+          fetch: FetchPolicy.noCache
+      )
+    )
   );
-
   return client;
 }
