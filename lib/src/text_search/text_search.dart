@@ -35,7 +35,7 @@ class _TextSearchState extends State<TextSearch> {
 
     if (!varController.onboardingShow) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        _buildInfoDialog(context);
+        _toggleInfoDialog(context);
       });
     }
   }
@@ -86,7 +86,7 @@ class _TextSearchState extends State<TextSearch> {
                   child: IconButton(
                     icon: const Icon(Icons.info),
                     onPressed: () {
-                      _buildInfoDialog(context);
+                      _toggleInfoDialog(context);
                     },
                   ),
                 ))
@@ -96,61 +96,65 @@ class _TextSearchState extends State<TextSearch> {
     );
   }
 
-  void _buildInfoDialog(BuildContext context) {
-    overlayEntry = OverlayEntry(
-      builder: (context) => Center(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
-          child: Material(
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            //surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  ListView(
-                    shrinkWrap: true,
-                    padding: const EdgeInsets.all(20.0),
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          IconButton(
-                            icon: const Icon(Icons.close),
-                            onPressed: () {
-                              removeOverlay();
-                            },
-                          )
-                        ],
-                      ),
-                      Text(AppLocalizations.of(context)!.wildcards),
-                      const Divider(
-                        thickness: 2,
-                      ),
-                      Text(AppLocalizations.of(context)!.doubleqoutes),
-                      const Divider(
-                        thickness: 2,
-                      ),
-                      Text(AppLocalizations.of(context)!.occurrence),
-                      const Divider(
-                        thickness: 2,
-                      ),
-                      Text(AppLocalizations.of(context)!.andOr),
-                    ],
+  void _toggleInfoDialog(BuildContext context) {
+    if (infoOverlayLive) {
+      removeOverlay();
+    } else {
+      overlayEntry = OverlayEntry(
+        builder: (context) =>
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                child: Material(
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
-                ],
+                  //surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ListView(
+                          shrinkWrap: true,
+                          padding: const EdgeInsets.all(20.0),
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                IconButton(
+                                  icon: const Icon(Icons.close),
+                                  onPressed: () {
+                                    removeOverlay();
+                                  },
+                                )
+                              ],
+                            ),
+                            Text(AppLocalizations.of(context)!.wildcards),
+                            const Divider(
+                              thickness: 2,
+                            ),
+                            Text(AppLocalizations.of(context)!.doubleqoutes),
+                            const Divider(
+                              thickness: 2,
+                            ),
+                            Text(AppLocalizations.of(context)!.occurrence),
+                            const Divider(
+                              thickness: 2,
+                            ),
+                            Text(AppLocalizations.of(context)!.andOr),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
-        ),
-      ),
-    );
+      );
 
-    Overlay.of(context).insert(overlayEntry);
-    infoOverlayLive = true;
+      Overlay.of(context).insert(overlayEntry);
+    }
   }
 
   Widget _buildTextField(BuildContext context) {
