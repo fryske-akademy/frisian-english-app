@@ -265,17 +265,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
   }
 
   List<DataRow> paradigms(Lemma lemma) {
-    var verb = lemma.pos=="verb"||lemma.pos=="aux";
-    if (!verb&&lemma.pos=="x") {
-      for (var p in lemma.paradigm) {
-        String l = p["linguistics"];
-        if (l.contains("pres")) {
-          verb=true;
-          break;
-        }
-      }
-    }
-    if (verb) {
+    if (lemma.pos=="verb"||lemma.pos=="aux") {
       return [DataRow(cells: <DataCell>[
         DataCell(Text(Dyntranslate.translate(context, "present"))),
         const DataCell(Text(""))
