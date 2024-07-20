@@ -283,7 +283,8 @@ class _DetailOverlayState extends State<DetailOverlay> {
 
   DataRow lingRow(e) {
     return DataRow(cells: <DataCell>[
-      DataCell(Text(Dyntranslate.translate(context, e["linguistics"]))),
+      // TODO wrapping doesn't work
+      DataCell(Text(Dyntranslate.translate(context, e["linguistics"]),softWrap: true)),
       DataCell(Text(e["forms"].join(", ")))
     ]);
   }
