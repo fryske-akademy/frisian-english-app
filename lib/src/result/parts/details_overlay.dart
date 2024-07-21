@@ -1,7 +1,10 @@
 // ignore_for_file: unused_local_variable, non_constant_identifier_names
 
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../lemma.dart';
@@ -246,13 +249,12 @@ class _DetailOverlayState extends State<DetailOverlay> {
                   child: SingleChildScrollView(
                     controller: scrollController2,
                     scrollDirection: Axis.horizontal,
-                    child: DataTable(
-                      headingRowHeight: 0,
-                      columns: const [
-                        DataColumn(label: Text("")),
-                        DataColumn(label: Text(""))
-                      ],
-                      rows: paradigms(widget.lemma),
+                    child: Table(
+                      columnWidths: const {
+                        0: FixedColumnWidth(120),
+                        1: IntrinsicColumnWidth()
+                      },
+                      children: paradigms(widget.lemma),
                     ),
                   ),
                 ),
@@ -264,15 +266,15 @@ class _DetailOverlayState extends State<DetailOverlay> {
     ));
   }
 
-  List<DataRow> paradigms(Lemma lemma) {
+  List<TableRow> paradigms(Lemma lemma) {
     if (lemma.pos=="verb"||lemma.pos=="aux") {
-      return [DataRow(cells: <DataCell>[
-        DataCell(Text(Dyntranslate.translate(context, "present"))),
-        const DataCell(Text(""))
+      return [TableRow(children: <TableCell>[
+        TableCell(child: Text(Dyntranslate.translate(context, "present"))),
+        const TableCell(child: Text(""))
       ]),...lemma.paradigm.where((e) => e["linguistics"].contains("pres")).map((e) => lingRow(e) )
-        ,DataRow(cells: <DataCell>[
-      DataCell(Text(Dyntranslate.translate(context, "past"))),
-        const DataCell(Text(""))
+        ,TableRow(children: <TableCell>[
+      TableCell(child: Text(Dyntranslate.translate(context, "past"))),
+        const TableCell(child: Text(""))
       ]),...lemma.paradigm.where((e) => e["linguistics"].contains("past")).map((e) => lingRow(e) ),
         ...lemma.paradigm.where((e) => e["linguistics"].contains("noun")).map((e) => lingRow(e) )
       ];
@@ -281,11 +283,16 @@ class _DetailOverlayState extends State<DetailOverlay> {
     }
   }
 
-  DataRow lingRow(e) {
-    return DataRow(cells: <DataCell>[
-      // TODO wrapping doesn't work
-      DataCell(Text(Dyntranslate.translate(context, e["linguistics"]),softWrap: true)),
-      DataCell(Text(e["forms"].join(", ")))
+  TableRow lingRow(e) {
+    return TableRow(
+        decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
+        children: <TableCell>[
+      TableCell(
+              child: Text(Dyntranslate.translate(context, e["linguistics"]),
+                overflow:TextOverflow.visible,
+                softWrap: true)
+          ),
+      TableCell(child: Text(e["forms"].join(", ")))
     ]);
   }
 }
