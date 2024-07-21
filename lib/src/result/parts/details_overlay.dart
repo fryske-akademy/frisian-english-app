@@ -1,10 +1,7 @@
 // ignore_for_file: unused_local_variable, non_constant_identifier_names
 
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../lemma.dart';
@@ -29,16 +26,18 @@ class _DetailOverlayState extends State<DetailOverlay> {
     super.initState();
     widget.lemma.processSubForms();
 
-    keys = List<GlobalKey>.generate(widget.lemma.synonyms.length, (index) => GlobalKey());
+    keys = List<GlobalKey>.generate(
+        widget.lemma.synonyms.length, (index) => GlobalKey());
   }
 
   @override
   Widget build(BuildContext context) {
     final ScrollController scrollController = ScrollController();
-    final ScrollController scrollController2 = ScrollController();
     return Center(
         child: Padding(
-      padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(550, 80, 550, 80) : const EdgeInsets.fromLTRB(25, 100, 25, 50),
+      padding: MediaQuery.of(context).size.width > 768
+          ? const EdgeInsets.fromLTRB(550, 80, 550, 80)
+          : const EdgeInsets.fromLTRB(25, 100, 25, 50),
       child: Material(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
@@ -102,7 +101,8 @@ class _DetailOverlayState extends State<DetailOverlay> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(AppLocalizations.of(context)!.synonyms, style: const TextStyle(fontSize: 20)),
+                  Text(AppLocalizations.of(context)!.synonyms,
+                      style: const TextStyle(fontSize: 20)),
                   const Divider(
                     thickness: 2,
                   ),
@@ -122,35 +122,46 @@ class _DetailOverlayState extends State<DetailOverlay> {
                           return TextButton(
                             key: keys[index],
                             style: ButtonStyle(
-                              backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                              backgroundColor:
+                                  WidgetStateProperty.all(Colors.transparent),
                               elevation: WidgetStateProperty.all(0.0),
                               splashFactory: NoSplash.splashFactory,
-                              overlayColor: WidgetStateProperty.all(Colors.transparent),
+                              overlayColor:
+                                  WidgetStateProperty.all(Colors.transparent),
                             ),
                             child: Text(widget.lemma.synonyms[index].form),
-                            onPressed: () => widget.onPressed(widget.lemma.synonyms[index].form),
+                            onPressed: () => widget
+                                .onPressed(widget.lemma.synonyms[index].form),
                             onLongPress: () {
-                              RenderBox renderBox = keys[index].currentContext!.findRenderObject() as RenderBox;
+                              RenderBox renderBox = keys[index]
+                                  .currentContext!
+                                  .findRenderObject() as RenderBox;
                               var size = renderBox.size;
                               var offset = renderBox.localToGlobal(Offset.zero);
 
                               OverlayEntry overlayEntry = OverlayEntry(
                                 builder: (context) => Positioned(
-                                  top: offset.dy + size.height, // Position just below the button
-                                  left: offset.dx - (size.width / 2), // Position at the same horizontal position as the button
-                                  width: MediaQuery.of(context).size.width / 3, // Set width to 1/3 of screen width
+                                  top: offset.dy + size.height,
+                                  // Position just below the button
+                                  left: offset.dx - (size.width / 2),
+                                  // Position at the same horizontal position as the button
+                                  width: MediaQuery.of(context).size.width / 3,
+                                  // Set width to 1/3 of screen width
                                   child: Material(
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     elevation: 5,
-                                    surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                                    surfaceTintColor: Theme.of(context)
+                                        .colorScheme
+                                        .onPrimaryContainer,
                                     child: Container(
                                       padding: const EdgeInsets.all(15.0),
                                       child: Flexible(
                                         child: Text(
                                           'Meaning of the synonym: ${widget.lemma.synonyms[index].meaning}',
-                                          softWrap: true, // Enable text wrapping
+                                          softWrap:
+                                              true, // Enable text wrapping
                                         ),
                                       ),
                                     ),
@@ -161,7 +172,8 @@ class _DetailOverlayState extends State<DetailOverlay> {
                               Overlay.of(context).insert(overlayEntry);
 
                               // Remove the overlay after 3 seconds
-                              Future.delayed(const Duration(seconds: 3)).then((_) => overlayEntry.remove());
+                              Future.delayed(const Duration(seconds: 3))
+                                  .then((_) => overlayEntry.remove());
                             },
                           );
                         },
@@ -181,7 +193,8 @@ class _DetailOverlayState extends State<DetailOverlay> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(AppLocalizations.of(context)!.variants, style: const TextStyle(fontSize: 20)),
+                  Text(AppLocalizations.of(context)!.variants,
+                      style: const TextStyle(fontSize: 20)),
                   const Divider(
                     thickness: 2,
                   ),
@@ -190,10 +203,12 @@ class _DetailOverlayState extends State<DetailOverlay> {
                       for (var variant in widget.lemma.variants)
                         TextButton(
                           style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                            backgroundColor:
+                                WidgetStateProperty.all(Colors.transparent),
                             elevation: WidgetStateProperty.all(0.0),
                             splashFactory: NoSplash.splashFactory,
-                            overlayColor: WidgetStateProperty.all(Colors.transparent),
+                            overlayColor:
+                                WidgetStateProperty.all(Colors.transparent),
                           ),
                           child: Text(variant),
                           onPressed: () => widget.onPressed(variant),
@@ -213,12 +228,16 @@ class _DetailOverlayState extends State<DetailOverlay> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(AppLocalizations.of(context)!.duchtisms, style: const TextStyle(fontSize: 20)),
+                  Text(AppLocalizations.of(context)!.duchtisms,
+                      style: const TextStyle(fontSize: 20)),
                   const Divider(
                     thickness: 2,
                   ),
                   Row(
-                    children: [for (var dutchism in widget.lemma.dutchisms) Text(dutchism)],
+                    children: [
+                      for (var dutchism in widget.lemma.dutchisms)
+                        Text(dutchism)
+                    ],
                   ),
                   const Divider(
                     thickness: 2,
@@ -232,34 +251,17 @@ class _DetailOverlayState extends State<DetailOverlay> {
               style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 10),
-            Material(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              elevation: 5,
-              surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-              child: Visibility(
-                visible: widget.lemma.paradigm.isNotEmpty,
-                child: RawScrollbar(
-                  mainAxisMargin: 25,
-                  radius: const Radius.circular(20),
-                  thumbVisibility: true,
-                  thickness: 3,
-                  controller: scrollController2,
-                  child: SingleChildScrollView(
-                    controller: scrollController2,
-                    scrollDirection: Axis.horizontal,
-                    child: Table(
-                      columnWidths: const {
-                        0: FixedColumnWidth(120),
-                        1: IntrinsicColumnWidth()
-                      },
-                      children: paradigms(widget.lemma),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            Visibility(
+              visible: widget.lemma.paradigm.isNotEmpty,
+              child: Expanded(
+                  child: Table(
+                columnWidths: const {
+                  0: FixedColumnWidth(120),
+                  1: IntrinsicColumnWidth()
+                },
+                children: paradigms(widget.lemma),
+              )),
+            )
           ],
         ),
       ),
@@ -267,32 +269,41 @@ class _DetailOverlayState extends State<DetailOverlay> {
   }
 
   List<TableRow> paradigms(Lemma lemma) {
-    if (lemma.pos=="verb"||lemma.pos=="aux") {
-      return [TableRow(children: <TableCell>[
-        TableCell(child: Text(Dyntranslate.translate(context, "present"))),
-        const TableCell(child: Text(""))
-      ]),...lemma.paradigm.where((e) => e["linguistics"].contains("pres")).map((e) => lingRow(e) )
-        ,TableRow(children: <TableCell>[
-      TableCell(child: Text(Dyntranslate.translate(context, "past"))),
-        const TableCell(child: Text(""))
-      ]),...lemma.paradigm.where((e) => e["linguistics"].contains("past")).map((e) => lingRow(e) ),
-        ...lemma.paradigm.where((e) => e["linguistics"].contains("noun")).map((e) => lingRow(e) )
+    if (lemma.pos == "verb" || lemma.pos == "aux") {
+      return [
+        TableRow(children: <TableCell>[
+          TableCell(child: Text(Dyntranslate.translate(context, "present"))),
+          const TableCell(child: Text(""))
+        ]),
+        ...lemma.paradigm
+            .where((e) => e["linguistics"].contains("pres"))
+            .map((e) => lingRow(e)),
+        TableRow(children: <TableCell>[
+          TableCell(child: Text(Dyntranslate.translate(context, "past"))),
+          const TableCell(child: Text(""))
+        ]),
+        ...lemma.paradigm
+            .where((e) => e["linguistics"].contains("past"))
+            .map((e) => lingRow(e)),
+        ...lemma.paradigm
+            .where((e) => e["linguistics"].contains("noun"))
+            .map((e) => lingRow(e))
       ];
     } else {
-      return lemma.paradigm.map((e) =>  lingRow(e)).toList();
+      return lemma.paradigm.map((e) => lingRow(e)).toList();
     }
   }
 
   TableRow lingRow(e) {
     return TableRow(
-        decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
+        decoration: BoxDecoration(
+            border: Border(
+                bottom: BorderSide(color: Theme.of(context).dividerColor))),
         children: <TableCell>[
-      TableCell(
+          TableCell(
               child: Text(Dyntranslate.translate(context, e["linguistics"]),
-                overflow:TextOverflow.visible,
-                softWrap: true)
-          ),
-      TableCell(child: Text(e["forms"].join(", ")))
-    ]);
+                  overflow: TextOverflow.visible, softWrap: true)),
+          TableCell(child: Text(e["forms"].join(", ")))
+        ]);
   }
 }
