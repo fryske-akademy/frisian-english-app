@@ -253,14 +253,13 @@ class _DetailOverlayState extends State<DetailOverlay> {
             const SizedBox(height: 10),
             Visibility(
               visible: widget.lemma.paradigm.isNotEmpty,
-              child: Expanded(
-                  child: Table(
+              child: Table(
                 columnWidths: const {
                   0: FixedColumnWidth(120),
                   1: IntrinsicColumnWidth()
                 },
                 children: paradigms(widget.lemma),
-              )),
+              ),
             )
           ],
         ),
@@ -272,21 +271,27 @@ class _DetailOverlayState extends State<DetailOverlay> {
     if (lemma.pos == "verb" || lemma.pos == "aux") {
       return [
         TableRow(children: <TableCell>[
-          TableCell(child: Text(Dyntranslate.translate(context, "present"))),
+          TableCell(child: Text(Dyntranslate.translate(context, "present"),style: TextStyle(fontWeight: FontWeight.bold))),
           const TableCell(child: Text(""))
         ]),
         ...lemma.paradigm
             .where((e) => e["linguistics"].contains("pres"))
             .map((e) => lingRow(e)),
-        TableRow(children: <TableCell>[
-          TableCell(child: Text(Dyntranslate.translate(context, "past"))),
-          const TableCell(child: Text(""))
+        TableRow(children: [
+          Container(
+              padding: EdgeInsets.only(top: 15),
+              child: Text(Dyntranslate.translate(context, "past"),style: TextStyle(fontWeight: FontWeight.bold))),
+              Container(child: Text(""))
         ]),
         ...lemma.paradigm
             .where((e) => e["linguistics"].contains("past"))
             .map((e) => lingRow(e)),
+        const TableRow(children: <TableCell>[
+          const TableCell(child: Text("")),
+          const TableCell(child: Text(""))
+        ]),
         ...lemma.paradigm
-            .where((e) => e["linguistics"].contains("noun"))
+            .where((e) => !(e["linguistics"].contains("pres")||e["linguistics"].contains("past")))
             .map((e) => lingRow(e))
       ];
     } else {
@@ -298,12 +303,15 @@ class _DetailOverlayState extends State<DetailOverlay> {
     return TableRow(
         decoration: BoxDecoration(
             border: Border(
-                bottom: BorderSide(color: Theme.of(context).dividerColor))),
-        children: <TableCell>[
-          TableCell(
+                bottom: BorderSide(color: Theme.of(context).dividerColor,width: 0.5))),
+        children: [
+          Container(
+              padding: EdgeInsets.only(top: 15),
               child: Text(Dyntranslate.translate(context, e["linguistics"]),
                   overflow: TextOverflow.visible, softWrap: true)),
-          TableCell(child: Text(e["forms"].join(", ")))
+          Container(
+              padding: EdgeInsets.only(top: 15),
+              child: Text(e["forms"].join(", ")))
         ]);
   }
 }
