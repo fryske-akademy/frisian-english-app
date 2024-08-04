@@ -154,6 +154,7 @@ class _TextSearchState extends State<TextSearch> {
       );
 
       Overlay.of(context).insert(overlayEntry);
+      infoOverlayLive=true;
     }
   }
 

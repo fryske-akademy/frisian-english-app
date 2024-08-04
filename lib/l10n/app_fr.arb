@@ -66,7 +66,7 @@
     "present": "Notiid",
     "past": "Doetiid",
     "wildcards": "Kist ? en * as wildcard brûke, bygelyks beam*",
-    "doubleqoutes": "By sykjen yn teksten kist skrapkes brûke om te sykjen op sinsdielen (\"vele handen\")",
+    "doubleqoutes": "Kist skrapkes brûke om te sykjen op sinsdielen (\"vele handen\")",
     "occurrence": "Sûnder skrapkes wurdt socht op it foarkommen fan op syn minst ien fan de wurden",
     "andOr": "Kist ek \" AND \" of \" OR \" brûke",
     "launch": "Start",
