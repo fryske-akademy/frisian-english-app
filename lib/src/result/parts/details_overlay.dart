@@ -33,6 +33,7 @@ class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
   @override
   Widget build(BuildContext context) {
     final ScrollController scrollController = ScrollController();
+    final ScrollController scrollController2 = ScrollController();
     return Center(
         child: Padding(
       padding: MediaQuery.of(context).size.width > 768
@@ -188,7 +189,6 @@ class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
               ),
             ),
             Visibility(
-              // TODO make variants scroll horizontally
               visible: widget.lemma.variants.isNotEmpty,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -199,27 +199,31 @@ class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
                   const Divider(
                     thickness: 2,
                   ),
-                  Row(
-                    children: [
-                      for (var variant in widget.lemma.variants)
-                        TextButton(
+                  SizedBox(
+                    height: 50,
+                  child:
+                  ListView.builder(
+
+                    scrollDirection: Axis.horizontal,
+                      controller: scrollController2,
+                      itemCount: widget.lemma.variants.length,
+                      itemBuilder: (context,index) {
+                        return TextButton(
                           style: ButtonStyle(
                             backgroundColor:
-                                WidgetStateProperty.all(Colors.transparent),
+                            WidgetStateProperty.all(Colors.transparent),
                             elevation: WidgetStateProperty.all(0.0),
                             splashFactory: NoSplash.splashFactory,
                             overlayColor:
-                                WidgetStateProperty.all(Colors.transparent),
+                            WidgetStateProperty.all(Colors.transparent),
                           ),
-                          child: Text(variant),
-                          onPressed: () => widget.onPressed(variant),
-                        ),
-                    ],
-                  ),
+                          child: Text(widget.lemma.variants[index]),
+                          onPressed: () => widget.onPressed(widget.lemma.variants[index]),
+                        );
+                      })),
                   const Divider(
                     thickness: 2,
-                  ),
-                  const SizedBox(height: 10),
+                  )
                 ],
               ),
             ),
