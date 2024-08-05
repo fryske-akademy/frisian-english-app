@@ -6,7 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../lemma.dart';
 import '../../../main.dart';
-import '../../dyn_translate.dart';
+import '../../helper.dart';
 
 class DetailOverlay extends StatefulWidget {
   final Function onPressed;
@@ -18,7 +18,7 @@ class DetailOverlay extends StatefulWidget {
   State<DetailOverlay> createState() => _DetailOverlayState();
 }
 
-class _DetailOverlayState extends State<DetailOverlay> {
+class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
   late List<GlobalKey> keys;
 
   @override
@@ -271,7 +271,7 @@ class _DetailOverlayState extends State<DetailOverlay> {
     if (lemma.pos == "verb" || lemma.pos == "aux") {
       return [
         TableRow(children: <TableCell>[
-          TableCell(child: Text(Dyntranslate.translate(context, "present"),style: TextStyle(fontWeight: FontWeight.bold))),
+          TableCell(child: Text(translate(context, "present"),style: const TextStyle(fontWeight: FontWeight.bold))),
           const TableCell(child: Text(""))
         ]),
         ...lemma.paradigm
@@ -279,16 +279,16 @@ class _DetailOverlayState extends State<DetailOverlay> {
             .map((e) => lingRow(e)),
         TableRow(children: [
           Container(
-              padding: EdgeInsets.only(top: 15),
-              child: Text(Dyntranslate.translate(context, "past"),style: TextStyle(fontWeight: FontWeight.bold))),
-              Container(child: Text(""))
+              padding: const EdgeInsets.only(top: 15),
+              child: Text(translate(context, "past"),style: const TextStyle(fontWeight: FontWeight.bold))),
+              const Text("")
         ]),
         ...lemma.paradigm
             .where((e) => e["linguistics"].contains("past"))
             .map((e) => lingRow(e)),
         const TableRow(children: <TableCell>[
-          const TableCell(child: Text("")),
-          const TableCell(child: Text(""))
+          TableCell(child: Text("")),
+          TableCell(child: Text(""))
         ]),
         ...lemma.paradigm
             .where((e) => !(e["linguistics"].contains("pres")||e["linguistics"].contains("past")))
@@ -306,11 +306,11 @@ class _DetailOverlayState extends State<DetailOverlay> {
                 bottom: BorderSide(color: Theme.of(context).dividerColor,width: 0.5))),
         children: [
           Container(
-              padding: EdgeInsets.only(top: 15),
-              child: Text(Dyntranslate.translate(context, e["linguistics"]),
+              padding: const EdgeInsets.only(top: 15),
+              child: Text(translate(context, e["linguistics"]),
                   overflow: TextOverflow.visible, softWrap: true)),
           Container(
-              padding: EdgeInsets.only(top: 15),
+              padding: const EdgeInsets.only(top: 15),
               child: Text(e["forms"].join(", ")))
         ]);
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/src/helper.dart';
 import 'package:frysish/src/home/home_view.dart';
 import 'package:frysish/src/text_search/text_result.dart';
 
@@ -14,7 +15,7 @@ class TextSearch extends StatefulWidget {
   State<TextSearch> createState() => _TextSearchState();
 }
 
-class _TextSearchState extends State<TextSearch> {
+class _TextSearchState extends State<TextSearch> with Dyntranslate {
   final GlobalKey textstackKey = GlobalKey();
   final GlobalKey textFieldKey = GlobalKey();
   final GlobalKey submitKey = GlobalKey();
@@ -22,8 +23,6 @@ class _TextSearchState extends State<TextSearch> {
   late ScrollController scrollController;
 
   late OverlayEntry overlayEntry;
-
-  String language = 'fry';
 
   bool infoOverlayLive = false;
 
@@ -204,22 +203,23 @@ class _TextSearchState extends State<TextSearch> {
 
   void _handleSubmitButtonPressed() async {
     varController.query = textController.text;
-    varController.route( TextResult.routeName, args: {'language': language});
+    varController.route( TextResult.routeName, args: {'language': varController.isFryEn?'fry':'en'});
   }
 
   _buildOperators(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 56,
-            child: Material(
-              borderRadius: BorderRadius.circular(25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+      child: Table(
+                columnWidths: const {
+                  0: IntrinsicColumnWidth(),
+                  1: IntrinsicColumnWidth(),
+                  2: IntrinsicColumnWidth(),
+                  3: IntrinsicColumnWidth(),
+                  4: IntrinsicColumnWidth(),
+                },
                 children: [
+                  TableRow(
+                      children: [
                   TextButton(
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(Colors.transparent),
@@ -244,108 +244,97 @@ class _TextSearchState extends State<TextSearch> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
-                  TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                      elevation: WidgetStateProperty.all(0.0),
-                      splashFactory: NoSplash.splashFactory,
-                      overlayColor: WidgetStateProperty.all(Colors.transparent),
-                    ),
-                    onPressed: () {
-                      int position = textController.selection.baseOffset;
-                      String leftText = textController.text.substring(0, position);
-                      String rightText = textController.text.substring(position);
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                        elevation: WidgetStateProperty.all(0.0),
+                        splashFactory: NoSplash.splashFactory,
+                        overlayColor: WidgetStateProperty.all(Colors.transparent),
+                      ),
+                      onPressed: () {
+                        int position = textController.selection.baseOffset;
+                        String leftText = textController.text.substring(0, position);
+                        String rightText = textController.text.substring(position);
 
-                      // Check if leftText ends with a space or rightText starts with a space
-                      String leftSpace = leftText.endsWith(' ') ? '' : ' ';
-                      String rightSpace = rightText.startsWith(' ') ? '' : ' ';
+                        // Check if leftText ends with a space or rightText starts with a space
+                        String leftSpace = leftText.endsWith(' ') ? '' : ' ';
+                        String rightSpace = rightText.startsWith(' ') ? '' : ' ';
 
-                      String newText = '$leftText${leftSpace}OR$rightSpace$rightText';
-                      textController.text = newText;
-                    },
-                    child: const Text(
-                      'OR',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                        String newText = '$leftText${leftSpace}OR$rightSpace$rightText';
+                        textController.text = newText;
+                      },
+                      child: const Text(
+                        'OR',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                  TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                      elevation: WidgetStateProperty.all(0.0),
-                      splashFactory: NoSplash.splashFactory,
-                      overlayColor: WidgetStateProperty.all(Colors.transparent),
-                    ),
-                    onPressed: () {
-                      int position = textController.selection.baseOffset;
-                      String leftText = textController.text.substring(0, position);
-                      String rightText = textController.text.substring(position);
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                        elevation: WidgetStateProperty.all(0.0),
+                        splashFactory: NoSplash.splashFactory,
+                        overlayColor: WidgetStateProperty.all(Colors.transparent),
+                      ),
+                      onPressed: () {
+                        int position = textController.selection.baseOffset;
+                        String leftText = textController.text.substring(0, position);
+                        String rightText = textController.text.substring(position);
 
-                      String newText = '$leftText"$rightText';
-                      textController.text = newText;
-                    },
-                    child: const Text(
-                      '"',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                        String newText = '$leftText"$rightText';
+                        textController.text = newText;
+                      },
+                      child: const Text(
+                        '"',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                  TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                      elevation: WidgetStateProperty.all(0.0),
-                      splashFactory: NoSplash.splashFactory,
-                      overlayColor: WidgetStateProperty.all(Colors.transparent),
-                    ),
-                    onPressed: () {
-                      int position = textController.selection.baseOffset;
-                      String leftText = textController.text.substring(0, position);
-                      String rightText = textController.text.substring(position);
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                        elevation: WidgetStateProperty.all(0.0),
+                        splashFactory: NoSplash.splashFactory,
+                        overlayColor: WidgetStateProperty.all(Colors.transparent),
+                      ),
+                      onPressed: () {
+                        int position = textController.selection.baseOffset;
+                        String leftText = textController.text.substring(0, position);
+                        String rightText = textController.text.substring(position);
 
-                      String newText = '$leftText?$rightText';
-                      textController.text = newText;
-                    },
-                    child: const Text(
-                      '?',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                        String newText = '$leftText?$rightText';
+                        textController.text = newText;
+                      },
+                      child: const Text(
+                        '?',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                  TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                      elevation: WidgetStateProperty.all(0.0),
-                      splashFactory: NoSplash.splashFactory,
-                      overlayColor: WidgetStateProperty.all(Colors.transparent),
-                    ),
-                    onPressed: () {
-                      int position = textController.selection.baseOffset;
-                      String leftText = textController.text.substring(0, position);
-                      String rightText = textController.text.substring(position);
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                        elevation: WidgetStateProperty.all(0.0),
+                        splashFactory: NoSplash.splashFactory,
+                        overlayColor: WidgetStateProperty.all(Colors.transparent),
+                      ),
+                      onPressed: () {
+                        int position = textController.selection.baseOffset;
+                        String leftText = textController.text.substring(0, position);
+                        String rightText = textController.text.substring(position);
 
-                      String newText = '$leftText*$rightText';
-                      textController.text = newText;
-                    },
-                    child: const Text(
-                      '*',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  IconButton(
-                    icon: CircleAvatar(
-                        radius: 10,
-                        backgroundImage: language == 'fry'
-                            ? const ResizeImage(AssetImage('assets/flags/fry.png'), width: 100, height: 100)
-                            : const ResizeImage(AssetImage('assets/flags/en.png'), width: 100, height: 100)),
-                    onPressed: () {
-                      setState(() {
-                        language = language == 'fry' ? 'en' : 'fry';
-                      });
-                    },
-                  ),
+                        String newText = '$leftText*$rightText';
+                        textController.text = newText;
+                      },
+                      child: const Text(
+                        '*',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ]),
+                  TableRow(children:
+                    langSwitch(context, this)+
+                    [const Text(""),const Text("")]
+                  )
                 ],
               ),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

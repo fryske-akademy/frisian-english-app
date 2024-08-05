@@ -142,7 +142,7 @@ class _TextResultState extends State<TextResult> {
                             children: [
                               SelectableText.rich(
                                   TextSpan(
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -153,7 +153,7 @@ class _TextResultState extends State<TextResult> {
                           TableRow(
                             children: [SelectableText.rich(
                               TextSpan(
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                 ),
                                 children: transSpans,

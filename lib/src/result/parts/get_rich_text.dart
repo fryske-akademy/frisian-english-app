@@ -15,7 +15,7 @@ List<TextSpan> getRichText(list) {
         break;
       case 'I':
         for (var subItem in item['textI']) {
-          textSpans.add(TextSpan(text: " " + subItem['textT'], style: const TextStyle(fontStyle: FontStyle.italic)));
+          textSpans.add(TextSpan(text: " ${subItem['textT']}", style: const TextStyle(fontStyle: FontStyle.italic)));
         }
         break;
       case 'Q':
