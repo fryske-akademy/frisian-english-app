@@ -330,8 +330,9 @@ class _TextSearchState extends State<TextSearch> with Dyntranslate {
                     )
                   ]),
                   TableRow(children:
+                  ([const Text("")] as List<Widget>) +
                     langSwitch(context, this)+
-                    [const Text(""),const Text("")]
+                    [const Text("")]
                   )
                 ],
               ),

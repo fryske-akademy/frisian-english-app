@@ -234,14 +234,12 @@ mixin Dyntranslate {
 
   List<Widget> langSwitch(BuildContext context, State state) {
     return [
-      Expanded(
-        child: Align(
+      Align(
           alignment: Alignment.center,
           child: Text(varController.isFryEn
               ? AppLocalizations.of(context)!.fry
               : AppLocalizations.of(context)!.en),
         ),
-      ),
       Padding(
         padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: IconButton(
@@ -255,14 +253,12 @@ mixin Dyntranslate {
           },
         ),
       ),
-      Expanded(
-        child: Align(
+      Align(
           alignment: Alignment.center,
           child: Text(varController.isFryEn
               ? AppLocalizations.of(context)!.en
               : AppLocalizations.of(context)!.fry),
-        ),
-      )
+        )
     ];
   }
 }
