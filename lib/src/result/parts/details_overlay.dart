@@ -188,6 +188,7 @@ class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
               ),
             ),
             Visibility(
+              // TODO make variants scroll horizontally
               visible: widget.lemma.variants.isNotEmpty,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
