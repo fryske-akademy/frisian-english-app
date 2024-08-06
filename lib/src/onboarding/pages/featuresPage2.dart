@@ -1,7 +1,6 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/src/helper.dart';
 
 class featuresPage2 extends StatefulWidget {
@@ -26,32 +25,24 @@ class _featuresPage2State extends State<featuresPage2> with SingleTickerProvider
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      width: MediaQuery.of(context).size.width,
-      padding: const EdgeInsets.symmetric(horizontal: 80),
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-        const Spacer(flex: 6),
-        Center(
-          child: Text(AppLocalizations.of(context)!.appFunctions, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-        ),
-        const Spacer(flex: 2),
+    return Center(child: Table(
+      children: [
         _getRow(context, "translate"),
-        const Spacer(flex: 1),
         _getRow(context, "viewExamples"),
-        const Spacer(flex: 1),
         _getRow(context, "textSearch"),
-        const Spacer(flex: 2),
         _getRow(context, "muchMore"),
-        const Spacer(flex: 8),
-      ]),
-    );
+      ]));
   }
 
-  Widget _getRow(BuildContext context, String txt) {
-    return Expanded(child: Center(child:
-    Text(translate(context, txt), softWrap: true, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-    ));
+  TableRow _getRow(BuildContext context, String txt) {
+    return TableRow(
+      children:
+    [
+      Center(child: SizedBox(
+          height: 80,
+        child: Text(translate(context, txt), softWrap: true, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold))))
+    ],
+    );
   }
 
   @override
