@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/main.dart';
 
-mixin Dyntranslate {
+mixin Helper {
   String translate(BuildContext context, String dynKey) {
     var localizations = AppLocalizations.of(context);
     switch (dynKey) {

@@ -20,7 +20,7 @@ class HomeView extends StatefulWidget {
   State createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State with Dyntranslate {
+class _HomeViewState extends State with Helper {
   final GlobalKey languageIconKey = GlobalKey();
 
   @override

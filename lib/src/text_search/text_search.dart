@@ -15,7 +15,7 @@ class TextSearch extends StatefulWidget {
   State<TextSearch> createState() => _TextSearchState();
 }
 
-class _TextSearchState extends State<TextSearch> with Dyntranslate {
+class _TextSearchState extends State<TextSearch> with Helper {
   final GlobalKey textstackKey = GlobalKey();
   final GlobalKey textFieldKey = GlobalKey();
   final GlobalKey submitKey = GlobalKey();

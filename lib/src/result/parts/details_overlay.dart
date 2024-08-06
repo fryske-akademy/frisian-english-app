@@ -18,7 +18,7 @@ class DetailOverlay extends StatefulWidget {
   State<DetailOverlay> createState() => _DetailOverlayState();
 }
 
-class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
+class _DetailOverlayState extends State<DetailOverlay> with Helper {
   late List<GlobalKey> keys;
 
   @override
@@ -34,6 +34,7 @@ class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
   Widget build(BuildContext context) {
     final ScrollController scrollController = ScrollController();
     final ScrollController scrollController2 = ScrollController();
+    final ScrollController scrollController3 = ScrollController();
     return Center(
         child: Padding(
       padding: MediaQuery.of(context).size.width > 768
@@ -238,12 +239,16 @@ class _DetailOverlayState extends State<DetailOverlay> with Dyntranslate {
                   const Divider(
                     thickness: 2,
                   ),
-                  Row(
-                    children: [
-                      for (var dutchism in widget.lemma.dutchisms)
-                        Text(dutchism)
-                    ],
-                  ),
+                  SizedBox(
+                      height: 50,
+                      child:
+                      ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          controller: scrollController3,
+                          itemCount: widget.lemma.dutchisms.length,
+                          itemBuilder: (context,index) {
+                            return Text(widget.lemma.dutchisms[index]);
+                          })),
                   const Divider(
                     thickness: 2,
                   ),

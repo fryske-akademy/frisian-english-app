@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/src/helper.dart';
 
 class featuresPage2 extends StatefulWidget {
   const featuresPage2({super.key, required Color customColor});
@@ -11,7 +12,7 @@ class featuresPage2 extends StatefulWidget {
   _featuresPage2State createState() => _featuresPage2State();
 }
 
-class _featuresPage2State extends State<featuresPage2> with SingleTickerProviderStateMixin {
+class _featuresPage2State extends State<featuresPage2> with SingleTickerProviderStateMixin, Helper {
   late AnimationController _controller;
 
   @override
@@ -35,24 +36,22 @@ class _featuresPage2State extends State<featuresPage2> with SingleTickerProvider
           child: Text(AppLocalizations.of(context)!.appFunctions, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
         ),
         const Spacer(flex: 2),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.translate, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-        ]),
+        _getRow(context, "translate"),
         const Spacer(flex: 1),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.viewExamples, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-        ]),
+        _getRow(context, "viewExamples"),
         const Spacer(flex: 1),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.textSearch, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-        ]),
+        _getRow(context, "textSearch"),
         const Spacer(flex: 2),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.muchMore, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-        ]),
+        _getRow(context, "muchMore"),
         const Spacer(flex: 8),
       ]),
     );
+  }
+
+  Widget _getRow(BuildContext context, String txt) {
+    return Expanded(child: Center(child:
+    Text(translate(context, txt), softWrap: true, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+    ));
   }
 
   @override
