@@ -330,7 +330,7 @@ class _TextSearchState extends State<TextSearch> with Helper {
                     )
                   ]),
                   TableRow(children:
-                  ([const Text("")] as List<Widget>) +
+                      List<Widget>.from([const Text("")])+
                     langSwitch(context, this)+
                     [const Text("")]
                   )
