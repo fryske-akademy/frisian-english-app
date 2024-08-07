@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
 import 'package:frysish/src/home/home_view.dart';
+import 'package:frysish/src/list_item.dart';
 import 'package:frysish/src/queries/get_lemmas.dart';
 import 'package:frysish/src/result/parts/details.dart';
 import 'package:select_dialog/select_dialog.dart';
@@ -64,7 +65,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
           details = toEnglish(all);
         }
 
-        remember(details);
+        _remember(details);
 
         return PopScope(
           canPop: true,
@@ -176,4 +177,23 @@ void toDetails(List<Lemma> value, BuildContext? context) async {
     varController.route(ResultView.routeName, args: {"lemma": l});
   }
 
+}
+
+
+void _remember(Details details) {
+  var history = varController.history;
+
+  if (history.length > 50) {
+    history.removeAt(0);
+  }
+
+  bool l = details.lemma.lang == 'fry';
+
+  if (!history.any((item) =>
+  item.form == details.lemma.form && item.isFryEn == l)) {
+    ListItem item = ListItem();
+    item.form = details.lemma.form;
+    item.isFryEn = l;
+    history.add(item);
+  }
 }

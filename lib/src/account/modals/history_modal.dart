@@ -60,10 +60,8 @@ class _HistoryModalState extends State<HistoryModal> {
                       ),
                     ],
                   ),
-                  trailing: Padding(
-                    padding: const EdgeInsets.only(right: 20.0),
-                    child: IconButton(
-                      icon: listItem.toBeDeleted ? const Icon(Icons.restore_from_trash) : const Icon(Icons.delete),
+                  trailing: IconButton(
+                      icon: listItem.toBeDeleted ? const Icon(Icons.delete_outline) : const Icon(Icons.delete),
                       onPressed: () {
                         setState(
                           () {
@@ -72,26 +70,11 @@ class _HistoryModalState extends State<HistoryModal> {
                         );
                       },
                     ),
-                  ),
                 ),
               );
             },
           ),
-        ),
-        Positioned(
-          right: 10,
-          bottom: 10,
-          child: FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                for (var item in varController.stagedItems) {
-                  item.toBeDeleted = true;
-                }
-              });
-            },
-            child: const Icon(Icons.delete),
-          ),
-        ),
+        )
       ],
     );
   }

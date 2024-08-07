@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_offline/flutter_offline.dart';
-import 'package:frysish/details.dart';
 import 'package:frysish/src/account/account_view.dart';
 import 'package:frysish/src/helper.dart';
-import 'package:frysish/src/list_item.dart';
 import 'package:frysish/src/settings/settings_view.dart';
 import 'package:frysish/src/text_search/text_search.dart';
 
@@ -206,25 +204,6 @@ class _HomeViewState extends State with Helper {
         ),
       ),
     );
-  }
-}
-
-
-void remember(Details details) {
-  var history = varController.history;
-
-  if (history.length > 50) {
-    history.removeAt(0);
-  }
-
-  bool l = details.lemma.lang == 'fry';
-
-  if (!history.any((item) =>
-  item.form == details.lemma.form && item.isFryEn == l)) {
-    ListItem item = ListItem();
-    item.form = details.lemma.form;
-    item.isFryEn = details.lemma.lang == 'fry' ? true : false;
-    history.add(item);
   }
 }
 
