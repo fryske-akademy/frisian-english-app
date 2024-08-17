@@ -32,6 +32,12 @@ class _HomeViewState extends State with Helper {
     languageIconKey.currentState?.dispose();
   }
 
+  void _closeLangOverlay() {
+    varController.langSwapOverlayEntry.remove();
+    varController.langSwapOverlayEntry.dispose();
+    varController.langSwapOverlayLive = false;
+  }
+
   void showLanguageOverlay() {
     final RenderBox renderBox = languageIconKey.currentContext!
         .findRenderObject() as RenderBox;
@@ -48,9 +54,7 @@ class _HomeViewState extends State with Helper {
                     IconButton(
                       icon: const Icon(Icons.close),
                       onPressed: () {
-                        varController.langSwapOverlayEntry.remove();
-                        varController.langSwapOverlayEntry.dispose();
-                        varController.langSwapOverlayLive = false;
+                        _closeLangOverlay();
                       },
                     ),
                     SegmentedButton<Locale>(
@@ -73,6 +77,7 @@ class _HomeViewState extends State with Helper {
                       },
                       onSelectionChanged: (Set<Locale> selectedValues) {
                         varController.updateLocale(selectedValues.first);
+                        _closeLangOverlay();
                       },
                     ),
                   ],
