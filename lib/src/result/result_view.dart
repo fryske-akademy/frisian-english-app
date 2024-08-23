@@ -35,9 +35,11 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
     tabController.addListener(handleTabSelection);
   }
 
+  
+
   void handleTabSelection() {
     if (tabController.indexIsChanging) {
-      varController.removeOverlay();
+      userSettings.removeOverlay();
     }
   }
 
@@ -52,10 +54,47 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
         : Lemma();
 
     return FutureBuilder(
-      future: getDetails(lemma.link),
+      future: getDetails(lemma.link).timeout(const Duration(seconds: 5)),
       builder: (context, snapshot) {
         if (!snapshot.hasData || snapshot.data!.isEmpty) {
-          return const Center(child: CircularProgressIndicator());
+          return Material(
+            // color: userSettings
+            //     .primaryColor, // Set the background color to the primary color
+            // child: Center(
+            //   child: SvgPicture.asset(
+            //     'assets/logos/frysishDark.svg',
+            //     width: 250,
+            //   ),
+            // ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Spacer(),
+                CircleAvatar(
+                  radius: 125,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  child: Image.asset(
+                    gaplessPlayback: false,
+                    userSettings.themeMode == ThemeMode.dark
+                        ? 'assets/gifs/frysishDark.gif'
+                        : 'assets/gifs/frysishLight.gif',
+                    height: 250,
+                    width: 250,
+                  ),
+                ),
+                const Spacer(),
+                IconButton(
+                  icon: const Icon(Icons.home),
+                  iconSize: 50,
+                  color: userSettings.themeMode == ThemeMode.dark
+                      ? Colors.white
+                      : Colors.black,
+                  onPressed: () {userSettings.route(HomeView.routeName);},
+                ),
+                const Spacer(),
+              ],
+            ),
+          );
         }
 
         List<Details> all = snapshot.data as List<Details>;
@@ -133,7 +172,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                           child: IconButton(
                             icon: const Icon(Icons.home),
                             onPressed: () {
-                              varController.route(HomeView.routeName);
+                              userSettings.route(HomeView.routeName);
                             },
                           ),
                         ),
@@ -153,11 +192,11 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 }
 
 void findDetails(String text) {
-  varController.query=text;
-  varController.hideAutocomplete(varController.autoComOverlayEntry);
+  userSettings.query=text;
+  userSettings.hideAutocomplete(userSettings.autoComOverlayEntry);
   getLemmas(text).timeout(
       const Duration(seconds: 3),
-      onTimeout: () => []).then((value) => toDetails(value, varController.navigatorKey.currentContext));
+      onTimeout: () => []).then((value) => toDetails(value, userSettings.navigatorKey.currentContext));
 }
 
 void toDetails(List<Lemma> value, BuildContext? context) async {
@@ -169,12 +208,16 @@ void toDetails(List<Lemma> value, BuildContext? context) async {
       label: context.mounted?AppLocalizations.of(context)!.choose:'Choose',
       selectedValue: l,
       items: List.of(value),
+
       onChange: (Lemma selected) {
-        Future.microtask(() => varController.route(ResultView.routeName, args: {"lemma": selected}));
+        // userSettings.route(ResultView.routeName, args: {"lemma": selected});
+        // userSettings.route(ResultView.routeName);
+        Future(() => userSettings.route(ResultView.routeName, args: {"lemma": selected}));
+        // Future.microtask(() => userSettings.route(ResultView.routeName, args: {"lemma": selected}));
       },
     );
   } else if (l.form!=""&&l.form!="???") {
-    varController.route(ResultView.routeName, args: {"lemma": l});
+    userSettings.route(ResultView.routeName, args: {"lemma": l});
   }
 
 }

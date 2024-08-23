@@ -67,7 +67,7 @@ class _TextResultState extends State<TextResult> {
     final Map arguments = ModalRoute.of(context)!.settings.arguments as Map;
 
     return FutureBuilder(
-      future: fetchData(varController.query, arguments['language']),
+      future: fetchData(userSettings.query, arguments['language']),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
@@ -97,7 +97,7 @@ class _TextResultState extends State<TextResult> {
                   const SizedBox(height: 25),
                   IconButton(
                     onPressed: () {
-                      varController.route( TextSearch.routeName);
+                      userSettings.route( TextSearch.routeName);
                     },
                     icon: const Icon(Icons.arrow_back),
                   )
@@ -108,7 +108,7 @@ class _TextResultState extends State<TextResult> {
 
           return Scaffold(
             appBar: AppBar(
-              title: Text(varController.query),
+              title: Text(userSettings.query),
             ),
             body: Material(
               child: ListView.builder(

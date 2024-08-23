@@ -6,15 +6,17 @@ import 'package:get_it/get_it.dart';
 import 'client.dart';
 import 'src/app.dart';
 import 'src/settings/var_controller.dart';
-import 'src/settings/settings_service.dart';
+import 'src/settings/user_settings.dart';
 
-final varController = VarController(SettingsService());
+final userSettings = UserSettings();
+final varController = VarController();
 
 void main() async {
   // makes sure that the app is fully initialized before running
   WidgetsFlutterBinding.ensureInitialized();
 
   // retrieves settings from device storage
+  await userSettings.loadSettings();
   await varController.loadSettings();
 
   final client = await initClient();
@@ -25,11 +27,11 @@ void main() async {
   // If system theme is set to dark, theme in app is set to dark
   var brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
 
-  if (varController.systemThemeOverruled) {
+  if (userSettings.systemThemeOverruled) {
     if (brightness == Brightness.dark) {
-      varController.updateThemeMode(ThemeMode.dark);
+      userSettings.updateThemeMode(ThemeMode.dark);
     } else {
-      varController.updateThemeMode(ThemeMode.light);
+      userSettings.updateThemeMode(ThemeMode.light);
     }
   }
 

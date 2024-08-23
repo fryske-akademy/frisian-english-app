@@ -30,9 +30,9 @@ class _TextSearchState extends State<TextSearch> with Helper {
   void initState() {
     super.initState();
     scrollController = ScrollController();
-    textController.text=varController.query;
+    textController.text = userSettings.query;
 
-    if (!varController.onboardingShow) {
+    if (!varController.onboardingShown) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         _toggleInfoDialog(context);
       });
@@ -42,7 +42,7 @@ class _TextSearchState extends State<TextSearch> with Helper {
   @override
   void dispose() {
     textController.dispose();
-    varController.removeOverlay();
+    userSettings.removeOverlay();
     scrollController.dispose();
     super.dispose();
   }
@@ -62,7 +62,7 @@ class _TextSearchState extends State<TextSearch> with Helper {
         leading: IconButton(
           icon: const Icon(Icons.home),
           onPressed: () {
-            varController.route( HomeView.routeName);
+            userSettings.route(HomeView.routeName);
           },
         ),
         automaticallyImplyLeading: false,
@@ -73,7 +73,7 @@ class _TextSearchState extends State<TextSearch> with Helper {
           alignment: Alignment.bottomRight,
           children: [
             _buildTextField(context),
-            _buildSubmitButton(context),
+            // _buildSubmitButton(context),
             Align(
               alignment: Alignment.bottomCenter,
               child: _buildOperators(context),
@@ -100,60 +100,59 @@ class _TextSearchState extends State<TextSearch> with Helper {
       removeOverlay();
     } else {
       overlayEntry = OverlayEntry(
-        builder: (context) =>
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
-                child: Material(
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  //surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
+        builder: (context) => Center(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+            child: Material(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              //surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    ListView(
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.all(20.0),
                       children: [
-                        ListView(
-                          shrinkWrap: true,
-                          padding: const EdgeInsets.all(20.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                IconButton(
-                                  icon: const Icon(Icons.close),
-                                  onPressed: () {
-                                    removeOverlay();
-                                  },
-                                )
-                              ],
-                            ),
-                            Text(AppLocalizations.of(context)!.wildcards),
-                            const Divider(
-                              thickness: 2,
-                            ),
-                            Text(AppLocalizations.of(context)!.doubleqoutes),
-                            const Divider(
-                              thickness: 2,
-                            ),
-                            Text(AppLocalizations.of(context)!.occurrence),
-                            const Divider(
-                              thickness: 2,
-                            ),
-                            Text(AppLocalizations.of(context)!.andOr),
+                            IconButton(
+                              icon: const Icon(Icons.close),
+                              onPressed: () {
+                                removeOverlay();
+                              },
+                            )
                           ],
                         ),
+                        Text(AppLocalizations.of(context)!.wildcards),
+                        const Divider(
+                          thickness: 2,
+                        ),
+                        Text(AppLocalizations.of(context)!.doubleqoutes),
+                        const Divider(
+                          thickness: 2,
+                        ),
+                        Text(AppLocalizations.of(context)!.occurrence),
+                        const Divider(
+                          thickness: 2,
+                        ),
+                        Text(AppLocalizations.of(context)!.andOr),
                       ],
                     ),
-                  ),
+                  ],
                 ),
               ),
             ),
+          ),
+        ),
       );
 
       Overlay.of(context).insert(overlayEntry);
-      infoOverlayLive=true;
+      infoOverlayLive = true;
     }
   }
 
@@ -161,7 +160,8 @@ class _TextSearchState extends State<TextSearch> with Helper {
     return Material(
       elevation: 5,
       surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-      borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+      borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20), topRight: Radius.circular(20)),
       child: Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
         child: TextField(
@@ -188,154 +188,304 @@ class _TextSearchState extends State<TextSearch> with Helper {
   }
 
   Widget _buildSubmitButton(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(8, 8, 25, 72),
-      child: FloatingActionButton(
-        key: submitKey,
-        shape: const CircleBorder(),
-        child: const Icon(Icons.send),
-        onPressed: () async {
+    return SizedBox(
+          width: double.infinity, // Fills the whole width of the screen
+          height: 50.0, // Set the height to make it squared
+          child: FilledButton(
+            style: ButtonStyle(
+              shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero, // Removes rounded corners
+                ),
+              ),
+            ),
+            onPressed: () async {
           _handleSubmitButtonPressed();
         },
-      ),
-    );
+            child: const Icon(Icons.send),
+          ),
+        );
   }
 
+  //   Widget _buildSubmitButton(BuildContext context) {
+  //   return Padding(
+  //     padding: const EdgeInsets.fromLTRB(0, 0, 50, 150),
+  //     child: FloatingActionButton(
+  //       key: submitKey,
+  //       shape: const CircleBorder(),
+  //       child: const Icon(Icons.send),
+  //       onPressed: () async {
+  //         _handleSubmitButtonPressed();
+  //       },
+  //     ),
+  //   );
+  // }
+
+
+
   void _handleSubmitButtonPressed() async {
-    varController.query = textController.text;
-    varController.route( TextResult.routeName, args: {'language': varController.isFryEn?'fry':'en'});
+    userSettings.query = textController.text;
+    userSettings.route(TextResult.routeName,
+        args: {'language': varController.isFryEn ? 'fry' : 'en'});
   }
 
   _buildOperators(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Table(
-                columnWidths: const {
-                  0: IntrinsicColumnWidth(),
-                  1: IntrinsicColumnWidth(),
-                  2: IntrinsicColumnWidth(),
-                  3: IntrinsicColumnWidth(),
-                  4: IntrinsicColumnWidth(),
-                },
-                children: [
-                  TableRow(
-                      children: [
-                  TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                      elevation: WidgetStateProperty.all(0.0),
-                      splashFactory: NoSplash.splashFactory,
-                      overlayColor: WidgetStateProperty.all(Colors.transparent),
-                    ),
-                    onPressed: () {
-                      int position = textController.selection.baseOffset;
-                      String leftText = textController.text.substring(0, position);
-                      String rightText = textController.text.substring(position);
-
-                      // Check if leftText ends with a space or rightText starts with a space
-                      String leftSpace = leftText.endsWith(' ') ? '' : ' ';
-                      String rightSpace = rightText.startsWith(' ') ? '' : ' ';
-
-                      String newText = '$leftText${leftSpace}AND$rightSpace$rightText';
-                      textController.text = newText;
-                    },
-                    child: const Text(
-                      'AND',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                    TextButton(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                        elevation: WidgetStateProperty.all(0.0),
-                        splashFactory: NoSplash.splashFactory,
-                        overlayColor: WidgetStateProperty.all(Colors.transparent),
-                      ),
-                      onPressed: () {
-                        int position = textController.selection.baseOffset;
-                        String leftText = textController.text.substring(0, position);
-                        String rightText = textController.text.substring(position);
-
-                        // Check if leftText ends with a space or rightText starts with a space
-                        String leftSpace = leftText.endsWith(' ') ? '' : ' ';
-                        String rightSpace = rightText.startsWith(' ') ? '' : ' ';
-
-                        String newText = '$leftText${leftSpace}OR$rightSpace$rightText';
-                        textController.text = newText;
-                      },
-                      child: const Text(
-                        'OR',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    TextButton(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                        elevation: WidgetStateProperty.all(0.0),
-                        splashFactory: NoSplash.splashFactory,
-                        overlayColor: WidgetStateProperty.all(Colors.transparent),
-                      ),
-                      onPressed: () {
-                        int position = textController.selection.baseOffset;
-                        String leftText = textController.text.substring(0, position);
-                        String rightText = textController.text.substring(position);
-
-                        String newText = '$leftText"$rightText';
-                        textController.text = newText;
-                      },
-                      child: const Text(
-                        '"',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    TextButton(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                        elevation: WidgetStateProperty.all(0.0),
-                        splashFactory: NoSplash.splashFactory,
-                        overlayColor: WidgetStateProperty.all(Colors.transparent),
-                      ),
-                      onPressed: () {
-                        int position = textController.selection.baseOffset;
-                        String leftText = textController.text.substring(0, position);
-                        String rightText = textController.text.substring(position);
-
-                        String newText = '$leftText?$rightText';
-                        textController.text = newText;
-                      },
-                      child: const Text(
-                        '?',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    TextButton(
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                        elevation: WidgetStateProperty.all(0.0),
-                        splashFactory: NoSplash.splashFactory,
-                        overlayColor: WidgetStateProperty.all(Colors.transparent),
-                      ),
-                      onPressed: () {
-                        int position = textController.selection.baseOffset;
-                        String leftText = textController.text.substring(0, position);
-                        String rightText = textController.text.substring(position);
-
-                        String newText = '$leftText*$rightText';
-                        textController.text = newText;
-                      },
-                      child: const Text(
-                        '*',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    )
-                  ]),
-                  TableRow(children:
-                      List<Widget>.from([const Text("")])+
-                    langSwitch(context, this)+
-                    [const Text("")]
-                  )
-                ],
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                elevation: WidgetStateProperty.all(0.0),
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
               ),
+              onPressed: () {
+                int position = textController.selection.baseOffset;
+                String leftText = textController.text.substring(0, position);
+                String rightText = textController.text.substring(position);
+
+                // Check if leftText ends with a space or rightText starts with a space
+                String leftSpace = leftText.endsWith(' ') ? '' : ' ';
+                String rightSpace = rightText.startsWith(' ') ? '' : ' ';
+
+                String newText =
+                    '$leftText${leftSpace}AND$rightSpace$rightText';
+                textController.text = newText;
+              },
+              child: const Text(
+                'AND',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                elevation: WidgetStateProperty.all(0.0),
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
+              ),
+              onPressed: () {
+                int position = textController.selection.baseOffset;
+                String leftText = textController.text.substring(0, position);
+                String rightText = textController.text.substring(position);
+
+                // Check if leftText ends with a space or rightText starts with a space
+                String leftSpace = leftText.endsWith(' ') ? '' : ' ';
+                String rightSpace = rightText.startsWith(' ') ? '' : ' ';
+
+                String newText = '$leftText${leftSpace}OR$rightSpace$rightText';
+                textController.text = newText;
+              },
+              child: const Text(
+                'OR',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                elevation: WidgetStateProperty.all(0.0),
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
+              ),
+              onPressed: () {
+                int position = textController.selection.baseOffset;
+                String leftText = textController.text.substring(0, position);
+                String rightText = textController.text.substring(position);
+
+                String newText = '$leftText"$rightText';
+                textController.text = newText;
+              },
+              child: const Text(
+                '"',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                elevation: WidgetStateProperty.all(0.0),
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
+              ),
+              onPressed: () {
+                int position = textController.selection.baseOffset;
+                String leftText = textController.text.substring(0, position);
+                String rightText = textController.text.substring(position);
+
+                String newText = '$leftText?$rightText';
+                textController.text = newText;
+              },
+              child: const Text(
+                '?',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                elevation: WidgetStateProperty.all(0.0),
+                splashFactory: NoSplash.splashFactory,
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
+              ),
+              onPressed: () {
+                int position = textController.selection.baseOffset;
+                String leftText = textController.text.substring(0, position);
+                String rightText = textController.text.substring(position);
+
+                String newText = '$leftText*$rightText';
+                textController.text = newText;
+              },
+              child: const Text(
+                '*',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
+        ),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: langSwitch(context, this)),
+        const Padding(padding: EdgeInsets.all(8.0)),
+        _buildSubmitButton(context),
+        
+      ],
     );
   }
+
+  // _buildOperators(BuildContext context) {
+  //   return Padding(
+  //     padding: const EdgeInsets.all(8.0),
+  //     child: Table(
+  //       columnWidths: const {
+  //         0: IntrinsicColumnWidth(),
+  //         1: IntrinsicColumnWidth(),
+  //         2: IntrinsicColumnWidth(),
+  //         3: IntrinsicColumnWidth(),
+  //         4: IntrinsicColumnWidth(),
+  //       },
+  //       children: [
+  //         TableRow(children: [
+  //           TextButton(
+  //             style: ButtonStyle(
+  //               backgroundColor: WidgetStateProperty.all(Colors.transparent),
+  //               elevation: WidgetStateProperty.all(0.0),
+  //               splashFactory: NoSplash.splashFactory,
+  //               overlayColor: WidgetStateProperty.all(Colors.transparent),
+  //             ),
+  //             onPressed: () {
+  //               int position = textController.selection.baseOffset;
+  //               String leftText = textController.text.substring(0, position);
+  //               String rightText = textController.text.substring(position);
+
+  //               // Check if leftText ends with a space or rightText starts with a space
+  //               String leftSpace = leftText.endsWith(' ') ? '' : ' ';
+  //               String rightSpace = rightText.startsWith(' ') ? '' : ' ';
+
+  //               String newText =
+  //                   '$leftText${leftSpace}AND$rightSpace$rightText';
+  //               textController.text = newText;
+  //             },
+  //             child: const Text(
+  //               'AND',
+  //               style: TextStyle(fontWeight: FontWeight.bold),
+  //             ),
+  //           ),
+  //           TextButton(
+  //             style: ButtonStyle(
+  //               backgroundColor: WidgetStateProperty.all(Colors.transparent),
+  //               elevation: WidgetStateProperty.all(0.0),
+  //               splashFactory: NoSplash.splashFactory,
+  //               overlayColor: WidgetStateProperty.all(Colors.transparent),
+  //             ),
+  //             onPressed: () {
+  //               int position = textController.selection.baseOffset;
+  //               String leftText = textController.text.substring(0, position);
+  //               String rightText = textController.text.substring(position);
+
+  //               // Check if leftText ends with a space or rightText starts with a space
+  //               String leftSpace = leftText.endsWith(' ') ? '' : ' ';
+  //               String rightSpace = rightText.startsWith(' ') ? '' : ' ';
+
+  //               String newText = '$leftText${leftSpace}OR$rightSpace$rightText';
+  //               textController.text = newText;
+  //             },
+  //             child: const Text(
+  //               'OR',
+  //               style: TextStyle(fontWeight: FontWeight.bold),
+  //             ),
+  //           ),
+  //           TextButton(
+  //             style: ButtonStyle(
+  //               backgroundColor: WidgetStateProperty.all(Colors.transparent),
+  //               elevation: WidgetStateProperty.all(0.0),
+  //               splashFactory: NoSplash.splashFactory,
+  //               overlayColor: WidgetStateProperty.all(Colors.transparent),
+  //             ),
+  //             onPressed: () {
+  //               int position = textController.selection.baseOffset;
+  //               String leftText = textController.text.substring(0, position);
+  //               String rightText = textController.text.substring(position);
+
+  //               String newText = '$leftText"$rightText';
+  //               textController.text = newText;
+  //             },
+  //             child: const Text(
+  //               '"',
+  //               style: TextStyle(fontWeight: FontWeight.bold),
+  //             ),
+  //           ),
+  //           TextButton(
+  //             style: ButtonStyle(
+  //               backgroundColor: WidgetStateProperty.all(Colors.transparent),
+  //               elevation: WidgetStateProperty.all(0.0),
+  //               splashFactory: NoSplash.splashFactory,
+  //               overlayColor: WidgetStateProperty.all(Colors.transparent),
+  //             ),
+  //             onPressed: () {
+  //               int position = textController.selection.baseOffset;
+  //               String leftText = textController.text.substring(0, position);
+  //               String rightText = textController.text.substring(position);
+
+  //               String newText = '$leftText?$rightText';
+  //               textController.text = newText;
+  //             },
+  //             child: const Text(
+  //               '?',
+  //               style: TextStyle(fontWeight: FontWeight.bold),
+  //             ),
+  //           ),
+  //           TextButton(
+  //             style: ButtonStyle(
+  //               backgroundColor: WidgetStateProperty.all(Colors.transparent),
+  //               elevation: WidgetStateProperty.all(0.0),
+  //               splashFactory: NoSplash.splashFactory,
+  //               overlayColor: WidgetStateProperty.all(Colors.transparent),
+  //             ),
+  //             onPressed: () {
+  //               int position = textController.selection.baseOffset;
+  //               String leftText = textController.text.substring(0, position);
+  //               String rightText = textController.text.substring(position);
+
+  //               String newText = '$leftText*$rightText';
+  //               textController.text = newText;
+  //             },
+  //             child: const Text(
+  //               '*',
+  //               style: TextStyle(fontWeight: FontWeight.bold),
+  //             ),
+  //           )
+  //         ]),
+  //         TableRow(
+  //             children: List<Widget>.from([const Text("")]) +
+  //                 langSwitch(context, this) +
+  //                 [const Text("")])
+  //       ],
+  //     ),
+  //   );
+  // }
 }

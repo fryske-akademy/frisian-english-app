@@ -20,7 +20,7 @@ dependencies:
     sdk: flutter                          #https://flutter.dev/docs/development/tools/sdk/releases?tab=macos
   flutter_launcher_icons: ^0.13.1         #https://pub.dev/packages/flutter_launcher_icons
   flutter_localization: ^0.2.0            #https://pub.dev/packages/flutter_localization
-  flutter_offline: ^3.0.1                 #https://pub.dev/packages/flutter_offline
+  flutter_offline: ^4.0.0                 #https://pub.dev/packages/flutter_offline
   flutter_onboarding_slider: ^1.0.11      #https://pub.dev/packages/flutter_onboarding_slider
   flutter_svg: ^2.0.10+1                     #https://pub.dev/packages/flutter_svg
   
@@ -39,11 +39,12 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   select_dialog: ^2.0.1
+  system_theme: ^3.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter                          #https://flutter.dev/docs/testing       
-  flutter_lints: ^3.0.1                   #https://pub.dev/packages/flutter_lints            
+  flutter_lints: ^4.0.0                   #https://pub.dev/packages/flutter_lints            
 
 flutter:
   uses-material-design: true
@@ -54,6 +55,7 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/flags/
     - assets/logos/
+    - assets/gifs/
 
 flutter_launcher_icons:
   image_path: "assets/logos/logo.png"

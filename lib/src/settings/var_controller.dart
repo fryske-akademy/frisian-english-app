@@ -1,51 +1,54 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
+
 import 'package:frysish/src/list_item.dart';
-import 'settings_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class VarController with ChangeNotifier {
-  VarController(this._settingsService);
+class VarController {
+  VarController();
 
-  final navigatorKey = GlobalKey<NavigatorState>();
-  final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
-
-  void route(String route, {Object? args}) {
-    navigatorKey.currentState?.pushNamed(route, arguments: args);
-  }
-  void replace(String route, {Object? args}) {
-    navigatorKey.currentState?.pushReplacementNamed(route,arguments: args);
-  }
-
-  late final SettingsService _settingsService;
-
-  late ThemeMode _themeMode;
-  late bool _systemThemeOverruled;
-  late Color _primaryColor;
   late List<ListItem> _history;
   late List<ListItem> _favorites;
-  late Locale _locale;
   late bool _onboardingShown;
   late bool _isFryEn;
 
-  ThemeMode get themeMode => _themeMode;
-  bool get systemThemeOverruled => _systemThemeOverruled;
-  Color get primaryColor => _primaryColor;
   List<ListItem> get history => _history;
   List<ListItem> get favorites => _favorites;
-  Locale get locale => _locale;
-  bool get onboardingShow => _onboardingShown;
+  bool get onboardingShown => _onboardingShown;
   bool get isFryEn => _isFryEn;
 
   Future<void> loadSettings() async {
-    _themeMode = await _settingsService.themeMode();
-    _systemThemeOverruled = await _settingsService.systemThemeOverruled();
-    _primaryColor = await _settingsService.primaryColor();
-    _history = await _settingsService.history();
-    _favorites = await _settingsService.favorites();
-    _locale = await _settingsService.locale();
-    _onboardingShown = await _settingsService.onboarding();
-    _isFryEn = await _settingsService.isFryEn();
+    _history = await getHistory();
+    _favorites = await getFavorites();
+    _onboardingShown = await getOnboarding();
+    _isFryEn = await getIsFryEn();
+  }
 
-    notifyListeners();
+  Future<List<ListItem>> getHistory() async {
+    final prefs = await SharedPreferences.getInstance();
+    final listItemsString = prefs.getStringList('history') ?? [];
+    return listItemsString
+        .map((item) => ListItem.fromJson(jsonDecode(item)))
+        .toList();
+  }
+
+  Future<List<ListItem>> getFavorites() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final listItemsString = prefs.getStringList('favorites') ?? [];
+    return listItemsString
+        .map((item) => ListItem.fromJson(jsonDecode(item)))
+        .toList();
+  }
+
+  Future<bool> getOnboarding() async {
+    final prefs = await SharedPreferences.getInstance();
+    final onboardingShown = prefs.getBool('onboardingShown') ?? false;
+    return onboardingShown;
+  }
+
+  Future<bool> getIsFryEn() async {
+    final prefs = await SharedPreferences.getInstance();
+    final isFryEn = prefs.getBool('isFryEn') ?? true;
+    return isFryEn;
   }
 
   Future<void> updateOnboardingShown(bool newOnboardingShown) async {
@@ -53,63 +56,26 @@ class VarController with ChangeNotifier {
 
     _onboardingShown = newOnboardingShown;
 
-    notifyListeners();
-
-    await _settingsService.updateOnboarding(newOnboardingShown);
-  }
-
-  Future<void> updateThemeMode(ThemeMode? newThemeMode) async {
-    if (newThemeMode == null) return;
-
-    if (newThemeMode == _themeMode) return;
-
-    if (newThemeMode == ThemeMode.system) {
-      _systemThemeOverruled = false;
-    } else {
-      _systemThemeOverruled = true;
-    }
-
-    _themeMode = newThemeMode;
-
-    notifyListeners();
-
-    await _settingsService.updateThemeMode(newThemeMode);
-  }
-
-  Future<void> updatePrimaryColor(Color newColor) async {
-    if (newColor == _primaryColor) return;
-
-    _primaryColor = newColor;
-
-    notifyListeners();
-
-    await _settingsService.updatePrimaryColor(newColor);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('onboardingShown', newOnboardingShown);
   }
 
   Future<void> updateHistory(List<ListItem> newHistory) async {
     _history = newHistory.where((item) => !item.toBeDeleted).toList();
 
-    notifyListeners();
-
-    await _settingsService.updateHistory(_history);
+    final prefs = await SharedPreferences.getInstance();
+    final listItemsEncoded =
+        _history.map((item) => jsonEncode(item.toJson())).toList();
+    await prefs.setStringList('history', listItemsEncoded);
   }
 
   Future<void> updateFavorites(List<ListItem> newFavorites) async {
     _favorites = newFavorites.where((item) => !item.toBeDeleted).toList();
 
-    notifyListeners();
-
-    await _settingsService.updateFavorites(_favorites);
-  }
-
-  Future<void> updateLocale(Locale newLocale) async {
-    if (newLocale == _locale) return;
-
-    _locale = newLocale;
-
-    notifyListeners();
-
-    await _settingsService.updateLocale(newLocale);
+    final prefs = await SharedPreferences.getInstance();
+    final listItemsEncoded =
+        _favorites.map((item) => jsonEncode(item.toJson())).toList();
+    await prefs.setStringList('favorites', listItemsEncoded);
   }
 
   Future<void> updateisFryEn(bool newisFryEn) async {
@@ -117,42 +83,9 @@ class VarController with ChangeNotifier {
 
     _isFryEn = newisFryEn;
 
-    notifyListeners();
-
-    await _settingsService.updateisFryEn(newisFryEn);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isFryEn', newisFryEn);
   }
 
   late List<ListItem> stagedItems = [];
-
-  var customColor = const Color.fromARGB(255, 204, 111, 24);
-  
-  OverlayEntry? autoComOverlayEntry;
-
-  void hideAutocomplete(OverlayEntry? oe) {
-    if (oe!=null) {
-      autoComOverlayEntry=null;
-      oe.remove();
-      oe.dispose();
-    }
-  }
-
-  late OverlayEntry langSwapOverlayEntry;
-  late OverlayEntry detailOverlayEntry;
-
-  bool langSwapOverlayLive = false;
-  bool detailOverlayLive = false;
-
-  void removeOverlay() {
-    if (langSwapOverlayLive) {
-      langSwapOverlayEntry.remove();
-      langSwapOverlayEntry.dispose();
-      langSwapOverlayLive = false;
-    } else if (detailOverlayLive) {
-      detailOverlayEntry.remove();
-      detailOverlayEntry.dispose();
-      detailOverlayLive = false;
-    }
-  }
-
-  late String query = '';
 }

@@ -1,100 +1,175 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:frysish/src/home/home_view.dart';
 
 import '../../main.dart';
-import 'pages/featuresPage.dart';
-import 'pages/featuresPage2.dart';
-import 'pages/info_page.dart';
-import 'pages/languagePage.dart';
-import 'pages/welcomePage.dart';
+import '../home/home_view.dart';
+import 'info_page.dart';
+import 'language_select_page.dart';
+import 'welcome_page.dart';
 
-// This handles what is shown in the appbar of the onboarding experience.
-class OnboardingView extends StatelessWidget {
-  const OnboardingView({super.key});
+class Onboarding extends StatefulWidget {
+  const Onboarding({super.key});
+
+  @override
+  State<Onboarding> createState() => _OnboardingState();
+}
+
+class _OnboardingState extends State<Onboarding> {
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
+
+  Widget _buildPageIndicator(int pageCount) {
+    List<Widget> indicators = [];
+    for (int i = 0; i < pageCount; i++) {
+      indicators.add(
+        i == _currentPage
+            ? _indicator(true)
+            : _indicator(false),
+      );
+    }
+    return Row(
+      //mainAxisAlignment: MainAxisAlignment.center,
+      children: indicators,
+    );
+  }
+
+  Widget _indicator(bool isActive) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      margin: const EdgeInsets.symmetric(horizontal: 8.0),
+      height: 12.0,
+      width: isActive ? 12.0 : 12.0,
+      decoration: BoxDecoration(
+        color: isActive ? Theme.of(context).colorScheme.primary : Colors.grey,
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    var customColor = const Color.fromARGB(255, 204, 111, 24);
-
-    return OnBoardingSlider(
-      skipTextButton: Text('Skip', style: TextStyle(fontSize: 16, color: customColor, fontWeight: FontWeight.w600)),
-      leading: Row(
-        children: [
-          IconButton(
-            icon: varController.themeMode == ThemeMode.dark ? const Icon(Icons.dark_mode) : const Icon(Icons.light_mode),
-            onPressed: () {
-              if (varController.themeMode == ThemeMode.light) {
-                varController.updateThemeMode(ThemeMode.dark);
-              } else {
-                varController.updateThemeMode(ThemeMode.light);
-              }
-            },
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          DropdownButtonHideUnderline(
-            child: DropdownButton<Locale>(
-              value: varController.locale,
-              borderRadius: BorderRadius.circular(20),
-              onChanged: (Locale? newLocale) async {
-                if (newLocale != null) {
-                  await varController.updateLocale(newLocale);
-                }
-              },
-              items: const [
-                DropdownMenuItem(
-                  value: Locale('en'),
-                  child: CircleAvatar(
-                    radius: 15,
-                    backgroundImage: ResizeImage(AssetImage('assets/flags/en.png'), width: 100, height: 100),
-                  ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    if (userSettings.themeMode == ThemeMode.light) {
+                      userSettings.updateThemeMode(ThemeMode.dark);
+                    } else {
+                      userSettings.updateThemeMode(ThemeMode.light);
+                    }
+                  },
+                  icon: userSettings.themeMode == ThemeMode.dark
+                      ? const Icon(Icons.dark_mode)
+                      : const Icon(Icons.light_mode),
                 ),
-                DropdownMenuItem(
-                  value: Locale('fr'),
-                  child: CircleAvatar(
-                    radius: 15,
-                    backgroundImage: ResizeImage(AssetImage('assets/flags/fry.png'), width: 100, height: 100),
-                  ),
-                ),
-                DropdownMenuItem(
-                  value: Locale('nl'),
-                  child: CircleAvatar(
-                    radius: 15,
-                    backgroundImage: ResizeImage(AssetImage('assets/flags/nl.png'), width: 100, height: 100),
+                DropdownButtonHideUnderline(
+                  child: DropdownButton<Locale>(
+                    value: userSettings.locale,
+                    borderRadius: BorderRadius.circular(20),
+                    items: const [
+                      DropdownMenuItem(
+                        value: Locale('en'),
+                        child: CircleAvatar(
+                          radius: 15,
+                          backgroundImage: ResizeImage(
+                              AssetImage('assets/flags/en.png'),
+                              width: 100,
+                              height: 100),
+                        ),
+                      ),
+                      DropdownMenuItem(
+                        value: Locale('fr'),
+                        child: CircleAvatar(
+                          radius: 15,
+                          backgroundImage: ResizeImage(
+                              AssetImage('assets/flags/fry.png'),
+                              width: 100,
+                              height: 100),
+                        ),
+                      ),
+                      DropdownMenuItem(
+                        value: Locale('nl'),
+                        child: CircleAvatar(
+                          radius: 15,
+                          backgroundImage: ResizeImage(
+                              AssetImage('assets/flags/nl.png'),
+                              width: 100,
+                              height: 100),
+                        ),
+                      ),
+                    ],
+                    onChanged: (Locale? newLocale) async {
+                      if (newLocale != null) {
+                        await userSettings.updateLocale(newLocale);
+                      }
+                    },
                   ),
                 ),
               ],
             ),
+            if (_currentPage != 3)
+              ElevatedButton(
+                onPressed: () {_pageController.animateToPage(4, duration: const Duration(milliseconds: 500), curve: Curves.ease);},
+                child: const Text('Skip'),
+              )
+          ],
+        ),
+      ),
+      body: Stack(
+        children: [
+          PageView(
+            controller: _pageController,
+            onPageChanged: (int page) {
+              setState(() {
+                _currentPage = page;
+              });
+            },
+            children: const [
+              WelcomePage(),
+              LanguageSelectPage(),
+              InfoPage(),
+              FeaturesPage(),
+            ],
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: SizedBox(
+              height: 50,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildPageIndicator(4),
+                  if (_currentPage == 3)
+                    ElevatedButton(
+                      onPressed: () {
+                        varController.updateOnboardingShown(true);
+                        userSettings.route( HomeView.routeName);
+                      },
+                      child: Text(AppLocalizations.of(context)!.launch,),
+                    ),
+              ],),
+            ),
           ),
         ],
       ),
-      skipIcon: const Icon(Icons.skip_next, color: Colors.white, size: 32.0),
-      totalPage: 5,
-      headerBackgroundColor: Theme.of(context).canvasColor,
-      finishButtonText: AppLocalizations.of(context)!.launch,
-      finishButtonStyle: FinishButtonStyle(backgroundColor: customColor),
-      onFinish: () {
-        varController.updateOnboardingShown(true);
-        varController.route( HomeView.routeName);
-      },
-      background: const [
-        Text(''),
-        Text(''),
-        Text(''),
-        Text(''),
-        Text(''),
-      ],
-      speed: 6,
-      pageBodies: [
-        welcomePage(customColor: customColor),
-        languagePage(customColor: customColor),
-        infoPage(customColor: customColor),
-        featuresPage(customColor: customColor),
-        featuresPage2(customColor: customColor),
-      ],
+    );
+  }
+}
+
+class FeaturesPage extends StatelessWidget {
+  const FeaturesPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text('Features of the app'),
     );
   }
 }

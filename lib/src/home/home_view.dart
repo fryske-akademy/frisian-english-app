@@ -1,61 +1,74 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_offline/flutter_offline.dart';
-import 'package:frysish/src/account/account_view.dart';
+
 import 'package:frysish/src/helper.dart';
-import 'package:frysish/src/settings/settings_view.dart';
-import 'package:frysish/src/text_search/text_search.dart';
 
 import '../../main.dart';
+import '../account/account_view.dart';
+import '../settings/settings_view.dart';
+import '../text_search/text_search.dart';
 import 'custom_text_field.dart';
 
 class HomeView extends StatefulWidget {
-  static const routeName = '/home';
-
   const HomeView({super.key});
+
+  static const routeName = '/home';
 
   @override
   State createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State with Helper {
-  final GlobalKey languageIconKey = GlobalKey();
+  bool languageSelectLive = false;
 
   @override
-  void dispose() {
-    super.dispose();
-    if (varController.langSwapOverlayLive) {
-      varController.langSwapOverlayEntry.remove();
-      varController.langSwapOverlayEntry.dispose();
-    }
-
-    languageIconKey.currentState?.dispose();
-  }
-
-  void _closeLangOverlay() {
-    varController.langSwapOverlayEntry.remove();
-    varController.langSwapOverlayEntry.dispose();
-    varController.langSwapOverlayLive = false;
-  }
-
-  void showLanguageOverlay() {
-    final RenderBox renderBox = languageIconKey.currentContext!
-        .findRenderObject() as RenderBox;
-    final Offset offset = renderBox.localToGlobal(Offset.zero);
-
-    varController.langSwapOverlayEntry = OverlayEntry(
-      builder: (BuildContext context) =>
-          Positioned(
-              top: offset.dy,
-              left: offset.dx,
-              child: Material(
+  Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+        title: Stack(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                    onPressed: () {
+                      setState(() {
+                        languageSelectLive = true;
+                      });
+                    },
+                    icon: const Icon(Icons.language)),
+                IconButton(
+                    onPressed: () {
+                      userSettings.route(AccountView.routeName);
+                    },
+                    icon: const Icon(Icons.account_circle)),
+                IconButton(
+                    onPressed: () {
+                      userSettings.route(SettingsView.routeName);
+                    },
+                    icon: const Icon(Icons.settings)),
+              ],
+            ),
+            if (languageSelectLive)
+              Material(
                 child: Row(
-                  children: <Widget>[
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     IconButton(
-                      icon: const Icon(Icons.close),
                       onPressed: () {
-                        _closeLangOverlay();
+                        setState(() {
+                          languageSelectLive = false;
+                        });
                       },
+                      icon: const Icon(Icons.close),
                     ),
                     SegmentedButton<Locale>(
                       segments: const [
@@ -72,143 +85,64 @@ class _HomeViewState extends State with Helper {
                           label: Text('nl'),
                         ),
                       ],
-                      selected: {
-                        varController.locale,
-                      },
+                      selected: {userSettings.locale},
                       onSelectionChanged: (Set<Locale> selectedValues) {
-                        varController.updateLocale(selectedValues.first);
-                        _closeLangOverlay();
+                        userSettings.updateLocale(selectedValues.first);
                       },
-                    ),
+                    )
                   ],
                 ),
-              )),
-    );
-
-    Overlay.of(context).insert(varController.langSwapOverlayEntry);
-    varController.langSwapOverlayLive = true;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return PopScope(
-      canPop: false,
-      child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          automaticallyImplyLeading: false,
-          toolbarHeight: 100,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
-                  key: languageIconKey,
-                  icon: const Icon(Icons.language),
-                  onPressed: () {
-                    varController.removeOverlay();
-                    showLanguageOverlay();
-                  }),
-              IconButton(
-                icon: const Icon(Icons.account_circle),
-                onPressed: () {
-                  varController.removeOverlay();
-                  varController.route(AccountView.routeName);
-                },
               ),
-              IconButton(
-                icon: const Icon(Icons.settings),
-                onPressed: () {
-                  varController.removeOverlay();
-                  varController.route(SettingsView.routeName);
-                },
-              ),
-            ],
-          ),
-        ),
-
-        // Text Field
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            OutlinedButton.icon(
-                onPressed: () {
-                  varController.removeOverlay();
-                  varController.route(TextSearch.routeName);
-                },
-                icon: const Icon(Icons.search),
-                label: Text(AppLocalizations.of(context)!.textSearch)),
-            const Spacer(
-              flex: 1,
-            ),
-            Expanded(
-              flex: 5,
-              child: Center(
-                  child: Row(
-                    children: [
-                      const Spacer(
-                        flex: 1,
-                      ),
-                      Expanded(
-                        // Adjusting flex to 2 for larger screens
-                        flex: MediaQuery
-                            .of(context)
-                            .size
-                            .width > 768 ? 2 : 8,
-                        child: OfflineBuilder(
-                          connectivityBuilder: (BuildContext context,
-                              ConnectivityResult connectivity,
-                              Widget child,) {
-                            final bool connected = connectivity !=
-                                ConnectivityResult.none;
-                            if (connected) {
-                              return const CustomTextField();
-                            } else {
-                              return const Icon(
-                                Icons.wifi_off,
-                                size: 48,
-                              );
-                            } // Internet Connection not available.
-                          },
-                          child: const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text(
-                                  'There seems to be an issue with your network connection.'),
-                            ],
-                          ),
-                        ),
-                      ),
-
-                      // ...
-                      const Spacer(flex: 1),
-                    ],
-                  )),
-            ),
-            const Spacer(
-              flex: 1,
-            ),
-
-            // Language Swap
-            Expanded(
-              child: ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    minHeight: 0,
-                    maxHeight: 10,
-                    maxWidth: 300,
-                    minWidth: 150,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: langSwitch(context,this),
-                  )),
-            ),
-            const Spacer(
-              flex: 1,
-            )
           ],
         ),
+      ),
+      body: Column(
+        children: [
+          const Spacer(flex: 1),
+          OutlinedButton.icon(
+            onPressed: () {
+              userSettings.route(TextSearch.routeName);
+            },
+            icon: const Icon(Icons.search),
+            label: Text(AppLocalizations.of(context)!.textSearch),
+          ),
+          const Spacer(flex: 2),
+          Expanded(
+            flex: 10,
+            child: Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.8,
+                child: OfflineBuilder(
+                  connectivityBuilder: (
+                    BuildContext context,
+                    List<ConnectivityResult> connectivity,
+                    Widget child,
+                  ) {
+                    final bool connected =
+                        !connectivity.contains(ConnectivityResult.none);
+                    if (connected) {
+                      return const CustomTextField();
+                    } else {
+                      return const Icon(
+                        Icons.wifi_off,
+                        size: 48,
+                      );
+                    } // Internet Connection not available.
+                  },
+                  child: const Text(
+                      'There seems to be an issue with your network connection.'),
+                ),
+              ),
+            ),
+          ),
+          const Spacer(flex: 2),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: langSwitch(context, this),
+          ),
+          const Spacer(flex: 2),
+        ],
       ),
     );
   }
 }
-

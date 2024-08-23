@@ -13,8 +13,6 @@ class AutoComOverlay extends StatefulWidget {
 
 }
 
-
-
 class _AutoComOverlayState extends State<AutoComOverlay> {
 
   final ScrollController _scrollController = ScrollController();

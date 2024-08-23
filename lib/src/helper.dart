@@ -234,31 +234,32 @@ mixin Helper {
 
   List<Widget> langSwitch(BuildContext context, State state) {
     return [
-      Align(
+      Expanded(
+        child: Align(
           alignment: Alignment.center,
           child: Text(varController.isFryEn
               ? AppLocalizations.of(context)!.fry
               : AppLocalizations.of(context)!.en),
         ),
-      Padding(
-        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-        child: IconButton(
-          icon: const Icon(Icons.swap_horiz, size: 24),
-          onPressed: () {
-            varController.removeOverlay();
-            // ignore: invalid_use_of_protected_member
-            state.setState(() {
-              varController.updateisFryEn(!varController.isFryEn);
-            });
-          },
-        ),
       ),
-      Align(
+      IconButton(
+        icon: const Icon(Icons.swap_horiz, size: 24),
+        onPressed: () {
+          userSettings.removeOverlay();
+
+          state.setState(() {
+            varController.updateisFryEn(!varController.isFryEn);
+          });
+        },
+      ),
+      Expanded(
+        child: Align(
           alignment: Alignment.center,
           child: Text(varController.isFryEn
               ? AppLocalizations.of(context)!.en
               : AppLocalizations.of(context)!.fry),
-        )
+        ),
+      ),
     ];
   }
 }

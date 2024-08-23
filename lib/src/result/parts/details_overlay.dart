@@ -69,7 +69,7 @@ class _DetailOverlayState extends State<DetailOverlay> with Helper {
                   child: IconButton(
                       icon: const Icon(Icons.close),
                       onPressed: () {
-                        varController.removeOverlay();
+                        userSettings.removeOverlay();
                       }),
                 ),
               ],

@@ -76,19 +76,19 @@ class _DetailsViewState extends State<DetailsView> {
     return Expanded(child: varController.isFryEn
         ? TextButton(
             onPressed: () {
-              varController.detailOverlayEntry = OverlayEntry(
+              userSettings.detailOverlayEntry = OverlayEntry(
                 builder: (context) {
                   return DetailOverlay(
                     widget.lemma,
                     onPressed: (string) {
-                      varController.removeOverlay();
+                      userSettings.removeOverlay();
                       findDetails(string);
                     },
                   );
                 },
               );
-              Overlay.of(context).insert(varController.detailOverlayEntry);
-              varController.detailOverlayLive = true;
+              Overlay.of(context).insert(userSettings.detailOverlayEntry);
+              userSettings.detailOverlayLive = true;
             },
             child: Text(
               widget.lemma.form,

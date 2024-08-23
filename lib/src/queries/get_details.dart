@@ -118,7 +118,7 @@ fragment par on Paradigm {
 Details toEnglish(List<Details> details) {
   Iterable<String> trs = details.map((e) => details.length==1?e.lemma.form:formPlusTrans(e) );
   Details english = Details();
-  english.lemma.form = varController.query;
+  english.lemma.form = userSettings.query;
   english.lemma.lang = "en";
   english.lemma.pos=details[0].lemma.pos;
   english.translations.addAll(trs.map((e) => {"form": e, "lang": "fry"}));

@@ -69,7 +69,7 @@ class _ProverbsState extends State<Proverbs> {
                         TextSpan(
                           text: '',
                           style: TextStyle(
-                            color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
+                            color: userSettings.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -82,7 +82,7 @@ class _ProverbsState extends State<Proverbs> {
                           TextSpan(
                             text: '',
                             style: TextStyle(
-                              color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
+                              color: userSettings.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
                               fontSize: 16,
                             ),
                             children: filtered[index].transSpans,
@@ -102,7 +102,7 @@ class _ProverbsState extends State<Proverbs> {
             child: IconButton(
               icon: const Icon(Icons.home),
               onPressed: () {
-                varController.route(HomeView.routeName);
+                userSettings.route(HomeView.routeName);
               },
             ),
           ),
