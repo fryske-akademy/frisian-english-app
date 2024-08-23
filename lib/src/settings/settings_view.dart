@@ -144,10 +144,7 @@ class SettingsView extends StatelessWidget {
                   child: IconButton(
                     icon: userSettings.colorMode == ColorMode.predifined
                         ? const Icon(Icons.phone_android)
-                        : const CircleAvatar(
-                              radius: 15,
-                              backgroundColor: Color(0x000071e2),
-                            ),
+                        : const Icon(Icons.contrast),
                     iconSize: 30,
                     onPressed: () {
                       if (userSettings.colorMode == ColorMode.system) {
