@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
@@ -11,6 +10,7 @@ import 'package:select_dialog/select_dialog.dart';
 import '../../details.dart';
 import '../../main.dart';
 import '../queries/get_details.dart';
+import 'parts/detail_overlay.dart';
 import 'parts/examples.dart';
 import 'parts/proverbs.dart';
 import 'parts/translations.dart';
@@ -27,6 +27,14 @@ class ResultView extends StatefulWidget {
 class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
   late TabController tabController;
 
+  var _isToggled = false;
+
+  void _toggleBool() {
+    setState(() {
+      _isToggled = !_isToggled;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -35,37 +43,22 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
     tabController.addListener(handleTabSelection);
   }
 
-  
-
   void handleTabSelection() {
-    if (tabController.indexIsChanging) {
-      userSettings.removeOverlay();
-    }
+    if (tabController.indexIsChanging) {}
   }
 
   @override
   Widget build(BuildContext context) {
-    final arguments = (ModalRoute
-        .of(context)
-        ?.settings
-        .arguments ?? <String, dynamic>{}) as Map;
-    final Lemma lemma = arguments['lemma'] is Lemma
-        ? arguments["lemma"]
-        : Lemma();
+    final arguments = (ModalRoute.of(context)?.settings.arguments ??
+        <String, dynamic>{}) as Map;
+    final Lemma lemma =
+        arguments['lemma'] is Lemma ? arguments["lemma"] : Lemma();
 
     return FutureBuilder(
       future: getDetails(lemma.link).timeout(const Duration(seconds: 5)),
       builder: (context, snapshot) {
         if (!snapshot.hasData || snapshot.data!.isEmpty) {
           return Material(
-            // color: userSettings
-            //     .primaryColor, // Set the background color to the primary color
-            // child: Center(
-            //   child: SvgPicture.asset(
-            //     'assets/logos/frysishDark.svg',
-            //     width: 250,
-            //   ),
-            // ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -89,7 +82,9 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                   color: userSettings.themeMode == ThemeMode.dark
                       ? Colors.white
                       : Colors.black,
-                  onPressed: () {userSettings.route(HomeView.routeName);},
+                  onPressed: () {
+                    userSettings.route(HomeView.routeName);
+                  },
                 ),
                 const Spacer(),
               ],
@@ -106,83 +101,110 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 
         _remember(details);
 
-        return PopScope(
-          canPop: true,
-          child: DefaultTabController(
-            length: 3,
-            child: Scaffold(
-              appBar: AppBar(
-                title: Text(AppLocalizations.of(context)!.result,
-                    style: const TextStyle(fontSize: 25)),
-                centerTitle: true,
-                automaticallyImplyLeading: false,
+        return DefaultTabController(
+          length: 3,
+          child: Scaffold(
+            appBar: AppBar(
+              title: Text(
+                AppLocalizations.of(context)!.result,
               ),
-              bottomNavigationBar: TabBar(
+              centerTitle: true,
+              bottom: TabBar(
                 controller: tabController,
                 labelStyle: const TextStyle(fontSize: 12),
                 tabs: [
+                  Tab(text: AppLocalizations.of(context)!.forms),
                   Tab(
-                    text: AppLocalizations.of(context)!.forms,
-                  ),
+                      text:
+                          "${AppLocalizations.of(context)!.examples}: ${Details.examples(details.texts).length}"),
                   Tab(
-                    text: "${AppLocalizations.of(context)!.examples}: ${Details
-                        .examples(details.texts)
-                        .length}",
-                  ),
-                  Tab(
-                    text: "${AppLocalizations.of(context)!.proverbs}: ${Details
-                        .proverbs(details.texts)
-                        .length}",
-                  ),
+                      text:
+                          "${AppLocalizations.of(context)!.proverbs}: ${Details.proverbs(details.texts).length}"),
                 ],
               ),
-              body: TabBarView(
-                controller: tabController,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        flex: 3,
-                        child: Padding(
-                          padding: MediaQuery
-                              .of(context)
-                              .size
-                              .width > 768
-                              ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
-                              : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                          child: Translations(details),
+            ),
+            body: TabBarView(
+              controller: tabController,
+              children: [
+                OrientationBuilder(
+                  builder: (BuildContext context, Orientation orientation) {
+                    return Stack(children: [
+                      Align(
+                        alignment: Alignment.center,
+                        child: Flex(
+                          direction: orientation == Orientation.portrait
+                              ? Axis.vertical
+                              : Axis.horizontal,
+                          children: [
+                            const Spacer(),
+                            Expanded(
+                              flex: 3,
+                              child: SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  height: (orientation == Orientation.portrait)
+                                      ? MediaQuery.of(context).size.height * 0.3
+                                      : MediaQuery.of(context).size.height *
+                                          0.5,
+                                  child: Translations(details)),
+                            ),
+                            const Spacer(),
+                            Expanded(
+                              flex: 3,
+                              child: SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  height: (orientation == Orientation.portrait)
+                                      ? MediaQuery.of(context).size.height * 0.3
+                                      : MediaQuery.of(context).size.height *
+                                          0.5,
+                                  child: DetailsView(
+                                    details.lemma,
+                                    toggleBool: _toggleBool,
+                                  )),
+                            ),
+                            const Spacer(),
+                          ],
                         ),
                       ),
-                      Expanded(
-                        flex: 3,
-                        child: Padding(
-                          padding: MediaQuery
-                              .of(context)
-                              .size
-                              .width > 768
-                              ? const EdgeInsets.fromLTRB(600, 50, 600, 50)
-                              : const EdgeInsets.fromLTRB(50, 50, 50, 50),
-                          child: DetailsView(details.lemma),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 25),
-                        child: Center(
-                          child: IconButton(
-                            icon: const Icon(Icons.home),
-                            onPressed: () {
-                              userSettings.route(HomeView.routeName);
-                            },
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  Examples(details.texts),
-                  Proverbs(details.texts),
-                ],
-              ),
+                      if (_isToggled)
+                        Stack(
+                          children: [
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Material(
+                                  elevation: 5,
+                                  child: Stack(
+                                    children: [
+                                      DetailOverlay(
+                                        onPressed: (string) {
+                                          findDetails(string);
+                                        },
+                                        lemma: details.lemma,
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomCenter,
+                                        child: IconButton(
+                                          onPressed: () {
+                                            _toggleBool();
+                                          },
+                                          icon: const Icon(Icons.close),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
+                    ]);
+                  },
+                ),
+                Examples(details.texts),
+                Proverbs(details.texts),
+              ],
             ),
           ),
         );
@@ -192,36 +214,32 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 }
 
 void findDetails(String text) {
-  userSettings.query=text;
-  userSettings.hideAutocomplete(userSettings.autoComOverlayEntry);
-  getLemmas(text).timeout(
-      const Duration(seconds: 3),
-      onTimeout: () => []).then((value) => toDetails(value, userSettings.navigatorKey.currentContext));
+  userSettings.query = text;
+  getLemmas(text).timeout(const Duration(seconds: 3), onTimeout: () => []).then(
+      (value) => toDetails(value, userSettings.navigatorKey.currentContext));
 }
 
 void toDetails(List<Lemma> value, BuildContext? context) async {
   if (value.isEmpty) return;
   Lemma l = value[0];
-  if (value.length>1) {
+  if (value.length > 1) {
     await SelectDialog.showModal<Lemma>(
       context!,
-      label: context.mounted?AppLocalizations.of(context)!.choose:'Choose',
+      label: context.mounted ? AppLocalizations.of(context)!.choose : 'Choose',
       selectedValue: l,
       items: List.of(value),
-
       onChange: (Lemma selected) {
         // userSettings.route(ResultView.routeName, args: {"lemma": selected});
         // userSettings.route(ResultView.routeName);
-        Future(() => userSettings.route(ResultView.routeName, args: {"lemma": selected}));
+        Future(() => userSettings
+            .route(ResultView.routeName, args: {"lemma": selected}));
         // Future.microtask(() => userSettings.route(ResultView.routeName, args: {"lemma": selected}));
       },
     );
-  } else if (l.form!=""&&l.form!="???") {
+  } else if (l.form != "" && l.form != "???") {
     userSettings.route(ResultView.routeName, args: {"lemma": l});
   }
-
 }
-
 
 void _remember(Details details) {
   var history = varController.history;
@@ -232,8 +250,8 @@ void _remember(Details details) {
 
   bool l = details.lemma.lang == 'fry';
 
-  if (!history.any((item) =>
-  item.form == details.lemma.form && item.isFryEn == l)) {
+  if (!history
+      .any((item) => item.form == details.lemma.form && item.isFryEn == l)) {
     ListItem item = ListItem();
     item.form = details.lemma.form;
     item.isFryEn = l;

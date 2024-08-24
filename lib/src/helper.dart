@@ -245,8 +245,6 @@ mixin Helper {
       IconButton(
         icon: const Icon(Icons.swap_horiz, size: 24),
         onPressed: () {
-          userSettings.removeOverlay();
-
           state.setState(() {
             varController.updateisFryEn(!varController.isFryEn);
           });

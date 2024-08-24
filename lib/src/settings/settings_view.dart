@@ -139,7 +139,7 @@ class SettingsView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(AppLocalizations.of(context)!.theme),
-                Padding(
+                Padding( 
                   padding: const EdgeInsets.only(right: 23.0),
                   child: IconButton(
                     icon: userSettings.colorMode == ColorMode.predifined

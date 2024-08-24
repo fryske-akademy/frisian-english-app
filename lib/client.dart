@@ -2,8 +2,7 @@ import 'package:graphql/client.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 Future<GraphQLClient> initClient() async {
-  final HttpLink httpLink = HttpLink(
-    const String.fromEnvironment("api", defaultValue: "https://frisian.eu/languageapi"),
+  final HttpLink httpLink = HttpLink("https://frisian.eu/languageapi"
   );
 
   await Hive.initFlutter();

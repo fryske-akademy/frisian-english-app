@@ -9,8 +9,8 @@ Future<List<Details>> getDetails(dynamic link) async {
 
   const String detailsQuery = r'''
 query details( # case and diacrit sensitive lemma (article) to find
-    $lemma: String! $pos: Pos $source: String! $englishTranslations: Boolean!=true) {
-    details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
+    $lemma: String! $source: String! $englishTranslations: Boolean!=true) {
+    details(lemma: $lemma source: $source englishTranslations: $englishTranslations) {
         source
         message { level text}
         lemma { ...lemmagraph }
@@ -24,12 +24,11 @@ query details( # case and diacrit sensitive lemma (article) to find
 fragment lemmagraph  on Lemma {
     form
     lang
-    pos
+    
     article
     hyphenation
     pronunciation
     subForms {
-        ... on FormInfo {__typename ...forminfo }
         ... on Synonym { __typename form lang }
         ... on Variant { __typename form lang }
         ... on Dutchism { __typename form lang }
@@ -57,7 +56,7 @@ fragment text on TextInterface {
     id text {...txtDetails} lang
 }
 fragment lemmalink on LemmaLink {
-    source lemma pos lang id text
+    source lemma lang id text
 }
 fragment txtDetails on FormattedText { text {
     ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
@@ -69,12 +68,6 @@ fragment txtDetails on FormattedText { text {
 fragment senses on Sense {
     id article link {...lemmalink}
 }
-fragment forminfo on FormInfo {
-	linguistics description paradigms {...par}
-}
-fragment par on Paradigm {
-    form splitForm lang hyphenation pronunciation preferred
-}
 ''';
 
   final QueryOptions detailsOptions = QueryOptions(
@@ -82,7 +75,7 @@ fragment par on Paradigm {
       variables: <String, dynamic>{
         'lemma': link['lemma'],
         'source': link['source'],
-        'pos': link['pos']
+        //'pos': link['pos']
       });
 
   final QueryResult detailsResult = await client.query(detailsOptions);
@@ -103,7 +96,7 @@ fragment par on Paradigm {
     details.lemma.article = detail['lemma']['article'] ?? '';
     details.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
     details.lemma.subForms = detail['lemma']['subForms'] ?? [];
-    details.lemma.pos = detail['lemma']['pos'] ?? [];
+    //details.lemma.pos = detail['lemma']['pos'] ?? [];
 
     details.translations = detail['translations'] ?? [];
     details.link = detail['link'] ?? {};
@@ -120,7 +113,7 @@ Details toEnglish(List<Details> details) {
   Details english = Details();
   english.lemma.form = userSettings.query;
   english.lemma.lang = "en";
-  english.lemma.pos=details[0].lemma.pos;
+  //english.lemma.pos=details[0].lemma.pos;
   english.translations.addAll(trs.map((e) => {"form": e, "lang": "fry"}));
   for (Details d in details) {
     if (details.length>1) english.texts.add(header(formPlusTrans(d)));

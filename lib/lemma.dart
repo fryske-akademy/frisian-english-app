@@ -12,7 +12,8 @@ class Lemma {
   String hyphenation = '';
 
   @override
-  String toString() =>  link["lemma"] + (link["lemma"]==form ? "" : " ($form)");
+  String toString() =>
+      link["lemma"] + (link["lemma"] == form ? "" : " ($form)");
 
   Map<String, dynamic> link = {};
 
@@ -27,7 +28,6 @@ class Lemma {
   bool toBeDeleted = false;
 
   Lemma();
-
 
   @override
   bool operator ==(Object other) =>
@@ -68,7 +68,10 @@ class Lemma {
   List paradigm = [];
 
   Future<void> processSubForms() async {
-    synonyms=[]; variants=[];dutchisms=[];paradigm=[];
+    synonyms = [];
+    variants = [];
+    dutchisms = [];
+    paradigm = [];
     for (var subForm in subForms) {
       switch (subForm?['__typename']) {
         case 'Synonym':
@@ -84,14 +87,15 @@ class Lemma {
           dutchisms.add(subForm['form']);
           break;
         case 'FormInfo':
-          if (subForm?['linguistics']=='unsupported') break;
+          if (subForm?['linguistics'] == 'unsupported') break;
           var forms = [];
           for (var p in subForm?['paradigms']) {
-            if (p['preferred']==true) {
+            if (p['preferred'] == true) {
               forms.add(p["form"]);
             }
           }
-          paradigm.add({"linguistics":subForm?['linguistics'],"forms":forms});
+          paradigm
+              .add({"linguistics": subForm?['linguistics'], "forms": forms});
           break;
       }
     }

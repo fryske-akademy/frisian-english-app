@@ -42,7 +42,6 @@ class _TextSearchState extends State<TextSearch> with Helper {
   @override
   void dispose() {
     textController.dispose();
-    userSettings.removeOverlay();
     scrollController.dispose();
     super.dispose();
   }

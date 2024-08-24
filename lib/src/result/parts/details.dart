@@ -1,35 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:frysish/src/result/result_view.dart';
 
 import '../../../lemma.dart';
 import '../../../main.dart';
-import 'details_overlay.dart';
 
 class DetailsView extends StatefulWidget {
   final Lemma lemma;
+  final Function toggleBool;
 
-  const DetailsView(this.lemma, {super.key});
+  const DetailsView(this.lemma, {super.key, required this.toggleBool});
 
   @override
   State<DetailsView> createState() => _DetailsViewState();
 }
 
 class _DetailsViewState extends State<DetailsView> {
+  
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Material(
-          elevation: 2,
-          surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+          elevation: 5,
+          surfaceTintColor:
+              Theme.of(context).colorScheme.onPrimaryContainer,
           borderRadius: BorderRadius.circular(20),
           child: Padding(
             padding: const EdgeInsets.all(15),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,11 +43,9 @@ class _DetailsViewState extends State<DetailsView> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                      '${AppLocalizations.of(context)!
-                          .selectPos(widget.lemma.pos)} ${widget.lemma.article} ${widget.lemma.hyphenation}',
+                      '${AppLocalizations.of(context)!.selectPos(widget.lemma.pos)} ${widget.lemma.article} ${widget.lemma.hyphenation}',
                       //Text(widget.lemma['pronunciation'])
-                    softWrap: true
-                  ),
+                      softWrap: true),
                 )
               ],
             ),
@@ -73,30 +73,24 @@ class _DetailsViewState extends State<DetailsView> {
   }
 
   Widget buildTextChild(BuildContext context) {
-    return Expanded(child: varController.isFryEn
-        ? TextButton(
-            onPressed: () {
-              userSettings.detailOverlayEntry = OverlayEntry(
-                builder: (context) {
-                  return DetailOverlay(
-                    widget.lemma,
-                    onPressed: (string) {
-                      userSettings.removeOverlay();
-                      findDetails(string);
-                    },
-                  );
+    return Expanded(
+        child: varController.isFryEn
+            ? TextButton(
+                onPressed: () {
+                  widget.toggleBool();
+                  //_toggleBool();
+                  // userSettings.detailOverlayEntry = OverlayEntry(
+                  //   builder: (context) {
+                  //     return DetailOverlay(
+                  //       widget.lemma,
+                  //       onPressed: (string) {
+                  //         findDetails(string);
+                  //       },
+                  //     );
+                  //   },
+                  // );
                 },
-              );
-              Overlay.of(context).insert(userSettings.detailOverlayEntry);
-              userSettings.detailOverlayLive = true;
-            },
-            child: Text(
-              widget.lemma.form,
-              softWrap: true
-            ))
-        : Text(
-        widget.lemma.form,
-        softWrap: true
-    ));
+                child: Text(widget.lemma.form, softWrap: true))
+            : Text(widget.lemma.form, softWrap: true));
   }
 }

@@ -105,35 +105,9 @@ class UserSettings with ChangeNotifier {
     await prefs.setString('locale', newLocale.languageCode);
   }
 
-  OverlayEntry? autoComOverlayEntry;
-
-  void hideAutocomplete(OverlayEntry? oe) {
-    if (oe != null) {
-      autoComOverlayEntry = null;
-      oe.remove();
-      oe.dispose();
-    }
-  }
-
-  late OverlayEntry langSwapOverlayEntry;
-  late OverlayEntry detailOverlayEntry;
-
-  bool langSwapOverlayLive = false;
-  bool detailOverlayLive = false;
-
-  void removeOverlay() {
-    if (langSwapOverlayLive) {
-      langSwapOverlayEntry.remove();
-      langSwapOverlayEntry.dispose();
-      langSwapOverlayLive = false;
-    } else if (detailOverlayLive) {
-      detailOverlayEntry.remove();
-      detailOverlayEntry.dispose();
-      detailOverlayLive = false;
-    }
-  }
-
   late String query = '';
+
+  bool detailsOverlayLive = false;
 
   
 }
