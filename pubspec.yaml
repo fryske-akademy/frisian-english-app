@@ -7,44 +7,27 @@ environment:
   sdk: '>=3.2.2 <4.0.0'
 
 dependencies:
-  auto_size_text: ^3.0.0                  #https://pub.dev/packages/auto_size_text
-  
-  dynamic_color: ^1.7.0                   #https://pub.dev/packages/dynamic_color
 
-  get_it: ^7.6.8
-  graphql: ^5.1.3
-  
-  build_runner: ^2.4.8                    #https://pub.dev/packages/build_runner
-  
+  auto_size_text: ^3.0.0
   flutter:
     sdk: flutter                          #https://flutter.dev/docs/development/tools/sdk/releases?tab=macos
-  flutter_launcher_icons: ^0.13.1         #https://pub.dev/packages/flutter_launcher_icons
-  flutter_localization: ^0.2.0            #https://pub.dev/packages/flutter_localization
-  flutter_offline: ^4.0.0                 #https://pub.dev/packages/flutter_offline
-  flutter_onboarding_slider: ^1.0.11      #https://pub.dev/packages/flutter_onboarding_slider
-  flutter_svg: ^2.0.10+1                     #https://pub.dev/packages/flutter_svg
-  
-  google_fonts: ^6.2.1                    #https://pub.dev/packages/google_fonts
-
-  path_provider: ^2.1.2                   #https://pub.dev/packages/path_provider
-  shared_preferences: ^2.2.2              #https://pub.dev/packages/shared_preferences
-  intl: 0.19.0                           #https://pub.dev/packages/intl
-
-  logger: ^2.2.0                        #https://pub.dev/packages/logger
-  mockito: ^5.4.4                         #https://pub.dev/packages/mockito                  
-  
-  url_launcher: ^6.2.5                    #https://pub.dev/packages/url_launcher
-  provider: ^6.1.2                        #https://pub.dev/packages/provider
-  cupertino_icons: ^1.0.6                 #https://pub.dev/packages/cupertino_icons
-  hive: ^2.2.3
+  flutter_localization: ^0.2.2
+  flutter_offline: ^4.0.0
+  flutter_svg: ^2.0.9
+  get_it: ^7.7.0
+  google_fonts: ^6.2.1
+  graphql: ^5.1.3
   hive_flutter: ^1.1.0
-  select_dialog: ^2.0.1
-  system_theme: ^3.1.0
+  intl: ^0.19.0
+  select_dialog: ^2.0.2
+  shared_preferences: ^2.3.2
+#  system_theme: ^3.1.0
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter                          #https://flutter.dev/docs/testing       
-  flutter_lints: ^4.0.0                   #https://pub.dev/packages/flutter_lints            
+  flutter_lints: 4.0.0                   #https://pub.dev/packages/flutter_lints            
 
 flutter:
   uses-material-design: true

@@ -168,13 +168,12 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                         ),
                       ),
                       if (_isToggled)
-                        Stack(
-                          children: [
-                            Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Material(
-                                  elevation: 5,
+                        Material(
+                          child: Stack(
+                            children: [
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
                                   child: Stack(
                                     children: [
                                       DetailOverlay(
@@ -185,19 +184,22 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                                       ),
                                       Align(
                                         alignment: Alignment.bottomCenter,
-                                        child: IconButton(
-                                          onPressed: () {
-                                            _toggleBool();
-                                          },
-                                          icon: const Icon(Icons.close),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(bottom: 100.0),
+                                          child: IconButton(
+                                            onPressed: () {
+                                              _toggleBool();
+                                            },
+                                            icon: const Icon(Icons.close),
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         )
                     ]);
                   },
