@@ -37,7 +37,7 @@ class WelcomePage extends StatelessWidget {
               Text(
                 AppLocalizations.of(context)!.welcome,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
               //Spacer(flex: 1,),
               Text(
