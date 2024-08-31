@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/main.dart';
 
-class Dyntranslate {
-  static String translate(BuildContext context, String dynKey) {
+mixin Helper {
+  String translate(BuildContext context, String dynKey) {
     var localizations = AppLocalizations.of(context);
     switch (dynKey) {
       case "choose":
@@ -229,5 +230,35 @@ class Dyntranslate {
         return localizations!.base;
     }
     return dynKey;
+  }
+
+  List<Widget> langSwitch(BuildContext context, State state) {
+    return [
+      Align(
+          alignment: Alignment.center,
+          child: Text(varController.isFryEn
+              ? AppLocalizations.of(context)!.fry
+              : AppLocalizations.of(context)!.en),
+        ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+        child: IconButton(
+          icon: const Icon(Icons.swap_horiz, size: 24),
+          onPressed: () {
+            varController.removeOverlay();
+            // ignore: invalid_use_of_protected_member
+            state.setState(() {
+              varController.updateisFryEn(!varController.isFryEn);
+            });
+          },
+        ),
+      ),
+      Align(
+          alignment: Alignment.center,
+          child: Text(varController.isFryEn
+              ? AppLocalizations.of(context)!.en
+              : AppLocalizations.of(context)!.fry),
+        )
+    ];
   }
 }

@@ -3,7 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 Future<GraphQLClient> initClient() async {
   final HttpLink httpLink = HttpLink(
-    String.fromEnvironment("api", defaultValue: "http://localhost:8080/servlet/graphql"),
+    const String.fromEnvironment("api", defaultValue: "http://localhost:8080/servlet/graphql"),
   );
 
   await Hive.initFlutter();

@@ -132,31 +132,36 @@ class _TextResultState extends State<TextResult> {
                       elevation: 1,
                       surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
                       borderRadius: BorderRadius.circular(10),
-                      child: ListTile(
-                        title: Row(children: [
-                          TextButton(onPressed: () => toDetails([lemma],context),
-                              child: Text(lemma.form)),
-                          SelectableText.rich(
-                          TextSpan(
-                            style: TextStyle(
-                              color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            children: textSpans,
-                          ))]),
-                        subtitle: Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: SelectableText.rich(
-                            TextSpan(
-                              style: TextStyle(
-                                color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
-                                fontSize: 16,
-                              ),
-                              children: transSpans,
-                            ),
+                      child: Table(
+                        children: [
+                          TableRow(
+                            children: [TextButton(onPressed: () => toDetails([lemma],context),
+                                child: Text(lemma.form))]
                           ),
-                        ),
+                          TableRow(
+                            children: [
+                              SelectableText.rich(
+                                  TextSpan(
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    children: textSpans,
+                                  ))
+                                ]
+                          ),
+                          TableRow(
+                            children: [SelectableText.rich(
+                              TextSpan(
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                ),
+                                children: transSpans,
+                              ),
+                            )
+                            ]
+                          )
+                        ],
                       ),
                     ),
                   );

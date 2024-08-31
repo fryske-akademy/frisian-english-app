@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_offline/flutter_offline.dart';
-import 'package:frysish/details.dart';
 import 'package:frysish/src/account/account_view.dart';
-import 'package:frysish/src/list_item.dart';
+import 'package:frysish/src/helper.dart';
 import 'package:frysish/src/settings/settings_view.dart';
 import 'package:frysish/src/text_search/text_search.dart';
 
@@ -16,10 +15,10 @@ class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeViewState extends State with Helper {
   final GlobalKey languageIconKey = GlobalKey();
 
   @override
@@ -33,50 +32,57 @@ class _HomeViewState extends State<HomeView> {
     languageIconKey.currentState?.dispose();
   }
 
+  void _closeLangOverlay() {
+    varController.langSwapOverlayEntry.remove();
+    varController.langSwapOverlayEntry.dispose();
+    varController.langSwapOverlayLive = false;
+  }
+
   void showLanguageOverlay() {
-    final RenderBox renderBox = languageIconKey.currentContext!.findRenderObject() as RenderBox;
+    final RenderBox renderBox = languageIconKey.currentContext!
+        .findRenderObject() as RenderBox;
     final Offset offset = renderBox.localToGlobal(Offset.zero);
 
     varController.langSwapOverlayEntry = OverlayEntry(
-      builder: (BuildContext context) => Positioned(
-          top: offset.dy,
-          left: offset.dx,
-          child: Material(
-            child: Row(
-              children: <Widget>[
-                IconButton(
-                  icon: const Icon(Icons.close),
-                  onPressed: () {
-                    varController.langSwapOverlayEntry.remove();
-                    varController.langSwapOverlayEntry.dispose();
-                    varController.langSwapOverlayLive = false;
-                  },
-                ),
-                SegmentedButton<Locale>(
-                  segments: const [
-                    ButtonSegment(
-                      value: Locale('en'),
-                      label: Text('en'),
+      builder: (BuildContext context) =>
+          Positioned(
+              top: offset.dy,
+              left: offset.dx,
+              child: Material(
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () {
+                        _closeLangOverlay();
+                      },
                     ),
-                    ButtonSegment(
-                      value: Locale('fr'),
-                      label: Text('fry'),
-                    ),
-                    ButtonSegment(
-                      value: Locale('nl'),
-                      label: Text('nl'),
+                    SegmentedButton<Locale>(
+                      segments: const [
+                        ButtonSegment(
+                          value: Locale('en'),
+                          label: Text('en'),
+                        ),
+                        ButtonSegment(
+                          value: Locale('fr'),
+                          label: Text('fry'),
+                        ),
+                        ButtonSegment(
+                          value: Locale('nl'),
+                          label: Text('nl'),
+                        ),
+                      ],
+                      selected: {
+                        varController.locale,
+                      },
+                      onSelectionChanged: (Set<Locale> selectedValues) {
+                        varController.updateLocale(selectedValues.first);
+                        _closeLangOverlay();
+                      },
                     ),
                   ],
-                  selected: {
-                    varController.locale,
-                  },
-                  onSelectionChanged: (Set<Locale> selectedValues) {
-                    varController.updateLocale(selectedValues.first);
-                  },
                 ),
-              ],
-            ),
-          )),
+              )),
     );
 
     Overlay.of(context).insert(varController.langSwapOverlayEntry);
@@ -106,14 +112,14 @@ class _HomeViewState extends State<HomeView> {
                 icon: const Icon(Icons.account_circle),
                 onPressed: () {
                   varController.removeOverlay();
-                  varController.route( AccountView.routeName);
+                  varController.route(AccountView.routeName);
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.settings),
                 onPressed: () {
                   varController.removeOverlay();
-                  varController.route( SettingsView.routeName);
+                  varController.route(SettingsView.routeName);
                 },
               ),
             ],
@@ -127,7 +133,7 @@ class _HomeViewState extends State<HomeView> {
             OutlinedButton.icon(
                 onPressed: () {
                   varController.removeOverlay();
-                  varController.route( TextSearch.routeName);
+                  varController.route(TextSearch.routeName);
                 },
                 icon: const Icon(Icons.search),
                 label: Text(AppLocalizations.of(context)!.textSearch)),
@@ -138,42 +144,45 @@ class _HomeViewState extends State<HomeView> {
               flex: 5,
               child: Center(
                   child: Row(
-                children: [
-                  const Spacer(
-                    flex: 1,
-                  ),
-                  Expanded(
-                    // Adjusting flex to 2 for larger screens
-                    flex: MediaQuery.of(context).size.width > 768 ? 2 : 8,
-                    child: OfflineBuilder(
-                      connectivityBuilder: (
-                        BuildContext context,
-                        ConnectivityResult connectivity,
-                        Widget child,
-                      ) {
-                        final bool connected = connectivity != ConnectivityResult.none;
-                        if (connected) {
-                          return const CustomTextField();
-                        } else {
-                          return const Icon(
-                            Icons.wifi_off,
-                            size: 48,
-                          );
-                        } // Internet Connection not available.
-                      },
-                      child: const Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('There seems to be an issue with your network connection.'),
-                        ],
+                    children: [
+                      const Spacer(
+                        flex: 1,
                       ),
-                    ),
-                  ),
+                      Expanded(
+                        // Adjusting flex to 2 for larger screens
+                        flex: MediaQuery
+                            .of(context)
+                            .size
+                            .width > 768 ? 2 : 8,
+                        child: OfflineBuilder(
+                          connectivityBuilder: (BuildContext context,
+                              ConnectivityResult connectivity,
+                              Widget child,) {
+                            final bool connected = connectivity !=
+                                ConnectivityResult.none;
+                            if (connected) {
+                              return const CustomTextField();
+                            } else {
+                              return const Icon(
+                                Icons.wifi_off,
+                                size: 48,
+                              );
+                            } // Internet Connection not available.
+                          },
+                          child: const Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                  'There seems to be an issue with your network connection.'),
+                            ],
+                          ),
+                        ),
+                      ),
 
-                  // ...
-                  const Spacer(flex: 1),
-                ],
-              )),
+                      // ...
+                      const Spacer(flex: 1),
+                    ],
+                  )),
             ),
             const Spacer(
               flex: 1,
@@ -190,58 +199,7 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Material(
-                              elevation: 5,
-                              surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-                              borderRadius: BorderRadius.circular(20),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10),
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(varController.isFryEn ? AppLocalizations.of(context)!.fry : AppLocalizations.of(context)!.en),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                        child: IconButton(
-                          icon: const Icon(Icons.swap_horiz, size: 24),
-                          onPressed: () {
-                            varController.removeOverlay();
-                            setState(() {
-                              varController.updateisFryEn(!varController.isFryEn);
-                            });
-                          },
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Material(
-                              elevation: 5,
-                              surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-                              borderRadius: BorderRadius.circular(20),
-                              child: Padding(
-                                padding: const EdgeInsets.all(10),
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(varController.isFryEn ? AppLocalizations.of(context)!.en : AppLocalizations.of(context)!.fry),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                    children: langSwitch(context,this),
                   )),
             ),
             const Spacer(
@@ -251,22 +209,6 @@ class _HomeViewState extends State<HomeView> {
         ),
       ),
     );
-  }
-}
-void remember(Details details) {
-  var history = varController.history;
-
-  if (history.length>50) {
-    history.removeAt(0);
-  }
-
-  bool l = details.lemma.lang=='fry';
-
-  if (!history.any((item) => item.form == details.lemma.form && item.isFryEn == l)) {
-    ListItem item = ListItem();
-    item.form = details.lemma.form;
-    item.isFryEn = details.lemma.lang == 'fry' ? true : false;
-    history.add(item);
   }
 }
 

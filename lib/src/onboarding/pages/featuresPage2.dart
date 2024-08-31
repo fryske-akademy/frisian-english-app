@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/src/helper.dart';
 
 class featuresPage2 extends StatefulWidget {
   const featuresPage2({super.key, required Color customColor});
@@ -11,7 +11,7 @@ class featuresPage2 extends StatefulWidget {
   _featuresPage2State createState() => _featuresPage2State();
 }
 
-class _featuresPage2State extends State<featuresPage2> with SingleTickerProviderStateMixin {
+class _featuresPage2State extends State<featuresPage2> with SingleTickerProviderStateMixin, Helper {
   late AnimationController _controller;
 
   @override
@@ -25,33 +25,23 @@ class _featuresPage2State extends State<featuresPage2> with SingleTickerProvider
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      width: MediaQuery.of(context).size.width,
-      padding: const EdgeInsets.symmetric(horizontal: 80),
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
-        const Spacer(flex: 6),
-        Center(
-          child: Text(AppLocalizations.of(context)!.appFunctions, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-        ),
-        const Spacer(flex: 2),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.translate, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-        ]),
-        const Spacer(flex: 1),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.viewExamples, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-        ]),
-        const Spacer(flex: 1),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.textSearch, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-        ]),
-        const Spacer(flex: 2),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(AppLocalizations.of(context)!.muchMore, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-        ]),
-        const Spacer(flex: 8),
-      ]),
+    return Center(child: Table(
+      children: [
+        _getRow(context, "translate"),
+        _getRow(context, "viewExamples"),
+        _getRow(context, "textSearch"),
+        _getRow(context, "muchMore"),
+      ]));
+  }
+
+  TableRow _getRow(BuildContext context, String txt) {
+    return TableRow(
+      children:
+    [
+      Center(child: SizedBox(
+          height: 80,
+        child: Text(translate(context, txt), softWrap: true, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold))))
+    ],
     );
   }
 

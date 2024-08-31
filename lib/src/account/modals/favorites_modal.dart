@@ -79,9 +79,7 @@ class _FavoritesModalState extends State<FavoritesModal> {
                       ),
                     ],
                   ),
-                  trailing: Padding(
-                    padding: const EdgeInsets.only(right: 20.0),
-                    child: IconButton(
+                  trailing: IconButton(
                       icon: listItem.toBeDeleted ? const Icon(Icons.favorite_border) : const Icon(Icons.favorite),
                       onPressed: () {
                         setState(
@@ -91,26 +89,11 @@ class _FavoritesModalState extends State<FavoritesModal> {
                         );
                       },
                     ),
-                  ),
                 ),
               );
             },
           ),
-        ),
-        Positioned(
-          right: 10,
-          bottom: 10,
-          child: FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                for (var item in varController.stagedItems) {
-                  item.toBeDeleted = true;
-                }
-              });
-            },
-            child: const Icon(Icons.favorite_border),
-          ),
-        ),
+        )
       ],
     );
   }

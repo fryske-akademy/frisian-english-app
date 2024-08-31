@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/src/result/result_view.dart';
@@ -41,17 +40,11 @@ class _DetailsViewState extends State<DetailsView> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(AppLocalizations.of(context)!
-                          .selectPos(widget.lemma.pos)),
-                      const Text(' '),
-                      Text(widget.lemma.article),
-                      const Text(' '),
-                      Text(widget.lemma.hyphenation),
+                  child: Text(
+                      '${AppLocalizations.of(context)!
+                          .selectPos(widget.lemma.pos)} ${widget.lemma.article} ${widget.lemma.hyphenation}',
                       //Text(widget.lemma['pronunciation'])
-                    ],
+                    softWrap: true
                   ),
                 )
               ],
@@ -80,7 +73,7 @@ class _DetailsViewState extends State<DetailsView> {
   }
 
   Widget buildTextChild(BuildContext context) {
-    return varController.isFryEn
+    return Expanded(child: varController.isFryEn
         ? TextButton(
             onPressed: () {
               varController.detailOverlayEntry = OverlayEntry(
@@ -97,19 +90,13 @@ class _DetailsViewState extends State<DetailsView> {
               Overlay.of(context).insert(varController.detailOverlayEntry);
               varController.detailOverlayLive = true;
             },
-            child: AutoSizeText(
+            child: Text(
               widget.lemma.form,
-              maxLines: 1,
-              minFontSize: 25,
-              maxFontSize: 40,
-              overflow: TextOverflow.ellipsis,
+              softWrap: true
             ))
-        : AutoSizeText(
-            widget.lemma.form,
-            maxLines: 1,
-            minFontSize: 25,
-            maxFontSize: 40,
-            overflow: TextOverflow.ellipsis,
-          );
+        : Text(
+        widget.lemma.form,
+        softWrap: true
+    ));
   }
 }
