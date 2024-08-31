@@ -156,9 +156,9 @@ class _HomeViewState extends State with Helper {
                             .width > 768 ? 2 : 8,
                         child: OfflineBuilder(
                           connectivityBuilder: (BuildContext context,
-                              ConnectivityResult connectivity,
+                              List<ConnectivityResult> connectivities,
                               Widget child,) {
-                            final bool connected = connectivity !=
+                            final bool connected = connectivities.isNotEmpty && connectivities[0] !=
                                 ConnectivityResult.none;
                             if (connected) {
                               return const CustomTextField();
