@@ -110,6 +110,10 @@
     "par_pos_plur": "stellende trap zelfstandig meervoud",
     "par_cmp_plur": "vergrotende trap zelfstandig meervoud",
     "par_sup_plur": "overtreffende trap zelfstandig meervoud",
+    "num_card": "hoofdtelwoord",
+    "num_card_plur": "hoofdtelwoord meervoud",
+    "num_ord": "rangtelwoord",
+    "num_ord_plur": "rangtelwoord meervoud",
     "unsupported": "onbekende vorm",
     "base": "basisvorm of lemma"
 }

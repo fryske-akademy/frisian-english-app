@@ -110,6 +110,10 @@
     "par_pos_plur": "stellende trep selstannich meartal",
     "par_cmp_plur": "fergrutsjende trep selstannich meartal",
     "par_sup_plur": "oertreffende trep selstannich meartal",
+    "num_card": "haadtelwurd",
+    "num_card_plur": "haadtelwurd meartal",
+    "num_ord": "rangtelwurd",
+    "num_ord_plur": "rangtelwurd meartal",
     "unsupported": "ûnbekende foarm",
     "base": "basisfoarm of lemma"
 }
