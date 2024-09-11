@@ -23,7 +23,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   final GlobalKey textFieldKey = GlobalKey();
   final GlobalKey submitKey = GlobalKey();
   final TextEditingController textController = TextEditingController();
-
+  Timer? _debounce;
 
   @override
   void didChangeDependencies() {
@@ -49,6 +49,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
     varController.removeListener(() => _handleTextChanged(context));
     varController.removeOverlay();
     varController.routeObserver.unsubscribe(this);
+    _debounce?.cancel();
     super.dispose();
   }
 
@@ -111,7 +112,10 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
 
   Future<void> _handleTextChanged(BuildContext context) async {
     if (textController.text.length >= 3) {
-      Future.delayed(const Duration(milliseconds: 500), () {renderOverlay(context);});
+      if (_debounce?.isActive ?? false) _debounce?.cancel();
+      _debounce = Timer(const Duration(milliseconds: 500), () {
+        renderOverlay(context);
+      });
     }
   }
 
