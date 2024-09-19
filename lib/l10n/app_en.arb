@@ -110,6 +110,10 @@
     "par_pos_plur": "positive degree plural noun",
     "par_cmp_plur": "comparative degree plural noun",
     "par_sup_plur": "superlative degree plural noun",
+    "num_card": "cardinal number",
+    "num_card_plur": "cardinal number plural",
+    "num_ord": "ordinal number",
+    "num_ord_plur": "ordinal number plural",
     "unsupported": "unsupported linguistics",
     "base": "base or lemma form"
 }

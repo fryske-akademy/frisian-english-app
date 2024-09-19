@@ -228,6 +228,14 @@ mixin Helper {
         return localizations!.unsupported;
       case "base":
         return localizations!.base;
+      case "num_card":
+        return localizations!.num_card;
+      case "num_ord":
+        return localizations!.num_ord;
+      case "num_card_plur":
+        return localizations!.num_card_plur;
+      case "num_ord_plur":
+        return localizations!.num_ord_plur;
     }
     return dynKey;
   }
