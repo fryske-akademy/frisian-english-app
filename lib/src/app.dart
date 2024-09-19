@@ -53,8 +53,8 @@ class MyAppState extends State<MyApp> {
   
 
   ThemeData _buildThemeData(Brightness brightness) {
-    SystemTheme.fallbackColor = const Color(0x000071e2);
-    final accentColor = SystemTheme.accentColor.accent;
+    // SystemTheme.fallbackColor = const Color(0x000071e2);
+    // final accentColor = SystemTheme.accentColor.accent;
 
     return ThemeData(
       useMaterial3: true,
@@ -62,7 +62,7 @@ class MyAppState extends State<MyApp> {
         brightness: brightness,
         seedColor: userSettings.colorMode == ColorMode.system
             ? const Color(0x000071e2)
-            : accentColor,
+            : const Color(0x000071e2),
       ),
       fontFamily: GoogleFonts.notoSansMono().fontFamily,
     );
