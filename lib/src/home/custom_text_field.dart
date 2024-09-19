@@ -110,7 +110,9 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
                     itemCount: lemmas.length,
                     itemBuilder: (context, index) {
                       return TextButton(
-                        onPressed: () => findDetails(lemmas[index].form),
+                        onPressed: () {
+                          findDetails(lemmas[index].form);
+                        },
                         child: Text(
                           lemmas[index].form,
                           style: const TextStyle(fontWeight: FontWeight.bold),
@@ -131,7 +133,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
       setState(() {
         _isLoading = true;
       });
-      Future( () => renderOverlay(context));
+      Future(() => renderOverlay(context));
     } else {
       setState(() {
         lemmas = [];
