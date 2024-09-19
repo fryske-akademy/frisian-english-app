@@ -111,8 +111,9 @@ class _TextResultState extends State<TextResult> {
               title: Text(userSettings.query),
             ),
             body: Material(
-              child: ListView.builder(
+              child: ListView.separated(
                 itemCount: textsData.length,
+                separatorBuilder: (context, index) => const Divider(),
                 itemBuilder: (context, index) {
                   index;
                   var texts = textsData[index]['text']['text'];
@@ -126,45 +127,57 @@ class _TextResultState extends State<TextResult> {
                   lemma.link=link;
                   lemma.form=link['lemma'];
 
-                  return Padding(
-                    padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                    child: Material(
-                      elevation: 1,
-                      surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-                      borderRadius: BorderRadius.circular(10),
-                      child: Table(
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Material(
+                        elevation: 1,
+                        surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Table(
                         children: [
                           TableRow(
-                            children: [TextButton(onPressed: () => toDetails([lemma],context),
-                                child: Text(lemma.form))]
+                          children: [
+                            TextButton(
+                            onPressed: () => toDetails([lemma], context),
+                            child: Text(lemma.form),
+                            ),
+                          ],
                           ),
                           TableRow(
-                            children: [
-                              SelectableText.rich(
-                                  TextSpan(
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                    children: textSpans,
-                                  ))
-                                ]
-                          ),
-                          TableRow(
-                            children: [SelectableText.rich(
+                          children: [
+                            Padding(
+                            padding: const EdgeInsets.fromLTRB(15,0,0,0),
+                            child: SelectableText.rich(
                               TextSpan(
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                ),
-                                children: transSpans,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
                               ),
-                            )
-                            ]
-                          )
+                              children: textSpans,
+                              ),
+                            ),
+                            ),
+                          ],
+                          ),
+                          TableRow(
+                          children: [
+                            Padding(
+                            padding: const EdgeInsets.fromLTRB(15,5,0,15),
+                            child: SelectableText.rich(
+                              TextSpan(
+                              style: const TextStyle(
+                                fontSize: 16,
+                              ),
+                              children: transSpans,
+                              ),
+                            ),
+                            ),
+                          ],
+                          ),
                         ],
+                        ),
                       ),
-                    ),
-                  );
+                    );
                 },
               ),
             ),

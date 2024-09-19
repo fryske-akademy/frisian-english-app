@@ -105,6 +105,7 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
           length: 3,
           child: Scaffold(
             appBar: AppBar(
+              automaticallyImplyLeading: false,
               title: Text(
                 AppLocalizations.of(context)!.result,
               ),
@@ -182,18 +183,6 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                                         },
                                         lemma: details.lemma,
                                       ),
-                                      Align(
-                                        alignment: Alignment.bottomCenter,
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(bottom: 100.0),
-                                          child: IconButton(
-                                            onPressed: () {
-                                              _toggleBool();
-                                            },
-                                            icon: const Icon(Icons.close),
-                                          ),
-                                        ),
-                                      ),
                                     ],
                                   ),
                                 ),
@@ -207,6 +196,17 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
                 Examples(details.texts),
                 Proverbs(details.texts),
               ],
+            ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                if (_isToggled) {
+                  _toggleBool();
+                } else {
+                  userSettings.replace(HomeView.routeName);
+                }
+              },
+              shape: const CircleBorder(),
+              child: _isToggled ? const Icon(Icons.close) : const Icon(Icons.home)
             ),
           ),
         );
@@ -259,4 +259,6 @@ void _remember(Details details) {
     item.isFryEn = l;
     history.add(item);
   }
+
+  varController.updateHistory(history);
 }

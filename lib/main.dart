@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 
 import 'client.dart';
@@ -14,6 +15,11 @@ final varController = VarController();
 void main() async {
   // makes sure that the app is fully initialized before running
   WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
 
   // retrieves settings from device storage
   await userSettings.loadSettings();

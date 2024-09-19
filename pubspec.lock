@@ -249,10 +249,10 @@ packages:
     dependency: "direct main"
     description:
       name: graphql
-      sha256: "62f31433ba194eda7b81a812a83c3d9560766cec5ac0210ea4a3e677c91b8df4"
+      sha256: b90f3faa525fed0d8b57f528af913cf1363e1d77f287004d3a15ce699fa866ee
       url: "https://pub.dev"
     source: hosted
-    version: "5.2.0-beta.8"
+    version: "5.2.0-beta.9"
   hive:
     dependency: transitive
     description:
@@ -473,10 +473,10 @@ packages:
     dependency: transitive
     description:
       name: rxdart
-      sha256: "0c7c0cedd93788d996e33041ffecda924cc54389199cde4e6a34b440f50044cb"
+      sha256: "5c3004a4a8dbb94bd4bf5412a4def4acdaa12e12f269737a5751369e12d1a962"
       url: "https://pub.dev"
     source: hosted
-    version: "0.27.7"
+    version: "0.28.0"
   select_dialog:
     dependency: "direct main"
     description:
@@ -586,6 +586,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  system_theme:
+    dependency: "direct main"
+    description:
+      name: system_theme
+      sha256: "676f8e5bdbf17d5b1267592370810df8cdfaa01d3a2e121b22bd4ea30e63f17c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
+  system_theme_web:
+    dependency: transitive
+    description:
+      name: system_theme_web
+      sha256: "900c92c5c050ce58048f241ef9a17e5cd8629808325a05b473dc62a6e99bae77"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
   term_glyph:
     dependency: transitive
     description:

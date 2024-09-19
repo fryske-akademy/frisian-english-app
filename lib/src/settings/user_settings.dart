@@ -17,6 +17,12 @@ class UserSettings with ChangeNotifier {
     navigatorKey.currentState?.pushReplacementNamed(route, arguments: args);
   }
 
+  void remove(String route, {Object? args}) {
+    navigatorKey.currentState?.popAndPushNamed(route, arguments: args);
+  }
+
+
+
   late bool _systemThemeOverruled;
   late ThemeMode _themeMode;
   late Locale _locale;

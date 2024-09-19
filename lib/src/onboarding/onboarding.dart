@@ -150,7 +150,7 @@ class _OnboardingState extends State<Onboarding> {
                     ElevatedButton(
                       onPressed: () {
                         varController.updateOnboardingShown(true);
-                        userSettings.route( HomeView.routeName);
+                        userSettings.remove( HomeView.routeName);
                       },
                       child: Text(AppLocalizations.of(context)!.launch,),
                     ),

@@ -7,23 +7,9 @@ import '../../lemma.dart';
 Future<List<Lemma>> getLemmas(String query) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
-  // const String lemmasQuery = r'''
-  //   query lemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $pos: Pos $sensitive: Boolean!=false $source: String $lexiconFallback: Boolean!=false) {
-  //       lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm pos: $pos sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
-  //           lemmas {
-  //               link {...detaillink} form
-  //           }
-  //       }
-  //   }
-  //   # use lemma, pos and source from results to link to details
-  //   fragment detaillink on LemmaLink {
-  //       source lemma pos
-  //   }
-  // ''';
-
   const String lemmasQuery = r'''
-    query lemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $sensitive: Boolean!=false $source: String $lexiconFallback: Boolean!=false) {
-        lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
+    query lemmas ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $pos: Pos $sensitive: Boolean!=false $source: String $lexiconFallback: Boolean!=false) {
+        lemmasearch(max: $max offset: $offset lang: $lang searchterm: $searchterm pos: $pos sensitive: $sensitive source: $source lexiconFallback: $lexiconFallback) {
             lemmas {
                 link {...detaillink} form
             }
@@ -34,7 +20,6 @@ Future<List<Lemma>> getLemmas(String query) async {
         source lemma pos
     }
   ''';
-
 
   final QueryOptions lemmasOptions = QueryOptions(
       document: gql(lemmasQuery), variables: <String, dynamic>{'searchterm': query, 'lang': varController.isFryEn ? 'fry' : 'en', 'source': 'fiwb'});

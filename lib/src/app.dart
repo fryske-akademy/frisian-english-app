@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:system_theme/system_theme.dart';
+import 'package:system_theme/system_theme.dart';
 
 import '../main.dart';
 import 'account/account_view.dart';
@@ -53,13 +53,16 @@ class MyAppState extends State<MyApp> {
   
 
   ThemeData _buildThemeData(Brightness brightness) {
+    SystemTheme.fallbackColor = const Color(0x000071e2);
+    final accentColor = SystemTheme.accentColor.accent;
+
     return ThemeData(
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
         brightness: brightness,
         seedColor: userSettings.colorMode == ColorMode.system
             ? const Color(0x000071e2)
-            : const Color(0x000071e2),
+            : accentColor,
       ),
       fontFamily: GoogleFonts.notoSansMono().fontFamily,
     );
@@ -105,16 +108,6 @@ class MyAppState extends State<MyApp> {
                     width: 250,
                   ),
                 ),
-                // child: SvgPicture.asset(
-                //   userSettings.themeMode == ThemeMode.dark
-                //       ? 'assets/logos/frysishDark.svg'
-                //       : 'assets/logos/frysishLight.svg',
-                //   width: 250,
-                //   // colorFilter: ColorFilter.mode(
-                //   //   Theme.of(context).colorScheme.inversePrimary,
-                //   //   BlendMode.srcIn,
-                //   // ),
-                // ),
               ),
             ),
           );
