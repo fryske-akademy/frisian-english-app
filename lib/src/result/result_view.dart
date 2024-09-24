@@ -198,17 +198,9 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               ],
             ),
             floatingActionButton: FloatingActionButton(
-                onPressed: () {
-                  if (_isToggled) {
-                    _toggleBool();
-                  } else {
-                    userSettings.replace(HomeView.routeName);
-                  }
-                },
+                onPressed: ()  => userSettings.replace(HomeView.routeName),
                 shape: const CircleBorder(),
-                child: _isToggled
-                    ? const Icon(Icons.close)
-                    : const Icon(Icons.home)),
+                child: const Icon(Icons.home)),
           ),
         );
       },
