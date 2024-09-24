@@ -61,15 +61,6 @@ class _ProverbsState extends State<Proverbs> {
                 borderRadius: BorderRadius.circular(10),
                 child: Stack(
                   children: [
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          (index + 1).toString(),
-                        ),
-                      ),
-                    ),
                     ListTile(
                       title: SelectableText.rich(
                         TextSpan(

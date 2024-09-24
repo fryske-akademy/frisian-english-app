@@ -198,16 +198,17 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
               ],
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                if (_isToggled) {
-                  _toggleBool();
-                } else {
-                  userSettings.replace(HomeView.routeName);
-                }
-              },
-              shape: const CircleBorder(),
-              child: _isToggled ? const Icon(Icons.close) : const Icon(Icons.home)
-            ),
+                onPressed: () {
+                  if (_isToggled) {
+                    _toggleBool();
+                  } else {
+                    userSettings.replace(HomeView.routeName);
+                  }
+                },
+                shape: const CircleBorder(),
+                child: _isToggled
+                    ? const Icon(Icons.close)
+                    : const Icon(Icons.home)),
           ),
         );
       },
@@ -227,7 +228,7 @@ void toDetails(List<Lemma> value, BuildContext? context) async {
   if (value.length > 1) {
     await SelectDialog.showModal<Lemma>(
       context!,
-      label: context.mounted ? AppLocalizations.of(context)!.choose : 'Choose',
+      showSearchBox: false,
       selectedValue: l,
       items: List.of(value),
       onChange: (Lemma selected) {
