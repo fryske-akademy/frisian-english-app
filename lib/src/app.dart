@@ -24,9 +24,6 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   bool _isLoading = false;
 
-  late var theme;
-  late var darkTheme;
-
   @override
   void initState() {
     super.initState();

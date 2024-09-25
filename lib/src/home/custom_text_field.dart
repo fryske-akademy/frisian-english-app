@@ -133,7 +133,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
       setState(() {
         _isLoading = true;
       });
-      Future(() => renderOverlay(context));
+      Future(() => renderOverlay());
     } else {
       setState(() {
         lemmas = [];
@@ -142,7 +142,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
     }
   }
 
-  Future<void> renderOverlay(BuildContext context) async {
+  Future<void> renderOverlay() async {
     autoComplete(textController.text).timeout(
       const Duration(seconds: 3),
       onTimeout: () {
