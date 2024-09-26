@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../main.dart';
 import '../home/home_view.dart';
+import 'features_page.dart';
 import 'info_page.dart';
 import 'language_select_page.dart';
 import 'welcome_page.dart';
@@ -23,9 +24,7 @@ class _OnboardingState extends State<Onboarding> {
     List<Widget> indicators = [];
     for (int i = 0; i < pageCount; i++) {
       indicators.add(
-        i == _currentPage
-            ? _indicator(true)
-            : _indicator(false),
+        i == _currentPage ? _indicator(true) : _indicator(false),
       );
     }
     return Row(
@@ -114,11 +113,6 @@ class _OnboardingState extends State<Onboarding> {
                 ),
               ],
             ),
-            if (_currentPage != 3)
-              ElevatedButton(
-                onPressed: () {_pageController.animateToPage(4, duration: const Duration(milliseconds: 500), curve: Curves.ease);},
-                child: const Text('Skip'),
-              )
           ],
         ),
       ),
@@ -146,30 +140,27 @@ class _OnboardingState extends State<Onboarding> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   _buildPageIndicator(4),
-                  if (_currentPage == 3)
-                    ElevatedButton(
-                      onPressed: () {
-                        varController.updateOnboardingShown(true);
-                        userSettings.remove( HomeView.routeName);
-                      },
-                      child: Text(AppLocalizations.of(context)!.launch,),
-                    ),
-              ],),
+                ],
+              ),
             ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class FeaturesPage extends StatelessWidget {
-  const FeaturesPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Features of the app'),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          if (_currentPage != 3) {
+            _pageController.animateToPage(4,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.ease);
+          } else {
+            varController.updateOnboardingShown(true);
+            userSettings.remove(HomeView.routeName);
+          }
+        },
+        child: Text(
+          _currentPage != 3 ? "skip" : AppLocalizations.of(context)!.launch,
+        ),
+      ),
     );
   }
 }
