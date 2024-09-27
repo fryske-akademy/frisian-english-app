@@ -21,7 +21,7 @@
     "fry": "Frisian",
     "grammar": "Grammar and paradigm",
     "history": "history",
-    "information": "information",
+    "information": "The basis of this app is the Frysk-Ingelsk dictionary by Anne Dykstra, published in 2000 by the Fryske Akademy. After the publication, Anne and his wife Foke continued working on the dictionary, improving many things and adding proverbs. There has not yet been a new edition containing these improvements. However, extensive work was done on converting the dictionary to the Fryske Akademy's Xml format. This ultimately led to a first digital version of this dictionary. The next step that was taken was to include English in the so-called languageapi, which uses stanfordnlp for English word forms and queries the digital dictionary for translations and examples. The languageapi in turn is queried from the Frysk-Ingelsk app, which offers everything in a user-friendly way.",
     "inside": "in",
     "issues": "problems and wishes",
     "lemmas": "headword",

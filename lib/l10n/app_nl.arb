@@ -21,7 +21,7 @@
     "fry": "Fries",
     "grammar": "Grammatica en paradigma",
     "history": "geschiedenis",
-    "information": "informatie",
+    "information": "Aan de basis van deze app ligt het in 2000 door de Fryske Akademy uitgegeven Frysk-Ingelsk wurdboek van Anne Dykstra. Na de uitgifte hebben Anne en zijn vrouw Foke doorgewerkt aan het woordenboek waarbij veel is verbeterd en spreekwoorden zijn teogevoegd. Er is nog geen nieuwe uitgave gekomen die deze verbeteringen bevat. Wel is er een tijd lang gewerkt aan het omzetten van het woordenboek naar het Xml-formaat van de Fryske Akademy. Uiteindelijk heeft dit geleid tot een eerste digitale versie van dit woordenboek. De volgende stap die gezet is is het opnemen van Engels in de zogenaamde languageapi, die voor engelse woordvormen stanfordnlp gebruikt en het digitale woordenboek bevraagt voor vertalingen en voorbeelden. De languageapi op haar beurt wordt bevraagd vanuit de Frysk-Ingelsk app, die alles op een gebruikersvriendelijke manier aanbiedt.",
     "inside": "in",
     "issues": "wensen en problemen",
     "lemmas": "trefwoord",
