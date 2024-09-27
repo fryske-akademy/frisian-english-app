@@ -140,7 +140,7 @@ class AccountViewState extends State<AccountView> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton(
-                      child: Text(AppLocalizations.of(context)!.information,
+                      child: Text("${(AppLocalizations.of(context)!.information).substring(0,15)}...",
                           style: TextStyle(
                               color: userSettings.themeMode == ThemeMode.dark
                                   ? Colors.white

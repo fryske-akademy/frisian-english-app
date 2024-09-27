@@ -22,7 +22,7 @@ class FeaturesPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Divider(),
+                  const Divider(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -44,8 +44,8 @@ class FeaturesPage extends StatelessWidget {
                       const Icon(Icons.swap_horiz),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Divider(),
                   ),
                   Row(
@@ -72,7 +72,7 @@ class FeaturesPage extends StatelessWidget {
                       Text(AppLocalizations.of(context)!.muchMore),
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                 ],
               ),
             ),
