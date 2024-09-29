@@ -8,75 +8,74 @@ Future<List<Details>> getDetails(dynamic link) async {
   final GraphQLClient client = GetIt.I<GraphQLClient>();
 
   const String detailsQuery = r'''
-    query details( # case and diacrit sensitive lemma (article) to find
-        $lemma: String! $pos: GramType $source: String! $englishTranslations: Boolean!=false) {
-        details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
-            lemma { ...lemmagraph }
-            translations { ...lemmagraph }
-            senses { translations { ...lemmagraph }  texts { ...textgraph } }
-            texts { 
-              __typename
-              ... on Example {
-                text {...txt} translations { text {...txt} }
-              }
-              ... on Collocation {
-                  text {...txt} translations { text {...txt} }
-              }
-              ... on Proverb {
-                  text {...txt} translations { text {...txt} }
-              }
-            }
-        }
+query details( # case and diacrit sensitive lemma (article) to find
+    $lemma: String! $pos: Pos $source: String! $englishTranslations: Boolean!=true) {
+    details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
+        source
+        message { level text}
+        lemma { ...lemmagraph }
+        translations { ...lemmagraph }
+        link {lemma text}
+        senses { ...senses translations { ...lemmagraph }  texts { ...textgraph } }
+        texts { ...textgraph }
+#        referrers { ...lemmalink }
     }
-    fragment lemmagraph  on Lemma {
-        form
-        grammar
-        lang
-        article
-        hyphenation
-        pronunciation
-        subForms {
-            ... on ParadigmCategory { type forms { ...par }}
-            ... on Paradigm { __typename ...par }
-            ... on Synonym { __typename form lang meaning }
-            ... on Variant { __typename form lang }
-            ... on Dutchism { __typename form lang }
-        }
+}
+fragment lemmagraph  on Lemma {
+    form
+    lang
+    pos
+    article
+    hyphenation
+    pronunciation
+    subForms {
+        ... on FormInfo {__typename ...forminfo }
+        ... on Synonym { __typename form lang }
+        ... on Variant { __typename form lang }
+        ... on Dutchism { __typename form lang }
     }
-    fragment textgraph on Text {
-        ...nestedtextgraph
-        ... on Proverb { ...text translations {...texttrans} }
+}
+fragment textgraph on Text {
+    ...nestedtextgraph
+    ... on Collocation {
+        ...text
+        senses { ...senses translations { ...texttrans } texts { ...nestedtextgraph } }
+        translations { ...texttrans }
+        examples { ...text translations {...texttrans} }
     }
-    fragment nestedtextgraph on Text {
-        __typename
-        ... on Example { ...text translations {...texttrans} }
-    }
+    ... on Proverb { ...text translations {...texttrans} }
+}
+fragment nestedtextgraph on Text {
+    __typename
+    ... on Example { ...text translations {...texttrans} }
+}
 
-    fragment texttrans on TextTranslated {
-        id text {...txtDetails} lang
+fragment texttrans on TextTranslated {
+    id text {...txtDetails} lang
+}
+fragment text on TextInterface {
+    id text {...txtDetails} lang
+}
+fragment lemmalink on LemmaLink {
+    source lemma pos lang id text
+}
+fragment txtDetails on FormattedText { text {
+    ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
+    ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
+    ... on T {textT}
+    ... on L { link { ...lemmalink } }
     }
-    fragment text on TextInterface {
-        id text {...txtDetails} lang
-    }
-    fragment lemmalink on LemmaLink {
-        source lemma pos lang id text
-    }
-    fragment txtDetails on FormattedText { text {
-        ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
-        ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
-        ... on T {textT}
-        ... on L { link { ...lemmalink } }
-        }
-    }
-    fragment par on Paradigm {
-        form splitForm lang grammar hyphenation pronunciation
-    }
-    fragment txt on FormattedText { text {
-        ... on Q {textQ { ... on T {textT} ... on I {textI {... on T {textT}}}}}
-        ... on I {textI { ... on T {textT} ... on Q {textQ {... on T {textT}}}}}
-        ... on T {textT}}
-    }
-  ''';
+}
+fragment senses on Sense {
+    id article link {...lemmalink}
+}
+fragment forminfo on FormInfo {
+	linguistics description paradigms {...par}
+}
+fragment par on Paradigm {
+    form splitForm lang hyphenation pronunciation preferred
+}
+''';
 
   final QueryOptions detailsOptions = QueryOptions(
       document: gql(detailsQuery),
@@ -104,7 +103,7 @@ Future<List<Details>> getDetails(dynamic link) async {
     details.lemma.article = detail['lemma']['article'] ?? '';
     details.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
     details.lemma.subForms = detail['lemma']['subForms'] ?? [];
-    details.lemma.grammar = detail['lemma']['grammar'] ?? [];
+    details.lemma.pos = detail['lemma']['pos'] ?? [];
 
     details.translations = detail['translations'] ?? [];
     details.link = detail['link'] ?? {};
@@ -119,9 +118,9 @@ Future<List<Details>> getDetails(dynamic link) async {
 Details toEnglish(List<Details> details) {
   Iterable<String> trs = details.map((e) => details.length==1?e.lemma.form:formPlusTrans(e) );
   Details english = Details();
-  english.lemma.form = varController.query;
+  english.lemma.form = userSettings.query;
   english.lemma.lang = "en";
-  english.lemma.grammar.addAll(details[0].lemma.grammar);
+  english.lemma.pos=details[0].lemma.pos;
   english.translations.addAll(trs.map((e) => {"form": e, "lang": "fry"}));
   for (Details d in details) {
     if (details.length>1) english.texts.add(header(formPlusTrans(d)));

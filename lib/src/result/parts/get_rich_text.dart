@@ -6,7 +6,7 @@ List<TextSpan> getRichText(list) {
   for (var item in list) {
     switch (item['__typename']) {
       case 'T':
-        String text = item['textT'].trim();
+        String text = item['textT'];
         if (isFirstTextSpan) {
           text = text.replaceFirst(RegExp(r'^[^a-zA-Z0-9]*'), '');
           isFirstTextSpan = false;
@@ -15,12 +15,12 @@ List<TextSpan> getRichText(list) {
         break;
       case 'I':
         for (var subItem in item['textI']) {
-          textSpans.add(TextSpan(text: subItem['textT'].trim(), style: const TextStyle(fontStyle: FontStyle.italic)));
+          textSpans.add(TextSpan(text: " ${subItem['textT']}", style: const TextStyle(fontStyle: FontStyle.italic)));
         }
         break;
       case 'Q':
         for (var subItem in item['textQ']) {
-          textSpans.add(TextSpan(text: subItem['textT'].trim(), style: const TextStyle(fontWeight: FontWeight.bold)));
+          textSpans.add(TextSpan(text: subItem['textT'], style: const TextStyle(fontWeight: FontWeight.bold)));
         }
         break;
       default:

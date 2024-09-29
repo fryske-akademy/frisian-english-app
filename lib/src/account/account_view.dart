@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:frysish/src/home/home_view.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../main.dart';
@@ -9,22 +8,37 @@ import 'modals/favorites_modal.dart';
 import 'modals/history_modal.dart';
 import 'modals/information_modal.dart';
 
-class AccountView extends StatelessWidget {
+class AccountView extends StatefulWidget {
   static const routeName = '/account';
 
   const AccountView({super.key});
 
-  final String faLogo = 'assets/logos/fa.svg';
+  @override
+  AccountViewState createState() => AccountViewState();
+}
 
+class AccountViewState extends State<AccountView> {
+  final String faLogo = 'assets/logos/fa.svg';
   final String nhlLogo = 'assets/logos/nhl.svg';
+  bool isLoading = false;
 
   Future<void> handleFeedback() async {
+    setState(() {
+      isLoading = true;
+    });
+
+    await Future.delayed(const Duration(seconds: 1)); // Delay of 2 seconds
+
     String email = Uri.encodeComponent("frysker@fryske-akademy.nl");
     String subject = Uri.encodeComponent("Feedback Frysish");
     String body = Uri.encodeComponent("");
     Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
     if (await launchUrl(mail)) {
     } else {}
+
+    setState(() {
+      isLoading = false;
+    });
   }
 
   @override
@@ -32,18 +46,20 @@ class AccountView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              varController.route( HomeView.routeName);
-            }),
+        // leading: IconButton(
+        //     icon: const Icon(Icons.arrow_back),
+        //     onPressed: () {
+        //       userSettings.route(HomeView.routeName);
+        //     }),
         title: Text(
           AppLocalizations.of(context)!.account,
           style: const TextStyle(fontSize: 25),
         ),
       ),
       body: Padding(
-        padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(600, 40, 600, 40) : const EdgeInsets.fromLTRB(40, 40, 40, 40),
+        padding: MediaQuery.of(context).size.width > 768
+            ? const EdgeInsets.fromLTRB(600, 40, 600, 40)
+            : const EdgeInsets.fromLTRB(40, 40, 40, 40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -55,7 +71,10 @@ class AccountView extends StatelessWidget {
                   children: [
                     TextButton(
                         child: Text(AppLocalizations.of(context)!.favorites,
-                            style: TextStyle(color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black)),
+                            style: TextStyle(
+                                color: userSettings.themeMode == ThemeMode.dark
+                                    ? Colors.white
+                                    : Colors.black)),
                         onPressed: () {
                           showModalBottomSheet(
                             context: context,
@@ -87,7 +106,10 @@ class AccountView extends StatelessWidget {
                   children: [
                     TextButton(
                       child: Text(AppLocalizations.of(context)!.history,
-                          style: TextStyle(color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black)),
+                          style: TextStyle(
+                              color: userSettings.themeMode == ThemeMode.dark
+                                  ? Colors.white
+                                  : Colors.black)),
                       onPressed: () {
                         showModalBottomSheet(
                           context: context,
@@ -118,8 +140,11 @@ class AccountView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton(
-                      child: Text(AppLocalizations.of(context)!.information,
-                          style: TextStyle(color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black)),
+                      child: Text("${(AppLocalizations.of(context)!.information).substring(0,15)}...",
+                          style: TextStyle(
+                              color: userSettings.themeMode == ThemeMode.dark
+                                  ? Colors.white
+                                  : Colors.black)),
                       onPressed: () {
                         showModalBottomSheet(
                           context: context,
@@ -145,7 +170,10 @@ class AccountView extends StatelessWidget {
                   children: [
                     TextButton(
                       child: Text(AppLocalizations.of(context)!.feedback,
-                          style: TextStyle(color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black)),
+                          style: TextStyle(
+                              color: userSettings.themeMode == ThemeMode.dark
+                                  ? Colors.white
+                                  : Colors.black)),
                       onPressed: () async {
                         await handleFeedback();
                       },
@@ -161,6 +189,12 @@ class AccountView extends StatelessWidget {
               ],
             ),
 
+            // Loading indicator
+            if (isLoading)
+              const Center(
+                child: CircularProgressIndicator(),
+              ),
+
             // More dictionarys part
             Column(
               children: [
@@ -174,12 +208,23 @@ class AccountView extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   onPressed: () async {
+                    setState(() {
+                      isLoading = true;
+                    });
+
+                    await Future.delayed(
+                        const Duration(seconds: 1)); // Delay of 2 seconds
+
                     Uri url = Uri.parse('https://frysker.nl/');
                     if (await canLaunchUrl(url)) {
                       await launchUrl(url);
                     } else {
                       throw 'Could not launch $url';
                     }
+
+                    setState(() {
+                      isLoading = false;
+                    });
                   },
                 ),
               ],

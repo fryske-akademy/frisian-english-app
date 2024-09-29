@@ -67,7 +67,7 @@ class _TextResultState extends State<TextResult> {
     final Map arguments = ModalRoute.of(context)!.settings.arguments as Map;
 
     return FutureBuilder(
-      future: fetchData(varController.query, arguments['language']),
+      future: fetchData(userSettings.query, arguments['language']),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
@@ -97,7 +97,7 @@ class _TextResultState extends State<TextResult> {
                   const SizedBox(height: 25),
                   IconButton(
                     onPressed: () {
-                      varController.route( TextSearch.routeName);
+                      userSettings.route( TextSearch.routeName);
                     },
                     icon: const Icon(Icons.arrow_back),
                   )
@@ -108,11 +108,12 @@ class _TextResultState extends State<TextResult> {
 
           return Scaffold(
             appBar: AppBar(
-              title: Text(varController.query),
+              title: Text(userSettings.query),
             ),
             body: Material(
-              child: ListView.builder(
+              child: ListView.separated(
                 itemCount: textsData.length,
+                separatorBuilder: (context, index) => const Divider(),
                 itemBuilder: (context, index) {
                   index;
                   var texts = textsData[index]['text']['text'];
@@ -126,40 +127,57 @@ class _TextResultState extends State<TextResult> {
                   lemma.link=link;
                   lemma.form=link['lemma'];
 
-                  return Padding(
-                    padding: MediaQuery.of(context).size.width > 768 ? const EdgeInsets.fromLTRB(300, 8, 300, 8) : const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                    child: Material(
-                      elevation: 1,
-                      surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
-                      borderRadius: BorderRadius.circular(10),
-                      child: ListTile(
-                        title: Row(children: [
-                          TextButton(onPressed: () => toDetails([lemma],context),
-                              child: Text(lemma.form)),
-                          SelectableText.rich(
-                          TextSpan(
-                            style: TextStyle(
-                              color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Material(
+                        elevation: 1,
+                        surfaceTintColor: Theme.of(context).colorScheme.onPrimaryContainer,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Table(
+                        children: [
+                          TableRow(
+                          children: [
+                            TextButton(
+                            onPressed: () => toDetails([lemma], context),
+                            child: Text(lemma.form),
                             ),
-                            children: textSpans,
-                          ))]),
-                        subtitle: Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
-                          child: SelectableText.rich(
-                            TextSpan(
-                              style: TextStyle(
-                                color: varController.themeMode == ThemeMode.dark ? Colors.white : Colors.black,
+                          ],
+                          ),
+                          TableRow(
+                          children: [
+                            Padding(
+                            padding: const EdgeInsets.fromLTRB(15,0,0,0),
+                            child: SelectableText.rich(
+                              TextSpan(
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              children: textSpans,
+                              ),
+                            ),
+                            ),
+                          ],
+                          ),
+                          TableRow(
+                          children: [
+                            Padding(
+                            padding: const EdgeInsets.fromLTRB(15,5,0,15),
+                            child: SelectableText.rich(
+                              TextSpan(
+                              style: const TextStyle(
                                 fontSize: 16,
                               ),
                               children: transSpans,
+                              ),
                             ),
+                            ),
+                          ],
                           ),
+                        ],
                         ),
                       ),
-                    ),
-                  );
+                    );
                 },
               ),
             ),

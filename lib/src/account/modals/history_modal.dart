@@ -10,16 +10,22 @@ class HistoryModal extends StatefulWidget {
   const HistoryModal({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _HistoryModalState createState() => _HistoryModalState();
+  HistoryModalState createState() => HistoryModalState();
 }
 
-class _HistoryModalState extends State<HistoryModal> {
+class HistoryModalState extends State<HistoryModal> {
+  bool _isLoading = true;
+
   @override
   void initState() {
     super.initState();
-    varController.loadSettings();
-    varController.stagedItems = varController.history;
+    Future.delayed(const Duration(seconds: 1), () {
+      setState(() {
+        varController.loadSettings();
+        varController.stagedItems = varController.history;
+        _isLoading = false;
+      });
+    });
   }
 
   void goToResultView(ListItem listItem, BuildContext context) {
@@ -29,70 +35,65 @@ class _HistoryModalState extends State<HistoryModal> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-          child: ListView.builder(
-            reverse: true,
-            itemCount: varController.stagedItems.length,
-            itemBuilder: (context, index) {
-              ListItem listItem = varController.stagedItems[index];
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                child: ListTile(
-                  title: Row(
-                    children: [
-                      TextButton(
-                        onPressed: !listItem.toBeDeleted
-                            ? () {
-                                goToResultView(listItem, context);
-                              }
-                            : null,
-                        child: AutoSizeText(
-                          listItem.form,
-                          style: listItem.toBeDeleted ? const TextStyle(color: Colors.grey) : null,
-                          maxFontSize: 40,
-                          minFontSize: 12,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
+    return AbsorbPointer(
+      absorbing: _isLoading,
+      child: Stack(
+        children: [
+          if (_isLoading)
+            const Center(
+              child: CircularProgressIndicator(),
+            )
+          else
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: ListView.builder(
+                reverse: true,
+                itemCount: varController.stagedItems.length,
+                itemBuilder: (context, index) {
+                  ListItem listItem = varController.stagedItems[index];
+                  return Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    child: ListTile(
+                      title: Row(
+                        children: [
+                          TextButton(
+                            onPressed: !listItem.toBeDeleted
+                                ? () {
+                                    goToResultView(listItem, context);
+                                  }
+                                : null,
+                            child: AutoSizeText(
+                              listItem.form,
+                              style: listItem.toBeDeleted
+                                  ? const TextStyle(color: Colors.grey)
+                                  : null,
+                              maxFontSize: 40,
+                              minFontSize: 12,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  trailing: Padding(
-                    padding: const EdgeInsets.only(right: 20.0),
-                    child: IconButton(
-                      icon: listItem.toBeDeleted ? const Icon(Icons.restore_from_trash) : const Icon(Icons.delete),
-                      onPressed: () {
-                        setState(
-                          () {
-                            listItem.toBeDeleted = !listItem.toBeDeleted;
-                          },
-                        );
-                      },
+                      trailing: IconButton(
+                        icon: listItem.toBeDeleted
+                            ? const Icon(Icons.delete_outline)
+                            : const Icon(Icons.delete),
+                        onPressed: () {
+                          setState(
+                            () {
+                              listItem.toBeDeleted = !listItem.toBeDeleted;
+                            },
+                          );
+                        },
+                      ),
                     ),
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-        Positioned(
-          right: 10,
-          bottom: 10,
-          child: FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                for (var item in varController.stagedItems) {
-                  item.toBeDeleted = true;
-                }
-              });
-            },
-            child: const Icon(Icons.delete),
-          ),
-        ),
-      ],
+                  );
+                },
+              ),
+            )
+        ],
+      ),
     );
   }
 }

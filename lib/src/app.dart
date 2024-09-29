@@ -2,67 +2,124 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import 'package:system_theme/system_theme.dart';
 
 import '../main.dart';
 import 'account/account_view.dart';
 import 'home/home_view.dart';
 import 'onboarding/onboarding.dart';
 import 'result/result_view.dart';
+import 'settings/user_settings.dart';
 import 'text_search/text_result.dart';
 import 'text_search/text_search.dart';
 import 'settings/settings_view.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({
-    super.key,
-  });
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  MyAppState createState() => MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  bool _isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    userSettings.addListener(_onuserSettingsChange);
+  }
+
+  @override
+  void dispose() {
+    userSettings.removeListener(_onuserSettingsChange);
+    super.dispose();
+  }
+
+  void _onuserSettingsChange() {
+    setState(() {
+      _isLoading = true;
+    });
+    Future.delayed(const Duration(seconds: 3), () {
+      setState(() {
+        _isLoading = false;
+      });
+    });
+  }
+
+  
+
+  ThemeData _buildThemeData(Brightness brightness) {
+    // SystemTheme.fallbackColor = const Color(0x000071e2);
+    // final accentColor = SystemTheme.accentColor.accent;
+
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(
+        brightness: brightness,
+        seedColor: userSettings.colorMode == ColorMode.system
+            ? const Color(0x000071e2)
+            : const Color(0x000071e2),
+      ),
+      fontFamily: GoogleFonts.notoSansMono().fontFamily,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    // Forces portrait mode, because the app is not designed for landscape
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
+    // SystemChrome.setPreferredOrientations([
+    //   DeviceOrientation.portraitUp,
+    //   DeviceOrientation.portraitDown,
+    // ]);
 
-    // ListenableBuilder listens to changes in varController and rebuilds the app. Because this is the root widget, the entire app is rebuilt.
     return ListenableBuilder(
-      listenable: varController,
+      listenable: userSettings,
       builder: (BuildContext context, Widget? child) {
-        return MaterialApp(
-          navigatorKey: varController.navigatorKey,
-          navigatorObservers: [varController.routeObserver],
-          restorationScopeId: 'app',
+        final theme = _buildThemeData(Brightness.light);
+        final darkTheme = _buildThemeData(Brightness.dark);
 
-          // Uses the generated AppLocalizations class to provide localized strings
+        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+          systemNavigationBarColor: userSettings.themeMode == ThemeMode.light
+              ? theme.colorScheme.surface
+              : darkTheme.colorScheme.surface,
+        ));
+
+        if (_isLoading) {
+          return MaterialApp(
+            theme: theme,
+            darkTheme: darkTheme,
+            themeMode: userSettings.themeMode,
+            home: Material(
+              child: Center(
+                child: CircleAvatar(
+                  radius: 125,
+                  backgroundColor: userSettings.themeMode == ThemeMode.dark
+                        ? theme.colorScheme.primary
+                        : darkTheme.colorScheme.primary,
+                  child: Image.asset(
+                    gaplessPlayback: false,
+                    userSettings.themeMode == ThemeMode.dark
+                        ? 'assets/gifs/frysishDark.gif'
+                        : 'assets/gifs/frysishLight.gif',
+                    height: 250,
+                    width: 250,
+                  ),
+                ),
+              ),
+            ),
+          );
+        }
+
+        return MaterialApp(
+          navigatorKey: userSettings.navigatorKey,
+          navigatorObservers: [userSettings.routeObserver],
+          restorationScopeId: 'app',
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale(varController.locale.languageCode),
-
-          // Sets the theme defaults for light and dark mode
-          theme: ThemeData(
-            useMaterial3: true,
-            applyElevationOverlayColor: true,
-            // fromSeed generates automatic color palettes based on the primary color
-            colorScheme: ColorScheme.fromSeed(seedColor: varController.primaryColor),
-            fontFamily: GoogleFonts.notoSansMono().fontFamily,
-          ),
-          darkTheme: ThemeData(
-            useMaterial3: true,
-            applyElevationOverlayColor: true,
-            fontFamily: GoogleFonts.notoSansMono().fontFamily,
-            colorScheme: ColorScheme.fromSeed(
-              brightness: Brightness.dark,
-              seedColor: varController.primaryColor,
-            ),
-          ),
-
-          // Uses the themeMode variable to determine the theme and because this is inside a ListenableBuilder, the app will rebuild when the themeMode changes
-          themeMode: varController.themeMode,
-
-          // Uses the GoRouter package to handle routing
-          // routerConfig: _router,
-
+          locale: Locale(userSettings.locale.languageCode),
+          theme: theme,
+          darkTheme: darkTheme,
+          themeMode: userSettings.themeMode,
           onGenerateRoute: (RouteSettings routeSettings) {
             return MaterialPageRoute(
               settings: routeSettings,
@@ -81,10 +138,11 @@ class MyApp extends StatelessWidget {
                   case TextResult.routeName:
                     return const TextResult();
                   default:
-                    if (varController.onboardingShow) {
+                    if (varController.onboardingShown) {
                       return const HomeView();
+                      
                     } else {
-                      return const OnboardingView();
+                      return const Onboarding();
                     }
                 }
               },

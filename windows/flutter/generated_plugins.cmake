@@ -4,7 +4,6 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   connectivity_plus
-  dynamic_color
   flutter_localization
   url_launcher_windows
 )

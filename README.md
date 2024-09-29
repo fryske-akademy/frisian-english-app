@@ -1,35 +1,6 @@
 # Frysish
 
-This project has been made by an intern in a period of approximately 95 days
-
-# Ferry Graphql
-
-Retrieve GraphQL Schema:
-	
- 	npm install -g get-graphql-schema
-	get-graphql-schema [ENDPOINT_URL] > lib/schema.graphql
-
-Creating classes automatically:
-	
- 	make a graphql folder to avoid clutter
-
-create file build.yaml (if it doens't exist yet)
-
-	targets:
-	  $default:
-		builders:
-		  ferry_generator|graphql_builder:
-			enabled: true
-			options:
-			  schema: [YOUR_PACKAGE_NAME]|lib/schema.graphql
-		  ferry_generator|serializer_builder:
-			enabled: true
-			options:
-			  schema: [YOUR_PACKAGE_NAME]|lib/schema.graphql
-
-Now make your querys in [QUERY].graphl files then execute:
-
-	flutter pub run build_runner build --delete-conflicting-outputs
+This project has initially been completed by an intern in a period of approximately 95 days
 
  # Internationalizing
 
