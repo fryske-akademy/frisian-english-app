@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/src/helper.dart';
+import 'package:frysish/src/home/home_view.dart';
 import 'package:frysish/src/text_search/text_result.dart';
 
 import '../../main.dart';
@@ -57,13 +58,13 @@ class _TextSearchState extends State<TextSearch> with Helper {
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.textSearch),
-        // leading: IconButton(
-        //   icon: const Icon(Icons.home),
-        //   onPressed: () {
-        //     userSettings.route(HomeView.routeName);
-        //   },
-        // ),
-        // automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(Icons.home),
+          onPressed: () {
+            userSettings.route(HomeView.routeName);
+          },
+        ),
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Stack(
