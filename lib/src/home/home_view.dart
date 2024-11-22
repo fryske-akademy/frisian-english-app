@@ -9,6 +9,7 @@ import '../account/account_view.dart';
 import '../settings/settings_view.dart';
 import '../text_search/text_search.dart';
 import 'custom_text_field.dart';
+import '../result/result_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -136,8 +137,27 @@ class _HomeViewState extends State with Helper {
             mainAxisAlignment: MainAxisAlignment.center,
             children: langSwitch(context, this),
           ),
-          const Spacer(flex: 2),
+          _buildSubmitButton(context)
         ],
+      ),
+    );
+  }
+  Widget _buildSubmitButton(BuildContext context) {
+    return SizedBox(
+      width: double.infinity, // Fills the whole width of the screen
+      height: 50.0, // Set the height to make it squared
+      child: FilledButton(
+        style: ButtonStyle(
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+            const RoundedRectangleBorder(
+              borderRadius: BorderRadius.zero, // Removes rounded corners
+            ),
+          ),
+        ),
+        onPressed: () async {
+          findDetails(userSettings.query);
+        },
+        child: const Icon(Icons.send),
       ),
     );
   }

@@ -82,12 +82,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
                 hintText: AppLocalizations.of(context)!.enterText,
               ),
             ),
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () => findDetails(textController.text),
-            shape: const CircleBorder(),
-            child: const Icon(Icons.send),
-          ),
+          )
         ),
         if (_isLoading)
           const Align(
@@ -100,7 +95,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(10, 10, 100, 15),
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 15),
               child: SizedBox(
                 height: 50,
                 child: Material(
@@ -129,6 +124,7 @@ class _CustomTextFieldState extends State<CustomTextField> with RouteAware {
   }
 
   void _handleTextChanged(BuildContext context) {
+    userSettings.query=textController.text;
     if (textController.text.length >= 3) {
       setState(() {
         _isLoading = true;
