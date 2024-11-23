@@ -187,14 +187,11 @@ class _TextSearchState extends State<TextSearch> with Helper {
   }
 
   Widget _buildSubmitButton(BuildContext context) {
-    return SizedBox(
-          width: double.infinity, // Fills the whole width of the screen
-          height: 50.0, // Set the height to make it squared
-          child: FilledButton(
+    return FilledButton(
             style: ButtonStyle(
               shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.zero, // Removes rounded corners
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20), // Removes rounded corners
                 ),
               ),
             ),
@@ -202,8 +199,7 @@ class _TextSearchState extends State<TextSearch> with Helper {
           _handleSubmitButtonPressed();
         },
             child: const Icon(Icons.send),
-          ),
-        );
+          );
   }
 
   //   Widget _buildSubmitButton(BuildContext context) {

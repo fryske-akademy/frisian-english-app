@@ -143,14 +143,11 @@ class _HomeViewState extends State with Helper {
     );
   }
   Widget _buildSubmitButton(BuildContext context) {
-    return SizedBox(
-      width: double.infinity, // Fills the whole width of the screen
-      height: 50.0, // Set the height to make it squared
-      child: FilledButton(
+    return FilledButton(
         style: ButtonStyle(
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-            const RoundedRectangleBorder(
-              borderRadius: BorderRadius.zero, // Removes rounded corners
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20), // Removes rounded corners
             ),
           ),
         ),
@@ -158,7 +155,6 @@ class _HomeViewState extends State with Helper {
           findDetails(userSettings.query);
         },
         child: const Icon(Icons.send),
-      ),
-    );
+      );
   }
 }
