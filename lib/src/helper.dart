@@ -268,4 +268,19 @@ mixin Helper {
       ),
     ];
   }
+  Widget buildSubmitButton(BuildContext context, Function f) {
+    return FilledButton(
+      style: ButtonStyle(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20), // Removes rounded corners
+          ),
+        ),
+      ),
+      onPressed: () async {
+        f();
+      },
+      child: const Icon(Icons.send),
+    );
+  }
 }

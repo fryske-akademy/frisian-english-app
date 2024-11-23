@@ -186,21 +186,6 @@ class _TextSearchState extends State<TextSearch> with Helper {
     );
   }
 
-  Widget _buildSubmitButton(BuildContext context) {
-    return FilledButton(
-            style: ButtonStyle(
-              shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20), // Removes rounded corners
-                ),
-              ),
-            ),
-            onPressed: () async {
-          _handleSubmitButtonPressed();
-        },
-            child: const Icon(Icons.send),
-          );
-  }
 
   //   Widget _buildSubmitButton(BuildContext context) {
   //   return Padding(
@@ -346,8 +331,7 @@ class _TextSearchState extends State<TextSearch> with Helper {
             mainAxisAlignment: MainAxisAlignment.center,
             children: langSwitch(context, this)),
         const Padding(padding: EdgeInsets.all(8.0)),
-        _buildSubmitButton(context),
-        
+        buildSubmitButton(context,_handleSubmitButtonPressed)
       ],
     );
   }

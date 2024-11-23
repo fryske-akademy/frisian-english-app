@@ -137,24 +137,9 @@ class _HomeViewState extends State with Helper {
             mainAxisAlignment: MainAxisAlignment.center,
             children: langSwitch(context, this),
           ),
-          _buildSubmitButton(context)
+          buildSubmitButton(context,lookup)
         ],
       ),
     );
-  }
-  Widget _buildSubmitButton(BuildContext context) {
-    return FilledButton(
-        style: ButtonStyle(
-          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20), // Removes rounded corners
-            ),
-          ),
-        ),
-        onPressed: () async {
-          findDetails(userSettings.query);
-        },
-        child: const Icon(Icons.send),
-      );
   }
 }

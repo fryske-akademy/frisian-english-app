@@ -210,8 +210,11 @@ class _ResultViewState extends State<ResultView> with TickerProviderStateMixin {
 
 void findDetails(String text) {
   userSettings.query = text;
-  getLemmas(text).timeout(const Duration(seconds: 3), onTimeout: () => []).then(
-      (value) => toDetails(value, userSettings.navigatorKey.currentContext));
+  lookup();
+}
+void lookup() {
+  getLemmas(userSettings.query).timeout(const Duration(seconds: 3), onTimeout: () => []).then(
+          (value) => toDetails(value, userSettings.navigatorKey.currentContext));
 }
 
 void toDetails(List<Lemma> value, BuildContext? context) async {
