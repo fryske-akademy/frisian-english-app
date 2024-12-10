@@ -26,22 +26,22 @@ Future<List<Lemma>> getLemmas(String query) async {
 
   final QueryResult lemmasResult = await client.query(lemmasOptions);
 
-  if (lemmasResult.hasException) {}
-
-  final Map<String, dynamic> lemmasData = lemmasResult.data as Map<String, dynamic>;
-
   List<Lemma> lemmas = [];
 
-  if (lemmasData['lemmasearch']['lemmas'] == null) return lemmas;
+  if (!lemmasResult.hasException && lemmasResult.data != null) {
+    final Map<String, dynamic> lemmasData = lemmasResult.data as Map<String, dynamic>;
+    if (lemmasData['lemmasearch']['lemmas'] == null) return lemmas;
 
-  for (var lemma in lemmasData['lemmasearch']['lemmas']) {
-    Lemma newlemma = Lemma();
+    for (var lemma in lemmasData['lemmasearch']['lemmas']) {
+      Lemma newlemma = Lemma();
 
-    newlemma.link = lemma['link'] ?? '';
-    newlemma.form = lemma['form'] ?? '';
+      newlemma.link = lemma['link'] ?? '';
+      newlemma.form = lemma['form'] ?? '';
 
-    lemmas.add(newlemma);
+      lemmas.add(newlemma);
+    }
   }
+
 
   return lemmas;
 }

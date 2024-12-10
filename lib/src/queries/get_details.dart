@@ -87,30 +87,33 @@ fragment par on Paradigm {
 
   final QueryResult detailsResult = await client.query(detailsOptions);
 
-  if (detailsResult.hasException) {}
-
-  final Map<String, dynamic> detailsData =
-      detailsResult.data as Map<String, dynamic>;
-
   List<Details> l = [];
-  for (var detail in detailsData['details']) {
-    Details details = Details();
 
-    details.source = detail['source'] ?? '';
+  if (!detailsResult.hasException && detailsResult.data != null) {
+    final Map<String, dynamic> detailsData =
+    detailsResult.data as Map<String, dynamic>;
 
-    details.lemma.form = detail['lemma']['form'] ?? '';
-    details.lemma.lang = detail['lemma']['lang'] ?? '';
-    details.lemma.article = detail['lemma']['article'] ?? '';
-    details.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
-    details.lemma.subForms = detail['lemma']['subForms'] ?? [];
-    details.lemma.pos = detail['lemma']['pos'] ?? [];
+    for (var detail in detailsData['details']) {
+      Details details = Details();
 
-    details.translations = detail['translations'] ?? [];
-    details.link = detail['link'] ?? {};
-    details.senses = detail['senses'] ?? [];
-    details.texts = detail['texts'] ?? [];
-    l.add(details);
+      details.source = detail['source'] ?? '';
+
+      details.lemma.form = detail['lemma']['form'] ?? '';
+      details.lemma.lang = detail['lemma']['lang'] ?? '';
+      details.lemma.article = detail['lemma']['article'] ?? '';
+      details.lemma.hyphenation = detail['lemma']['hyphenation'] ?? '';
+      details.lemma.subForms = detail['lemma']['subForms'] ?? [];
+      details.lemma.pos = detail['lemma']['pos'] ?? [];
+
+      details.translations = detail['translations'] ?? [];
+      details.link = detail['link'] ?? {};
+      details.senses = detail['senses'] ?? [];
+      details.texts = detail['texts'] ?? [];
+      l.add(details);
+    }
+
   }
+
   return l;
 }
 

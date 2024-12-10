@@ -56,10 +56,10 @@ class _TextResultState extends State<TextResult> {
 
     final QueryResult textsResult = await client.query(texts);
 
-    if (textsResult.hasException) {}
-
-    final Map<String, dynamic> textsData = textsResult.data as Map<String, dynamic>;
-    return textsData;
+    if (!textsResult.hasException && textsResult.data != null) {
+      return textsResult.data as Map<String, dynamic>;
+    }
+    return [];
   }
 
   @override
@@ -73,9 +73,14 @@ class _TextResultState extends State<TextResult> {
           return const Center(child: CircularProgressIndicator());
         } else if (snapshot.hasError) {
           return Text('Error: ${snapshot.error}');
+        } else if (snapshot.data.length==0) {
+          return const Material(
+              child: Center(
+              child: Column(
+              children: [Text("Nothing found"),BackButton()]
+        )));
         } else {
           var textsData = snapshot.data['textsearch']['texts'];
-          textsData;
 
           if (textsData == null) {
             return Material(
