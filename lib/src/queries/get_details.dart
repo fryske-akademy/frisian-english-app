@@ -12,7 +12,6 @@ query details( # case and diacrit sensitive lemma (article) to find
     $lemma: String! $pos: Pos $source: String! $englishTranslations: Boolean!=true) {
     details(lemma: $lemma pos: $pos source: $source englishTranslations: $englishTranslations) {
         source
-        message { level text}
         lemma { ...lemmagraph }
         translations { ...lemmagraph }
         link {lemma text}

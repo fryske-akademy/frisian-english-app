@@ -24,7 +24,6 @@ class _TextResultState extends State<TextResult> {
     const String textsQuery = r'''
     query texts ($max: Int!=10 $offset: Int!=0 $lang: LangType! $searchterm: String! $sensitive: Boolean!=false $source: String) {
     textsearch(offset: $offset max: $max searchterm: $searchterm lang: $lang sensitive: $sensitive source: $source) {
-        message {level text}
         offset max total texts {
             __typename
             ... on Example {
