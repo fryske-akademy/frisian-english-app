@@ -75,7 +75,7 @@ class _TextResultState extends State<TextResult> {
           return Text('Error: ${snapshot.error}');
         } else if (snapshot.data.length==0) {
           return const Material(
-              child: Padding(padding: const EdgeInsets.only(top: 50),
+              child: Padding(padding: EdgeInsets.only(top: 50),
               child: Center(
                   child: Column(
                       children: [Text("Nothing found"),BackButton()]

@@ -11,7 +11,7 @@ dependencies:
   auto_size_text: ^3.0.0
   flutter:
     sdk: flutter                          #https://flutter.dev/docs/development/tools/sdk/releases?tab=macos
-  flutter_localization: ^0.2.2
+  flutter_localization: ^0.3.1
   flutter_offline: ^4.0.0
   flutter_svg: ^2.0.9
   get_it: ^8.0.2
@@ -27,7 +27,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter                          #https://flutter.dev/docs/testing       
-  flutter_lints: 4.0.0                   #https://pub.dev/packages/flutter_lints            
+  flutter_lints: ^5.0.0                   #https://pub.dev/packages/flutter_lints            
 
 flutter:
   uses-material-design: true
