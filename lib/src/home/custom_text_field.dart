@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:frysish/l10n/app_localizations.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/src/queries/autocomplete.dart';
 
 import '../../lemma.dart';

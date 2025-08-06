@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:frysish/details.dart';
+import 'package:frysish/l10n/app_localizations.dart';
 import 'package:frysish/src/list_item.dart';
 import 'package:frysish/src/result/result_view.dart';
 import 'package:url_launcher/url_launcher.dart';

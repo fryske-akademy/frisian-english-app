@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:frysish/l10n/app_localizations.dart';
 import 'package:frysish/lemma.dart';
 import 'package:frysish/main.dart';
 import 'package:frysish/src/result/result_view.dart';
